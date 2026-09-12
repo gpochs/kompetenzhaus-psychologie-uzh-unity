@@ -1,0 +1,32 @@
+{
+  "schema": "game-room.milestone-reviews.v1",
+  "roomId": "kompetenzhaus-campus",
+  "function": {
+    "status": "pending",
+    "approvedBy": "",
+    "approvedAt": "",
+    "evidence": [
+      "floor-plan.png",
+      "ceiling-plan.png",
+      "../references/asset-references.png"
+    ],
+    "strangestElement": "Shared evidence table: a learning interaction surface, not a holographic omniscient AI.",
+    "notes": "Human approval has not been inferred from implementation authorization."
+  },
+  "form": {
+    "status": "pending",
+    "approvedBy": "",
+    "approvedAt": "",
+    "evidence": [],
+    "strangestElement": "",
+    "notes": "Human approval has not been inferred from implementation authorization."
+  },
+  "runtime": {
+    "status": "pending",
+    "approvedBy": "",
+    "approvedAt": "",
+    "evidence": [],
+    "strangestElement": "",
+    "notes": "Human approval has not been inferred from implementation authorization."
+  }
+}

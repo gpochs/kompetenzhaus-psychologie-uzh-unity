@@ -1,0 +1,22 @@
+{
+  "schema": "kompetenzhaus.plan.v1",
+  "units": "meters",
+  "stage": "Function review / not final composition",
+  "bounds": [
+    28,
+    24,
+    3.2
+  ],
+  "role": "optional-starter",
+  "fixedRuntimeLayout": false,
+  "openingClearHeightMetres": 2.7,
+  "roomId": "kompetenzhaus-campus",
+  "productionView": "bird view + first person",
+  "minimumClearanceMeters": 1.8,
+  "mainArrivalWidthMeters": 2.4,
+  "floorPlan": "floor-plan.png",
+  "reflectedCeilingPlan": "ceiling-plan.png",
+  "geometrySource": "../blender/build_review_plan.py",
+  "planCutHeightMeters": 1.2,
+  "paidServiceBudget": 0
+}

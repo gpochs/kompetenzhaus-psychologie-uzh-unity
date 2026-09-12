@@ -1,0 +1,6 @@
+{
+  "name": "Kompetenzhaus.Runtime",
+  "rootNamespace": "Kompetenzhaus",
+  "references": ["Unity.InputSystem", "Unity.ugui"],
+  "autoReferenced": true
+}

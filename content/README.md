@@ -1,0 +1,38 @@
+# Current competency design: version 2.1
+
+The new profile uses competency-framework.json (16 competencies, 48 unique criteria), career-profiles.json (12 activity-based views) and module-learning-design.json (153 proposed objectives across 43 slots plus 3 alternatives). It does not derive personal competence from legacy scores or ECTS. Each competence has an explicit AI role, student responsibility, assessment focus and example task. T1 understanding, T2 tool operation and T3 system/workflow design are distinct.
+
+Run node tools/build-competency-framework.mjs --check and node tools/build-module-learning-design.mjs --check. The module validator checks all 48 criteria in the actual standard pathway after elective replacement. The older identifiers described below are retained for source fidelity and the inherited game catalogue; they are not the new profile's categories.
+
+The Word generators tools/write-framework-documents.py and tools/write-module-documents.py produce editable DE/EN reference documents in the parent project directory from these same canonical data.
+
+# Portable game content
+
+`kompetenzhaus-content.json` is the Unity-facing data file. It is produced by `node tools/export-unity-content.mjs`, using only the public JavaScript files in this duplicated repository and the original exercises in `content/additional-quests.mjs`. No internal UZH documents are bundled. The exporter needs only Node.js built-in modules. Run `node tools/export-unity-content.mjs --check` to validate the generated files without changing them.
+
+The export preserves 43 building slots, 19 competence identifiers, four progression stages and 42 distinct quiz banks containing 130 inherited questions. Repeated elective slots intentionally share module codes and quiz banks. Eleven additional quests contain 22 new questions. They are self-contained fictional exercises, available in German and English, and need neither a live AI service nor personal information. Five main quests link source evaluation, methods, a Bachelor capstone, diagnostic reasoning and research accountability; six side quests cover study planning, cognition, measurement, teamwork, health research and bounded research assistants.
+
+## Schema 1
+
+- `modules[].id` is the original **slot id**, such as `003`, `s01a` or `MA`. It is unique. `code` is the original module code and may be shared by several slots.
+- `modules[].houseId` is `bsc` or `msc`. `stageId` is a string from `1` to `4`; `stage` is the corresponding integer. Stages 1–2 belong to the Bachelor progression, stages 3–4 to the Master progression.
+- `modules[].questions` contains the bank's questions for direct loading. `quizBankId` also resolves through root `quizBanks`. Count unique questions through `quizBanks`, not by adding duplicated per-slot question arrays.
+- `optionalModules` includes Economic and Consumer Psychology, Clinical Neuropsychology and Mentoring. `optionCodes` records slot choices. Apply the chosen optional module's ECTS as well as its question bank; Mentoring is 6 ECTS.
+- A question has `id`, `prompt:{de,en}`, `options:[{de,en}]`, zero-based `correctIndex` and `explanation:{de,en}`. Some inherited questions also have `type:"position"` and `positions:[{de,en}]`; present those positions as context before the question.
+- `quests` has `id`, `type` (`main` or `side`), `stageId`, `moduleIds`, `frameworkVersion`, canonical `criterionIds` and their unique `competencyIds`, localized title/description/instructions/feedback, `questions`, `prerequisiteQuestIds`, world hints and a cosmetic reward. `alignmentMeaning` identifies these references as game-practice topics, not assessed competence or achieved levels. Their criteria belong to framework 2.1, independently of the inherited catalogue's 19 historical identifiers. World hints describe intended presentation, not proof that a model or minigame has been implemented.
+- `rules` records the inherited Bachelor-to-Master gate (`BA`) and direct Master entry option. Questions require successful answers with retries. Keep the explanation visible after **every** answer, including the final answer, until the player explicitly continues.
+- All new fields use concrete arrays and objects suitable for Unity `JsonUtility`; unknown fields can be ignored. `legacy-public-data.json` is an exact JSON snapshot of all four source datasets, including maps and specialist choices that a future reader may require. It is for fidelity and migration, not a second runtime file that must be loaded.
+
+## Status and interpretation
+
+The legacy texts are preserved verbatim, including dated future-facing claims. Preservation does not constitute current factual verification. The source game describes its competence model as a July 2026 discussion draft, not an approved curriculum. Current module rules, credits, titles and assessment details require authoritative review before this version is presented as study guidance. Inherited building prerequisites are gameplay rules; several must not be silently promoted to formal enrolment requirements.
+
+Unity's `QuizPresentation` supplies modern display wording for the three inherited questions that explicitly name superseded competence labels (`06SM200-400:q2`, `06SM200-103:q2`, `06SM200-502:q3`). Historical JSON remains unchanged; question ids, options, correct indices and the explicit feedback/Continue flow are preserved. New quest alignment is validated with `node --test tools/quest-framework-alignment.test.mjs`; it never changes profile attainment or career scores.
+
+The proposed AI activities, competence mappings and all additional quests carry `Designentwurf` status. They do not certify stakeholder approval, implemented teaching changes, a Bachelor assessment weighting, student achievement or professional competence. Game rewards are cosmetic items and game experience, not ECTS. Fictional diagnostic and health cases are educational reasoning exercises without real patient data.
+
+The new exercise patterns are evidence checking, model comparison, predict–observe–explain, retrieval with feedback, worked examples, collaborative roles, transfer and tool auditing. Their particular module alignment is a game design proposal. No raw internal plans, personal details, internal file paths or confidential source extracts belong in these public files.
+
+## Validation
+
+The exporter checks localization, unique slot and quest ids, module/stage/competence/prerequisite references, option counts, valid answer indices, question identifiers, cosmetic rewards and expected inherited counts. It compares every inherited prompt, answer option, correct answer and explanation to its source. Source hashes are included in metadata. Output omits timestamps so unchanged sources produce identical bytes.

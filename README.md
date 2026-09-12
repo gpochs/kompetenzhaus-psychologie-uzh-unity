@@ -1,3 +1,17 @@
+# Kompetenzhaus Psychologie UZH – Unity-Neuentwicklung
+
+Diese öffentliche Repository ist die **einmalige, eigenständige Kopie** des bisherigen Spiels mit erhaltener Git-Historie. Hier entsteht eine neue Unity-Web-Version mit Bachelor- und Masterhaus, Vogel- und Ich-Perspektive, unmittelbar sichtbaren Modulquizzen, zusätzlichen Lernquests, eigener Grafik und Sound sowie einem GenAI-Baututor.
+
+Das neue Kompetenzmodell 2.1 verbindet Fachwissenschaft, Future Skills und KI in 16 Kompetenzen mit 48 eindeutig zugeordneten Kriterien. Die 153 Lernzielvorschläge zeigen konkrete Aufgaben und Nachweise; sie sind ein Entwurf und keine beschlossene Studienordnung. Die folgenden Abschnitte zur alten Version bleiben als historische Dokumentation erhalten.
+
+**Status: in Entwicklung.** Noch kein fertiger Unity-Web-Build veröffentlicht. [Entwicklungsumfang und Nachweise](docs/REBUILD.md) · [Lerndaten](content/README.md) · [GenAI-Integration](docs/genai-integration-design.md).
+
+Das [bisherige Spiel](https://gpochs.github.io/kompetenzhaus-psychologie-uzh/) und seine [ursprüngliche Repository](https://github.com/gpochs/kompetenzhaus-psychologie-uzh) bleiben erhalten. Zusatzkostenbudget dieser Neuentwicklung: **0**. Interne Originaldokumente werden nicht veröffentlicht.
+
+---
+
+## Dokumentation der übernommenen Ausgangsversion
+
 # Das Kompetenzhaus — Psychologie UZH (Entwurf)
 
 Ein browserbasiertes 3D-Bauspiel: Studierende bauen ihr Psychologiestudium (BSc 06B-7200-120, MSc 06M-7200-120) Modul für Modul zu einem Haus — und mit jedem Baustein wächst ihr Kompetenzprofil aus **Fachkompetenzen (Fa1–Fa10)**, **KI-Kompetenzen (KI1–KI6)** und **Future Skills (Fu1–Fu3)**.

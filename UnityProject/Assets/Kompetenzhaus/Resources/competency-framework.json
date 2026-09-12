@@ -1,0 +1,2327 @@
+{
+  "futureLenses": [
+    {
+      "id": "initiative",
+      "title": {
+        "de": "Eigeninitiative und Umsetzung",
+        "en": "Initiative and implementation"
+      },
+      "criterionIds": [
+        "H2.1",
+        "H2.3",
+        "V2.2"
+      ],
+      "competencyIds": [
+        "H2",
+        "V2"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai"
+      ],
+      "description": {
+        "de": "Ein offenes Praxisproblem in ein begründetes Vorhaben übersetzen und die nächsten Schritte selbst organisieren.",
+        "en": "Turn an open practice problem into a justified project and organise the next steps independently."
+      }
+    },
+    {
+      "id": "system-design",
+      "title": {
+        "de": "Systemgestaltung",
+        "en": "System design"
+      },
+      "criterionIds": [
+        "T1.1",
+        "T3.1",
+        "T3.2",
+        "T3.3"
+      ],
+      "competencyIds": [
+        "T1",
+        "T3"
+      ],
+      "contextIds": [
+        "with-ai",
+        "about-ai"
+      ],
+      "description": {
+        "de": "Einen Forschungsablauf mit menschlichen und KI-gestützten Schritten entwerfen, testen und bei Ausfällen beherrschbar halten.",
+        "en": "Design and test a research workflow with human and AI-assisted steps, keeping failures manageable."
+      }
+    },
+    {
+      "id": "creative-problem-solving",
+      "title": {
+        "de": "Kreative Problemlösung",
+        "en": "Creative problem solving"
+      },
+      "criterionIds": [
+        "R1.1",
+        "H2.2"
+      ],
+      "competencyIds": [
+        "R1",
+        "H2"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai"
+      ],
+      "description": {
+        "de": "Für eine bisher ungelöste Versorgungs- oder Forschungsfrage mehrere eigene Lösungsansätze entwickeln, bevor ein Werkzeug Vorschläge macht.",
+        "en": "Develop several personal approaches to an unresolved care or research question before consulting tool suggestions."
+      }
+    },
+    {
+      "id": "digital-critique",
+      "title": {
+        "de": "Kritische digitale Kompetenz",
+        "en": "Critical digital competence"
+      },
+      "criterionIds": [
+        "T1.3",
+        "R4.2",
+        "V1.2"
+      ],
+      "competencyIds": [
+        "T1",
+        "R4",
+        "V1"
+      ],
+      "contextIds": [
+        "with-ai",
+        "about-ai"
+      ],
+      "description": {
+        "de": "Technische Eignung, fachliche Aussagekraft und ethische Zulässigkeit eines Systems anhand dreier unterschiedlicher Kriterien prüfen.",
+        "en": "Examine a system’s technical suitability, evidential value and ethical acceptability using three distinct criteria."
+      }
+    },
+    {
+      "id": "decisions-under-uncertainty",
+      "title": {
+        "de": "Entscheiden unter Unsicherheit",
+        "en": "Decision-making under uncertainty"
+      },
+      "criterionIds": [
+        "R4.3",
+        "H1.3",
+        "V1.2"
+      ],
+      "competencyIds": [
+        "R4",
+        "H1",
+        "V1"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai"
+      ],
+      "description": {
+        "de": "Trotz widersprüchlicher Befunde eine begrenzte Entscheidung begründen und angeben, welche neue Information sie ändern würde.",
+        "en": "Justify a bounded decision despite conflicting findings and state what new information would change it."
+      }
+    },
+    {
+      "id": "self-efficacy",
+      "title": {
+        "de": "Selbstwirksamkeit reflektieren",
+        "en": "Reflect on self-efficacy"
+      },
+      "criterionIds": [
+        "V2.1"
+      ],
+      "competencyIds": [
+        "V2"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai"
+      ],
+      "description": {
+        "de": "Eigene Zuversicht mit konkreten Arbeitserfahrungen abgleichen. Das Selbsturteil bleibt von einem Kompetenznachweis getrennt.",
+        "en": "Compare personal confidence with concrete work experiences. Keep self-report separate from evidence of competence."
+      }
+    },
+    {
+      "id": "critical-thinking",
+      "title": {
+        "de": "Kritisches Denken",
+        "en": "Critical thinking"
+      },
+      "criterionIds": [
+        "P1.2",
+        "R2.2",
+        "R3.2",
+        "R4.1",
+        "R4.2",
+        "R4.3"
+      ],
+      "competencyIds": [
+        "P1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai",
+        "about-ai"
+      ],
+      "description": {
+        "de": "Annahmen und Alternativen bei Theorien, Messungen und Analysen begründet prüfen. Menschliche und generierte Behauptungen erfüllen dieselben fachlichen Beleganforderungen; beurteilt wird jeweils das zuständige Kriterium.",
+        "en": "Examine assumptions and alternatives in theories, measurement and analysis with justification. Human and generated claims face the same evidential standards; assessment uses the relevant criterion in each case."
+      }
+    },
+    {
+      "id": "active-control",
+      "title": {
+        "de": "Aktive Steuerung",
+        "en": "Active control"
+      },
+      "criterionIds": [
+        "T2.1",
+        "T2.2",
+        "T2.3",
+        "T3.3",
+        "V2.2",
+        "V2.3"
+      ],
+      "competencyIds": [
+        "T2",
+        "T3",
+        "V2"
+      ],
+      "contextIds": [
+        "with-ai"
+      ],
+      "description": {
+        "de": "Bei einem KI-gestützten Projekt eigene Ziele setzen, Informationslast begrenzen und festlegen, wann selbst gerechnet, entschieden oder Unterstützung eingeholt wird; Werkzeuge dafür gezielt einstellen.",
+        "en": "Set personal goals, manage information load and decide when to calculate, decide or seek help personally in an AI-assisted project; adjust tools accordingly."
+      }
+    },
+    {
+      "id": "self-determination",
+      "title": {
+        "de": "Selbstbestimmung",
+        "en": "Self-determination"
+      },
+      "criterionIds": [
+        "V1.3",
+        "V2.1"
+      ],
+      "competencyIds": [
+        "V1",
+        "V2"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai"
+      ],
+      "description": {
+        "de": "Den Einsatz oder bewussten Verzicht auf KI anhand eigener Ziele, Schutzinteressen und professioneller Grenzen begründen.",
+        "en": "Justify using or declining AI through personal goals, protected interests and professional limits."
+      }
+    },
+    {
+      "id": "ethics",
+      "title": {
+        "de": "Ethisches Urteilen",
+        "en": "Ethical judgement"
+      },
+      "criterionIds": [
+        "V1.1",
+        "V1.2",
+        "V1.3"
+      ],
+      "competencyIds": [
+        "V1"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai",
+        "about-ai"
+      ],
+      "description": {
+        "de": "Zielkonflikte zwischen individueller Unterstützung, Fairness und Datenschutz an einem fiktiven KI-System bearbeiten.",
+        "en": "Address competing aims of individual support, fairness and privacy in a fictional AI system."
+      }
+    },
+    {
+      "id": "cooperation",
+      "title": {
+        "de": "Kooperation",
+        "en": "Cooperation"
+      },
+      "criterionIds": [
+        "K3.1",
+        "K3.2",
+        "K3.3"
+      ],
+      "competencyIds": [
+        "K3"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai"
+      ],
+      "description": {
+        "de": "Verantwortung in einem interdisziplinären Team mit KI-Werkzeugen so verteilen, dass Übergaben und menschliche Entscheidungen nachvollziehbar bleiben.",
+        "en": "Allocate responsibility in an interdisciplinary team using AI so that handovers and human decisions remain traceable."
+      }
+    },
+    {
+      "id": "communication",
+      "title": {
+        "de": "Kommunikation",
+        "en": "Communication"
+      },
+      "criterionIds": [
+        "K1.1",
+        "K1.2",
+        "K1.3",
+        "K2.2"
+      ],
+      "competencyIds": [
+        "K1",
+        "K2"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai",
+        "about-ai"
+      ],
+      "description": {
+        "de": "Ein unsicheres Forschungsergebnis und die Rolle der KI unterschiedlichen Beteiligten erklären; abweichende Sichtweisen aufnehmen und Missverständnisse klären.",
+        "en": "Explain an uncertain research finding and the role of AI to different participants; engage with differing views and clarify misunderstandings."
+      }
+    },
+    {
+      "id": "systems-thinking",
+      "title": {
+        "de": "In Zusammenhängen denken",
+        "en": "Systems thinking"
+      },
+      "criterionIds": [
+        "P2.1",
+        "P2.3",
+        "H2.3"
+      ],
+      "competencyIds": [
+        "P2",
+        "H2"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai",
+        "about-ai"
+      ],
+      "description": {
+        "de": "Bei einer Veränderung Rückwirkungen zwischen Person, Institution und technischem System berücksichtigen.",
+        "en": "Consider feedback between people, institutions and technical systems when planning change."
+      }
+    },
+    {
+      "id": "adaptive-learning",
+      "title": {
+        "de": "Lernen bei technologischem Wandel",
+        "en": "Learning amid technological change"
+      },
+      "criterionIds": [
+        "T1.3",
+        "V2.1",
+        "V2.2",
+        "V2.3"
+      ],
+      "competencyIds": [
+        "T1",
+        "V2"
+      ],
+      "contextIds": [
+        "without-ai",
+        "with-ai",
+        "about-ai"
+      ],
+      "description": {
+        "de": "Ein unbekanntes Werkzeug anhand stabiler Fachkriterien erschliessen und eigene Wissenslücken gezielt bearbeiten.",
+        "en": "Learn an unfamiliar tool through stable disciplinary criteria and address personal knowledge gaps."
+      }
+    }
+  ],
+  "futureCoverageRule": {
+    "de": "Diese Bezüge machen Future Skills sichtbar. Sie sind keine weiteren Kompetenzskalen: Ein Kriterium kann in mehreren thematischen Ansichten erscheinen, wird aber nur an seinem kanonischen Ort erfasst. Die ersten zwölf Bezüge orientieren sich an AIComp; die letzten zwei machen zusätzliche Zukunftsfragen ausdrücklich sichtbar.",
+    "en": "These links make future skills visible. They are not additional competence scales: a criterion may appear in several thematic views but is recorded only in its canonical location. The first twelve links draw on AIComp; the final two make further future-oriented questions explicit."
+  },
+  "futureDesignTests": [
+    {
+      "de": "Bleibt das Lernziel sinnvoll, wenn das heute verwendete KI-Werkzeug ersetzt wird?",
+      "en": "Does the objective remain useful if today’s AI tool is replaced?"
+    },
+    {
+      "de": "Müssen Studierende selbst eine Frage, Alternative oder begründete Entscheidung entwickeln?",
+      "en": "Must students develop a question, alternative or justified decision themselves?"
+    },
+    {
+      "de": "Wird erkennbar, wo KI unterstützt und welche fachliche Eigenleistung bestehen bleibt?",
+      "en": "Is it clear where AI assists and which disciplinary work remains the student’s own?"
+    },
+    {
+      "de": "Werden Unsicherheit, Systemfolgen und die Perspektive betroffener Menschen berücksichtigt?",
+      "en": "Does the task account for uncertainty, system effects and the perspectives of affected people?"
+    },
+    {
+      "de": "Verändert eine Rückmeldung das weitere Handeln, statt nur Punkte zu liefern?",
+      "en": "Does feedback change subsequent action rather than merely award points?"
+    },
+    {
+      "de": "Ist der neue Lernanteil in den vorhandenen Arbeitsaufwand integriert und einer konkreten bisherigen Aktivität zugeordnet?",
+      "en": "Is the new learning component integrated into the existing workload and tied to a specific previous activity?"
+    }
+  ],
+  "schema": "kompetenzhaus.competency-framework",
+  "schemaVersion": 2,
+  "version": "2.1.0-draft",
+  "status": {
+    "de": "Entwurf für das Lernspiel und die Curriculumentwicklung; fachliche Validierung steht aus.",
+    "en": "Draft for the learning game and curriculum development; subject review is still required."
+  },
+  "date": "2026-09-12",
+  "title": {
+    "de": "Psychologische Handlungskompetenz",
+    "en": "Competence in psychological practice and research"
+  },
+  "designPrinciple": {
+    "de": "Jedes beobachtbare Kriterium hat genau einen Ort. Fach-, KI- und Future-Skills-Rahmen verweisen auf diese Kriterien; sie erzeugen keine zusätzlichen Punkte.",
+    "en": "Each observable criterion has one home. Disciplinary, AI and future skills frameworks refer to these criteria; they do not add another score."
+  },
+  "limitation": {
+    "de": "Die Bereiche sind miteinander verbunden. Eindeutige Zuordnung verhindert doppelte Erfassung; sie beweist keine psychometrische Unabhängigkeit. Das Modell wurde nicht als Messinstrument validiert.",
+    "en": "The domains are related. Unique ownership prevents duplicate recording; it does not establish psychometric independence. This model has not been validated as a measurement instrument."
+  },
+  "domains": [
+    {
+      "id": "P",
+      "title": {
+        "de": "Psychologische Zusammenhänge",
+        "en": "Psychological understanding"
+      }
+    },
+    {
+      "id": "R",
+      "title": {
+        "de": "Wissenschaftliche Erkenntnis",
+        "en": "Scientific inquiry"
+      }
+    },
+    {
+      "id": "H",
+      "title": {
+        "de": "Diagnostik und Veränderung",
+        "en": "Assessment and change"
+      }
+    },
+    {
+      "id": "K",
+      "title": {
+        "de": "Verständigung und Zusammenarbeit",
+        "en": "Communication and collaboration"
+      }
+    },
+    {
+      "id": "T",
+      "title": {
+        "de": "Digitale und KI-Systeme",
+        "en": "Digital and AI systems"
+      }
+    },
+    {
+      "id": "V",
+      "title": {
+        "de": "Verantwortung und eigene Entwicklung",
+        "en": "Responsibility and personal development"
+      }
+    }
+  ],
+  "levelDefinitions": [
+    {
+      "level": 1,
+      "label": "I",
+      "title": {
+        "de": "Angeleitet begründen",
+        "en": "Reason with guidance"
+      },
+      "description": {
+        "de": "In überschaubaren Aufgaben mit bereitgestellten Kriterien handeln und den eigenen Lösungsweg erklären.",
+        "en": "Work on bounded tasks using supplied criteria and explain the reasoning."
+      }
+    },
+    {
+      "level": 2,
+      "label": "II",
+      "title": {
+        "de": "Selbständig entscheiden",
+        "en": "Make independent decisions"
+      },
+      "description": {
+        "de": "Für typische Fachaufgaben geeignete Verfahren auswählen, Alternativen vergleichen und die Entscheidung belegen.",
+        "en": "Select suitable methods for typical disciplinary tasks, compare alternatives and support the decision with evidence."
+      }
+    },
+    {
+      "level": 3,
+      "label": "III",
+      "title": {
+        "de": "Komplexe Situationen bearbeiten",
+        "en": "Address complex situations"
+      },
+      "description": {
+        "de": "Bei Unsicherheit, neuen Bedingungen oder Zielkonflikten Vorgehen entwickeln, Grenzen prüfen und Entscheidungen verantworten.",
+        "en": "Develop an approach under uncertainty, new conditions or competing goals, examine its limits and take responsibility for decisions."
+      }
+    }
+  ],
+  "studyMilestones": [
+    {
+      "id": "1",
+      "title": {
+        "de": "Bachelor: Orientierung und Grundlagen",
+        "en": "Bachelor: orientation and foundations"
+      },
+      "typicalSemesters": "1–2"
+    },
+    {
+      "id": "2",
+      "title": {
+        "de": "Bachelor: Vertiefung und Anwendung",
+        "en": "Bachelor: development and application"
+      },
+      "typicalSemesters": "3–6"
+    },
+    {
+      "id": "3",
+      "title": {
+        "de": "Master: komplexe Fach- und Forschungsaufgaben",
+        "en": "Master: complex disciplinary and research tasks"
+      },
+      "typicalSemesters": "1–2"
+    },
+    {
+      "id": "4",
+      "title": {
+        "de": "Master: selbständige Forschung und Transfer",
+        "en": "Master: independent research and transfer"
+      },
+      "typicalSemesters": "3–4"
+    }
+  ],
+  "milestoneRule": {
+    "de": "Studienmeilensteine ordnen Lerngelegenheiten. Weder Semester noch ECTS, Hausbau oder Quizabschluss setzen eine Kompetenzstufe.",
+    "en": "Study milestones organise learning opportunities. Semesters, credits, buildings and completed quizzes do not establish a competence level."
+  },
+  "contexts": [
+    {
+      "id": "without-ai",
+      "title": {
+        "de": "Ohne KI",
+        "en": "Without AI"
+      }
+    },
+    {
+      "id": "with-ai",
+      "title": {
+        "de": "Mit KI als Werkzeug",
+        "en": "With AI as a tool"
+      }
+    },
+    {
+      "id": "about-ai",
+      "title": {
+        "de": "KI als Gegenstand",
+        "en": "AI as the subject"
+      }
+    }
+  ],
+  "competencies": [
+    {
+      "id": "P1",
+      "domainId": "P",
+      "title": {
+        "de": "Psychologische Modelle erklären",
+        "en": "Explain psychological models"
+      },
+      "scope": {
+        "de": "Begriffe, Mechanismen und Befunde fachlich verknüpfen.",
+        "en": "Connect disciplinary concepts, mechanisms and findings."
+      },
+      "boundary": {
+        "de": "Die Güte einer Studie gehört zu R4; die Qualität einer verständlichen Darstellung zu K1.",
+        "en": "Study quality belongs to R4; the quality of an accessible presentation belongs to K1."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann konkurrierende Erklärungen oder Gegenbeispiele zu einem psychologischen Phänomen erzeugen. Menschliche Urteile über KI sind selbst ein Gegenstand psychologischer Erklärung, etwa Automationsvertrauen und Anthropomorphisierung.",
+          "en": "AI can generate competing explanations or counterexamples for a psychological phenomenon. Human judgements about AI are also objects of psychological explanation, including automation trust and anthropomorphism."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende wählen die Theorie, legen Annahmen offen und erklären Mechanismen selbst. Sie unterscheiden eine sprachlich überzeugende Analogie von einer fachlich tragfähigen Erklärung.",
+          "en": "Students choose the theory, state its assumptions and explain the mechanisms themselves. They distinguish a persuasive analogy from a defensible disciplinary explanation."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt werden Begriffsgenauigkeit, Modellvergleich und Erklärungskraft (P1). Die Belegprüfung einer generierten Behauptung wird bei R4 erfasst.",
+          "en": "Assess conceptual accuracy, model comparison and explanatory power (P1). Evaluation of evidence for a generated claim belongs to R4."
+        },
+        "exampleTask": {
+          "de": "Erkläre, warum eine Person einer falschen KI-Empfehlung folgt. Vergleiche zwei psychologische Modelle mit einer generierten Erklärung und leite für jedes Modell eine unterscheidbare Vorhersage ab.",
+          "en": "Explain why someone follows an incorrect AI recommendation. Compare two psychological models with a generated explanation and derive a distinguishable prediction for each model."
+        },
+        "relatedCriterionIds": [
+          "P1.1",
+          "P1.2",
+          "P1.3",
+          "R4.2"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "P1.1",
+          "text": {
+            "de": "Zentrale Begriffe und Mechanismen fachlich korrekt unterscheiden.",
+            "en": "Distinguish core concepts and mechanisms accurately."
+          }
+        },
+        {
+          "id": "P1.2",
+          "text": {
+            "de": "Modelle anhand ihrer Annahmen und Vorhersagen vergleichen.",
+            "en": "Compare models through their assumptions and predictions."
+          }
+        },
+        {
+          "id": "P1.3",
+          "text": {
+            "de": "Ein psychologisches Phänomen mit einem passenden Modell erklären.",
+            "en": "Explain a psychological phenomenon using an appropriate model."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Ein vertrautes Phänomen mit vorgegebenen Begriffen erklären.",
+            "en": "Explain a familiar phenomenon using supplied concepts."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Konkurrierende Modelle für ein neues Beispiel begründet auswählen.",
+            "en": "Choose between competing models for a new example and justify the choice."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Mehrere Erklärungsebenen bei widersprüchlichen Befunden verbinden und Modellgrenzen herausarbeiten.",
+            "en": "Connect levels of explanation when findings conflict and identify model limits."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "domainId": "P",
+      "title": {
+        "de": "Person und Kontext einordnen",
+        "en": "Understand person and context"
+      },
+      "scope": {
+        "de": "Entwicklung, individuelle Unterschiede sowie soziale, kulturelle und institutionelle Bedingungen berücksichtigen.",
+        "en": "Account for development, individual differences and social, cultural and institutional conditions."
+      },
+      "boundary": {
+        "de": "Hier wird erklärt, wie Kontext wirkt. Normative Fragen der Fairness gehören zu V1.",
+        "en": "This competence explains how context matters. Normative questions of fairness belong to V1."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Veränderungen von Fallkontexten vorschlagen. Zugleich verändern Empfehlungssysteme, digitale Beziehungen und algorithmische Entscheidungen die Lebensbedingungen, die Psychologie erklären soll.",
+          "en": "AI can suggest changes to case contexts. Recommendation systems, digital relationships and algorithmic decisions also reshape the conditions psychology seeks to explain."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende prüfen, welche sozialen, kulturellen und entwicklungsbezogenen Annahmen eine Darstellung voraussetzt. Sie erklären Rückwirkungen zwischen Person, System und Institution und vermeiden stereotype Verallgemeinerungen.",
+          "en": "Students examine the social, cultural and developmental assumptions behind an account. They explain feedback between people, systems and institutions and avoid stereotyped generalisations."
+        },
+        "assessmentFocus": {
+          "de": "Hier zählt die kontextbezogene Erklärung und ihre Übertragbarkeit (P2). Die normative Bewertung von Benachteiligung gehört zu V1.",
+          "en": "The focus is contextual explanation and transferability (P2). Normative judgements about disadvantage belong to V1."
+        },
+        "exampleTask": {
+          "de": "Vergleiche zwei fiktive Studierende, die dieselbe KI-Lernhilfe unter unterschiedlichen sprachlichen und sozialen Bedingungen nutzen. Zeichne mögliche Rückwirkungen auf Verhalten, Unterstützung und institutionelle Entscheidungen.",
+          "en": "Compare two fictional students using the same AI learning aid under different linguistic and social conditions. Map possible feedback affecting behaviour, support and institutional decisions."
+        },
+        "relatedCriterionIds": [
+          "P2.1",
+          "P2.2",
+          "P2.3",
+          "V1.1"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "P2.1",
+          "text": {
+            "de": "Relevante Kontext- und Entwicklungsbedingungen sowie wechselseitige Einflüsse für eine Fragestellung beschreiben.",
+            "en": "Describe contextual and developmental conditions and reciprocal influences relevant to a question."
+          }
+        },
+        {
+          "id": "P2.2",
+          "text": {
+            "de": "Unterschiede zwischen Personen und Gruppen ohne unzulässige Verallgemeinerung interpretieren.",
+            "en": "Interpret differences between people and groups without unwarranted generalisation."
+          }
+        },
+        {
+          "id": "P2.3",
+          "text": {
+            "de": "Die Übertragbarkeit psychologischer Erklärungen auf eine andere Lebenslage begründen.",
+            "en": "Explain whether a psychological account transfers to a different life situation."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Offensichtliche Kontextbedingungen in einer Vignette erkennen.",
+            "en": "Recognise explicit contextual conditions in a vignette."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Einzelfall, Gruppe und Situation in einer Erklärung systematisch auseinanderhalten.",
+            "en": "Distinguish individual, group and situation systematically in an explanation."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Kontextwechsel und mehrfache Benachteiligung in komplexen Erklärungen berücksichtigen, ohne Kategorien zu verabsolutieren.",
+            "en": "Account for changing contexts and intersecting disadvantages without treating categories as fixed explanations."
+          }
+        }
+      ]
+    },
+    {
+      "id": "R1",
+      "domainId": "R",
+      "title": {
+        "de": "Untersuchungen planen",
+        "en": "Design investigations"
+      },
+      "scope": {
+        "de": "Beantwortbare Fragen und geeignete Forschungs- oder Evaluationsdesigns entwickeln.",
+        "en": "Develop answerable questions and suitable research or evaluation designs."
+      },
+      "boundary": {
+        "de": "Messinstrumente: R2. Datenanalyse: R3. Ethische Zulässigkeit: V1.",
+        "en": "Measurement instruments: R2. Data analysis: R3. Ethical acceptability: V1."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Designalternativen, mögliche Störfaktoren und simulierte Szenarien vorschlagen. Ihre Wirkung auf menschliches Verhalten kann selbst Forschungsfrage sein.",
+          "en": "AI can suggest design alternatives, possible confounds and simulated scenarios. Its effects on human behaviour can themselves become research questions."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende formulieren die Frage und begründen Design, Vergleich und Stichprobe. Simulierte Daten dienen der Planung; sie werden nicht als Beobachtungen realer Personen ausgegeben.",
+          "en": "Students formulate the question and justify the design, comparison and sample. Simulated data support planning and must not be represented as observations of real people."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt wird, ob der Plan die Frage beantworten kann und alternative Erklärungen berücksichtigt (R1). Ethische Zulässigkeit bleibt V1.",
+          "en": "Assess whether the design can answer the question and address alternative explanations (R1). Ethical acceptability remains V1."
+        },
+        "exampleTask": {
+          "de": "Plane eine Untersuchung dazu, ob KI-Rückmeldung selbständiges Lernen unterstützt. Vergleiche eigene und bereitgestellte KI-Designvorschläge; trenne kurzfristige Leistung von späterem Transfer ohne Hilfe.",
+          "en": "Plan an investigation into whether AI feedback supports independent learning. Compare your own and supplied AI design proposals; distinguish immediate performance from later unaided transfer."
+        },
+        "relatedCriterionIds": [
+          "R1.1",
+          "R1.2",
+          "R1.3",
+          "V1.2"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "R1.1",
+          "text": {
+            "de": "Aus einem Problem eine prüfbare Frage oder Hypothese ableiten.",
+            "en": "Derive a testable question or hypothesis from a problem."
+          }
+        },
+        {
+          "id": "R1.2",
+          "text": {
+            "de": "Design, Stichprobe und Vergleichsbedingungen auf die Frage abstimmen.",
+            "en": "Match design, sampling and comparison conditions to the question."
+          }
+        },
+        {
+          "id": "R1.3",
+          "text": {
+            "de": "Störfaktoren und Grenzen kausaler Schlüsse durch die Planung berücksichtigen.",
+            "en": "Address confounds and limits to causal inference in the design."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Eine vorgegebene Frage in einen einfachen Untersuchungsplan übersetzen.",
+            "en": "Translate a supplied question into a simple investigation plan."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Zwischen Designs wählen und Entscheidungen zu Stichprobe und Kontrolle begründen.",
+            "en": "Choose between designs and justify sampling and control decisions."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Für eine offene Frage ein durchführbares Design unter konkurrierenden Anforderungen entwickeln.",
+            "en": "Develop a feasible design for an open question under competing demands."
+          }
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "domainId": "R",
+      "title": {
+        "de": "Psychologisch messen",
+        "en": "Measure psychological constructs"
+      },
+      "scope": {
+        "de": "Konstrukte operationalisieren und die Qualität von Messungen prüfen.",
+        "en": "Operationalise constructs and examine measurement quality."
+      },
+      "boundary": {
+        "de": "Messqualität ist von der Entscheidung über eine Person in H1 und statistischer Auswertung in R3 getrennt.",
+        "en": "Measurement quality is distinct from decisions about a person in H1 and statistical analysis in R3."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Itemvarianten oder Kodierungen vorschlagen. KI-basierte Verhaltensindikatoren und automatisierte Bewertungen sind mögliche neue Messverfahren, deren Güte erst belegt werden muss.",
+          "en": "AI can suggest item variants or coding schemes. AI-derived behavioural indicators and automated ratings are possible new measurement methods whose quality must be established."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende bestimmen das Konstrukt und beurteilen Operationalisierung, Messfehler und Vergleichbarkeit. Plausible Ausgaben gelten nicht automatisch als valide Messung.",
+          "en": "Students define the construct and judge operationalisation, measurement error and comparability. Plausible outputs are not automatically valid measurements."
+        },
+        "assessmentFocus": {
+          "de": "Der Nachweis betrifft Messqualität (R2), einschliesslich möglicher Veränderungen bei Modell- oder Populationswechsel. Eine Entscheidung über einen konkreten Fall gehört zu H1.",
+          "en": "Evidence concerns measurement quality (R2), including possible changes across models or populations. A decision about a specific case belongs to H1."
+        },
+        "exampleTask": {
+          "de": "Entwirf eine Prüfung einer fiktiven KI-Sprachbewertung von Belastung: Welche Vergleichsdaten, Reliabilitäts- und Validitätsbelege sowie Gruppenvergleiche wären erforderlich?",
+          "en": "Design an evaluation of a fictional AI language-based measure of distress: which comparison data, reliability and validity evidence, and group comparisons would be needed?"
+        },
+        "relatedCriterionIds": [
+          "R2.1",
+          "R2.2",
+          "R2.3",
+          "H1.2"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "R2.1",
+          "text": {
+            "de": "Ein Konstrukt in beobachtbare Indikatoren und geeignete Erhebungsverfahren übersetzen.",
+            "en": "Translate a construct into observable indicators and suitable data collection methods."
+          }
+        },
+        {
+          "id": "R2.2",
+          "text": {
+            "de": "Reliabilität, Validität und Messfehler anhand passender Belege beurteilen.",
+            "en": "Judge reliability, validity and measurement error using appropriate evidence."
+          }
+        },
+        {
+          "id": "R2.3",
+          "text": {
+            "de": "Normen, Vergleichbarkeit und Messinvarianz für den vorgesehenen Einsatz prüfen.",
+            "en": "Examine norms, comparability and measurement invariance for the intended use."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Konstrukt, Item, Skala und Messfehler an einem Beispiel unterscheiden.",
+            "en": "Distinguish construct, item, scale and measurement error in an example."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Für eine Frage ein Instrument auswählen und seine Gütekriterien prüfen.",
+            "en": "Choose an instrument for a question and examine its measurement properties."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Bei schwierigen Populationen oder neuen Verfahren eine Messstrategie begründen und verbleibende Unsicherheit ausweisen.",
+            "en": "Justify a measurement strategy for difficult populations or novel procedures and report remaining uncertainty."
+          }
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "domainId": "R",
+      "title": {
+        "de": "Daten auswerten",
+        "en": "Analyse data"
+      },
+      "scope": {
+        "de": "Daten nachvollziehbar aufbereiten und mit geeigneten quantitativen oder qualitativen Verfahren auswerten.",
+        "en": "Prepare data transparently and analyse them using appropriate quantitative or qualitative methods."
+      },
+      "boundary": {
+        "de": "Ob die daraus abgeleitete inhaltliche Behauptung hinreichend belegt ist, wird unter R4 beurteilt.",
+        "en": "Whether the resulting substantive claim is adequately supported is judged under R4."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Analysecode, Visualisierungen oder erste qualitative Kategorien vorschlagen. Sie kann so die Auswertung beschleunigen, aber auch unbemerkte Analyseentscheidungen vorwegnehmen.",
+          "en": "AI can suggest analysis code, visualisations or initial qualitative categories. It may speed up analysis while making analytic decisions that go unnoticed."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende wählen und erklären das Verfahren, prüfen Voraussetzungen und führen Kontrollschritte selbst aus. Sie dokumentieren Datenbearbeitung, Änderungen und Unsicherheit.",
+          "en": "Students select and explain the method, check assumptions and perform independent checks. They document data preparation, changes and uncertainty."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt werden nachvollziehbare, methodisch korrekte Auswertung und Interpretation (R3). Die reine Bedienfolge eines Werkzeugs gehört zu T2.3.",
+          "en": "Assess transparent, methodologically sound analysis and interpretation (R3). A tool’s operation record alone belongs to T2.3."
+        },
+        "exampleTask": {
+          "de": "Überarbeite einen bereitgestellten KI-Analyseentwurf für einen offenen Übungsdatensatz. Begründe Verfahrenswahl und Korrekturen; prüfe ein Ergebnis oder eine qualitative Zuordnung unabhängig vom KI-Vorschlag.",
+          "en": "Revise a supplied AI analysis draft for an open practice dataset. Justify the method and corrections; independently check a result or qualitative coding decision."
+        },
+        "relatedCriterionIds": [
+          "R3.1",
+          "R3.2",
+          "R3.3",
+          "T2.3"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "R3.1",
+          "text": {
+            "de": "Datenbereinigung und Analyseschritte reproduzierbar dokumentieren.",
+            "en": "Document data preparation and analysis reproducibly."
+          }
+        },
+        {
+          "id": "R3.2",
+          "text": {
+            "de": "Zur Fragestellung passende Auswertungsverfahren auswählen, korrekt anwenden und ihre Voraussetzungen prüfen.",
+            "en": "Select analysis methods suited to the question, apply them correctly and examine their assumptions."
+          }
+        },
+        {
+          "id": "R3.3",
+          "text": {
+            "de": "Ergebnisse und Auswertungsgrenzen begründet interpretieren, etwa Effektgrössen und Unsicherheit oder die Tragfähigkeit qualitativer Kategorien.",
+            "en": "Interpret findings and analytic limitations with justification, including effect sizes and uncertainty or the defensibility of qualitative categories."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Eine überschaubare Auswertung nachvollziehen und zentrale Kennwerte erklären.",
+            "en": "Follow a bounded analysis and explain its main quantities."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Einen Datensatz selbständig analysieren und Annahmen sowie Sensitivität prüfen.",
+            "en": "Analyse a dataset independently and check assumptions and sensitivity."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Komplexe Modelle oder Analysealternativen unter Unsicherheit vergleichen und die gewählte Lösung reproduzierbar verteidigen.",
+            "en": "Compare complex models or analysis alternatives under uncertainty and defend a reproducible solution."
+          }
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "domainId": "R",
+      "title": {
+        "de": "Behauptungen und Evidenz prüfen",
+        "en": "Evaluate claims and evidence"
+      },
+      "scope": {
+        "de": "Die Tragfähigkeit von Aussagen anhand von Quellen, Argumenten und Gegenbelegen beurteilen.",
+        "en": "Judge claims through sources, arguments and counterevidence."
+      },
+      "boundary": {
+        "de": "Hier wird die Tragfähigkeit von Quellen und fallübergreifenden Behauptungen beurteilt, unabhängig davon, ob Menschen oder KI sie formulieren. Diagnostische Schlüsse zum konkreten Fall gehören zu H1; KI-Evaluation erhält keinen zweiten Score.",
+        "en": "This concerns the strength of sources and claims across cases, whether made by humans or AI. Diagnostic conclusions about a specific case belong to H1; AI evaluation receives no second score."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Suchbegriffe, Argumentationsketten oder Gegenpositionen liefern. Generierte Literaturangaben und Synthesen sind zugleich Gegenstand der Prüfung.",
+          "en": "AI can suggest search terms, lines of argument or counterpositions. Generated references and syntheses are themselves objects of scrutiny."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende suchen Originalbelege, prüfen deren tatsächliche Aussage und revidieren ihr Urteil bei Gegenbelegen. Sie unterscheiden Nachprüfbarkeit, Plausibilität und verbleibende Unsicherheit.",
+          "en": "Students locate original evidence, check what it actually says and revise judgements when counterevidence emerges. They distinguish verifiability, plausibility and remaining uncertainty."
+        },
+        "assessmentFocus": {
+          "de": "Für menschliche und generierte Aussagen gelten dieselben Beleganforderungen (R4). Technische Fehlermechanismen zu erklären ist T1; ein zweiter KI-Evaluationswert entfällt.",
+          "en": "Human and generated claims face the same evidential standards (R4). Explaining technical failure mechanisms belongs to T1; there is no second AI-evaluation score."
+        },
+        "exampleTask": {
+          "de": "Prüfe eine bereitgestellte KI-Zusammenfassung einer psychologischen Kontroverse. Erstelle eine überprüfbare Belegkette, markiere unbelegte Schlüsse und formuliere ein Urteil, das Gegenbefunde berücksichtigt.",
+          "en": "Audit a supplied AI summary of a psychological controversy. Build a verifiable evidence chain, mark unsupported inferences and reach a judgement that accounts for conflicting findings."
+        },
+        "relatedCriterionIds": [
+          "R4.1",
+          "R4.2",
+          "R4.3",
+          "T1.2"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "R4.1",
+          "text": {
+            "de": "Herkunft, Auffindbarkeit und Aussagegehalt einer Quelle prüfen.",
+            "en": "Check a source’s provenance, retrievability and actual claim."
+          }
+        },
+        {
+          "id": "R4.2",
+          "text": {
+            "de": "Schlussfolgerungen gegen Methoden, Ergebnisse und alternative Erklärungen prüfen.",
+            "en": "Check conclusions against methods, results and alternative explanations."
+          }
+        },
+        {
+          "id": "R4.3",
+          "text": {
+            "de": "Mehrere Befunde mit Unsicherheit und widersprechender Evidenz zu einem begründeten Urteil verbinden.",
+            "en": "Combine findings into a reasoned judgement that accounts for uncertainty and conflicting evidence."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Eine vorgegebene Aussage mit einer auffindbaren Quelle abgleichen.",
+            "en": "Check a supplied claim against a retrievable source."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Mehrere Quellen kritisch vergleichen und eine Schlussfolgerung begründen.",
+            "en": "Compare sources critically and justify a conclusion."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Bei widersprüchlichen, unvollständigen oder generierten Informationen eine belastbare Synthese mit offenen Fragen erstellen.",
+            "en": "Produce a defensible synthesis from conflicting, incomplete or generated information and state unresolved questions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "H1",
+      "domainId": "H",
+      "title": {
+        "de": "Psychologisch beurteilen",
+        "en": "Make psychological assessments"
+      },
+      "scope": {
+        "de": "Eine konkrete diagnostische Frage anhand mehrerer Informationen fallbezogen beantworten.",
+        "en": "Answer a specific assessment question using several sources of case information."
+      },
+      "boundary": {
+        "de": "Testkonstruktion und Messqualität liegen bei R2, Forschungsbelege bei R4 und Beziehungsgestaltung bei K2. Dieselbe diagnostische Fallinterpretation wird dort nicht erneut bewertet. Ein Lernfall ist keine klinische Qualifikation.",
+        "en": "Test construction and measurement quality belong to R2, research evidence to R4 and professional relationships to K2. The same diagnostic case interpretation is not assessed there again. A learning case is not a clinical qualification."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann in fiktiven Fällen Informationen ordnen oder diagnostische Alternativen vorschlagen. Ihre Empfehlung kann das menschliche Urteil beeinflussen und zusätzliche Verzerrungen erzeugen.",
+          "en": "AI can organise information or suggest assessment alternatives in fictional cases. Its recommendation may influence human judgement and introduce further bias."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende begründen die diagnostische Frage, integrieren widersprüchliche Informationen und benennen fehlende Daten sowie eigene Zuständigkeitsgrenzen. Sie prüfen eine Empfehlung anhand des Falls.",
+          "en": "Students justify the assessment question, integrate conflicting information and identify missing data and limits to their role. They examine recommendations against the case."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt wird die begründete Fallinterpretation einschliesslich Unsicherheit (H1). Messqualität bleibt R2, Beziehungsgestaltung K2 und allgemeine Studienkritik R4.",
+          "en": "Assess reasoned case interpretation, including uncertainty (H1). Measurement quality remains R2, relationships K2 and general study appraisal R4."
+        },
+        "exampleTask": {
+          "de": "Bearbeite eine fiktive Fallvignette zuerst selbst, dann mit einer bereitgestellten KI-Empfehlung. Begründe, was du übernimmst oder verwirfst und welche zusätzliche Information dein Urteil ändern würde.",
+          "en": "Assess a fictional vignette independently, then with a supplied AI recommendation. Justify what you retain or reject and identify information that could change your judgement."
+        },
+        "relatedCriterionIds": [
+          "H1.1",
+          "H1.2",
+          "H1.3",
+          "R2.2"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "H1.1",
+          "text": {
+            "de": "Auftrag und diagnostische Frage klären und begrenzen.",
+            "en": "Clarify and delimit the referral and assessment question."
+          }
+        },
+        {
+          "id": "H1.2",
+          "text": {
+            "de": "Informationen zu einer nachvollziehbaren Fallformulierung mit Alternativhypothesen verbinden.",
+            "en": "Integrate information into a traceable case formulation with alternative hypotheses."
+          }
+        },
+        {
+          "id": "H1.3",
+          "text": {
+            "de": "Ein fallbezogenes Urteil mit Unsicherheit und weiterem Abklärungsbedarf begründen.",
+            "en": "Justify a case judgement with uncertainty and further assessment needs."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Informationen eines fiktiven Falls mit einer vorgegebenen Fragestellung ordnen.",
+            "en": "Organise information from a fictional case around a supplied question."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Eine Fallformulierung entwickeln und alternative Deutungen prüfen.",
+            "en": "Develop a case formulation and consider alternative interpretations."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Komplexe oder widersprüchliche Fallinformationen zu einem begrenzten, begründeten Urteil zusammenführen.",
+            "en": "Integrate complex or conflicting case information into a bounded, justified judgement."
+          }
+        }
+      ]
+    },
+    {
+      "id": "H2",
+      "domainId": "H",
+      "title": {
+        "de": "Veränderung gestalten",
+        "en": "Design interventions and change"
+      },
+      "scope": {
+        "de": "Psychologische Ziele in fachlich begründete Interventionen oder Gestaltungsvorschläge übersetzen.",
+        "en": "Translate psychological goals into justified interventions or design proposals."
+      },
+      "boundary": {
+        "de": "Die Wirkung wird mit R1–R4 untersucht. Beziehung: K2. Ethische Entscheidung: V1. Keine doppelte Bewertung unter einem weiteren Transfer-Score.",
+        "en": "Effects are investigated through R1–R4. Relationships: K2. Ethical decisions: V1. No additional transfer score duplicates this work."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Varianten einer Präventions-, Beratungs- oder Organisationsmassnahme entwerfen. KI-gestützte Interventionen verändern zugleich Kontakt, Zugang und die Verteilung von Verantwortung.",
+          "en": "AI can draft variants of prevention, counselling or organisational interventions. AI-assisted interventions also change contact, access and the distribution of responsibility."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende bestimmen das Ziel, erklären den Wirkmechanismus und planen Rückmeldung sowie Anpassung. Sie entwickeln Alternativen, einschliesslich eines Vorgehens ohne KI.",
+          "en": "Students define the aim, explain the mechanism and plan feedback and adaptation. They develop alternatives, including an approach without AI."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt werden die fachliche Passung und der begründete Veränderungsplan (H2). Technische Umsetzung gehört zu T3, ethische Abwägung zu V1.",
+          "en": "Assess disciplinary fit and a justified change plan (H2). Technical implementation belongs to T3 and ethical deliberation to V1."
+        },
+        "exampleTask": {
+          "de": "Entwirf für einen fiktiven Hochschulkontext zwei Massnahmen zur Lernunterstützung, eine mit und eine ohne KI. Beschreibe Wirkannahmen, mögliche Rückwirkungen und Kriterien für eine spätere Anpassung.",
+          "en": "Design two learning-support interventions for a fictional university context, one with and one without AI. Describe mechanisms, possible feedback effects and criteria for later adaptation."
+        },
+        "relatedCriterionIds": [
+          "H2.1",
+          "H2.2",
+          "H2.3",
+          "T3.1",
+          "V1.1"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "H2.1",
+          "text": {
+            "de": "Aus einem begründeten Bedarf konkrete Veränderungsziele ableiten.",
+            "en": "Derive concrete change goals from a justified need."
+          }
+        },
+        {
+          "id": "H2.2",
+          "text": {
+            "de": "Alternative Interventionen oder neue Gestaltungslösungen auch für plausible zukünftige Bedingungen entwickeln und ihre Wirkannahmen erklären.",
+            "en": "Develop alternative interventions or novel design solutions, including for plausible future conditions, and explain their proposed mechanisms."
+          }
+        },
+        {
+          "id": "H2.3",
+          "text": {
+            "de": "Die Umsetzung an Ressourcen, Rückmeldungen und veränderte Bedingungen anpassen.",
+            "en": "Adapt implementation to resources, feedback and changing conditions."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Für eine fiktive Situation eine vorgegebene Massnahme und deren Ziel erklären.",
+            "en": "Explain a supplied measure and its goal for a fictional situation."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Alternativen für einen begrenzten Bedarf vergleichen und einen umsetzbaren Vorschlag entwickeln.",
+            "en": "Compare alternatives for a bounded need and develop a feasible proposal."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Unter Zielkonflikten eine begründete Lösung entwickeln, Umsetzungshürden bearbeiten und Anpassungen verantworten.",
+            "en": "Develop a justified solution under competing goals, address implementation barriers and take responsibility for adaptations."
+          }
+        }
+      ]
+    },
+    {
+      "id": "K1",
+      "domainId": "K",
+      "title": {
+        "de": "Wissen verständlich vermitteln",
+        "en": "Communicate knowledge clearly"
+      },
+      "scope": {
+        "de": "Wissenschaftliche und fachliche Inhalte adressatengerecht darstellen.",
+        "en": "Present scientific and professional content for its intended audience."
+      },
+      "boundary": {
+        "de": "Bewertet werden Verständlichkeit, Struktur und Darstellung. Sachliche Belegqualität gehört zu R4; Gesprächsbeziehung zu K2.",
+        "en": "Assessment concerns clarity, structure and presentation. Evidential quality belongs to R4; the conversational relationship to K2."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Text-, Übersetzungs- und Darstellungsvarianten anbieten. Über KI-Einsatz, Unsicherheit und menschliche Verantwortung muss zugleich verständlich mit unterschiedlichen Zielgruppen kommuniziert werden.",
+          "en": "AI can offer wording, translation and presentation variants. AI use, uncertainty and human responsibility also need to be communicated clearly to different audiences."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende entscheiden, welche Darstellung dem Publikum hilft, prüfen Bedeutungsverschiebungen und überarbeiten auf Rückmeldung. Sie erklären Grenzen und Zuständigkeiten in eigenen Worten.",
+          "en": "Students decide which presentation serves the audience, check changes in meaning and revise after feedback. They explain limits and responsibilities in their own words."
+        },
+        "assessmentFocus": {
+          "de": "Hier zählen Verständlichkeit, Struktur und adressatengerechte Überarbeitung (K1). Quellenprüfung gehört zu R4; die Pflicht zur Offenlegung wird unter V1 beurteilt.",
+          "en": "The focus is clarity, structure and audience-sensitive revision (K1). Source checking belongs to R4; obligations to disclose are assessed under V1."
+        },
+        "exampleTask": {
+          "de": "Erkläre eine fiktive KI-gestützte Forschungsentscheidung für Studierende und für ein Fachteam. Vergleiche eigene und generierte Fassungen; überarbeite sie anhand von Verständnisfragen der beiden Gruppen.",
+          "en": "Explain a fictional AI-assisted research decision to students and to a specialist team. Compare your own and generated versions; revise them using comprehension questions from both groups."
+        },
+        "relatedCriterionIds": [
+          "K1.1",
+          "K1.2",
+          "K1.3",
+          "R4.1",
+          "V1.3"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "K1.1",
+          "text": {
+            "de": "Eine Botschaft für Zweck, Publikum und Format klar strukturieren.",
+            "en": "Structure a message for its purpose, audience and format."
+          }
+        },
+        {
+          "id": "K1.2",
+          "text": {
+            "de": "Fachliche Ergebnisse und Unsicherheit sprachlich oder visuell verständlich darstellen.",
+            "en": "Communicate findings and uncertainty clearly in words or visuals."
+          }
+        },
+        {
+          "id": "K1.3",
+          "text": {
+            "de": "Eine Darstellung anhand konkreter Rückmeldung überarbeiten.",
+            "en": "Revise a presentation in response to specific feedback."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Einen kurzen Befund für ein vorgegebenes Publikum verständlich zusammenfassen.",
+            "en": "Summarise a short finding clearly for a specified audience."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Eine begründete fachliche Darstellung selbständig planen und überarbeiten.",
+            "en": "Plan and revise a reasoned professional account independently."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Komplexe oder kontroverse Sachverhalte für verschiedene Zielgruppen ohne irreführende Vereinfachung vermitteln.",
+            "en": "Communicate complex or contested issues to different audiences without misleading simplification."
+          }
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "domainId": "K",
+      "title": {
+        "de": "Professionelle Gespräche führen",
+        "en": "Conduct professional conversations"
+      },
+      "scope": {
+        "de": "Zuhören, Perspektiven aufnehmen und eine arbeitsfähige Beziehung gestalten.",
+        "en": "Listen, understand perspectives and establish a workable professional relationship."
+      },
+      "boundary": {
+        "de": "Die Qualität der Beziehung und Gesprächsführung wird hier erfasst; diagnostische Schlüsse bei H1, Teamorganisation bei K3.",
+        "en": "This covers relationships and conversational practice; assessment conclusions belong to H1 and team organisation to K3."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann ein Rollenspiel oder alternative Gesprächsverläufe simulieren. Vertrauen, Sorge und unterschiedliche Einstellungen gegenüber KI können selbst Gegenstand eines professionellen Gesprächs sein.",
+          "en": "AI can simulate role-play or alternative conversational turns. Trust, concern and differing attitudes towards AI can themselves become topics of professional conversations."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende hören zu, klären Anliegen und reagieren auf Ambivalenz. Sie unterscheiden simulierte Antworten von Erleben realer Menschen und erproben Gesprächsführung auch mit menschlichen Gegenübern.",
+          "en": "Students listen, clarify concerns and respond to ambivalence. They distinguish simulated responses from real human experience and also practise with human partners."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt werden Zuhören, gemeinsames Verständnis und Umgang mit Beziehungsspannungen (K2). Ein gelungener Chat belegt keine allgemeine Gesprächs- oder Therapiebefähigung.",
+          "en": "Assess listening, shared understanding and responses to relational tension (K2). A successful chat does not establish general conversational or therapeutic competence."
+        },
+        "exampleTask": {
+          "de": "Führe ein fiktives Gespräch mit einer Person, die einer KI-Empfehlung misstraut. Übe Nachfragen in einer Simulation und besprich anschliessend mit einer Peerperson, welche Perspektiven die Simulation verfehlt hat.",
+          "en": "Conduct a fictional conversation with someone who distrusts an AI recommendation. Practise follow-up questions in a simulation, then discuss with a peer which perspectives the simulation missed."
+        },
+        "relatedCriterionIds": [
+          "K2.1",
+          "K2.2",
+          "K2.3"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "K2.1",
+          "text": {
+            "de": "Durch offene Fragen und Zuhören Anliegen und Perspektiven klären.",
+            "en": "Clarify concerns and perspectives through open questions and listening."
+          }
+        },
+        {
+          "id": "K2.2",
+          "text": {
+            "de": "Das Gespräch transparent strukturieren und ein gemeinsames Verständnis prüfen.",
+            "en": "Structure the conversation transparently and check shared understanding."
+          }
+        },
+        {
+          "id": "K2.3",
+          "text": {
+            "de": "Mit Emotionen, Missverständnissen und Beziehungsspannungen professionell umgehen.",
+            "en": "Respond professionally to emotions, misunderstandings and relational tensions."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "In einem Rollenspiel zuhören, nachfragen und das Verstandene zurückmelden.",
+            "en": "Listen, ask follow-up questions and reflect understanding in a role-play."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Ein begrenztes Gespräch zielgerichtet führen und die Perspektive des Gegenübers berücksichtigen.",
+            "en": "Conduct a bounded conversation purposefully while attending to the other person’s perspective."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Ein anspruchsvolles Gespräch bei Ambivalenz oder Spannung reflektiert gestalten und eigene Grenzen erkennen.",
+            "en": "Manage a demanding conversation involving ambivalence or tension and recognise personal limits."
+          }
+        }
+      ]
+    },
+    {
+      "id": "K3",
+      "domainId": "K",
+      "title": {
+        "de": "Zusammenarbeit organisieren",
+        "en": "Organise collaboration"
+      },
+      "scope": {
+        "de": "Gemeinsame Arbeit mit klaren Rollen, Absprachen und verantwortlichen Übergaben gestalten.",
+        "en": "Organise shared work through clear roles, agreements and accountable handovers."
+      },
+      "boundary": {
+        "de": "Gilt auch für Teams mit KI-Werkzeugen. Tool-Bedienung gehört zu T2, ethische Delegationsgrenzen zu V1.",
+        "en": "Also applies to teams using AI tools. Tool operation belongs to T2; ethical limits to delegation belong to V1."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Teambeiträge zusammenfassen oder Aufgaben vorschlagen. Ihre Verwendung verändert Abstimmung, fachübergreifende Verständigung und Übergaben zwischen Menschen.",
+          "en": "AI can summarise team contributions or suggest tasks. Its use changes coordination, interdisciplinary communication and handovers between people."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende vereinbaren menschliche Zuständigkeiten, machen Abhängigkeiten sichtbar und bearbeiten unterschiedliche Sichtweisen auf KI-Nutzung. Generierte Vorschläge werden als solche in die gemeinsame Entscheidung eingebracht.",
+          "en": "Students agree human responsibilities, make dependencies visible and address differing views on AI use. Generated suggestions enter shared decisions with their origin made clear."
+        },
+        "assessmentFocus": {
+          "de": "Hier zählt die Qualität von Koordination, Übergaben und gemeinsamer Entscheidung (K3). Tool-Bedienung liegt bei T2, technische Schnittstellen bei T3 und zulässige Delegation bei V1.",
+          "en": "Assess coordination, handovers and shared decisions (K3). Tool operation belongs to T2, technical interfaces to T3 and permissible delegation to V1."
+        },
+        "exampleTask": {
+          "de": "Organisiert im Team ein fiktives Forschungsprojekt mit optionaler KI-Unterstützung. Vereinbart Zuständigkeiten und Übergaben; löst einen Konflikt darüber, ob ein ungeprüfter generierter Beitrag verwendet werden soll.",
+          "en": "Organise a fictional team research project with optional AI assistance. Agree responsibilities and handovers; resolve a disagreement about using an unchecked generated contribution."
+        },
+        "relatedCriterionIds": [
+          "K3.1",
+          "K3.2",
+          "K3.3",
+          "T3.1",
+          "V1.2"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "K3.1",
+          "text": {
+            "de": "Rollen, Beiträge und Zuständigkeiten für ein gemeinsames Ziel vereinbaren.",
+            "en": "Agree on roles, contributions and responsibilities for a shared goal."
+          }
+        },
+        {
+          "id": "K3.2",
+          "text": {
+            "de": "Arbeitsstände, Entscheidungen und Übergaben für andere nachvollziehbar halten.",
+            "en": "Keep progress, decisions and handovers traceable for others."
+          }
+        },
+        {
+          "id": "K3.3",
+          "text": {
+            "de": "Unterschiedliche Perspektiven und Konflikte in eine gemeinsame Arbeitsentscheidung einbeziehen.",
+            "en": "Include differing perspectives and conflicts in a shared working decision."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Eine vereinbarte Teamrolle erfüllen und den eigenen Beitrag dokumentieren.",
+            "en": "Fulfil an agreed team role and document the contribution."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Eine Gruppenaufgabe koordinieren und Konflikte sachbezogen bearbeiten.",
+            "en": "Coordinate a group task and address task-related conflict."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Interdisziplinäre Zusammenarbeit bei unklaren Zuständigkeiten und konkurrierenden Zielen gestalten.",
+            "en": "Organise interdisciplinary collaboration when responsibilities are unclear and goals compete."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1",
+      "domainId": "T",
+      "title": {
+        "de": "KI und digitale Systeme verstehen",
+        "en": "Understand AI and digital systems"
+      },
+      "scope": {
+        "de": "Funktionsweisen, Datenabhängigkeit und technische Grenzen relevanter Systeme erklären.",
+        "en": "Explain how relevant systems work, depend on data and are technically limited."
+      },
+      "boundary": {
+        "de": "Technische Erklärung ist von der Prüfung einer konkreten Aussage in R4 und normativer Verantwortung in V1 getrennt.",
+        "en": "Technical explanation is distinct from checking a specific claim in R4 and normative responsibility in V1."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI ist hier der technische Gegenstand: Datenflüsse, Modellverhalten, Systemgrenzen und Abhängigkeiten. Auch multimodale und handelnde Systeme werden an stabilen technischen Fragen untersucht.",
+          "en": "AI is the technical object here: data flows, model behaviour, system limits and dependencies. Multimodal and action-taking systems are examined through stable technical questions."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende erklären relevante Funktionsweisen und leiten daraus Eignung sowie Fehlerbedingungen ab. Sie benennen Wissenslücken bei nicht einsehbaren Systemen.",
+          "en": "Students explain relevant mechanisms and infer suitability and failure conditions. They identify knowledge gaps in systems they cannot inspect."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt wird das technische Verständnis (T1), unabhängig von der Bediengeschwindigkeit. Inhaltliche Wahrheit bleibt R4, Betrieb T2 und eigene Systemgestaltung T3.",
+          "en": "Assess technical understanding (T1), independently of operating speed. Substantive truth remains R4, operation T2 and system design T3."
+        },
+        "exampleTask": {
+          "de": "Vergleiche eine fiktive lokale Textanalyse mit einem externen multimodalen Assistenten. Zeichne Datenflüsse und erkläre, welche Schlussfolgerungen ihre Ausgaben technisch nicht rechtfertigen.",
+          "en": "Compare a fictional local text-analysis tool with an external multimodal assistant. Map data flows and explain which inferences their outputs cannot technically support."
+        },
+        "relatedCriterionIds": [
+          "T1.1",
+          "T1.2",
+          "T1.3"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "T1.1",
+          "text": {
+            "de": "Für eine Anwendung relevante Systembestandteile und Datenflüsse erklären.",
+            "en": "Explain system components and data flows relevant to an application."
+          }
+        },
+        {
+          "id": "T1.2",
+          "text": {
+            "de": "Training, Inferenz, probabilistische Ausgaben und typische Fehlermechanismen unterscheiden.",
+            "en": "Distinguish training, inference, probabilistic outputs and common error mechanisms."
+          }
+        },
+        {
+          "id": "T1.3",
+          "text": {
+            "de": "Technische Eignung und Grenzen für einen bestimmten Einsatz begründen.",
+            "en": "Explain technical suitability and limitations for a particular use."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "An einem Beispiel erklären, weshalb eine plausible KI-Antwort falsch sein kann.",
+            "en": "Use an example to explain why a plausible AI answer can be wrong."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Die technische Eignung zweier Systeme für eine Fachaufgabe vergleichen.",
+            "en": "Compare the technical suitability of two systems for a disciplinary task."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Bei neuartigen Systemen Datenflüsse, Abhängigkeiten und Ausfallbedingungen nachvollziehbar analysieren.",
+            "en": "Analyse data flows, dependencies and failure conditions in unfamiliar systems."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "domainId": "T",
+      "title": {
+        "de": "Digitale und KI-Werkzeuge gezielt anwenden",
+        "en": "Use digital and AI tools purposefully"
+      },
+      "scope": {
+        "de": "Vorhandene Werkzeuge für begrenzte Fachaufgaben bedienen, Eingaben anpassen und den Einsatz technisch nachvollziehbar halten.",
+        "en": "Operate existing tools for bounded disciplinary tasks, adapt inputs and keep a traceable technical record."
+      },
+      "boundary": {
+        "de": "T2 betrifft den Einsatz eines vorhandenen Werkzeugs; neue Abläufe und Komponentenverbindungen gehören zu T3. Ein Bedienprotokoll ersetzt weder die methodische Analysebegründung in R3 noch Integritäts- und Offenlegungsanforderungen in V1.",
+        "en": "T2 concerns using an existing tool; new workflows and component connections belong to T3. An operation record replaces neither analytic reasoning in R3 nor integrity and disclosure requirements in V1."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "Ein vorhandenes digitales oder KI-Werkzeug wird für eine begrenzte Fachaufgabe eingesetzt: passende Eingaben formulieren, Funktionen wählen und Ausgaben technisch sichern.",
+          "en": "An existing digital or AI tool is used for a bounded disciplinary task: formulate suitable inputs, select functions and preserve outputs technically."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende steuern das Werkzeug bewusst, passen Eingaben an und halten die Bedienfolge nachvollziehbar fest. Sie können bei unpassenden Ergebnissen auf eine andere Vorgehensweise wechseln.",
+          "en": "Students operate the tool deliberately, adapt inputs and retain a traceable operation record. They can switch approach when outputs are unsuitable."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt werden Eingabeübersetzung, gezielte Bedienung und technische Sicherung (T2). Methodische Analysebegründung ist R3; Entwicklung eines neuen Ablaufs ist T3.",
+          "en": "Assess task-to-input translation, purposeful operation and technical recording (T2). Analytic reasoning belongs to R3; developing a new workflow belongs to T3."
+        },
+        "exampleTask": {
+          "de": "Bearbeite eine psychologische Lernfrage mit einer vorhandenen, bedienbaren lokalen Vorlage. Vorbereitete KI-Ausgaben können darin als Beispiele dienen. Passe Eingaben und Einstellungen an und sichere eine Bedienanleitung mit Beispielausgabe.",
+          "en": "Work on a psychology learning question using an existing, operable local template. Prepared AI outputs can serve as examples within it. Adapt inputs and settings and retain operating instructions with a sample output."
+        },
+        "relatedCriterionIds": [
+          "T2.1",
+          "T2.2",
+          "T2.3"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "T2.1",
+          "text": {
+            "de": "Eine begrenzte Fachaufgabe in geeignete Eingaben, Prompts oder Bedienhandlungen übersetzen.",
+            "en": "Translate a bounded disciplinary task into suitable inputs, prompts or operations."
+          }
+        },
+        {
+          "id": "T2.2",
+          "text": {
+            "de": "Ein vorhandenes Werkzeug gezielt bedienen und Eingaben oder Einstellungen begründet anpassen.",
+            "en": "Operate an existing tool purposefully and adapt inputs or settings with justification."
+          }
+        },
+        {
+          "id": "T2.3",
+          "text": {
+            "de": "Relevante Einstellungen, Bedienfolge und Ausgaben so sichern, dass der Werkzeugeinsatz nachvollzogen werden kann.",
+            "en": "Retain relevant settings, operating steps and outputs so that the tool use can be retraced."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Eine vorgegebene Fachaufgabe mit einem vorhandenen Werkzeug bearbeiten und Eingaben sowie Ausgabe festhalten.",
+            "en": "Complete a supplied disciplinary task with an existing tool and record inputs and output."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Für eine typische Fachaufgabe Bedienhandlungen und Einstellungen selbständig anpassen und den Einsatz nachvollziehbar dokumentieren.",
+            "en": "Adapt operations and settings independently for a typical disciplinary task and document the use transparently."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Unter veränderten oder mehrdeutigen Anforderungen die Nutzung eines unbekannten Werkzeugs erschliessen, Anpassungen begründen und Grenzen der Bedienung erkennen.",
+            "en": "Learn to use an unfamiliar tool under changing or ambiguous demands, justify adaptations and recognise operational limits."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "domainId": "T",
+      "title": {
+        "de": "Systeme und Arbeitsabläufe gestalten",
+        "en": "Design systems and workflows"
+      },
+      "scope": {
+        "de": "Digitale oder KI-gestützte Arbeitsabläufe mit technischen Komponenten, menschlichen Entscheidungen und prüfbaren Übergaben entwerfen und erproben.",
+        "en": "Design and test digital or AI-assisted workflows with technical components, human decisions and verifiable handovers."
+      },
+      "boundary": {
+        "de": "Hier zählen Systementwurf, Integration und Funktionsprüfung. Die Bedienung eines vorhandenen Werkzeugs liegt bei T2, Teamabsprachen bei K3, sachliche Belegqualität bei R4 und ethische Zulässigkeit bei V1.",
+        "en": "The focus is system design, integration and functional testing. Operating an existing tool belongs to T2, team agreements to K3, evidential quality to R4 and ethical acceptability to V1."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Bestandteil eines neu entworfenen Ablaufs sein oder beim Erstellen eines Prototyps helfen. Menschen bestimmen Aufgabenzerlegung, Schnittstellen und kontrollierbare Eingriffe.",
+          "en": "AI can be part of a newly designed workflow or assist in prototyping. People determine task decomposition, interfaces and controllable intervention points."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende entwerfen die Struktur, verbinden Komponenten und prüfen Ausfälle. Sie können erklären, wann ein System an einen Menschen übergeben oder angehalten werden muss.",
+          "en": "Students design the structure, connect components and test failures. They can explain when a system must hand over to a person or stop."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt werden Entwurf, Integration und Funktionstests (T3). Eine ethische Freigabe wird dadurch nicht nachgewiesen; sie gehört zu V1.",
+          "en": "Assess design, integration and functional tests (T3). This does not establish ethical acceptability, which belongs to V1."
+        },
+        "exampleTask": {
+          "de": "Entwirf einen kleinen Lernprototyp mit vorbereiteten KI-Antworten, Quellenprüfung durch Menschen und einem Abbruchpfad. Teste fehlende Eingaben, widersprüchliche Ausgaben und eine bewusste menschliche Übersteuerung.",
+          "en": "Design a small learning prototype with prepared AI responses, human source checking and a stop path. Test missing inputs, conflicting outputs and deliberate human override."
+        },
+        "relatedCriterionIds": [
+          "T3.1",
+          "T3.2",
+          "T3.3",
+          "V1.2"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "T3.1",
+          "text": {
+            "de": "Eine Fachaufgabe in überprüfbare Schritte, menschliche Entscheidungen und definierte Schnittstellen zerlegen.",
+            "en": "Decompose a disciplinary task into testable steps, human decisions and defined interfaces."
+          }
+        },
+        {
+          "id": "T3.2",
+          "text": {
+            "de": "Komponenten zu einem Ablauf oder Prototyp mit klaren Eingabe- und Ausgabebedingungen verbinden.",
+            "en": "Connect components into a workflow or prototype with clear input and output conditions."
+          }
+        },
+        {
+          "id": "T3.3",
+          "text": {
+            "de": "Funktionstests, Fehlerbehandlung und menschliche Eingriffspunkte entwickeln und dokumentieren.",
+            "en": "Develop and document functional tests, error handling and points for human intervention."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Einen kleinen vorstrukturierten Ablauf ergänzen und einen vorgegebenen Fehlerfall prüfen.",
+            "en": "Complete a small structured workflow and test a supplied failure case."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Einen eigenen Ablauf aus vorhandenen Komponenten aufbauen und mit begründeten Testfällen prüfen.",
+            "en": "Build a workflow from existing components and evaluate it with justified test cases."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Einen komplexen Ablauf unter wechselnden Anforderungen mit Schnittstellen, Ausfalltests und kontrollierbaren menschlichen Eingriffen entwickeln.",
+            "en": "Develop a complex workflow under changing demands with interfaces, failure tests and controllable human intervention."
+          }
+        }
+      ]
+    },
+    {
+      "id": "V1",
+      "domainId": "V",
+      "title": {
+        "de": "Ethisch und rechtlich verantwortlich handeln",
+        "en": "Act ethically and responsibly"
+      },
+      "scope": {
+        "de": "Rechte, Risiken, Integrität und verantwortbare Handlungsgrenzen fallbezogen abwägen.",
+        "en": "Weigh rights, risks, integrity and defensible limits to action in context."
+      },
+      "boundary": {
+        "de": "KI-Ethik ist eine Ausprägung dieser Kompetenz. Fairness wird normativ hier, statistische Gruppenunterschiede bei R2/R3 beurteilt.",
+        "en": "AI ethics is an application of this competence. Fairness is judged normatively here; statistical group differences belong to R2/R3."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI-Nutzung verändert Schutzinteressen, Autonomie und die Verteilung von Folgen. Auch Machtverhältnisse, Zugang, längerfristige soziale Auswirkungen und Ressourcenverbrauch gehören zur Abwägung.",
+          "en": "AI use changes protected interests, autonomy and the distribution of consequences. Power relations, access, longer-term social effects and resource use also inform deliberation."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende wägen Nutzen und Risiken aus Sicht betroffener Menschen ab, sichern Einwilligung und Integrität und begründen Grenzen der Delegation. Sie können einen Einsatz auch ablehnen.",
+          "en": "Students weigh benefits and risks from affected people’s perspectives, safeguard consent and integrity and justify limits to delegation. They may also decide against use."
+        },
+        "assessmentFocus": {
+          "de": "Beurteilt werden normative Abwägung und verantwortbares Vorgehen (V1). KI-Ethik I–III vertieft dieselbe Kompetenz unter steigenden Anforderungen und schafft keine zusätzliche Kategorie.",
+          "en": "Assess ethical deliberation and defensible conduct (V1). AI ethics I–III revisits the same competence at increasing demands and creates no additional category."
+        },
+        "exampleTask": {
+          "de": "Entscheide über eine fiktive KI-Lernhilfe, deren Nutzen und Langzeitfolgen unsicher sind. Berücksichtige Studierende mit unterschiedlichen Ressourcen, Datenweitergabe und das Recht auf eine Alternative; dokumentiere Bedingungen und Abbruchgründe.",
+          "en": "Decide on a fictional AI learning aid whose benefits and long-term effects are uncertain. Consider students with differing resources, data sharing and access to an alternative; record conditions and reasons to stop."
+        },
+        "relatedCriterionIds": [
+          "V1.1",
+          "V1.2",
+          "V1.3"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "V1.1",
+          "text": {
+            "de": "Betroffene, Schutzinteressen und mögliche kurz- und langfristige soziale oder ökologische Folgen einer Handlung identifizieren.",
+            "en": "Identify affected parties, protected interests and possible short- and long-term social or environmental consequences."
+          }
+        },
+        {
+          "id": "V1.2",
+          "text": {
+            "de": "Handlungsoptionen anhand berufsethischer Grundsätze und einschlägiger Regeln abwägen.",
+            "en": "Weigh options against professional ethical principles and applicable rules."
+          }
+        },
+        {
+          "id": "V1.3",
+          "text": {
+            "de": "Einwilligung, Datenschutz, Integrität und Grenzen eigener Verantwortung im Vorgehen absichern.",
+            "en": "Address consent, privacy, integrity and limits of personal responsibility in the procedure."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "In einem fiktiven Fall ein Datenschutz- oder Integritätsproblem erkennen und eine begründete Schutzmassnahme nennen.",
+            "en": "Identify a privacy or integrity issue in a fictional case and give a justified protective measure."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Für eine typische Fachaufgabe Handlungsoptionen ethisch abwägen und Schutzmassnahmen begründen.",
+            "en": "Weigh ethical options for a typical disciplinary task and justify safeguards."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Bei Zielkonflikten und unklaren Systemfolgen eine verantwortbare Entscheidung mit Grenzen und Eskalationsbedarf dokumentieren.",
+            "en": "Document a defensible decision under competing goals and uncertain system effects, including limits and escalation needs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "V2",
+      "domainId": "V",
+      "title": {
+        "de": "Eigenes Lernen und Handeln steuern",
+        "en": "Regulate learning and professional development"
+      },
+      "scope": {
+        "de": "Den eigenen Lern- und Arbeitsprozess anhand von Rückmeldung und konkreten Belegen weiterentwickeln.",
+        "en": "Develop personal learning and working practices using feedback and concrete evidence."
+      },
+      "boundary": {
+        "de": "Selbstvertrauen ist ein mögliches Selbsturteil, kein automatisch aus Aufgaben abgeleiteter Kompetenzwert. Die fachliche Richtigkeit wird im jeweils zuständigen Fachkriterium beurteilt; Quellen- und Befundkritik gehört zu R4.",
+        "en": "Confidence may be self-reported; it is not a competence score inferred from tasks. Disciplinary correctness is assessed under the relevant criterion; source and evidence appraisal belongs to R4."
+      },
+      "aiIntegration": {
+        "possibleRole": {
+          "de": "KI kann Rückmeldung, Übungsvarianten und Lernplanung unterstützen. Sie kann zugleich eigene Denkarbeit verdrängen oder ein unbegründetes Gefühl von Verständnis fördern.",
+          "en": "AI can support feedback, practice variation and learning plans. It may also displace personal reasoning or create an unwarranted sense of understanding."
+        },
+        "learnerResponsibility": {
+          "de": "Studierende setzen eigene Ziele, bestimmen Hilfen und prüfen ihr Verständnis auch ohne KI. Sie passen Strategien anhand tatsächlicher Schwierigkeiten an und holen bei Bedarf Unterstützung.",
+          "en": "Students set their own goals, choose support and check understanding without AI as well. They adapt strategies to actual difficulties and seek help when needed."
+        },
+        "assessmentFocus": {
+          "de": "Hier zählt begründete Selbststeuerung anhand von Lernbelegen (V2). Zuversicht bleibt Selbstbericht; die fachliche Richtigkeit einer Lösung wird im jeweiligen Fachkriterium beurteilt.",
+          "en": "Assess reasoned self-regulation using learning evidence (V2). Confidence remains self-report; disciplinary correctness is assessed under the relevant criterion."
+        },
+        "exampleTask": {
+          "de": "Löse eine Aufgabe zunächst selbst, nutze dann vorbereitete KI-Rückmeldung und bearbeite später eine Transferaufgabe ohne Hilfe. Vergleiche erwartetes und gezeigtes Verständnis und passe deinen Lernplan begründet an.",
+          "en": "Attempt a task independently, then use prepared AI feedback and later attempt an unaided transfer task. Compare expected and demonstrated understanding and justify changes to your learning plan."
+        },
+        "relatedCriterionIds": [
+          "V2.1",
+          "V2.2",
+          "V2.3"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "V2.1",
+          "text": {
+            "de": "Eigene Ziele, Ressourcen und Unterstützungsbedarf realistisch benennen.",
+            "en": "Identify personal goals, resources and support needs realistically."
+          }
+        },
+        {
+          "id": "V2.2",
+          "text": {
+            "de": "Geeignete Lern- oder Arbeitsstrategien planen und durchführen.",
+            "en": "Plan and use suitable learning or working strategies."
+          }
+        },
+        {
+          "id": "V2.3",
+          "text": {
+            "de": "Den eigenen Lern- und Selbststeuerungsprozess anhand von Rückmeldung und Leistungssituationen überprüfen und anpassen, auch wenn Werkzeuge eigenes Denken übernehmen könnten.",
+            "en": "Review and adapt personal learning and self-regulation using feedback and performance situations, including when tools could displace personal reasoning."
+          }
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "description": {
+            "de": "Einen kleinen Lernplan ausführen und eine hilfreiche Anpassung begründen.",
+            "en": "Carry out a small learning plan and explain a useful adjustment."
+          }
+        },
+        {
+          "level": 2,
+          "description": {
+            "de": "Den eigenen Lernprozess anhand konkreter Schwierigkeiten selbständig anpassen.",
+            "en": "Adapt personal learning independently in response to specific difficulties."
+          }
+        },
+        {
+          "level": 3,
+          "description": {
+            "de": "Die eigene Entwicklung bei offenen, langfristigen Aufgaben steuern und bei Bedarf gezielt Unterstützung einholen.",
+            "en": "Manage personal development in open, sustained tasks and seek targeted support when needed."
+          }
+        }
+      ]
+    }
+  ],
+  "recordingRules": {
+    "criterionOwner": "one-criterion-one-competency",
+    "opportunity": "A planned module outcome is a learning opportunity, not attained competence.",
+    "gamePractice": "A quiz or quest records practice in the game. It does not certify a competence level.",
+    "evidence": "An evidence record needs criterionId, targetLevel, contextId, taskId, evidenceType, judgement and feedback. Self-report stays separate from assessed work.",
+    "recurrence": "Repeated practice uses the same criterionId. A later task may target a higher level; do not create new competencies or add level numbers together.",
+    "aggregation": "No total ability score, ECTS-derived competence level, career-fit percentage or automatic promotion. Show learning opportunities and practice separately. Unknown is not zero.",
+    "multiCriterionTask": "One task may provide evidence for several distinct criteria. Each criterion is judged once; framework source tags and AI contexts never add points.",
+    "levelInterpretation": "Any assessed level is conditional on the task, context and evidence. Level III does not imply universal mastery or authorisation to practise."
+  },
+  "spiralExample": {
+    "competencyId": "V1",
+    "contextId": "about-ai",
+    "label": {
+      "de": "KI-Ethik",
+      "en": "AI ethics"
+    },
+    "isModule": false,
+    "occasions": [
+      {
+        "level": 1,
+        "moduleIds": [
+          "003"
+        ],
+        "task": {
+          "de": "In einem fiktiven Prompt personenbezogene Daten erkennen und eine begründete Alternative formulieren.",
+          "en": "Identify personal data in a fictional prompt and propose a justified alternative."
+        }
+      },
+      {
+        "level": 2,
+        "moduleIds": [
+          "102",
+          "BA"
+        ],
+        "task": {
+          "de": "Für eine Untersuchung KI-Nutzung, Einwilligung und Eigenleistung abwägen und den Entscheid dokumentieren.",
+          "en": "Weigh AI use, consent and personal contribution in an investigation and document the decision."
+        }
+      },
+      {
+        "level": 3,
+        "moduleIds": [
+          "600",
+          "MA"
+        ],
+        "task": {
+          "de": "Bei einem fiktiven Forschungs- oder Praxisprojekt Nutzen, Risiken und Verantwortlichkeiten eines KI-Systems unter Unsicherheit begründen.",
+          "en": "Justify benefits, risks and responsibilities of an AI system under uncertainty in a fictional research or practice project."
+        }
+      }
+    ],
+    "note": {
+      "de": "I–III bezeichnen hier Zielniveaus derselben Kompetenz. Die genannten Module bieten mögliche Lerngelegenheiten; daraus entstehen keine neuen Module oder verbindlichen Modulanforderungen.",
+      "en": "I–III denote target levels of the same competence. The named modules offer possible learning opportunities; this creates neither new modules nor binding module requirements."
+    }
+  },
+  "legacyCrosswalk": [
+    {
+      "legacyId": "Fa1",
+      "competencyIds": [
+        "P1"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fa2",
+      "competencyIds": [
+        "R1"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fa3",
+      "competencyIds": [
+        "R3"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fa4",
+      "competencyIds": [
+        "R4"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fa5",
+      "competencyIds": [
+        "R2",
+        "H1"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fa6",
+      "competencyIds": [
+        "K1"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fa7",
+      "competencyIds": [
+        "V1"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fa8",
+      "competencyIds": [
+        "H2"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fa9",
+      "competencyIds": [
+        "P2"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fa10",
+      "competencyIds": [
+        "V2"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "KI1",
+      "competencyIds": [
+        "T2"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "KI2",
+      "competencyIds": [
+        "T2",
+        "T3"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "KI3",
+      "competencyIds": [
+        "K3",
+        "T2"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "KI4",
+      "competencyIds": [
+        "T1"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "KI5",
+      "competencyIds": [
+        "V1"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "KI6",
+      "competencyIds": [
+        "R4",
+        "T3"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fu1",
+      "competencyIds": [
+        "R1",
+        "H2",
+        "T3"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fu2",
+      "competencyIds": [
+        "R4",
+        "V2"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    },
+    {
+      "legacyId": "Fu3",
+      "competencyIds": [
+        "V1",
+        "K1",
+        "K2",
+        "K3"
+      ],
+      "rule": "conceptual-crosswalk-only; never transfer or add old scores"
+    }
+  ],
+  "sourceCrosswalk": [
+    {
+      "sourceId": "phsg",
+      "mapping": [
+        [
+          "Anwenden",
+          [
+            "T2"
+          ]
+        ],
+        [
+          "Gestalten",
+          [
+            "T3"
+          ]
+        ],
+        [
+          "Zusammenarbeiten",
+          [
+            "K3"
+          ]
+        ],
+        [
+          "Verstehen",
+          [
+            "T1"
+          ]
+        ],
+        [
+          "Verantworten",
+          [
+            "V1"
+          ]
+        ],
+        [
+          "Evaluieren",
+          [
+            "R4",
+            "T3"
+          ]
+        ]
+      ],
+      "note": "Separate epistemic evaluation (R4) from technical functional testing (T3). PHSG already synthesises AIComp; do not stack them."
+    },
+    {
+      "sourceId": "aicomp",
+      "mapping": [
+        [
+          "Arbeits- und gestaltungsbezogene Kompetenzen",
+          [
+            "R1",
+            "H2",
+            "T2",
+            "T3"
+          ]
+        ],
+        [
+          "Personenbezogene Kompetenzen",
+          [
+            "R4",
+            "V2"
+          ]
+        ],
+        [
+          "Soziale Kompetenzen",
+          [
+            "V1",
+            "K1",
+            "K2",
+            "K3"
+          ]
+        ]
+      ],
+      "note": "The twelve source fields are cross-references, not twelve extra scores. Self-efficacy is not inferred from task completion."
+    },
+    {
+      "sourceId": "unesco-students",
+      "mapping": [
+        [
+          "Human-centred mindset / ethics",
+          [
+            "V1",
+            "V2"
+          ]
+        ],
+        [
+          "Techniques and applications / system design",
+          [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        ]
+      ],
+      "note": "School-oriented framework; adapted cautiously. Its Understand/Apply/Create levels are not university degree levels."
+    },
+    {
+      "sourceId": "uzh-eth",
+      "mapping": [
+        [
+          "AI fundamentals and applications",
+          [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        ],
+        [
+          "Teaching and learning",
+          [
+            "K1",
+            "H2",
+            "R2",
+            "H1",
+            "V2"
+          ]
+        ],
+        [
+          "Ethics, privacy and security",
+          [
+            "V1"
+          ]
+        ]
+      ],
+      "note": "Designed for lecturers. Pedagogical expertise is relevant to teaching roles, not a compulsory generic student AI score."
+    },
+    {
+      "sourceId": "europsy",
+      "mapping": [
+        [
+          "Professional activities",
+          [
+            "H1",
+            "H2",
+            "K1",
+            "K2",
+            "K3",
+            "V1"
+          ]
+        ],
+        [
+          "Scientific foundation",
+          [
+            "P1",
+            "P2",
+            "R1",
+            "R2",
+            "R3",
+            "R4"
+          ]
+        ]
+      ],
+      "note": "Role profiles below are design views of professional activities, not certification requirements or eligibility judgements."
+    }
+  ],
+  "sources": [
+    {
+      "id": "phsg",
+      "title": "KI-Kompetenzrahmen PHSG, Version 1, August 2025",
+      "url": "https://proforis.phsg.ch/server/api/core/bitstreams/f88eb5fc-33f3-47bf-b572-6cb23b7acc0a/content",
+      "role": "Six operational and reflective AI competence dimensions; synthesis of existing frameworks."
+    },
+    {
+      "id": "aicomp",
+      "title": "AIComp: Future Skills für eine durch KI geprägte Lebens- und Arbeitswelt, 2024",
+      "url": "https://ai-comp.org/downloads/AIComp_Part_2_Kompetenzmodell_final.pdf",
+      "role": "Twelve fields in three domains; survey-based model, not an objective proficiency test."
+    },
+    {
+      "id": "aicomp-guide",
+      "title": "KI-Future Skills integrieren, 2026",
+      "url": "https://ai-comp.org/downloads/20260114_Broschuere_KI-Future-Skills-integrieren.pdf",
+      "role": "Integration into learning tasks rather than parallel additive scores."
+    },
+    {
+      "id": "nextskills",
+      "title": "Future Skills in der Bildungsforschung, 2022",
+      "url": "https://nextskills.org/downloads/2022-01-Future-Skills-Bildungsforschung_final_Vs_2.pdf",
+      "role": "Self-directed action and future-oriented capability; psychology expertise must remain explicit."
+    },
+    {
+      "id": "uzh-eth",
+      "title": "KI-Kompetenzrahmen für Dozierende der UZH und ETH Zürich, 2025",
+      "url": "https://teachingtools.uzh.ch/asset/693bd9c4110566aa2906d3b2/download",
+      "role": "Lecturer role: foundations, teaching and learning, ethics and legal aspects."
+    },
+    {
+      "id": "unesco-students",
+      "title": "UNESCO AI competency framework for students, 2024",
+      "url": "https://www.unesco.org/en/articles/ai-competency-framework-students",
+      "role": "Human agency, ethics, technical understanding and system design."
+    },
+    {
+      "id": "unesco-teachers",
+      "title": "UNESCO AI competency framework for teachers, 2024",
+      "url": "https://www.unesco.org/en/articles/ai-competency-framework-teachers",
+      "role": "Teaching-specific AI pedagogy and professional learning; not all fields transfer to all psychology students."
+    },
+    {
+      "id": "europsy",
+      "title": "EFPA EuroPsy regulations, 2025",
+      "url": "https://www.efpa.eu/wp-content/uploads/2026/04/EuroPsy-Regulations-2025.pdf",
+      "role": "Professional activities and scientific foundation; not a substitute for national professional requirements."
+    }
+  ]
+}

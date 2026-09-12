@@ -1,0 +1,19 @@
+# Preserve the bytes identified by the source and publication SHA256 records.
+# These inherited sources were read with CRLF; make checkout consistent on all OSs.
+/js/daten-struktur.js text eol=crlf
+/js/daten-texte.js text eol=crlf
+/js/daten-quiz.js text eol=crlf
+/js/daten-stufen.js text eol=crlf
+
+# These UTF-8 inputs/outputs are hashed as files, so Git must not rewrite newlines.
+/content/** -text whitespace=cr-at-eol
+/companion/** -text whitespace=cr-at-eol
+/UnityProject/Assets/**/*.json -text whitespace=cr-at-eol
+/web-template/qa/*.json -text whitespace=cr-at-eol
+/art/**/*.json -text whitespace=cr-at-eol
+
+# Unity serializes empty YAML values with a trailing space.
+*.meta whitespace=-blank-at-eol
+*.asset whitespace=-blank-at-eol
+*.unity whitespace=-blank-at-eol
+/UnityProject/Assets/TutorialInfo/** whitespace=-blank-at-eol

@@ -1,0 +1,7 @@
+{
+  "name": "Kompetenzhaus.Editor",
+  "rootNamespace": "Kompetenzhaus.Editor",
+  "references": ["Kompetenzhaus.Runtime"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

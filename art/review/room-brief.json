@@ -1,0 +1,73 @@
+{
+  "schema": "game-room.room-brief.v1",
+  "roomId": "kompetenzhaus-campus",
+  "family": "gameplay-room",
+  "purpose": "Build Bachelor and Master psychology competence houses through module learning; explore shared evidence, research and practice quests on foot.",
+  "runtimeSurface": "Unity 6000.6 WebGL via GitHub Pages; desktop/laptop primary, reduced-detail accessible fallback",
+  "boundsMeters": [
+    28,
+    24,
+    10
+  ],
+  "hero": {
+    "id": "evidence-table",
+    "role": "Shared evidence comparison workshop at the centre of the two study paths",
+    "reservedBoundsMeters": [
+      8,
+      6.8,
+      3.2
+    ]
+  },
+  "symmetry": {
+    "mode": "none",
+    "order": 1,
+    "appliesTo": [],
+    "exceptions": [
+      "Bachelor and Master have related architecture but different content, progression and upper-floor build layouts."
+    ]
+  },
+  "circulation": {
+    "description": "Level arrival2.4m wide; central courtyard leads to distinct degree houses. Paths and hero working clearance at least1.8m. Lift travel provides selectable level access.",
+    "minimumClearanceMeters": 1.8
+  },
+  "productionCamera": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "location": [
+      28,
+      -34,
+      30
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ],
+    "verticalFovDegrees": 45
+  },
+  "performanceBudget": {
+    "maxSceneTriangles": 160000,
+    "maxVLowBytes": 20000000,
+    "maxHighTextureBytes": 12000000
+  },
+  "creditBudget": {
+    "maximumCredits": 0,
+    "approvalRequired": true
+  },
+  "environment": {
+    "type": "none",
+    "identity": "Local authored sky and lights",
+    "source": "",
+    "assignmentKey": ""
+  },
+  "artifacts": {
+    "floorPlan": "floor-plan.png",
+    "reflectedCeilingPlan": "ceiling-plan.png",
+    "planMetadata": "plan-metadata.json",
+    "wallElevations": [],
+    "visualTarget": "../references/two-houses-concept.png",
+    "openingContactSheet": "floor-plan.png"
+  }
+}

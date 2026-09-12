@@ -1,3 +1,37 @@
 90_Recherche/
 10_Modulkatalog-Zukunft/
 .DS_Store
+
+# Unity: sources only, never generated editor caches or local credentials.
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
+**/.vs/
+**/*.csproj
+**/*.sln
+**/*.slnx
+**/__pycache__/
+**/*.pyc
+**/*.suo
+**/*.user
+**/*.pidb
+**/*.booproj
+**/*.unitypackage
+**/sysinfo.txt
+**/crashlytics-build.properties
+**/.env
+**/.env.*
+!.env.example
+
+# Local intermediate production files; approved source assets live in art/.
+art/work/
+# Local layout-review intermediate contains Blender's local path metadata.
+art/review/function-layout.blend
+**/*.blend1
+**/*.blend2
+local-private/
+build-local/

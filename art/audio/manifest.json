@@ -1,0 +1,119 @@
+{
+  "schema": "kompetenzhaus.audio",
+  "version": 1,
+  "provenance": "Original deterministic synthesis by tools/generate-audio.mjs. No recordings, external assets, network calls or billable services.",
+  "format": {
+    "codec": "PCM",
+    "sampleRate": 44100,
+    "channels": 1,
+    "bitsPerSample": 16
+  },
+  "integration": {
+    "master": "Respect the sound toggle; do not autoplay before the player enables sound.",
+    "ambience": "Optional. Suggested playback volume 0.35; use 0.5 s fades when starting/stopping.",
+    "footsteps": "Alternate A/B only while the avatar moves; do not trigger every render frame.",
+    "hover": "Optional, disabled by default to avoid auditory clutter.",
+    "signals": "All feedback must also have a visible equivalent."
+  },
+  "sounds": [
+    {
+      "name": "ui-hover",
+      "duration": 0.08,
+      "description": "Quiet, rounded wooden touch for optional hover feedback.",
+      "loop": false,
+      "peak": 0.093987,
+      "rms": 0.023729,
+      "file": "ui-hover.wav",
+      "bytes": 7100,
+      "sha256": "aa0be0a60b7716c9a217d28c5bd8a6c6486fb62d3b793d28fd934cea6290284b"
+    },
+    {
+      "name": "ui-select",
+      "duration": 0.18,
+      "description": "Soft two-part pluck for selection and opening a card.",
+      "loop": false,
+      "peak": 0.276848,
+      "rms": 0.065121,
+      "file": "ui-select.wav",
+      "bytes": 15920,
+      "sha256": "09b0d6bd3af432e5477ee1ad95598064cbcd63843ea71bd515cef0064bf6f937"
+    },
+    {
+      "name": "footstep-a",
+      "duration": 0.19,
+      "description": "Muted gravel/oak footstep; alternate A and B, tied to actual movement.",
+      "loop": false,
+      "peak": 0.287123,
+      "rms": 0.039269,
+      "file": "footstep-a.wav",
+      "bytes": 16802,
+      "sha256": "d32a0dc3b353cec64c00ad57a3ec978a274a0b82cf7547d230650495b90e5357"
+    },
+    {
+      "name": "footstep-b",
+      "duration": 0.19,
+      "description": "Muted gravel/oak footstep; alternate A and B, tied to actual movement.",
+      "loop": false,
+      "peak": 0.344181,
+      "rms": 0.042651,
+      "file": "footstep-b.wav",
+      "bytes": 16802,
+      "sha256": "e3ace353504c45b7a383cc72310d831a93a9df25cb2a8bf7de35982063de73f7"
+    },
+    {
+      "name": "build-place",
+      "duration": 0.44,
+      "description": "Warm construction impact: low body, short wood knock and a restrained grain.",
+      "loop": false,
+      "peak": 0.452594,
+      "rms": 0.07242,
+      "file": "build-place.wav",
+      "bytes": 38852,
+      "sha256": "362f816991944e6d5fd38844b212cfc9beccd9688a8a865414ad72567421a1fd"
+    },
+    {
+      "name": "quest-complete",
+      "duration": 0.95,
+      "description": "Three gentle ascending notes for a completed learning task.",
+      "loop": false,
+      "peak": 0.349822,
+      "rms": 0.080717,
+      "file": "quest-complete.wav",
+      "bytes": 83834,
+      "sha256": "0ba369c37380d495cda8bceb145854b2d8b1b61035cdc76ffebfa1e58c6817b7"
+    },
+    {
+      "name": "milestone",
+      "duration": 1.45,
+      "description": "Short warm major-sixth resolution; reserve for meaningful milestones.",
+      "loop": false,
+      "peak": 0.429883,
+      "rms": 0.08308,
+      "file": "milestone.wav",
+      "bytes": 127934,
+      "sha256": "8183c14d1f4208cd0ad3a3920a441a66876e9c31e89e6d4f2a898df9896ffeb0"
+    },
+    {
+      "name": "ui-unavailable",
+      "duration": 0.28,
+      "description": "Quiet descending cue; no buzzer or alarm.",
+      "loop": false,
+      "peak": 0.146,
+      "rms": 0.039165,
+      "file": "ui-unavailable.wav",
+      "bytes": 24740,
+      "sha256": "cebab4e6052dd2793f61318b6a0d5d1d544c13853348b4a1acc3a932eacd797c"
+    },
+    {
+      "name": "courtyard-ambience",
+      "duration": 16,
+      "description": "Subtle seamless tonal courtyard bed. Start only on opt-in; loop quietly.",
+      "loop": true,
+      "peak": 0.063142,
+      "rms": 0.02272,
+      "file": "courtyard-ambience.wav",
+      "bytes": 1411244,
+      "sha256": "e9c602ccca7aedc78c3a54296f19768843800c1df82f4cb3ef67a16eb6fabdbf"
+    }
+  ]
+}

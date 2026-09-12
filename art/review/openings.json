@@ -1,0 +1,190 @@
+{
+  "schema": "game-room.opening-schedule.v1",
+  "roomId": "kompetenzhaus-campus",
+  "primaryArrival": {
+    "openingId": "arrival",
+    "exception": ""
+  },
+  "openings": [
+    {
+      "id": "arrival",
+      "wallId": "Main arrival south",
+      "type": "door",
+      "center": [
+        0,
+        -10.8,
+        1.35
+      ],
+      "dimensions": [
+        2.4,
+        0.6,
+        2.7
+      ],
+      "purpose": "Level accessible arrival",
+      "destination": "Courtyard",
+      "state": "true-through-opening"
+    },
+    {
+      "id": "west-research",
+      "wallId": "West inner",
+      "type": "door",
+      "center": [
+        -7,
+        -3,
+        1.35
+      ],
+      "dimensions": [
+        0.6,
+        2.4,
+        2.7
+      ],
+      "purpose": "Research room access",
+      "destination": "Methods studio",
+      "state": "true-through-opening"
+    },
+    {
+      "id": "west-social",
+      "wallId": "West inner",
+      "type": "door",
+      "center": [
+        -7,
+        5,
+        1.35
+      ],
+      "dimensions": [
+        0.6,
+        2.4,
+        2.7
+      ],
+      "purpose": "Conversation room access",
+      "destination": "Discussion studio",
+      "state": "true-through-opening"
+    },
+    {
+      "id": "east-cognition",
+      "wallId": "East inner",
+      "type": "door",
+      "center": [
+        7,
+        -3,
+        1.35
+      ],
+      "dimensions": [
+        0.6,
+        2.4,
+        2.7
+      ],
+      "purpose": "Experiment room access",
+      "destination": "Cognition studio",
+      "state": "true-through-opening"
+    },
+    {
+      "id": "east-library",
+      "wallId": "East inner",
+      "type": "door",
+      "center": [
+        7,
+        5,
+        1.35
+      ],
+      "dimensions": [
+        0.6,
+        2.4,
+        2.7
+      ],
+      "purpose": "Evidence archive access",
+      "destination": "Library",
+      "state": "true-through-opening"
+    },
+    {
+      "id": "ai-workshop",
+      "wallId": "North workshop front",
+      "type": "door",
+      "center": [
+        0,
+        6,
+        1.35
+      ],
+      "dimensions": [
+        2.4,
+        0.6,
+        2.7
+      ],
+      "purpose": "Hero workshop entry",
+      "destination": "AI evidence workshop",
+      "state": "true-through-opening"
+    },
+    {
+      "id": "west-passage",
+      "wallId": "West partition",
+      "type": "door",
+      "center": [
+        -10.4,
+        1,
+        1.35
+      ],
+      "dimensions": [
+        2.4,
+        0.6,
+        2.7
+      ],
+      "purpose": "Connected studio circulation",
+      "destination": "West studios",
+      "state": "true-through-opening"
+    },
+    {
+      "id": "east-passage",
+      "wallId": "East partition",
+      "type": "door",
+      "center": [
+        10.4,
+        1,
+        1.35
+      ],
+      "dimensions": [
+        2.4,
+        0.6,
+        2.7
+      ],
+      "purpose": "Connected studio circulation",
+      "destination": "East studios",
+      "state": "true-through-opening"
+    },
+    {
+      "id": "west-front",
+      "wallId": "West front",
+      "type": "door",
+      "center": [
+        -10.4,
+        -6,
+        1.35
+      ],
+      "dimensions": [
+        2.4,
+        0.6,
+        2.7
+      ],
+      "purpose": "Secondary arrival",
+      "destination": "Methods studio",
+      "state": "true-through-opening"
+    },
+    {
+      "id": "east-front",
+      "wallId": "East front",
+      "type": "door",
+      "center": [
+        10.4,
+        -6,
+        1.35
+      ],
+      "dimensions": [
+        2.4,
+        0.6,
+        2.7
+      ],
+      "purpose": "Secondary arrival",
+      "destination": "Cognition studio",
+      "state": "true-through-opening"
+    }
+  ]
+}

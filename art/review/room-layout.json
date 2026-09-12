@@ -1,0 +1,273 @@
+{
+  "schema": "game-room.layout.v1",
+  "roomId": "kompetenzhaus-campus",
+  "units": "meters",
+  "surfaces": [
+    {
+      "id": "Bachelor outer",
+      "type": "wall",
+      "center": [
+        -13.8,
+        2,
+        1.6
+      ],
+      "dimensions": [
+        0.24,
+        16,
+        3.2
+      ]
+    },
+    {
+      "id": "Master outer",
+      "type": "wall",
+      "center": [
+        13.8,
+        2,
+        1.6
+      ],
+      "dimensions": [
+        0.24,
+        16,
+        3.2
+      ]
+    },
+    {
+      "id": "Bachelor rear",
+      "type": "wall",
+      "center": [
+        -10.4,
+        10,
+        1.6
+      ],
+      "dimensions": [
+        6.8,
+        0.24,
+        3.2
+      ]
+    },
+    {
+      "id": "Master rear",
+      "type": "wall",
+      "center": [
+        10.4,
+        10,
+        1.6
+      ],
+      "dimensions": [
+        6.8,
+        0.24,
+        3.2
+      ]
+    },
+    {
+      "id": "Workshop rear",
+      "type": "wall",
+      "center": [
+        0,
+        12.8,
+        1.6
+      ],
+      "dimensions": [
+        8,
+        0.24,
+        3.2
+      ]
+    },
+    {
+      "id": "Workshop west",
+      "type": "wall",
+      "center": [
+        -4,
+        9.4,
+        1.6
+      ],
+      "dimensions": [
+        0.24,
+        6.8,
+        3.2
+      ]
+    },
+    {
+      "id": "Workshop east",
+      "type": "wall",
+      "center": [
+        4,
+        9.4,
+        1.6
+      ],
+      "dimensions": [
+        0.24,
+        6.8,
+        3.2
+      ]
+    },
+    {
+      "id": "Main arrival south",
+      "type": "wall",
+      "center": [
+        0,
+        -10.8,
+        0.45
+      ],
+      "dimensions": [
+        28,
+        0.24,
+        0.9
+      ]
+    },
+    {
+      "id": "West inner",
+      "type": "wall",
+      "center": [
+        -7,
+        2,
+        1.6
+      ],
+      "dimensions": [
+        0.24,
+        16,
+        3.2
+      ]
+    },
+    {
+      "id": "East inner",
+      "type": "wall",
+      "center": [
+        7,
+        2,
+        1.6
+      ],
+      "dimensions": [
+        0.24,
+        16,
+        3.2
+      ]
+    },
+    {
+      "id": "North workshop front",
+      "type": "wall",
+      "center": [
+        0,
+        6,
+        1.6
+      ],
+      "dimensions": [
+        8,
+        0.24,
+        3.2
+      ]
+    },
+    {
+      "id": "West partition",
+      "type": "wall",
+      "center": [
+        -10.4,
+        1,
+        1.6
+      ],
+      "dimensions": [
+        6.8,
+        0.24,
+        3.2
+      ]
+    },
+    {
+      "id": "East partition",
+      "type": "wall",
+      "center": [
+        10.4,
+        1,
+        1.6
+      ],
+      "dimensions": [
+        6.8,
+        0.24,
+        3.2
+      ]
+    },
+    {
+      "id": "West front",
+      "type": "wall",
+      "center": [
+        -10.4,
+        -6,
+        1.6
+      ],
+      "dimensions": [
+        6.8,
+        0.24,
+        3.2
+      ]
+    },
+    {
+      "id": "East front",
+      "type": "wall",
+      "center": [
+        10.4,
+        -6,
+        1.6
+      ],
+      "dimensions": [
+        6.8,
+        0.24,
+        3.2
+      ]
+    },
+    {
+      "id": "West ceiling",
+      "type": "ceiling",
+      "center": [
+        -10.4,
+        2,
+        3.35
+      ],
+      "dimensions": [
+        6.8,
+        16,
+        0.3
+      ]
+    },
+    {
+      "id": "East ceiling",
+      "type": "ceiling",
+      "center": [
+        10.4,
+        2,
+        3.35
+      ],
+      "dimensions": [
+        6.8,
+        16,
+        0.3
+      ]
+    },
+    {
+      "id": "Workshop ceiling",
+      "type": "ceiling",
+      "center": [
+        0,
+        9.4,
+        3.35
+      ],
+      "dimensions": [
+        8,
+        6.8,
+        0.3
+      ]
+    }
+  ],
+  "instances": [],
+  "productionCamera": {
+    "location": [
+      28,
+      -34,
+      30
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ],
+    "verticalFovDegrees": 45
+  }
+}

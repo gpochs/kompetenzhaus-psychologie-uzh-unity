@@ -1,0 +1,7 @@
+{
+  "name": "Kompetenzhaus.Tests",
+  "references": ["Kompetenzhaus.Runtime"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

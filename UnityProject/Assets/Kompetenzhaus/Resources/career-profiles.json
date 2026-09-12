@@ -1,0 +1,1407 @@
+{
+  "schema": "kompetenzhaus.career-profiles",
+  "schemaVersion": 2,
+  "frameworkVersion": "2.1.0-draft",
+  "notice": {
+    "de": "Diese Ansichten zeigen berufliche Tätigkeiten und passende Lerngelegenheiten. Sie beurteilen weder persönliche Eignung noch Berufszulassung. Ein Spielabschluss ersetzt keine Ausbildung, Supervision oder gesetzlich erforderliche Qualifikation.",
+    "en": "These views connect professional activities to learning opportunities. They assess neither personal suitability nor eligibility to practise. Completing the game does not replace education, supervision or legally required qualifications."
+  },
+  "displayRule": "Show concrete activities, mapped opportunities and next learning options. Never calculate a similarity percentage or a normative target polygon. Each criterion occurs at most once within a role view.",
+  "roles": [
+    {
+      "id": "psycho",
+      "title": {
+        "de": "Psychotherapie",
+        "en": "Psychotherapy"
+      },
+      "sourceUrl": "https://www.efpa.eu/wp-content/uploads/2026/04/EuroPsy-Regulations-2025.pdf",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "case",
+          "title": {
+            "de": "Fall verstehen und formulieren",
+            "en": "Understand and formulate a case"
+          },
+          "criterionIds": [
+            "H1.1",
+            "H1.2",
+            "H1.3",
+            "P1.3",
+            "P2.1"
+          ],
+          "activity": {
+            "de": "Entstehungs- und Aufrechterhaltungsmodelle sowie Lebensbedingungen zur Formulierung eines fiktiven Falls mit Alternativhypothesen heranziehen.",
+            "en": "Use models of onset and maintenance alongside living conditions to formulate a fictional case with alternative hypotheses."
+          }
+        },
+        {
+          "id": "relationship",
+          "title": {
+            "de": "Therapeutische Beziehung",
+            "en": "Therapeutic relationship"
+          },
+          "criterionIds": [
+            "K2.1",
+            "K2.2",
+            "K2.3"
+          ],
+          "activity": {
+            "de": "In einem Rollenspiel Anliegen klären, Verständnis prüfen und eine Gesprächsspannung bearbeiten.",
+            "en": "Clarify concerns, check understanding and address relational tension in a role-play."
+          }
+        },
+        {
+          "id": "intervention",
+          "title": {
+            "de": "Intervention begründen",
+            "en": "Justify an intervention"
+          },
+          "criterionIds": [
+            "H2.1",
+            "H2.2",
+            "H2.3"
+          ],
+          "activity": {
+            "de": "Für einen fiktiven Bedarf Ziele und einen begründeten Behandlungsvorschlag entwickeln.",
+            "en": "Develop goals and a justified treatment proposal for a fictional need."
+          }
+        },
+        {
+          "id": "outcome",
+          "title": {
+            "de": "Verlauf und Wirkung prüfen",
+            "en": "Examine progress and outcomes"
+          },
+          "criterionIds": [
+            "R1.2",
+            "R2.2",
+            "R3.3",
+            "R4.3"
+          ],
+          "activity": {
+            "de": "Verlaufsdaten unter Berücksichtigung von Messfehlern und alternativen Erklärungen beurteilen.",
+            "en": "Interpret progress data while considering measurement error and alternative explanations."
+          }
+        },
+        {
+          "id": "responsibility",
+          "title": {
+            "de": "Schutz und Verantwortung",
+            "en": "Protection and responsibility"
+          },
+          "criterionIds": [
+            "V1.1",
+            "V1.2",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Einwilligung, Vertraulichkeit und Grenzen der eigenen Rolle in einem Fall klären.",
+            "en": "Clarify consent, confidentiality and limits to one’s role in a case."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Digitale Unterstützung einordnen",
+            "en": "Understand digital support"
+          },
+          "criterionIds": [
+            "T1.1",
+            "T1.3"
+          ],
+          "activity": {
+            "de": "Datenflüsse und technische Grenzen einer fiktiven digitalen Unterstützung erklären; den bewussten Verzicht auf KI als mögliche Entscheidung offenhalten.",
+            "en": "Explain data flows and technical limits of fictional digital support; keep a deliberate decision not to use AI open."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "klinik",
+      "title": {
+        "de": "Klinische Psychologie",
+        "en": "Clinical psychology"
+      },
+      "sourceUrl": "https://www.psychologie.ch/index.php/de/bildung",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "assessment",
+          "title": {
+            "de": "Belastungen und Ressourcen erfassen",
+            "en": "Assess difficulties and resources"
+          },
+          "criterionIds": [
+            "H1.1",
+            "H1.2",
+            "H1.3",
+            "P1.3",
+            "P2.1"
+          ],
+          "activity": {
+            "de": "Psychologische Erklärungsmodelle, Lebensbedingungen und verschiedene Informationsquellen zu einer begrenzten klinischen Frage verbinden.",
+            "en": "Combine psychological explanatory models, living conditions and several information sources for a bounded clinical question."
+          }
+        },
+        {
+          "id": "support",
+          "title": {
+            "de": "Unterstützung planen",
+            "en": "Plan support"
+          },
+          "criterionIds": [
+            "H2.1",
+            "H2.2",
+            "H2.3"
+          ],
+          "activity": {
+            "de": "Massnahmen mit begründeten Zielen und verfügbaren Ressourcen abstimmen.",
+            "en": "Match measures to justified goals and available resources."
+          }
+        },
+        {
+          "id": "care",
+          "title": {
+            "de": "Gespräche und Zusammenarbeit",
+            "en": "Conversations and collaboration"
+          },
+          "criterionIds": [
+            "K2.1",
+            "K2.2",
+            "K3.1",
+            "K3.2"
+          ],
+          "activity": {
+            "de": "Anliegen klären und Informationen nachvollziehbar an ein fiktives Versorgungsteam übergeben.",
+            "en": "Clarify concerns and hand information over transparently to a fictional care team."
+          }
+        },
+        {
+          "id": "quality",
+          "title": {
+            "de": "Ergebnisse und Qualität prüfen",
+            "en": "Examine outcomes and quality"
+          },
+          "criterionIds": [
+            "R2.2",
+            "R3.3",
+            "R4.2"
+          ],
+          "activity": {
+            "de": "Messqualität und klinische Schlussfolgerung anhand eines fiktiven Verlaufs auseinanderhalten.",
+            "en": "Distinguish measurement quality from clinical conclusions in a fictional trajectory."
+          }
+        },
+        {
+          "id": "ethics",
+          "title": {
+            "de": "Verantwortung im Versorgungskontext",
+            "en": "Responsibility in care"
+          },
+          "criterionIds": [
+            "V1.1",
+            "V1.2",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Schutzinteressen und berufliche Grenzen in einer schwierigen Entscheidung abwägen.",
+            "en": "Weigh protected interests and professional limits in a difficult decision."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Digitale Versorgung kritisch planen",
+            "en": "Plan digital support in care"
+          },
+          "criterionIds": [
+            "T1.1",
+            "T1.3",
+            "T3.3"
+          ],
+          "activity": {
+            "de": "Technische Eignung und menschliche Eingriffspunkte einer fiktiven digitalen Versorgungshilfe bestimmen.",
+            "en": "Identify technical suitability and human intervention points in a fictional digital care aid."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gesundheit",
+      "title": {
+        "de": "Gesundheitspsychologie und Prävention",
+        "en": "Health psychology and prevention"
+      },
+      "sourceUrl": "https://gesundheitsfoerderung.ch/sites/default/files/2024-09/A4_Qualitaetscheck_Projekte_PGV_de_web.pdf",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "needs",
+          "title": {
+            "de": "Bedarf und Lebensbedingungen",
+            "en": "Needs and living conditions"
+          },
+          "criterionIds": [
+            "P2.1",
+            "P2.2",
+            "P2.3",
+            "H2.1"
+          ],
+          "activity": {
+            "de": "Gesundheitsbezogenen Bedarf im Lebensumfeld einer Zielgruppe begründen.",
+            "en": "Explain health-related needs in a target group’s living context."
+          }
+        },
+        {
+          "id": "participation",
+          "title": {
+            "de": "Beteiligung und Abstimmung",
+            "en": "Participation and coordination"
+          },
+          "criterionIds": [
+            "K2.1",
+            "K3.1",
+            "K3.3"
+          ],
+          "activity": {
+            "de": "Betroffene an Zielklärung und Entscheidungen beteiligen.",
+            "en": "Involve affected people in defining goals and making decisions."
+          }
+        },
+        {
+          "id": "implementation",
+          "title": {
+            "de": "Massnahmen umsetzen",
+            "en": "Implement measures"
+          },
+          "criterionIds": [
+            "H2.2",
+            "H2.3"
+          ],
+          "activity": {
+            "de": "Eine Massnahme mit plausibler Wirkannahme und realistischen Ressourcen planen.",
+            "en": "Plan a measure with a plausible mechanism and realistic resources."
+          }
+        },
+        {
+          "id": "evaluation",
+          "title": {
+            "de": "Wirkung untersuchen",
+            "en": "Investigate effects"
+          },
+          "criterionIds": [
+            "R1.2",
+            "R2.2",
+            "R3.3",
+            "R4.3"
+          ],
+          "activity": {
+            "de": "Eine Evaluation mit Grenzen der Aussagekraft entwerfen.",
+            "en": "Design an evaluation and explain limits to its conclusions."
+          }
+        },
+        {
+          "id": "equity",
+          "title": {
+            "de": "Zugang und Fairness",
+            "en": "Access and fairness"
+          },
+          "criterionIds": [
+            "V1.1",
+            "V1.2",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Nutzen und mögliche Nachteile für unterschiedlich betroffene Gruppen abwägen.",
+            "en": "Weigh benefits and potential disadvantages for differently affected groups."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Digitale Prävention gestalten",
+            "en": "Design digital prevention"
+          },
+          "criterionIds": [
+            "T1.3",
+            "T3.1",
+            "T3.3"
+          ],
+          "activity": {
+            "de": "Für eine digitale Präventionsmassnahme technische Grenzen und prüfbare menschliche Eingriffspunkte entwerfen.",
+            "en": "Define technical limits and testable human intervention points for a digital prevention measure."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neuro",
+      "title": {
+        "de": "Neuropsychologie",
+        "en": "Neuropsychology"
+      },
+      "sourceUrl": "https://neuro.psychologie.ch/de/neuropsychologische-diagnostik",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "basis",
+          "title": {
+            "de": "Kognition und Gehirn",
+            "en": "Cognition and brain"
+          },
+          "criterionIds": [
+            "P1.1",
+            "P1.2",
+            "P1.3",
+            "P2.1"
+          ],
+          "activity": {
+            "de": "Kognitive Funktionen und neuropsychologische Modelle in einen Fallkontext einordnen.",
+            "en": "Place cognitive functions and neuropsychological models in a case context."
+          }
+        },
+        {
+          "id": "measurement",
+          "title": {
+            "de": "Funktionen erfassen",
+            "en": "Measure functions"
+          },
+          "criterionIds": [
+            "R2.1",
+            "R2.2",
+            "R2.3"
+          ],
+          "activity": {
+            "de": "Instrumente und Normen für eine fiktive Abklärungsfrage auswählen.",
+            "en": "Select instruments and norms for a fictional assessment question."
+          }
+        },
+        {
+          "id": "judgement",
+          "title": {
+            "de": "Befunde integrieren",
+            "en": "Integrate findings"
+          },
+          "criterionIds": [
+            "H1.1",
+            "H1.2",
+            "H1.3"
+          ],
+          "activity": {
+            "de": "Anamnese und Testergebnisse mit Alternativerklärungen verbinden.",
+            "en": "Integrate history and test results with alternative explanations."
+          }
+        },
+        {
+          "id": "rehabilitation",
+          "title": {
+            "de": "Rehabilitation begründen",
+            "en": "Justify rehabilitation"
+          },
+          "criterionIds": [
+            "H2.1",
+            "H2.2",
+            "H2.3"
+          ],
+          "activity": {
+            "de": "Alltagsbezogene Ziele und einen begründeten Unterstützungsvorschlag entwickeln.",
+            "en": "Develop everyday goals and a justified support proposal."
+          }
+        },
+        {
+          "id": "feedback",
+          "title": {
+            "de": "Rückmeldung und Schutz",
+            "en": "Feedback and protection"
+          },
+          "criterionIds": [
+            "K1.2",
+            "K2.1",
+            "V1.1",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Ergebnisse verständlich rückmelden und Schutzinteressen berücksichtigen.",
+            "en": "Communicate results clearly and account for protected interests."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Digitale Messverfahren verstehen",
+            "en": "Understand digital measurement"
+          },
+          "criterionIds": [
+            "T1.1",
+            "T1.3"
+          ],
+          "activity": {
+            "de": "Datenflüsse und technische Grenzen eines digitalen Erhebungsverfahrens erklären.",
+            "en": "Explain data flows and technical limits of a digital assessment procedure."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "schule",
+      "title": {
+        "de": "Schulpsychologie",
+        "en": "School psychology"
+      },
+      "sourceUrl": "https://www.schulpsychologie.ch/wp-content/uploads/2011/01/Schulpsychologische-Standards-Kurzversion-2018.pdf",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "development",
+          "title": {
+            "de": "Lernen und Entwicklung",
+            "en": "Learning and development"
+          },
+          "criterionIds": [
+            "P2.1",
+            "P2.2",
+            "P2.3"
+          ],
+          "activity": {
+            "de": "Entwicklung und schulisches Umfeld in einer fiktiven Situation berücksichtigen.",
+            "en": "Account for development and the school environment in a fictional situation."
+          }
+        },
+        {
+          "id": "assessment",
+          "title": {
+            "de": "Mehrperspektivische Abklärung",
+            "en": "Assessment across perspectives"
+          },
+          "criterionIds": [
+            "H1.1",
+            "H1.2",
+            "H1.3"
+          ],
+          "activity": {
+            "de": "Informationen von Kind, Familie und Schule mit unterschiedlichen Hypothesen ordnen.",
+            "en": "Organise information from a child, family and school with different hypotheses."
+          }
+        },
+        {
+          "id": "advice",
+          "title": {
+            "de": "Beratung und Verständigung",
+            "en": "Consultation and shared understanding"
+          },
+          "criterionIds": [
+            "K2.1",
+            "K2.2",
+            "K2.3",
+            "K3.1"
+          ],
+          "activity": {
+            "de": "Ein Beratungsgespräch mit mehreren Beteiligten vorbereiten.",
+            "en": "Prepare a consultation involving several participants."
+          }
+        },
+        {
+          "id": "support",
+          "title": {
+            "de": "Förderung und Unterstützung",
+            "en": "Development and support"
+          },
+          "criterionIds": [
+            "H2.1",
+            "H2.2",
+            "H2.3"
+          ],
+          "activity": {
+            "de": "Eine realistische Unterstützung im schulischen Alltag entwerfen.",
+            "en": "Design feasible support in everyday school life."
+          }
+        },
+        {
+          "id": "safeguard",
+          "title": {
+            "de": "Schutz und Wirkung",
+            "en": "Protection and outcomes"
+          },
+          "criterionIds": [
+            "V1.1",
+            "V1.2",
+            "V1.3",
+            "R3.3",
+            "R4.2"
+          ],
+          "activity": {
+            "de": "Schutzbedarf und Grenzen der Wirkungsaussagen erkennen.",
+            "en": "Recognise protection needs and limits to claims about effects."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Digitale Lernhilfen einordnen",
+            "en": "Understand digital learning aids"
+          },
+          "criterionIds": [
+            "T1.3",
+            "T3.3"
+          ],
+          "activity": {
+            "de": "Die technische Eignung eines Lernwerkzeugs prüfen und menschliche Eingriffspunkte festlegen.",
+            "en": "Examine a learning tool’s technical suitability and define human intervention points."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phd",
+      "title": {
+        "de": "Forschung und akademischer Weg",
+        "en": "Research and academic work"
+      },
+      "sourceUrl": "https://research-and-innovation.ec.europa.eu/system/files/2023-04/ec_rtd_research-competence-presentation.pdf",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "design",
+          "title": {
+            "de": "Fragen und Forschungsdesign",
+            "en": "Questions and research design"
+          },
+          "criterionIds": [
+            "R1.1",
+            "R1.2",
+            "R1.3",
+            "P1.2"
+          ],
+          "activity": {
+            "de": "Aus konkurrierenden psychologischen Modellen unterschiedliche Vorhersagen und eine unterscheidende Forschungsfrage mit geeignetem Design ableiten.",
+            "en": "Derive different predictions from competing psychological models and develop a discriminating question with a suitable design."
+          }
+        },
+        {
+          "id": "methods",
+          "title": {
+            "de": "Messung und Analyse",
+            "en": "Measurement and analysis"
+          },
+          "criterionIds": [
+            "R2.1",
+            "R2.2",
+            "R2.3",
+            "R3.1",
+            "R3.2",
+            "R3.3"
+          ],
+          "activity": {
+            "de": "Eine reproduzierbare Untersuchung mit geprüften Mess- und Analyseannahmen durchführen.",
+            "en": "Conduct a reproducible investigation with examined measurement and analysis assumptions."
+          }
+        },
+        {
+          "id": "integrity",
+          "title": {
+            "de": "Evidenz und Integrität",
+            "en": "Evidence and integrity"
+          },
+          "criterionIds": [
+            "R4.1",
+            "R4.2",
+            "R4.3",
+            "V1.1",
+            "V1.2",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Schlussfolgerungen kritisch prüfen und Forschung nachvollziehbar verantworten.",
+            "en": "Examine conclusions critically and make research decisions accountable."
+          }
+        },
+        {
+          "id": "publication",
+          "title": {
+            "de": "Publikation und Transfer",
+            "en": "Publication and communication"
+          },
+          "criterionIds": [
+            "K1.1",
+            "K1.2",
+            "K1.3"
+          ],
+          "activity": {
+            "de": "Ergebnisse für Fachpublikum und weitere Zielgruppen darstellen.",
+            "en": "Present findings for specialists and other audiences."
+          }
+        },
+        {
+          "id": "team",
+          "title": {
+            "de": "Forschungsarbeit organisieren",
+            "en": "Organise research work"
+          },
+          "criterionIds": [
+            "K3.1",
+            "K3.2",
+            "K3.3",
+            "V2.2",
+            "V2.3"
+          ],
+          "activity": {
+            "de": "Ein Forschungsprojekt abstimmen, Beiträge dokumentieren und den eigenen Arbeitsprozess anpassen.",
+            "en": "Coordinate a research project, document contributions and adapt personal working practices."
+          }
+        },
+        {
+          "id": "teaching",
+          "title": {
+            "de": "Wissenschaftliches Lernen ermöglichen",
+            "en": "Support scientific learning"
+          },
+          "criterionIds": [
+            "H2.1",
+            "H2.2",
+            "H2.3"
+          ],
+          "activity": {
+            "de": "Für ein Fachthema eine aktivierende Lernaufgabe mit begründetem Lernziel entwickeln.",
+            "en": "Develop an active learning task with a justified objective for a disciplinary topic."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Reproduzierbare Arbeitsabläufe gestalten",
+            "en": "Design reproducible workflows"
+          },
+          "criterionIds": [
+            "T3.1",
+            "T3.2",
+            "T3.3"
+          ],
+          "activity": {
+            "de": "Einen Forschungsablauf mit dokumentierten Schnittstellen, Funktionstests und menschlichen Entscheidungen entwickeln.",
+            "en": "Develop a research workflow with documented interfaces, functional tests and human decisions."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gutachten",
+      "title": {
+        "de": "Rechtspsychologie und Begutachtung",
+        "en": "Forensic psychology and expert assessment"
+      },
+      "sourceUrl": "https://rechtspsychologie.ch/images/downloads/GA_Anforderungen%20SGRP.pdf",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "mandate",
+          "title": {
+            "de": "Auftrag und psychologische Frage",
+            "en": "Referral and psychological question"
+          },
+          "criterionIds": [
+            "H1.1",
+            "P2.1"
+          ],
+          "activity": {
+            "de": "Rechtliche Entscheidungsfrage und psychologisch bearbeitbare Frage unterscheiden.",
+            "en": "Distinguish a legal decision from a question psychology can address."
+          }
+        },
+        {
+          "id": "information",
+          "title": {
+            "de": "Informationen und Verfahren",
+            "en": "Information and methods"
+          },
+          "criterionIds": [
+            "R2.1",
+            "R2.2",
+            "R2.3"
+          ],
+          "activity": {
+            "de": "Informationsquellen und geeignete Verfahren mit ihren Grenzen auswählen.",
+            "en": "Select information sources and suitable methods with their limitations."
+          }
+        },
+        {
+          "id": "alternatives",
+          "title": {
+            "de": "Hypothesen und Schlussfolgerungen",
+            "en": "Hypotheses and conclusions"
+          },
+          "criterionIds": [
+            "H1.2",
+            "H1.3",
+            "R4.2",
+            "R4.3"
+          ],
+          "activity": {
+            "de": "Alternativhypothesen prüfen und die Reichweite des Urteils begrenzen.",
+            "en": "Examine alternative hypotheses and delimit the judgement."
+          }
+        },
+        {
+          "id": "report",
+          "title": {
+            "de": "Nachvollziehbares Gutachten",
+            "en": "Traceable expert report"
+          },
+          "criterionIds": [
+            "K1.1",
+            "K1.2",
+            "K1.3"
+          ],
+          "activity": {
+            "de": "Befund, Schlussfolgerung und Unsicherheit für die Auftraggebenden trennen.",
+            "en": "Separate findings, conclusions and uncertainty for those commissioning the report."
+          }
+        },
+        {
+          "id": "limits",
+          "title": {
+            "de": "Unabhängigkeit und Verantwortung",
+            "en": "Independence and responsibility"
+          },
+          "criterionIds": [
+            "V1.1",
+            "V1.2",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Rollenkonflikte und Schutzinteressen in einem fiktiven Auftrag abwägen.",
+            "en": "Weigh role conflicts and protected interests in a fictional referral."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Technische Entscheidungshilfen einordnen",
+            "en": "Understand technical decision aids"
+          },
+          "criterionIds": [
+            "T1.1",
+            "T1.3"
+          ],
+          "activity": {
+            "de": "Die Datenbasis und technischen Grenzen eines fiktiven Entscheidungshilfesystems erläutern.",
+            "en": "Explain the data basis and technical limits of a fictional decision support system."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wirtschaft",
+      "title": {
+        "de": "Arbeits- und Organisationspsychologie",
+        "en": "Work and organisational psychology"
+      },
+      "sourceUrl": "https://psy4work.psychologie.ch/de/4-2",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "analysis",
+          "title": {
+            "de": "Arbeit und Organisation verstehen",
+            "en": "Understand work and organisations"
+          },
+          "criterionIds": [
+            "P2.1",
+            "P2.2",
+            "P2.3",
+            "P1.3"
+          ],
+          "activity": {
+            "de": "Arbeitsbedingungen und organisationale Zusammenhänge eines Problems erklären.",
+            "en": "Explain working conditions and organisational aspects of a problem."
+          }
+        },
+        {
+          "id": "assessment",
+          "title": {
+            "de": "Auswahl und Entwicklung",
+            "en": "Selection and development"
+          },
+          "criterionIds": [
+            "H1.1",
+            "H1.2",
+            "H1.3",
+            "R2.2"
+          ],
+          "activity": {
+            "de": "Eine diagnostische Frage im Personalkontext mit geeigneten Informationen beantworten.",
+            "en": "Answer an assessment question in a personnel context using suitable information."
+          }
+        },
+        {
+          "id": "change",
+          "title": {
+            "de": "Arbeitsgestaltung und Veränderung",
+            "en": "Work design and change"
+          },
+          "criterionIds": [
+            "H2.1",
+            "H2.2",
+            "H2.3"
+          ],
+          "activity": {
+            "de": "Eine begründete Veränderung von Arbeit oder Organisation entwerfen.",
+            "en": "Design a justified change to work or organisation."
+          }
+        },
+        {
+          "id": "team",
+          "title": {
+            "de": "Teams und Beteiligung",
+            "en": "Teams and participation"
+          },
+          "criterionIds": [
+            "K3.1",
+            "K3.2",
+            "K3.3"
+          ],
+          "activity": {
+            "de": "Perspektiven, Rollen und Konflikte in einem Veränderungsvorhaben koordinieren.",
+            "en": "Coordinate perspectives, roles and conflicts in a change project."
+          }
+        },
+        {
+          "id": "quality",
+          "title": {
+            "de": "Wirkung und Verantwortung",
+            "en": "Effects and responsibility"
+          },
+          "criterionIds": [
+            "R3.3",
+            "R4.2",
+            "V1.1",
+            "V1.2",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Wirkungsaussagen und mögliche Belastungen einer Massnahme abwägen.",
+            "en": "Weigh claims about effects and possible burdens of a measure."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Mensch-Technik-Arbeit gestalten",
+            "en": "Design human–technology work"
+          },
+          "criterionIds": [
+            "T1.3",
+            "T3.1",
+            "T3.3"
+          ],
+          "activity": {
+            "de": "Einen Arbeitsablauf mit technischen Unterstützungen und klaren menschlichen Eingriffen entwerfen.",
+            "en": "Design a workflow with technical support and clear human intervention."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "laufbahn",
+      "title": {
+        "de": "Berufs-, Studien- und Laufbahnberatung",
+        "en": "Career and educational guidance"
+      },
+      "sourceUrl": "https://www.berufsberatung.ch/de/berufe/berufs-studien-und-laufbahnberater-in",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "concern",
+          "title": {
+            "de": "Anliegen und Lebenslage",
+            "en": "Concerns and life context"
+          },
+          "criterionIds": [
+            "K2.1",
+            "P2.1",
+            "P2.2"
+          ],
+          "activity": {
+            "de": "Ein Beratungsanliegen im persönlichen und sozialen Kontext klären.",
+            "en": "Clarify a guidance concern in its personal and social context."
+          }
+        },
+        {
+          "id": "exploration",
+          "title": {
+            "de": "Interessen und Möglichkeiten",
+            "en": "Interests and possibilities"
+          },
+          "criterionIds": [
+            "H1.1",
+            "H1.2",
+            "H1.3"
+          ],
+          "activity": {
+            "de": "Informationen zu Interessen und Ressourcen mit begrenzten Schlussfolgerungen verbinden.",
+            "en": "Combine information about interests and resources while limiting conclusions."
+          }
+        },
+        {
+          "id": "information",
+          "title": {
+            "de": "Informationen prüfen",
+            "en": "Check information"
+          },
+          "criterionIds": [
+            "R4.1",
+            "R4.2",
+            "K1.2"
+          ],
+          "activity": {
+            "de": "Ausbildungs- und Berufsinformationen prüfen und verständlich vermitteln.",
+            "en": "Check and clearly communicate education and career information."
+          }
+        },
+        {
+          "id": "choice",
+          "title": {
+            "de": "Entscheidungen begleiten",
+            "en": "Support decisions"
+          },
+          "criterionIds": [
+            "K2.2",
+            "K2.3",
+            "H2.1",
+            "H2.2",
+            "H2.3"
+          ],
+          "activity": {
+            "de": "Alternativen offenhalten und gemeinsam nächste Schritte entwickeln.",
+            "en": "Keep alternatives open and develop next steps together."
+          }
+        },
+        {
+          "id": "agency",
+          "title": {
+            "de": "Selbstbestimmung achten",
+            "en": "Respect personal agency"
+          },
+          "criterionIds": [
+            "V1.1",
+            "V1.2",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Eine Empfehlung von einer fremdbestimmten Entscheidung unterscheiden.",
+            "en": "Distinguish a recommendation from making the decision for someone else."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Digitale Informationshilfen verstehen",
+            "en": "Understand digital information aids"
+          },
+          "criterionIds": [
+            "T1.1",
+            "T1.3"
+          ],
+          "activity": {
+            "de": "Erklären, welche Daten und technischen Grenzen Vorschläge einer digitalen Informationshilfe prägen.",
+            "en": "Explain which data and technical limits shape suggestions from a digital information aid."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konsum",
+      "title": {
+        "de": "Konsum- und Marktforschung",
+        "en": "Consumer and market research"
+      },
+      "sourceUrl": "https://iccwbo.org/news-publications/business-solutions/iccesomar-international-code-market-opinion-social-research-data-analytics/",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "behaviour",
+          "title": {
+            "de": "Entscheidungsverhalten erklären",
+            "en": "Explain decision behaviour"
+          },
+          "criterionIds": [
+            "P1.1",
+            "P1.2",
+            "P1.3",
+            "P2.3"
+          ],
+          "activity": {
+            "de": "Konsumentscheidungen und Grenzen ihrer Übertragung erklären.",
+            "en": "Explain consumer decisions and limits to generalisation."
+          }
+        },
+        {
+          "id": "study",
+          "title": {
+            "de": "Untersuchung entwickeln",
+            "en": "Develop a study"
+          },
+          "criterionIds": [
+            "R1.1",
+            "R1.2",
+            "R1.3",
+            "R2.1"
+          ],
+          "activity": {
+            "de": "Eine Befragung oder ein Experiment für eine konkrete Forschungsfrage planen.",
+            "en": "Plan a survey or experiment for a specific research question."
+          }
+        },
+        {
+          "id": "data",
+          "title": {
+            "de": "Daten und Schlüsse",
+            "en": "Data and conclusions"
+          },
+          "criterionIds": [
+            "R3.1",
+            "R3.2",
+            "R3.3",
+            "R4.2"
+          ],
+          "activity": {
+            "de": "Ergebnisse auswerten und alternative Erklärungen prüfen.",
+            "en": "Analyse results and consider alternative explanations."
+          }
+        },
+        {
+          "id": "recommendation",
+          "title": {
+            "de": "Empfehlungen vermitteln",
+            "en": "Communicate recommendations"
+          },
+          "criterionIds": [
+            "K1.1",
+            "K1.2",
+            "K1.3",
+            "H2.2"
+          ],
+          "activity": {
+            "de": "Eine fachlich begründete Empfehlung für einen Auftrag verständlich darstellen.",
+            "en": "Present a justified recommendation clearly for a commission."
+          }
+        },
+        {
+          "id": "ethics",
+          "title": {
+            "de": "Transparenz und Verantwortung",
+            "en": "Transparency and responsibility"
+          },
+          "criterionIds": [
+            "V1.1",
+            "V1.2",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Forschungszweck, Einwilligung und mögliche Beeinflussung abwägen.",
+            "en": "Weigh research purpose, consent and possible influence."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Digitale Forschungswerkzeuge gestalten",
+            "en": "Design digital research tools"
+          },
+          "criterionIds": [
+            "T3.1",
+            "T3.2",
+            "T3.3"
+          ],
+          "activity": {
+            "de": "Einen digitalen Forschungsablauf mit dokumentierten Eingaben und Funktionstests entwickeln.",
+            "en": "Develop a digital research workflow with documented inputs and functional tests."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ux",
+      "title": {
+        "de": "UX Research und menschzentrierte Gestaltung",
+        "en": "UX research and human-centred design"
+      },
+      "sourceUrl": "https://germanupa.de/wissen/berufsbild",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "context",
+          "title": {
+            "de": "Nutzungskontext verstehen",
+            "en": "Understand the use context"
+          },
+          "criterionIds": [
+            "P2.1",
+            "P2.2",
+            "P2.3",
+            "K2.1"
+          ],
+          "activity": {
+            "de": "Nutzungsziele und Bedingungen mit offenen Fragen untersuchen.",
+            "en": "Investigate user goals and conditions through open questions."
+          }
+        },
+        {
+          "id": "requirements",
+          "title": {
+            "de": "Anforderungen begründen",
+            "en": "Justify requirements"
+          },
+          "criterionIds": [
+            "H2.1",
+            "R4.3"
+          ],
+          "activity": {
+            "de": "Aus Beobachtungen begründete Anforderungen statt vorschneller Lösungen ableiten.",
+            "en": "Derive justified requirements from observations before settling on solutions."
+          }
+        },
+        {
+          "id": "test",
+          "title": {
+            "de": "Nutzung untersuchen",
+            "en": "Investigate use"
+          },
+          "criterionIds": [
+            "R1.2",
+            "R2.1",
+            "R2.2",
+            "R3.3"
+          ],
+          "activity": {
+            "de": "Einen Usability-Test planen und Ergebnisse mit ihren Grenzen auswerten.",
+            "en": "Plan a usability test and interpret results with their limitations."
+          }
+        },
+        {
+          "id": "iteration",
+          "title": {
+            "de": "Gestaltung verbessern",
+            "en": "Improve a design"
+          },
+          "criterionIds": [
+            "H2.2",
+            "H2.3",
+            "K3.2"
+          ],
+          "activity": {
+            "de": "Entwürfe anhand von Rückmeldung verbessern und Entscheidungen dokumentieren.",
+            "en": "Improve designs using feedback and document decisions."
+          }
+        },
+        {
+          "id": "communication",
+          "title": {
+            "de": "Ergebnisse und Verantwortung",
+            "en": "Findings and responsibility"
+          },
+          "criterionIds": [
+            "K1.1",
+            "K1.2",
+            "K1.3",
+            "V1.1",
+            "V1.2",
+            "V1.3"
+          ],
+          "activity": {
+            "de": "Ergebnisse verständlich vermitteln und Zugänglichkeit sowie Schutzinteressen begründen.",
+            "en": "Communicate findings clearly and justify accessibility and protection requirements."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Interaktive Systeme erproben",
+            "en": "Test interactive systems"
+          },
+          "criterionIds": [
+            "T1.3",
+            "T3.2",
+            "T3.3"
+          ],
+          "activity": {
+            "de": "Einen interaktiven Prototyp konfigurieren und technische Fehlerfälle einschliesslich menschlicher Eingriffe testen.",
+            "en": "Configure an interactive prototype and test technical failures, including human intervention."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppp",
+      "title": {
+        "de": "Unterrichten: Pädagogik und Psychologie",
+        "en": "Teaching pedagogy and psychology"
+      },
+      "sourceUrl": "https://www.ife.uzh.ch/de/study/Lehrdiplom-f%C3%BCr-das-Unterrichtsfach-PP.html",
+      "status": "authored-orientation-view-not-professional-standard",
+      "facets": [
+        {
+          "id": "content",
+          "title": {
+            "de": "Fachinhalte auswählen",
+            "en": "Select subject content"
+          },
+          "criterionIds": [
+            "P1.1",
+            "P1.2",
+            "P1.3",
+            "R4.2"
+          ],
+          "activity": {
+            "de": "Psychologische Inhalte fachlich prüfen und für ein Unterrichtsthema auswählen.",
+            "en": "Check psychological content and select it for a teaching topic."
+          }
+        },
+        {
+          "id": "learning",
+          "title": {
+            "de": "Lernaufgaben gestalten",
+            "en": "Design learning tasks"
+          },
+          "criterionIds": [
+            "H2.1",
+            "H2.2",
+            "H2.3"
+          ],
+          "activity": {
+            "de": "Aus einem Lernziel eine aktivierende Aufgabe mit passender Unterstützung entwickeln.",
+            "en": "Develop an active task with suitable support from a learning objective."
+          }
+        },
+        {
+          "id": "explanation",
+          "title": {
+            "de": "Erklären und besprechen",
+            "en": "Explain and discuss"
+          },
+          "criterionIds": [
+            "K1.1",
+            "K1.2",
+            "K1.3",
+            "K2.1",
+            "K2.2"
+          ],
+          "activity": {
+            "de": "Ein Konzept verständlich erklären und das Verständnis im Gespräch prüfen.",
+            "en": "Explain a concept clearly and check understanding through discussion."
+          }
+        },
+        {
+          "id": "assessment",
+          "title": {
+            "de": "Lernen erfassen und rückmelden",
+            "en": "Assess learning and give feedback"
+          },
+          "criterionIds": [
+            "R2.1",
+            "R2.2",
+            "H1.3"
+          ],
+          "activity": {
+            "de": "Ein auf das Lernziel abgestimmtes Kriterium und hilfreiche Rückmeldung formulieren.",
+            "en": "Formulate a criterion aligned with the objective and give useful feedback."
+          }
+        },
+        {
+          "id": "development",
+          "title": {
+            "de": "Unterricht reflektieren",
+            "en": "Reflect on teaching"
+          },
+          "criterionIds": [
+            "V1.1",
+            "V1.2",
+            "V1.3",
+            "V2.1",
+            "V2.2",
+            "V2.3"
+          ],
+          "activity": {
+            "de": "Eigene Entscheidungen anhand von Lernerfahrungen, Schutzinteressen und Rückmeldungen überarbeiten.",
+            "en": "Revise decisions using learning experiences, protected interests and feedback."
+          }
+        },
+        {
+          "id": "digital-context",
+          "title": {
+            "de": "Lernwerkzeuge begründet einsetzen",
+            "en": "Use learning tools with justification"
+          },
+          "criterionIds": [
+            "T1.3",
+            "T3.3"
+          ],
+          "activity": {
+            "de": "Die technische Eignung eines Lernwerkzeugs prüfen und Eingriffspunkte der Lehrperson festlegen.",
+            "en": "Examine a learning tool’s technical suitability and define intervention points for the teacher."
+          },
+          "optionalContext": true,
+          "contextIds": [
+            "with-ai",
+            "about-ai"
+          ]
+        }
+      ]
+    }
+  ]
+}

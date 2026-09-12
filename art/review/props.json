@@ -1,0 +1,917 @@
+{
+  "schema": "game-room.prop-manifest.v1",
+  "roomId": "kompetenzhaus-campus",
+  "generation": {
+    "provider": "local-blender",
+    "apiModel": null,
+    "hardCreditCeiling": 0,
+    "pricingSource": null,
+    "reason": "Explicit user requirement: no additional cost. No Meshy API or paid generation."
+  },
+  "assets": [
+    {
+      "id": "evidence-table",
+      "name": "Evidenztisch",
+      "cell": "top-left",
+      "dimensionsMeters": [
+        2.6,
+        2.6,
+        0.904
+      ],
+      "class": "hero",
+      "function": "Compare a claim, its supporting source and uncertainty; starts the shared evidence main quest.",
+      "targetPolycount": 6000,
+      "intendedInstances": 1,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Evidenztisch as shown on the isolated reference contact sheet.",
+      "rejectionCriteria": [
+        "Whole silhouette and support must match the approved reference.",
+        "No crop, fused neighbours or floating load-bearing parts.",
+        "Declared metre-scale dimensions; grounded base within 5 mm.",
+        "Triangle budget applies to exported triangulated mesh.",
+        "Door portals must remain actual 2.4 m clear passages."
+      ],
+      "image": {
+        "source": "../references/asset-references.png",
+        "sheetCell": "top-left",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
+        "approved": false,
+        "approvedBy": "",
+        "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+        "approvedAt": ""
+      },
+      "reviewStatus": "pending",
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "family": "learning-prop"
+    },
+    {
+      "id": "wall-door",
+      "name": "Durchgangswand",
+      "cell": "row-1-column-2",
+      "dimensionsMeters": [
+        4.04,
+        0.355,
+        3.22
+      ],
+      "class": "reusable",
+      "function": "Make Bachelor and Master arrival and active learning room entrances legible.",
+      "targetPolycount": 2500,
+      "intendedInstances": 3,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Vier-Meter-Durchgangsmodul mit echtem Wanddurchbruch; 4.04m breite Abdeckung ist eine beabsichtigte Überlappung an modularen Fugen.",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval.",
+        "The wall must have an evaluated clear 2.4m × 2.7m passage, including the effect of its piers, trim and lintel."
+      ],
+      "image": {
+        "source": "../references/architecture-kit.png",
+        "sheetCell": "row-1-column-2",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      },
+      "reviewStatus": "pending",
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "family": "architecture",
+      "legacyId": "entry-portal",
+      "nominalGridMetres": 4,
+      "floorPitchMetres": 3.2,
+      "clearOpeningMetres": [
+        2.4,
+        2.7
+      ],
+      "additionalReferences": [
+        {
+          "source": "../references/asset-references.png",
+          "sheetCell": "top-middle",
+          "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+          "approved": false
+        }
+      ]
+    },
+    {
+      "id": "discussion-sofa",
+      "name": "Gesprächssofa",
+      "cell": "top-right",
+      "dimensionsMeters": [
+        2.2,
+        0.9,
+        0.85
+      ],
+      "class": "reusable",
+      "function": "Stage fictional peer feedback, communication and team decision exercises.",
+      "targetPolycount": 5000,
+      "intendedInstances": 2,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Gesprächssofa as shown on the isolated reference contact sheet.",
+      "rejectionCriteria": [
+        "Whole silhouette and support must match the approved reference.",
+        "No crop, fused neighbours or floating load-bearing parts.",
+        "Declared metre-scale dimensions; grounded base within 5 mm.",
+        "Triangle budget applies to exported triangulated mesh.",
+        "Door portals must remain actual 2.4 m clear passages."
+      ],
+      "image": {
+        "source": "../references/asset-references.png",
+        "sheetCell": "top-right",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
+        "approved": false,
+        "approvedBy": "",
+        "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+        "approvedAt": ""
+      },
+      "reviewStatus": "pending",
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "family": "learning-prop"
+    },
+    {
+      "id": "research-desk",
+      "name": "Forschungsarbeitsplatz",
+      "cell": "bottom-left",
+      "dimensionsMeters": [
+        1.4,
+        0.7,
+        1.4
+      ],
+      "class": "reusable",
+      "function": "Interact with methods, prediction, data and model-validation questions.",
+      "targetPolycount": 4000,
+      "intendedInstances": 4,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Forschungsarbeitsplatz as shown on the isolated reference contact sheet.",
+      "rejectionCriteria": [
+        "Whole silhouette and support must match the approved reference.",
+        "No crop, fused neighbours or floating load-bearing parts.",
+        "Declared metre-scale dimensions; grounded base within 5 mm.",
+        "Triangle budget applies to exported triangulated mesh.",
+        "Door portals must remain actual 2.4 m clear passages."
+      ],
+      "image": {
+        "source": "../references/asset-references.png",
+        "sheetCell": "bottom-left",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
+        "approved": false,
+        "approvedBy": "",
+        "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+        "approvedAt": ""
+      },
+      "reviewStatus": "pending",
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "family": "learning-prop"
+    },
+    {
+      "id": "courtyard-tree",
+      "name": "Innenhofbaum",
+      "cell": "bottom-middle",
+      "dimensionsMeters": [
+        2.4,
+        2.4,
+        3
+      ],
+      "class": "reusable",
+      "function": "Player-selectable courtyard decoration and spatial waypoint.",
+      "targetPolycount": 4500,
+      "intendedInstances": 2,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Innenhofbaum as shown on the isolated reference contact sheet.",
+      "rejectionCriteria": [
+        "Whole silhouette and support must match the approved reference.",
+        "No crop, fused neighbours or floating load-bearing parts.",
+        "Declared metre-scale dimensions; grounded base within 5 mm.",
+        "Triangle budget applies to exported triangulated mesh.",
+        "Door portals must remain actual 2.4 m clear passages."
+      ],
+      "image": {
+        "source": "../references/asset-references.png",
+        "sheetCell": "bottom-middle",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
+        "approved": false,
+        "approvedBy": "",
+        "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+        "approvedAt": ""
+      },
+      "reviewStatus": "pending",
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "family": "learning-prop"
+    },
+    {
+      "id": "student-guide",
+      "name": "Studierendenfigur",
+      "cell": "bottom-right",
+      "dimensionsMeters": [
+        1.1,
+        0.42,
+        1.85
+      ],
+      "class": "reusable",
+      "function": "Animated peer guide; supports orientation and fictional team interactions.",
+      "targetPolycount": 9000,
+      "intendedInstances": 2,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Studierendenfigur as shown on the isolated reference contact sheet.",
+      "rejectionCriteria": [
+        "Whole silhouette and support must match the approved reference.",
+        "No crop, fused neighbours or floating load-bearing parts.",
+        "Declared metre-scale dimensions; grounded base within 5 mm.",
+        "Triangle budget applies to exported triangulated mesh.",
+        "Door portals must remain actual 2.4 m clear passages."
+      ],
+      "image": {
+        "source": "../references/asset-references.png",
+        "sheetCell": "bottom-right",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
+        "approved": false,
+        "approvedBy": "",
+        "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+        "approvedAt": ""
+      },
+      "reviewStatus": "pending",
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "family": "learning-prop"
+    },
+    {
+      "id": "wall-window",
+      "name": "Fensterwand",
+      "family": "architecture",
+      "cell": "row-1-column-1",
+      "dimensionsMeters": [
+        4.04,
+        0.32,
+        3.22
+      ],
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "nominalGridMetres": 4,
+      "floorPitchMetres": 3.2,
+      "class": "reusable",
+      "function": "Bring daylight and an outside view into a learner-defined room while retaining a continuous wall substrate.",
+      "targetPolycount": 3500,
+      "intendedInstances": 16,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Bring daylight and an outside view into a learner-defined room while retaining a continuous wall substrate.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/architecture-kit.png",
+        "sheetCell": "row-1-column-1",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "wall-solid",
+      "name": "Geschlossene Wand",
+      "family": "architecture",
+      "cell": "derived-from-row-1-column-1",
+      "dimensionsMeters": [
+        4.04,
+        0.293,
+        3.22
+      ],
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "nominalGridMetres": 4,
+      "floorPitchMetres": 3.2,
+      "class": "reusable",
+      "function": "Close boundaries where the learner chooses privacy or a solid facade; a windowless derivative of the reference construction.",
+      "targetPolycount": 1500,
+      "intendedInstances": 16,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Close boundaries where the learner chooses privacy or a solid facade; a windowless derivative of the reference construction.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/architecture-kit.png",
+        "sheetCell": "derived-from-row-1-column-1",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      },
+      "referenceRelation": "Authored closed-wall derivative; no separate solid-wall object appears in the contact sheet."
+    },
+    {
+      "id": "floor-tile",
+      "name": "Eichenboden",
+      "family": "architecture",
+      "cell": "row-1-column-3",
+      "dimensionsMeters": [
+        4,
+        4,
+        0.324
+      ],
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "nominalGridMetres": 4,
+      "floorPitchMetres": 3.2,
+      "class": "reusable",
+      "function": "Connect walkable bays and support modules or furniture on the four-metre building grid.",
+      "targetPolycount": 4000,
+      "intendedInstances": 16,
+      "attachmentFace": "grid-contact-plane",
+      "semanticFront": "negative-y",
+      "description": "Connect walkable bays and support modules or furniture on the four-metre building grid.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/architecture-kit.png",
+        "sheetCell": "row-1-column-3",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      },
+      "pivotNote": "Local grid/contact plane is z=0; foundation extends below it and the oak finish above it."
+    },
+    {
+      "id": "roof-flat",
+      "name": "Flachdach",
+      "family": "architecture",
+      "cell": "row-1-column-4",
+      "dimensionsMeters": [
+        4.1,
+        4.1,
+        0.6
+      ],
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "nominalGridMetres": 4,
+      "floorPitchMetres": 3.2,
+      "class": "reusable",
+      "function": "Cap a learner-defined footprint with an openable roof and legible edge protection.",
+      "targetPolycount": 2000,
+      "intendedInstances": 8,
+      "attachmentFace": "grid-contact-plane",
+      "semanticFront": "negative-y",
+      "description": "Cap a learner-defined footprint with an openable roof and legible edge protection.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/architecture-kit.png",
+        "sheetCell": "row-1-column-4",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "roof-gabled",
+      "name": "Satteldach",
+      "family": "architecture",
+      "cell": "row-2-column-1",
+      "dimensionsMeters": [
+        4.32,
+        4.2,
+        1.48
+      ],
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "nominalGridMetres": 4,
+      "floorPitchMetres": 3.2,
+      "class": "reusable",
+      "function": "Give a custom building a pitched silhouette with visible ridge and support detail.",
+      "targetPolycount": 3000,
+      "intendedInstances": 8,
+      "attachmentFace": "grid-contact-plane",
+      "semanticFront": "negative-y",
+      "description": "Give a custom building a pitched silhouette with visible ridge and support detail.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/architecture-kit.png",
+        "sheetCell": "row-2-column-1",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "balcony",
+      "name": "Balkon",
+      "family": "architecture",
+      "cell": "row-2-column-2",
+      "dimensionsMeters": [
+        4,
+        1.2,
+        1.365
+      ],
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "nominalGridMetres": 4,
+      "floorPitchMetres": 3.2,
+      "class": "reusable",
+      "function": "Extend selected upper-floor bays with an explicitly guarded outdoor edge.",
+      "targetPolycount": 2000,
+      "intendedInstances": 2,
+      "attachmentFace": "grid-contact-plane",
+      "semanticFront": "negative-y",
+      "description": "Extend selected upper-floor bays with an explicitly guarded outdoor edge.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/architecture-kit.png",
+        "sheetCell": "row-2-column-2",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "staircase",
+      "name": "Treppe",
+      "family": "architecture",
+      "cell": "row-2-column-3",
+      "dimensionsMeters": [
+        1.53,
+        3.22,
+        4.15
+      ],
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "nominalGridMetres": 4,
+      "floorPitchMetres": 3.2,
+      "class": "reusable",
+      "function": "Connect adjacent 3.2m storeys with sixteen 0.2m risers and a 3.2m run. Unity adds a full-width 0.8m upper landing within the 4m bay; the mesh envelope includes railings above it.",
+      "targetPolycount": 4000,
+      "intendedInstances": 2,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Sixteen 0.2m steps, 3.2m run and separately assembled 0.8m upper landing; the model is reserved in a clear vertical bay and cannot be stacked over an occupied stair endpoint.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/architecture-kit.png",
+        "sheetCell": "row-2-column-3",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      },
+      "riseMetres": 3.2,
+      "riserCount": 16,
+      "riserHeightMetres": 0.2
+    },
+    {
+      "id": "wall-partition",
+      "name": "Innenwand mit Durchgang",
+      "family": "architecture",
+      "cell": "row-2-column-4",
+      "dimensionsMeters": [
+        4.04,
+        0.355,
+        3.22
+      ],
+      "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
+      "nominalGridMetres": 4,
+      "floorPitchMetres": 3.2,
+      "class": "reusable",
+      "function": "Separate learner-defined rooms while keeping a real connecting passage and acoustic timber detail.",
+      "targetPolycount": 2500,
+      "intendedInstances": 8,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Separate learner-defined rooms while keeping a real connecting passage and acoustic timber detail.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval.",
+        "The evaluated wall and its surrounding trim must leave a clear 2.4m × 2.7m passage."
+      ],
+      "image": {
+        "source": "../references/architecture-kit.png",
+        "sheetCell": "row-2-column-4",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      },
+      "clearOpeningMetres": [
+        2.4,
+        2.7
+      ]
+    },
+    {
+      "id": "bookshelf",
+      "name": "Bücherregal",
+      "family": "furniture",
+      "cell": "row-1-column-1",
+      "dimensionsMeters": [
+        1.2,
+        0.32,
+        1.8
+      ],
+      "dimensionBasis": "Planned full-object dimensions explicitly supplied for this reference family; not a measured model export.",
+      "class": "reusable",
+      "function": "Make a learner-selected reading or evidence area legible with stocked shelves.",
+      "targetPolycount": 5000,
+      "intendedInstances": 4,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Make a learner-selected reading or evidence area legible with stocked shelves.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/furniture-references.png",
+        "sheetCell": "row-1-column-1",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "lamp",
+      "name": "Bogenleuchte",
+      "family": "furniture",
+      "cell": "row-1-column-2",
+      "dimensionsMeters": [
+        0.85,
+        0.55,
+        1.7
+      ],
+      "dimensionBasis": "Planned full-object dimensions explicitly supplied for this reference family; not a measured model export.",
+      "class": "reusable",
+      "function": "Define a quiet reading corner with a stable weighted base and a visible light fixture.",
+      "targetPolycount": 2000,
+      "intendedInstances": 4,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Define a quiet reading corner with a stable weighted base and a visible light fixture.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/furniture-references.png",
+        "sheetCell": "row-1-column-2",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "noticeboard",
+      "name": "Evidenz-Pinnwand",
+      "family": "furniture",
+      "cell": "row-1-column-3",
+      "dimensionsMeters": [
+        1.3,
+        0.5,
+        1.5
+      ],
+      "dimensionBasis": "Planned full-object dimensions explicitly supplied for this reference family; not a measured model export.",
+      "class": "reusable",
+      "function": "Provide a visual anchor for research claims, sources and feedback; actual readable content belongs in accessible UI.",
+      "targetPolycount": 2500,
+      "intendedInstances": 3,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Provide a visual anchor for research claims, sources and feedback; actual readable content belongs in accessible UI.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/furniture-references.png",
+        "sheetCell": "row-1-column-3",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "chair",
+      "name": "Studienstuhl",
+      "family": "furniture",
+      "cell": "row-1-column-4",
+      "dimensionsMeters": [
+        0.55,
+        0.6,
+        0.85
+      ],
+      "dimensionBasis": "Planned full-object dimensions explicitly supplied for this reference family; not a measured model export.",
+      "class": "reusable",
+      "function": "Arrange individual work or conversation seating with a clear seated orientation.",
+      "targetPolycount": 3000,
+      "intendedInstances": 8,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Arrange individual work or conversation seating with a clear seated orientation.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/furniture-references.png",
+        "sheetCell": "row-1-column-4",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "bench",
+      "name": "Eichenbank",
+      "family": "furniture",
+      "cell": "row-2-column-1",
+      "dimensionsMeters": [
+        1.5,
+        0.55,
+        0.78
+      ],
+      "dimensionBasis": "Planned full-object dimensions explicitly supplied for this reference family; not a measured model export.",
+      "class": "reusable",
+      "function": "Create shared waiting or reflection places beside circulation, without blocking routes.",
+      "targetPolycount": 2500,
+      "intendedInstances": 4,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Create shared waiting or reflection places beside circulation, without blocking routes.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/furniture-references.png",
+        "sheetCell": "row-2-column-1",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "acoustic-divider",
+      "name": "Akustik-Trennwand",
+      "family": "furniture",
+      "cell": "row-2-column-2",
+      "dimensionsMeters": [
+        1,
+        0.45,
+        1.6
+      ],
+      "dimensionBasis": "Planned full-object dimensions explicitly supplied for this reference family; not a measured model export.",
+      "class": "reusable",
+      "function": "Organise quiet learning zones with movable partitions; it never substitutes for a structural wall.",
+      "targetPolycount": 1500,
+      "intendedInstances": 4,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Organise quiet learning zones with movable partitions; it never substitutes for a structural wall.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/furniture-references.png",
+        "sheetCell": "row-2-column-2",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "achievement-display",
+      "name": "Meilenstein-Display",
+      "family": "furniture",
+      "cell": "row-2-column-3",
+      "dimensionsMeters": [
+        0.8,
+        0.55,
+        0.7
+      ],
+      "dimensionBasis": "Planned full-object dimensions explicitly supplied for this reference family; not a measured model export.",
+      "class": "reusable",
+      "function": "Display earned in-game learning milestones as selectable decoration, without implying academic credit.",
+      "targetPolycount": 3500,
+      "intendedInstances": 3,
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "description": "Display earned in-game learning milestones as selectable decoration, without implying academic credit.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval."
+      ],
+      "image": {
+        "source": "../references/furniture-references.png",
+        "sheetCell": "row-2-column-3",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    },
+    {
+      "id": "research-poster",
+      "name": "Forschungsposter",
+      "family": "furniture",
+      "cell": "row-2-column-4",
+      "dimensionsMeters": [
+        0.7,
+        0.06,
+        0.9
+      ],
+      "dimensionBasis": "Planned full-object dimensions explicitly supplied for this reference family; not a measured model export.",
+      "class": "reusable",
+      "function": "Decorate research rooms with abstract visual methods; readable titles and explanations remain in the optional UI.",
+      "targetPolycount": 600,
+      "intendedInstances": 6,
+      "attachmentFace": "wall",
+      "semanticFront": "negative-y",
+      "description": "Decorate research rooms with abstract visual methods; readable titles and explanations remain in the optional UI.",
+      "reviewStatus": "pending",
+      "rejectionCriteria": [
+        "Full silhouette, support and material organisation must remain recognisable against the indicated reference cell.",
+        "No fused neighbouring props, cropped geometry or unsupported floating pieces.",
+        "Evaluate transformed mesh dimensions and named origin before export; these manifest dimensions are planned targets.",
+        "Exported triangulated geometry must remain within the stated triangle budget.",
+        "Validate placement contact, player clearance and the real production view before Runtime approval.",
+        "Mount the broad back face to a wall; do not treat this wall-mounted poster as a standing floor prop."
+      ],
+      "image": {
+        "source": "../references/furniture-references.png",
+        "sheetCell": "row-2-column-4",
+        "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
+        "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
+        "promptProvenance": "descriptive-summary-not-verbatim",
+        "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+        "approved": false,
+        "approvedBy": "",
+        "approvedAt": ""
+      }
+    }
+  ],
+  "conventions": {
+    "units": "meters",
+    "dimensionsOrder": "Blender x,y,z; full object envelope including trim, monitors, outstretched arms and handrails",
+    "nominalGridMetres": 4,
+    "floorPitchMetres": 3.2,
+    "doorClearWidthMetres": 2.4,
+    "doorClearHeightMetres": 2.7,
+    "reviewStatus": "pending",
+    "manifestPurpose": "Preparatory reference and intended-model contract, not exported-model evidence"
+  },
+  "assetFamilies": [
+    {
+      "id": "architecture",
+      "name": "Frei kombinierbare Architektur",
+      "source": "../references/architecture-kit.png",
+      "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd"
+    },
+    {
+      "id": "learning-prop",
+      "name": "Lernen und Orientierung",
+      "source": "../references/asset-references.png",
+      "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60"
+    },
+    {
+      "id": "furniture",
+      "name": "Frei wählbare Einrichtung",
+      "source": "../references/furniture-references.png",
+      "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720"
+    }
+  ]
+}

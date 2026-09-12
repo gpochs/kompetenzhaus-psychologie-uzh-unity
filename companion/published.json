@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "publishedOn": "2026-09-12",
+  "publicUrl": "https://claude.ai/public/artifacts/3c6ead1a-4ca5-4d72-ade2-a463e3d9841f",
+  "embedUrl": "https://claude.site/public/artifacts/3c6ead1a-4ca5-4d72-ade2-a463e3d9841f/embed",
+  "allowedEmbedDomains": [
+    "gpochs.github.io"
+  ],
+  "frameworkVersion": "2.1.0-draft",
+  "sourceFile": "ki-baututor-unity.html",
+  "sourceBytes": 455424,
+  "sourceSha256": "7DFF2D6FE6B74588F5B2ADAF4BC0DBA2E0447FE552CE3E2C6E3115601F61171E",
+  "previousArtifacts": [
+    {
+      "publicUrl": "https://claude.ai/public/artifacts/f66a1b12-cc7f-4cc3-ad43-5146ef4b5277",
+      "status": "Original preserved"
+    },
+    {
+      "publicUrl": "https://claude.ai/public/artifacts/5a04170a-76aa-4bbf-97d0-d60e1e789f2c",
+      "status": "Earlier Unity companion preserved"
+    },
+    {
+      "publicUrl": "https://claude.ai/public/artifacts/3ab6c94b-8a8b-41f5-978d-42d70ad19316",
+      "status": "Superseded draft; short-scene feedback weakness found in public test"
+    },
+    {
+      "publicUrl": "https://claude.ai/public/artifacts/1c63055c-94e1-45c3-b039-5e591b7c1ff2",
+      "status": "Superseded draft; repeated self-reflection control bug found in public test"
+    }
+  ],
+  "verification": {
+    "publishedState": "Claude publisher UI displayed Published (Public); author copy reported matching SHA256 and bytes",
+    "embedDomainSaved": true,
+    "mockHostTests": 39,
+    "publicRuntime": "Verified on the final public page: all four modes produced real Claude responses in German. Tutor distinguished T2 tool use from T3 workflow design with disciplinary responsibility. CV without experience produced a future learning goal. Career used professional activities without a fit score. Fictional conversation passed one-contribution stop/skip, authored minimum-material notice, same-dialogue resume, second contribution, repeated stop/skip and final feedback with validated learner quotations and immediately following character quotations.",
+    "feedbackScope": "This checks the exercised interaction and quotation validation, not all future model interpretations or professional competence. The host generated the responses under the signed-in account; no separate paid API was used.",
+    "publicEmbedGeneration": "pending Unity Web deployment",
+    "publishedBytesIndependentlyDownloaded": false
+  },
+  "billing": "No owner API key or paid endpoint; visitor Claude account and its available allowance apply. No paid usage, credits purchase, auto-reload or paid fallback is enabled by this project."
+}

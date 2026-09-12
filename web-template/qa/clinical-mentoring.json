@@ -1,0 +1,2609 @@
+{
+    "schemaVersion": 1,
+    "ready": true,
+    "error": "",
+    "message": "C# QA fixture: clinical-mentoring",
+    "language": "de",
+    "learningMode": "Free",
+    "selectedHouseId": "all",
+    "viewMode": "BirdView",
+    "futureCurriculum": true,
+    "directMasterEntry": false,
+    "worldReady": false,
+    "visibleFloor": 3,
+    "showRoofs": false,
+    "interactionHint": "",
+    "focusedModuleId": "",
+    "focusedQuestId": "",
+    "accessibility": {
+        "highContrast": false,
+        "reducedMotion": false,
+        "captions": true,
+        "textScale": 1.0,
+        "lookSensitivity": 1.0,
+        "masterVolume": 0.75
+    },
+    "placedModuleIds": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "200",
+        "201",
+        "300",
+        "301",
+        "302",
+        "400",
+        "401",
+        "402",
+        "403",
+        "500",
+        "501",
+        "502",
+        "600",
+        "901",
+        "902",
+        "903",
+        "904",
+        "909",
+        "001",
+        "002",
+        "003",
+        "s11",
+        "s12",
+        "s13",
+        "BA",
+        "s04",
+        "s05",
+        "s06",
+        "wp",
+        "s01a",
+        "s01b",
+        "s07",
+        "s08",
+        "s09",
+        "s01c",
+        "s03",
+        "s02a",
+        "s02b",
+        "MA"
+    ],
+    "quizMasteredModuleIds": [],
+    "selfCheckedModuleIds": [],
+    "completedQuestIds": [],
+    "unlockedCosmeticIds": [],
+    "earnedExperience": 0,
+    "moduleChoices": [
+        {
+            "slotId": "wp",
+            "moduleCode": "06SM200-511"
+        },
+        {
+            "slotId": "s01c",
+            "moduleCode": "10SMSTS-505"
+        }
+    ],
+    "competenceChoices": [
+        {
+            "moduleId": "s11",
+            "specialisationId": "",
+            "topicId": "s11b",
+            "thesisQuestionId": ""
+        },
+        {
+            "moduleId": "s12",
+            "specialisationId": "",
+            "topicId": "s12a",
+            "thesisQuestionId": ""
+        },
+        {
+            "moduleId": "s13",
+            "specialisationId": "",
+            "topicId": "s13c",
+            "thesisQuestionId": ""
+        },
+        {
+            "moduleId": "BA",
+            "specialisationId": "",
+            "topicId": "BAk",
+            "thesisQuestionId": "BAk1"
+        },
+        {
+            "moduleId": "s04",
+            "specialisationId": "HEA",
+            "topicId": "",
+            "thesisQuestionId": ""
+        },
+        {
+            "moduleId": "s05",
+            "specialisationId": "HEA",
+            "topicId": "",
+            "thesisQuestionId": ""
+        },
+        {
+            "moduleId": "s06",
+            "specialisationId": "HEA",
+            "topicId": "",
+            "thesisQuestionId": ""
+        },
+        {
+            "moduleId": "s07",
+            "specialisationId": "HEA",
+            "topicId": "",
+            "thesisQuestionId": ""
+        },
+        {
+            "moduleId": "s08",
+            "specialisationId": "HEA",
+            "topicId": "",
+            "thesisQuestionId": ""
+        },
+        {
+            "moduleId": "s09",
+            "specialisationId": "HEA",
+            "topicId": "",
+            "thesisQuestionId": ""
+        }
+    ],
+    "preStageChecks": [],
+    "profile": {
+        "meaning": "modelled-curricular-exposure-not-measured-personal-competence",
+        "sourceStatus": "Inherited public design model, 2026; career and further-education descriptions are not newly verified requirements.",
+        "sourceUrl": "https://github.com/gpochs/kompetenzhaus-psychologie-uzh",
+        "calculationVersion": "legacy-profile-1",
+        "isPreview": false,
+        "competencies": [
+            {
+                "id": "Fa1",
+                "score": 202.0,
+                "maximum": 202.0,
+                "ratio": 1.0,
+                "percent": 100,
+                "stage": 4,
+                "builtModuleIds": [
+                    "001",
+                    "002",
+                    "MA",
+                    "400",
+                    "909",
+                    "200",
+                    "201",
+                    "401",
+                    "402",
+                    "300",
+                    "301",
+                    "302",
+                    "403",
+                    "502",
+                    "wp",
+                    "s11",
+                    "s12",
+                    "s13",
+                    "s04",
+                    "s05",
+                    "s06",
+                    "s01a",
+                    "s01b",
+                    "s07",
+                    "s08",
+                    "s09",
+                    "s01c",
+                    "s02a",
+                    "s02b"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fa2",
+                "score": 96.0,
+                "maximum": 174.0,
+                "ratio": 0.5517241379310345,
+                "percent": 55,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "002",
+                    "102",
+                    "201",
+                    "103",
+                    "s03",
+                    "BA",
+                    "101",
+                    "500",
+                    "901",
+                    "902",
+                    "903"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fa3",
+                "score": 108.0,
+                "maximum": 108.0,
+                "ratio": 1.0,
+                "percent": 100,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "001",
+                    "103",
+                    "BA",
+                    "100",
+                    "101",
+                    "102",
+                    "500",
+                    "s03",
+                    "903",
+                    "904"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fa4",
+                "score": 186.0,
+                "maximum": 202.0,
+                "ratio": 0.9207920792079208,
+                "percent": 92,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "001",
+                    "002",
+                    "909",
+                    "BA",
+                    "200",
+                    "s11",
+                    "103",
+                    "s12",
+                    "s13",
+                    "s04",
+                    "s05",
+                    "s01a",
+                    "s01b",
+                    "s07",
+                    "s08",
+                    "100",
+                    "101",
+                    "201",
+                    "300",
+                    "500",
+                    "501",
+                    "s06",
+                    "s09",
+                    "s03",
+                    "003",
+                    "s02a",
+                    "s02b",
+                    "902",
+                    "904"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fa5",
+                "score": 136.0,
+                "maximum": 132.0,
+                "ratio": 1.0303030303030303,
+                "percent": 103,
+                "stage": 3,
+                "builtModuleIds": [
+                    "600",
+                    "BA",
+                    "100",
+                    "400",
+                    "s11",
+                    "300",
+                    "s12",
+                    "s13",
+                    "501",
+                    "s04",
+                    "s05",
+                    "s06",
+                    "wp",
+                    "s07",
+                    "s08",
+                    "s09",
+                    "301"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fa6",
+                "score": 138.0,
+                "maximum": 142.0,
+                "ratio": 0.971830985915493,
+                "percent": 97,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "102",
+                    "600",
+                    "BA",
+                    "s11",
+                    "s12",
+                    "s13",
+                    "909",
+                    "003",
+                    "501",
+                    "s04",
+                    "s05",
+                    "s06",
+                    "s01a",
+                    "s01b",
+                    "s07",
+                    "s08",
+                    "s09",
+                    "902",
+                    "903",
+                    "904",
+                    "901"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fa7",
+                "score": 84.0,
+                "maximum": 84.0,
+                "ratio": 1.0,
+                "percent": 100,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "400",
+                    "600",
+                    "BA",
+                    "102",
+                    "501",
+                    "302",
+                    "502",
+                    "s06",
+                    "s09",
+                    "s01c",
+                    "003",
+                    "901"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fa8",
+                "score": 168.0,
+                "maximum": 164.0,
+                "ratio": 1.024390243902439,
+                "percent": 102,
+                "stage": 3,
+                "builtModuleIds": [
+                    "600",
+                    "400",
+                    "BA",
+                    "s11",
+                    "402",
+                    "301",
+                    "302",
+                    "s12",
+                    "s13",
+                    "502",
+                    "s04",
+                    "s05",
+                    "s06",
+                    "s07",
+                    "s08",
+                    "s09",
+                    "s01c",
+                    "401",
+                    "403",
+                    "wp"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fa9",
+                "score": 72.0,
+                "maximum": 140.0,
+                "ratio": 0.5142857142857142,
+                "percent": 51,
+                "stage": 3,
+                "builtModuleIds": [
+                    "001",
+                    "600",
+                    "400",
+                    "403",
+                    "100",
+                    "s11",
+                    "300",
+                    "302",
+                    "s12",
+                    "501",
+                    "502",
+                    "s05",
+                    "s08",
+                    "s01c"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fa10",
+                "score": 50.0,
+                "maximum": 50.0,
+                "ratio": 1.0,
+                "percent": 100,
+                "stage": 4,
+                "builtModuleIds": [
+                    "600",
+                    "MA",
+                    "102",
+                    "BA",
+                    "003",
+                    "s01c",
+                    "901",
+                    "903"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "KI1",
+                "score": 108.0,
+                "maximum": 108.0,
+                "ratio": 1.0,
+                "percent": 100,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "001",
+                    "600",
+                    "101",
+                    "102",
+                    "103",
+                    "s03",
+                    "BA",
+                    "s11",
+                    "s12",
+                    "s13",
+                    "500",
+                    "s04",
+                    "s07",
+                    "s09",
+                    "s01c",
+                    "003",
+                    "903",
+                    "s02a",
+                    "s02b"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "KI2",
+                "score": 66.0,
+                "maximum": 74.0,
+                "ratio": 0.8918918918918919,
+                "percent": 89,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "BA",
+                    "102",
+                    "s01a",
+                    "s01b",
+                    "101",
+                    "s11",
+                    "s12",
+                    "s13",
+                    "s03",
+                    "903"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "KI3",
+                "score": 102.0,
+                "maximum": 160.0,
+                "ratio": 0.6375,
+                "percent": 64,
+                "stage": 4,
+                "builtModuleIds": [
+                    "600",
+                    "MA",
+                    "102",
+                    "400",
+                    "301",
+                    "302",
+                    "s05",
+                    "s08",
+                    "BA",
+                    "403",
+                    "s06",
+                    "wp",
+                    "901"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "KI4",
+                "score": 106.0,
+                "maximum": 174.0,
+                "ratio": 0.6091954022988506,
+                "percent": 61,
+                "stage": 3,
+                "builtModuleIds": [
+                    "002",
+                    "103",
+                    "100",
+                    "200",
+                    "201",
+                    "401",
+                    "500",
+                    "s04",
+                    "s07",
+                    "s03",
+                    "300",
+                    "s05",
+                    "003"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "KI5",
+                "score": 160.0,
+                "maximum": 156.0,
+                "ratio": 1.0256410256410255,
+                "percent": 103,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "600",
+                    "400",
+                    "102",
+                    "402",
+                    "502",
+                    "s06",
+                    "s09",
+                    "s01c",
+                    "909",
+                    "BA",
+                    "s11",
+                    "302",
+                    "s12",
+                    "s13",
+                    "501",
+                    "s05",
+                    "wp",
+                    "s01a",
+                    "s01b",
+                    "s08",
+                    "901",
+                    "003",
+                    "902",
+                    "904"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "KI6",
+                "score": 244.0,
+                "maximum": 254.0,
+                "ratio": 0.9606299212598425,
+                "percent": 96,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "001",
+                    "909",
+                    "101",
+                    "400",
+                    "s11",
+                    "103",
+                    "300",
+                    "403",
+                    "s12",
+                    "s13",
+                    "501",
+                    "s04",
+                    "s05",
+                    "s06",
+                    "wp",
+                    "s07",
+                    "s08",
+                    "s09",
+                    "BA",
+                    "100",
+                    "200",
+                    "201",
+                    "401",
+                    "402",
+                    "301",
+                    "500",
+                    "502",
+                    "s01a",
+                    "s01b",
+                    "s03",
+                    "902",
+                    "903",
+                    "904",
+                    "003",
+                    "s02a",
+                    "s02b"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fu1",
+                "score": 158.0,
+                "maximum": 166.0,
+                "ratio": 0.9518072289156626,
+                "percent": 95,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "001",
+                    "400",
+                    "102",
+                    "103",
+                    "s01a",
+                    "s01b",
+                    "BA",
+                    "100",
+                    "101",
+                    "200",
+                    "201",
+                    "s11",
+                    "401",
+                    "300",
+                    "301",
+                    "302",
+                    "403",
+                    "s12",
+                    "s13",
+                    "500",
+                    "501",
+                    "502",
+                    "s04",
+                    "s05",
+                    "s06",
+                    "wp",
+                    "s07",
+                    "s08",
+                    "s09",
+                    "s03",
+                    "903",
+                    "s02a",
+                    "s02b"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fu2",
+                "score": 140.0,
+                "maximum": 144.0,
+                "ratio": 0.9722222222222222,
+                "percent": 97,
+                "stage": 4,
+                "builtModuleIds": [
+                    "001",
+                    "002",
+                    "600",
+                    "909",
+                    "400",
+                    "103",
+                    "402",
+                    "BA",
+                    "100",
+                    "101",
+                    "200",
+                    "201",
+                    "s11",
+                    "401",
+                    "300",
+                    "s13",
+                    "500",
+                    "s04",
+                    "s01a",
+                    "s01b",
+                    "s07",
+                    "s01c",
+                    "s03",
+                    "003",
+                    "901",
+                    "902",
+                    "903",
+                    "904"
+                ],
+                "availableModuleIds": []
+            },
+            {
+                "id": "Fu3",
+                "score": 110.0,
+                "maximum": 98.0,
+                "ratio": 1.1224489795918366,
+                "percent": 112,
+                "stage": 4,
+                "builtModuleIds": [
+                    "MA",
+                    "600",
+                    "400",
+                    "102",
+                    "s01c",
+                    "BA",
+                    "003",
+                    "s11",
+                    "301",
+                    "302",
+                    "403",
+                    "s12",
+                    "s13",
+                    "501",
+                    "502",
+                    "s05",
+                    "s06",
+                    "wp",
+                    "s08",
+                    "s09",
+                    "901",
+                    "902",
+                    "904",
+                    "s02a",
+                    "s02b"
+                ],
+                "availableModuleIds": []
+            }
+        ],
+        "fields": [
+            {
+                "id": "fa",
+                "name": {
+                    "de": "",
+                    "en": ""
+                },
+                "competencyIds": [
+                    "Fa1",
+                    "Fa2",
+                    "Fa3",
+                    "Fa4",
+                    "Fa5",
+                    "Fa6",
+                    "Fa7",
+                    "Fa8",
+                    "Fa9",
+                    "Fa10"
+                ],
+                "score": 1240.0,
+                "maximum": 1398.0,
+                "ratio": 0.8869814020028612,
+                "percent": 89
+            },
+            {
+                "id": "ki",
+                "name": {
+                    "de": "",
+                    "en": ""
+                },
+                "competencyIds": [
+                    "KI1",
+                    "KI2",
+                    "KI3",
+                    "KI4",
+                    "KI5",
+                    "KI6"
+                ],
+                "score": 786.0,
+                "maximum": 926.0,
+                "ratio": 0.8488120950323974,
+                "percent": 85
+            },
+            {
+                "id": "fu",
+                "name": {
+                    "de": "",
+                    "en": ""
+                },
+                "competencyIds": [
+                    "Fu1",
+                    "Fu2",
+                    "Fu3"
+                ],
+                "score": 408.0,
+                "maximum": 408.0,
+                "ratio": 1.0,
+                "percent": 100
+            }
+        ],
+        "radar": [
+            {
+                "id": "knowledge",
+                "name": {
+                    "de": "Fachwissen & Transfer",
+                    "en": "Knowledge & transfer"
+                },
+                "competencyIds": [
+                    "Fa1",
+                    "Fa8",
+                    "Fa9"
+                ],
+                "score": 442.0,
+                "maximum": 506.0,
+                "ratio": 0.8735177865612648,
+                "percent": 87
+            },
+            {
+                "id": "methods",
+                "name": {
+                    "de": "Methoden, Daten & Diagnostik",
+                    "en": "Methods, data & diagnostics"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "Fa3",
+                    "Fa5"
+                ],
+                "score": 340.0,
+                "maximum": 414.0,
+                "ratio": 0.821256038647343,
+                "percent": 82
+            },
+            {
+                "id": "thinking",
+                "name": {
+                    "de": "Denken, Ethik & Kommunikation",
+                    "en": "Thinking, ethics & communication"
+                },
+                "competencyIds": [
+                    "Fa4",
+                    "Fa6",
+                    "Fa7",
+                    "Fa10"
+                ],
+                "score": 458.0,
+                "maximum": 478.0,
+                "ratio": 0.9581589958158996,
+                "percent": 96
+            },
+            {
+                "id": "aiCreation",
+                "name": {
+                    "de": "Mit KI arbeiten & gestalten",
+                    "en": "Working & creating with AI"
+                },
+                "competencyIds": [
+                    "KI1",
+                    "KI2",
+                    "KI3"
+                ],
+                "score": 276.0,
+                "maximum": 342.0,
+                "ratio": 0.8070175438596491,
+                "percent": 81
+            },
+            {
+                "id": "aiJudgement",
+                "name": {
+                    "de": "KI verstehen, prüfen & verantworten",
+                    "en": "Understanding, auditing & owning AI"
+                },
+                "competencyIds": [
+                    "KI4",
+                    "KI5",
+                    "KI6"
+                ],
+                "score": 510.0,
+                "maximum": 584.0,
+                "ratio": 0.8732876712328768,
+                "percent": 87
+            },
+            {
+                "id": "future",
+                "name": {
+                    "de": "Future Skills (mit & ohne KI)",
+                    "en": "Future skills (with & without AI)"
+                },
+                "competencyIds": [
+                    "Fu1",
+                    "Fu2",
+                    "Fu3"
+                ],
+                "score": 408.0,
+                "maximum": 408.0,
+                "ratio": 1.0,
+                "percent": 100
+            }
+        ],
+        "credits": [
+            {
+                "houseId": "bsc",
+                "selectedEcts": 120.0,
+                "targetEcts": 120
+            },
+            {
+                "houseId": "msc",
+                "selectedEcts": 122.0,
+                "targetEcts": 120
+            }
+        ],
+        "choices": {
+            "bachelorDirection": "klin",
+            "masterSpecialisation": "HEA",
+            "bachelorCounts": [
+                {
+                    "id": "klin",
+                    "count": 4
+                },
+                {
+                    "id": "ekn",
+                    "count": 0
+                },
+                {
+                    "id": "swo",
+                    "count": 0
+                }
+            ],
+            "masterCounts": [
+                {
+                    "id": "DeNC",
+                    "count": 0
+                },
+                {
+                    "id": "HEA",
+                    "count": 6
+                },
+                {
+                    "id": "SEOP",
+                    "count": 0
+                }
+            ]
+        },
+        "careers": [
+            {
+                "id": "psycho",
+                "name": {
+                    "de": "Psychotherapie",
+                    "en": "Psychotherapy"
+                },
+                "description": {
+                    "de": "Eidgenössisch anerkannte:r Psychotherapeut:in — der lange Turm mit klaren Etappen",
+                    "en": "Federally recognised psychotherapist — the tall tower with clear stages"
+                },
+                "fitPercent": 86,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.9,
+                    0.8,
+                    0.9,
+                    0.55,
+                    0.85,
+                    0.8
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "klinik",
+                "name": {
+                    "de": "Klinische Psychologie",
+                    "en": "Clinical psychology"
+                },
+                "description": {
+                    "de": "Fachtitel Klinische Psychologie/Gesundheitspsychologie, Klinik, Beratung, Prävention",
+                    "en": "Specialist titles in clinical/health psychology, clinics, counselling, prevention"
+                },
+                "fitPercent": 86,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.9,
+                    0.8,
+                    0.85,
+                    0.6,
+                    0.85,
+                    0.75
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "gesundheit",
+                "name": {
+                    "de": "Gesundheitsförderung & Prävention",
+                    "en": "Health promotion & prevention"
+                },
+                "description": {
+                    "de": "Gesundheitspsychologie: Prävention, betriebliche Gesundheit, Public Health — einer der fünf eidgenössischen Titel",
+                    "en": "Health psychology: prevention, workplace health, public health — one of the five federal titles"
+                },
+                "fitPercent": 81,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.9,
+                    0.7,
+                    0.85,
+                    0.55,
+                    0.7,
+                    0.85
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "neuro",
+                "name": {
+                    "de": "Neuropsychologie",
+                    "en": "Neuropsychology"
+                },
+                "description": {
+                    "de": "Klinische Neuropsychologie, Diagnostik und Rehabilitation nach Hirnschädigungen",
+                    "en": "Clinical neuropsychology, assessment and rehabilitation after brain injury"
+                },
+                "fitPercent": 31,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.9,
+                    0.9,
+                    0.8,
+                    0.55,
+                    0.8,
+                    0.65
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "schule",
+                "name": {
+                    "de": "Kinder-, Jugend- & Schulpsychologie",
+                    "en": "Child, adolescent & school psychology"
+                },
+                "description": {
+                    "de": "Schulpsychologische Dienste, Beratung von Kindern, Eltern und Lehrpersonen",
+                    "en": "School psychology services, counselling children, parents and teachers"
+                },
+                "fitPercent": 67,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.9,
+                    0.75,
+                    0.85,
+                    0.55,
+                    0.7,
+                    0.8
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "phd",
+                "name": {
+                    "de": "PhD & Forschung",
+                    "en": "PhD & research"
+                },
+                "description": {
+                    "de": "Promotion, wissenschaftliche Mitarbeit, akademische Laufbahn",
+                    "en": "Doctorate, research positions, academic career"
+                },
+                "fitPercent": 48,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.7,
+                    0.95,
+                    0.9,
+                    0.8,
+                    0.9,
+                    0.7
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "gutachten",
+                "name": {
+                    "de": "Diagnostik & Rechtspsychologie",
+                    "en": "Assessment & legal psychology"
+                },
+                "description": {
+                    "de": "Forensische, verkehrs- und versicherungspsychologische Begutachtung",
+                    "en": "Forensic, traffic and insurance psychology assessment"
+                },
+                "fitPercent": 75,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.85,
+                    0.95,
+                    0.95,
+                    0.5,
+                    0.9,
+                    0.7
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "wirtschaft",
+                "name": {
+                    "de": "Arbeits- & Organisationspsychologie",
+                    "en": "Work & organisational psychology"
+                },
+                "description": {
+                    "de": "Personalauswahl und -entwicklung, Führung, Teams, Arbeitsgestaltung — das grösste nicht-klinische Berufsfeld",
+                    "en": "Personnel selection and development, leadership, teams, work design — the largest non-clinical field"
+                },
+                "fitPercent": 24,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.75,
+                    0.7,
+                    0.8,
+                    0.85,
+                    0.7,
+                    0.9
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "laufbahn",
+                "name": {
+                    "de": "Berufs-, Studien- & Laufbahnberatung",
+                    "en": "Career, study & vocational counselling"
+                },
+                "description": {
+                    "de": "Menschen bei Berufswahl, Laufbahnentscheiden und Neuorientierung begleiten — mit Diagnostik und Beratung",
+                    "en": "Supporting people in career choice, career decisions and reorientation — with assessment and counselling"
+                },
+                "fitPercent": 23,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.75,
+                    0.85,
+                    0.9,
+                    0.5,
+                    0.75,
+                    0.9
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "konsum",
+                "name": {
+                    "de": "Markt- & Konsumentenpsychologie",
+                    "en": "Market & consumer psychology"
+                },
+                "description": {
+                    "de": "Entscheidungsverhalten, Werbewirkung und Marktforschung — psychologisch fundiert statt bauchgetrieben",
+                    "en": "Decision behaviour, advertising effects and market research — psychologically grounded rather than gut-driven"
+                },
+                "fitPercent": 18,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.7,
+                    0.95,
+                    0.8,
+                    0.65,
+                    0.7,
+                    0.6
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "ux",
+                "name": {
+                    "de": "Nutzer- & Medienpsychologie (UX-Research)",
+                    "en": "User & media psychology (UX research)"
+                },
+                "description": {
+                    "de": "Wie Menschen digitale Produkte wahrnehmen, verstehen und nutzen — Kognition und Methodik werden zum Beruf",
+                    "en": "How people perceive, understand and use digital products — cognition and methodology become a profession"
+                },
+                "fitPercent": 14,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.7,
+                    0.85,
+                    0.85,
+                    0.75,
+                    0.8,
+                    0.8
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            },
+            {
+                "id": "ppp",
+                "name": {
+                    "de": "PPP-Lehrperson (Gymnasium)",
+                    "en": "PPP teacher (high school)"
+                },
+                "description": {
+                    "de": "Unterricht im Schwerpunktfach Philosophie/Pädagogik/Psychologie, der Kreis zur Vorstufe ⓪ schliesst sich",
+                    "en": "Teaching the PPP major, closing the loop to stage ⓪"
+                },
+                "fitPercent": 54,
+                "hasEvidence": true,
+                "targetRadar": [
+                    0.95,
+                    0.6,
+                    0.9,
+                    0.7,
+                    0.75,
+                    0.85
+                ],
+                "gaps": [],
+                "recommendedModuleIds": []
+            }
+        ],
+        "semesters": [
+            {
+                "id": "B1",
+                "fa": 134.0,
+                "ki": 62.0,
+                "fu": 58.0
+            },
+            {
+                "id": "B2",
+                "fa": 0.0,
+                "ki": 0.0,
+                "fu": 0.0
+            },
+            {
+                "id": "B3",
+                "fa": 100.0,
+                "ki": 68.0,
+                "fu": 60.0
+            },
+            {
+                "id": "B4",
+                "fa": 68.0,
+                "ki": 48.0,
+                "fu": 32.0
+            },
+            {
+                "id": "B5",
+                "fa": 88.0,
+                "ki": 72.0,
+                "fu": 52.0
+            },
+            {
+                "id": "B6",
+                "fa": 84.0,
+                "ki": 54.0,
+                "fu": 38.0
+            },
+            {
+                "id": "M1",
+                "fa": 86.0,
+                "ki": 66.0,
+                "fu": 50.0
+            },
+            {
+                "id": "M2",
+                "fa": 186.0,
+                "ki": 98.0,
+                "fu": 66.0
+            },
+            {
+                "id": "M3",
+                "fa": 304.0,
+                "ki": 210.0,
+                "fu": 100.0
+            },
+            {
+                "id": "M4",
+                "fa": 38.0,
+                "ki": 26.0,
+                "fu": 16.0
+            }
+        ],
+        "choiceOptions": [
+            {
+                "moduleId": "s11",
+                "kind": "topic",
+                "id": "s11a",
+                "parentId": "",
+                "directionId": "ekn",
+                "name": {
+                    "de": "Kognitive Entwicklung & Lernen über die Lebensspanne",
+                    "en": "Cognitive development & learning across the lifespan"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s11",
+                "kind": "topic",
+                "id": "s11b",
+                "parentId": "",
+                "directionId": "klin",
+                "name": {
+                    "de": "Entwicklungspsychopathologie & Resilienz",
+                    "en": "Developmental psychopathology & resilience"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s11",
+                "kind": "topic",
+                "id": "s11c",
+                "parentId": "",
+                "directionId": "swo",
+                "name": {
+                    "de": "Soziale & emotionale Entwicklung in Familie und Peers",
+                    "en": "Social & emotional development in family and peer contexts"
+                },
+                "competencyIds": [
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s12",
+                "kind": "topic",
+                "id": "s12a",
+                "parentId": "",
+                "directionId": "klin",
+                "name": {
+                    "de": "Psychotherapieforschung & Interventionsansätze",
+                    "en": "Psychotherapy research & intervention approaches"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s12",
+                "kind": "topic",
+                "id": "s12b",
+                "parentId": "",
+                "directionId": "ekn",
+                "name": {
+                    "de": "Klinische Neurowissenschaft & Biopsychologie psychischer Störungen",
+                    "en": "Clinical neuroscience & biopsychology of mental disorders"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s12",
+                "kind": "topic",
+                "id": "s12c",
+                "parentId": "",
+                "directionId": "swo",
+                "name": {
+                    "de": "Gesundheitsverhalten & Prävention in Alltag und Arbeitswelt",
+                    "en": "Health behaviour & prevention in everyday and work life"
+                },
+                "competencyIds": [
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s13",
+                "kind": "topic",
+                "id": "s13a",
+                "parentId": "",
+                "directionId": "swo",
+                "name": {
+                    "de": "Organisations- & Personalpsychologie",
+                    "en": "Organisational & personnel psychology"
+                },
+                "competencyIds": [
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s13",
+                "kind": "topic",
+                "id": "s13b",
+                "parentId": "",
+                "directionId": "ekn",
+                "name": {
+                    "de": "Soziale Kognition & Urteilsbildung",
+                    "en": "Social cognition & judgement"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s13",
+                "kind": "topic",
+                "id": "s13c",
+                "parentId": "",
+                "directionId": "klin",
+                "name": {
+                    "de": "Persönlichkeit, Differenzen & psychische Gesundheit",
+                    "en": "Personality, individual differences & mental health"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "BA",
+                "kind": "topic",
+                "id": "BAk",
+                "parentId": "",
+                "directionId": "klin",
+                "name": {
+                    "de": "Themenfeld Klinische Psychologie & Gesundheit",
+                    "en": "Thesis field: clinical & health psychology"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "BA",
+                "kind": "topic",
+                "id": "BAe",
+                "parentId": "",
+                "directionId": "ekn",
+                "name": {
+                    "de": "Themenfeld Entwicklung, Kognition & Neurowissenschaft",
+                    "en": "Thesis field: development, cognition & neuroscience"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "BA",
+                "kind": "topic",
+                "id": "BAs",
+                "parentId": "",
+                "directionId": "swo",
+                "name": {
+                    "de": "Themenfeld Sozial-, Wirtschafts- & Organisationspsychologie",
+                    "en": "Thesis field: social, economic & organisational psychology"
+                },
+                "competencyIds": [
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "BA",
+                "kind": "thesisQuestion",
+                "id": "BAk1",
+                "parentId": "BAk",
+                "directionId": "",
+                "name": {
+                    "de": "Hängt Schlafqualität mit depressiven Symptomen zusammen? Analyse eines bereitgestellten Längsschnitt-Datensatzes",
+                    "en": "Is sleep quality linked to depressive symptoms? Analysis of a provided longitudinal dataset"
+                },
+                "competencyIds": [
+                    "Fa3"
+                ],
+                "careerIds": [
+                    "psycho",
+                    "klinik",
+                    "gesundheit"
+                ]
+            },
+            {
+                "moduleId": "BA",
+                "kind": "thesisQuestion",
+                "id": "BAk2",
+                "parentId": "BAk",
+                "directionId": "",
+                "name": {
+                    "de": "Reproduzierbarkeitscheck: Lässt sich der Zusammenhang von Social-Media-Nutzung und Wohlbefinden mit offenen Daten replizieren?",
+                    "en": "Reproducibility check: does the social-media-use/well-being link replicate with open data?"
+                },
+                "competencyIds": [
+                    "Fa3",
+                    "Fa4"
+                ],
+                "careerIds": [
+                    "klinik",
+                    "phd",
+                    "gesundheit"
+                ]
+            },
+            {
+                "moduleId": "BA",
+                "kind": "thesisQuestion",
+                "id": "BAk3",
+                "parentId": "BAk",
+                "directionId": "",
+                "name": {
+                    "de": "Strukturierter Review: Wirksamkeit digitaler Gesundheitsinterventionen (Apps) bei Stress — codierte Befunde",
+                    "en": "Structured review: effectiveness of digital health interventions (apps) for stress — coded findings"
+                },
+                "competencyIds": [
+                    "Fa4",
+                    "KI6"
+                ],
+                "careerIds": [
+                    "gesundheit",
+                    "klinik",
+                    "ux"
+                ]
+            },
+            {
+                "moduleId": "BA",
+                "kind": "thesisQuestion",
+                "id": "BAe1",
+                "parentId": "BAe",
+                "directionId": "",
+                "name": {
+                    "de": "Altersunterschiede im Arbeitsgedächtnis: Auswertung eines bereitgestellten Reaktionszeit-Datensatzes",
+                    "en": "Age differences in working memory: analysis of a provided reaction-time dataset"
+                },
+                "competencyIds": [
+                    "Fa3"
+                ],
+                "careerIds": [
+                    "neuro",
+                    "phd"
+                ]
+            },
+            {
+                "moduleId": "BA",
+                "kind": "thesisQuestion",
+                "id": "BAe2",
+                "parentId": "BAe",
+                "directionId": "",
+                "name": {
+                    "de": "Robustheitscheck eines publizierten Gedächtniseffekts (z.B. Testungseffekt) mit alternativen Auswertungsentscheidungen",
+                    "en": "Robustness check of a published memory effect (e.g. testing effect) under alternative analytic decisions"
+                },
+                "competencyIds": [
+                    "Fa3",
+                    "Fa4"
+                ],
+                "careerIds": [
+                    "phd",
+                    "neuro",
+                    "ux"
+                ]
+            },
+            {
+                "moduleId": "BA",
+                "kind": "thesisQuestion",
+                "id": "BAe3",
+                "parentId": "BAe",
+                "directionId": "",
+                "name": {
+                    "de": "Strukturierter Review: Was zeigen Längsschnittstudien zu Bildschirmzeit in der frühen Kindheit?",
+                    "en": "Structured review: what do longitudinal studies show on screen time in early childhood?"
+                },
+                "competencyIds": [
+                    "Fa4",
+                    "KI6"
+                ],
+                "careerIds": [
+                    "schule",
+                    "phd",
+                    "gesundheit"
+                ]
+            },
+            {
+                "moduleId": "BA",
+                "kind": "thesisQuestion",
+                "id": "BAs1",
+                "parentId": "BAs",
+                "directionId": "",
+                "name": {
+                    "de": "Homeoffice und Arbeitszufriedenheit: Analyse eines bereitgestellten Befragungs-Datensatzes",
+                    "en": "Working from home and job satisfaction: analysis of a provided survey dataset"
+                },
+                "competencyIds": [
+                    "Fa3"
+                ],
+                "careerIds": [
+                    "wirtschaft",
+                    "laufbahn"
+                ]
+            },
+            {
+                "moduleId": "BA",
+                "kind": "thesisQuestion",
+                "id": "BAs2",
+                "parentId": "BAs",
+                "directionId": "",
+                "name": {
+                    "de": "Reproduzierbarkeitscheck: Nudging-Effekte auf umweltfreundliches Verhalten in offenen Datensätzen",
+                    "en": "Reproducibility check: nudging effects on pro-environmental behaviour in open datasets"
+                },
+                "competencyIds": [
+                    "Fa3",
+                    "Fa4"
+                ],
+                "careerIds": [
+                    "wirtschaft",
+                    "konsum"
+                ]
+            },
+            {
+                "moduleId": "BA",
+                "kind": "thesisQuestion",
+                "id": "BAs3",
+                "parentId": "BAs",
+                "directionId": "",
+                "name": {
+                    "de": "Strukturierter Review: Algorithmus-Aversion und Vertrauen in KI-Empfehlungen — codierte Befunde",
+                    "en": "Structured review: algorithm aversion and trust in AI recommendations — coded findings"
+                },
+                "competencyIds": [
+                    "Fa4",
+                    "KI6"
+                ],
+                "careerIds": [
+                    "konsum",
+                    "ux",
+                    "wirtschaft"
+                ]
+            },
+            {
+                "moduleId": "s04",
+                "kind": "specialisation",
+                "id": "DeNC",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Developmental & Cognitive Neuroscience (DeNC)",
+                    "en": "Developmental & Cognitive Neuroscience (DeNC)"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s04",
+                "kind": "specialisation",
+                "id": "HEA",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Health, Emotion & Adjustment (HEA)",
+                    "en": "Health, Emotion & Adjustment (HEA)"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s04",
+                "kind": "specialisation",
+                "id": "SEOP",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Social, Economic & Organisational Psychology (SEOP)",
+                    "en": "Social, Economic & Organisational Psychology (SEOP)"
+                },
+                "competencyIds": [
+                    "Fa8",
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s05",
+                "kind": "specialisation",
+                "id": "DeNC",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Developmental & Cognitive Neuroscience (DeNC)",
+                    "en": "Developmental & Cognitive Neuroscience (DeNC)"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s05",
+                "kind": "specialisation",
+                "id": "HEA",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Health, Emotion & Adjustment (HEA)",
+                    "en": "Health, Emotion & Adjustment (HEA)"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s05",
+                "kind": "specialisation",
+                "id": "SEOP",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Social, Economic & Organisational Psychology (SEOP)",
+                    "en": "Social, Economic & Organisational Psychology (SEOP)"
+                },
+                "competencyIds": [
+                    "Fa8",
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s06",
+                "kind": "specialisation",
+                "id": "DeNC",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Developmental & Cognitive Neuroscience (DeNC)",
+                    "en": "Developmental & Cognitive Neuroscience (DeNC)"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s06",
+                "kind": "specialisation",
+                "id": "HEA",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Health, Emotion & Adjustment (HEA)",
+                    "en": "Health, Emotion & Adjustment (HEA)"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s06",
+                "kind": "specialisation",
+                "id": "SEOP",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Social, Economic & Organisational Psychology (SEOP)",
+                    "en": "Social, Economic & Organisational Psychology (SEOP)"
+                },
+                "competencyIds": [
+                    "Fa8",
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s07",
+                "kind": "specialisation",
+                "id": "DeNC",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Developmental & Cognitive Neuroscience (DeNC)",
+                    "en": "Developmental & Cognitive Neuroscience (DeNC)"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s07",
+                "kind": "specialisation",
+                "id": "HEA",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Health, Emotion & Adjustment (HEA)",
+                    "en": "Health, Emotion & Adjustment (HEA)"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s07",
+                "kind": "specialisation",
+                "id": "SEOP",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Social, Economic & Organisational Psychology (SEOP)",
+                    "en": "Social, Economic & Organisational Psychology (SEOP)"
+                },
+                "competencyIds": [
+                    "Fa8",
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s08",
+                "kind": "specialisation",
+                "id": "DeNC",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Developmental & Cognitive Neuroscience (DeNC)",
+                    "en": "Developmental & Cognitive Neuroscience (DeNC)"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s08",
+                "kind": "specialisation",
+                "id": "HEA",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Health, Emotion & Adjustment (HEA)",
+                    "en": "Health, Emotion & Adjustment (HEA)"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s08",
+                "kind": "specialisation",
+                "id": "SEOP",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Social, Economic & Organisational Psychology (SEOP)",
+                    "en": "Social, Economic & Organisational Psychology (SEOP)"
+                },
+                "competencyIds": [
+                    "Fa8",
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s09",
+                "kind": "specialisation",
+                "id": "DeNC",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Developmental & Cognitive Neuroscience (DeNC)",
+                    "en": "Developmental & Cognitive Neuroscience (DeNC)"
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "KI4"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s09",
+                "kind": "specialisation",
+                "id": "HEA",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Health, Emotion & Adjustment (HEA)",
+                    "en": "Health, Emotion & Adjustment (HEA)"
+                },
+                "competencyIds": [
+                    "Fa5",
+                    "Fa8"
+                ],
+                "careerIds": []
+            },
+            {
+                "moduleId": "s09",
+                "kind": "specialisation",
+                "id": "SEOP",
+                "parentId": "",
+                "directionId": "",
+                "name": {
+                    "de": "Social, Economic & Organisational Psychology (SEOP)",
+                    "en": "Social, Economic & Organisational Psychology (SEOP)"
+                },
+                "competencyIds": [
+                    "Fa8",
+                    "Fa9",
+                    "KI3"
+                ],
+                "careerIds": []
+            }
+        ],
+        "preStageOptions": [
+            {
+                "index": 0,
+                "name": {
+                    "de": "Ich kann wissenschaftliche von alltagspsychologischen Erklärungen unterscheiden (z.B. anhand Falsifizierbarkeit).",
+                    "en": "I can distinguish scientific from folk-psychological explanations (e.g. via falsifiability)."
+                },
+                "competencyIds": [
+                    "Fa4"
+                ]
+            },
+            {
+                "index": 1,
+                "name": {
+                    "de": "Ich kenne grundlegende Forschungsdesigns und Kennwerte (Mittelwert, Streuung), z.B. aus dem PPP-Unterricht.",
+                    "en": "I know basic research designs and statistics (mean, dispersion), e.g. from PPP classes."
+                },
+                "competencyIds": [
+                    "Fa2",
+                    "Fa3"
+                ]
+            },
+            {
+                "index": 2,
+                "name": {
+                    "de": "Ich kenne einige klassische Studien und Theorien der Psychologie.",
+                    "en": "I know some classic studies and theories of psychology."
+                },
+                "competencyIds": [
+                    "Fa1"
+                ]
+            },
+            {
+                "index": 3,
+                "name": {
+                    "de": "Ich habe KI-Tools schon fürs Lernen genutzt und ihre Antworten mindestens einmal kritisch geprüft.",
+                    "en": "I have used AI tools for learning and critically checked their answers at least once."
+                },
+                "competencyIds": [
+                    "KI1",
+                    "KI6"
+                ]
+            }
+        ]
+    },
+    "profilePreview": {
+        "meaning": "modelled-curricular-exposure-not-measured-personal-competence",
+        "sourceStatus": "Inherited public design model, 2026; career and further-education descriptions are not newly verified requirements.",
+        "sourceUrl": "https://github.com/gpochs/kompetenzhaus-psychologie-uzh",
+        "calculationVersion": "legacy-profile-1",
+        "isPreview": false,
+        "competencies": [],
+        "fields": [],
+        "radar": [],
+        "credits": [],
+        "choices": {
+            "bachelorDirection": "",
+            "masterSpecialisation": "",
+            "bachelorCounts": [],
+            "masterCounts": []
+        },
+        "careers": [],
+        "semesters": [],
+        "choiceOptions": [],
+        "preStageOptions": []
+    },
+    "moduleStates": [
+        {
+            "id": "001",
+            "selectedCode": "06SM200-001",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "002",
+            "selectedCode": "06SM200-002",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "003",
+            "selectedCode": "06SM200-003",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "100",
+            "selectedCode": "06SM200-100",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "101",
+            "selectedCode": "06SM200-101",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "400",
+            "selectedCode": "06SM200-400",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "200",
+            "selectedCode": "06SM200-200",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "201",
+            "selectedCode": "06SM200-201",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "102",
+            "selectedCode": "06SM200-102",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s11",
+            "selectedCode": "06SM200-s11",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "103",
+            "selectedCode": "06SM200-103",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "401",
+            "selectedCode": "06SM200-401",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "402",
+            "selectedCode": "06SM200-402",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "300",
+            "selectedCode": "06SM200-300",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "301",
+            "selectedCode": "06SM200-301",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "302",
+            "selectedCode": "06SM200-302",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "403",
+            "selectedCode": "06SM200-403",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s12",
+            "selectedCode": "06SM200-s12",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s13",
+            "selectedCode": "06SM200-s13",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "BA",
+            "selectedCode": "06SM200-BA",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "500",
+            "selectedCode": "06SM200-500",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "501",
+            "selectedCode": "06SM200-501",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "502",
+            "selectedCode": "06SM200-502",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s04",
+            "selectedCode": "06SM200-s04",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s05",
+            "selectedCode": "06SM200-s05",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s06",
+            "selectedCode": "06SM200-s06",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "wp",
+            "selectedCode": "06SM200-511",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s01a",
+            "selectedCode": "06SM200-s01",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s01b",
+            "selectedCode": "06SM200-s01",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s07",
+            "selectedCode": "06SM200-s07",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s08",
+            "selectedCode": "06SM200-s08",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s09",
+            "selectedCode": "06SM200-s09",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s01c",
+            "selectedCode": "10SMSTS-505",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s03",
+            "selectedCode": "06SM200-s03",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "600",
+            "selectedCode": "06SM200-600",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s02a",
+            "selectedCode": "06SM200-s02",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "s02b",
+            "selectedCode": "06SM200-s02",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "MA",
+            "selectedCode": "06SM200-MA",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "901",
+            "selectedCode": "06SM200-901",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "902",
+            "selectedCode": "06SM200-902",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "903",
+            "selectedCode": "06SM200-903",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "904",
+            "selectedCode": "06SM200-904",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        },
+        {
+            "id": "909",
+            "selectedCode": "06SM200-909",
+            "canBuild": true,
+            "alreadyPlaced": true,
+            "positioned": false,
+            "needsSelfCheck": false,
+            "needsQuiz": false,
+            "needsMasterEntry": false,
+            "missingPrerequisiteIds": []
+        }
+    ],
+    "questStates": [
+        {
+            "id": "main-evidence-foundation",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "main-methods-workshop",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "main-bachelor-capstone",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "main-diagnostic-audit",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "main-research-capstone",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "side-learning-studio",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "side-attention-gallery",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "side-measurement-workshop",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "side-team-roles",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "side-health-garden",
+            "canStart": true,
+            "completed": false
+        },
+        {
+            "id": "side-agent-observatory",
+            "canStart": true,
+            "completed": false
+        }
+    ],
+    "quiz": {
+        "phase": "Idle",
+        "moduleId": "",
+        "questId": "",
+        "questionId": "",
+        "type": "",
+        "prompt": "",
+        "explanation": "",
+        "correctAnswer": "",
+        "positions": [],
+        "options": [],
+        "selectedIndex": -1,
+        "mastered": 0,
+        "total": 0,
+        "mistakes": 0,
+        "correct": false
+    },
+    "architecture": {
+        "schemaVersion": 1,
+        "gridSizeMetres": 4.0,
+        "timeOfDay": 14.0,
+        "weather": "clear",
+        "houses": [
+            {
+                "houseId": "bsc",
+                "theme": "warm-timber",
+                "facadeStyle": "open-bays",
+                "roofStyle": "flat",
+                "starterPreset": "custom",
+                "floors": 1,
+                "wallColor": "#E9E2D2",
+                "accentColor": "#247B80",
+                "footprintTiles": [],
+                "courtyardCutouts": [],
+                "rooms": [],
+                "connections": [],
+                "modulePlacements": [],
+                "decorations": []
+            },
+            {
+                "houseId": "msc",
+                "theme": "light-mineral",
+                "facadeStyle": "open-bays",
+                "roofStyle": "flat",
+                "starterPreset": "custom",
+                "floors": 1,
+                "wallColor": "#E9E2D2",
+                "accentColor": "#247B80",
+                "footprintTiles": [],
+                "courtyardCutouts": [],
+                "rooms": [],
+                "connections": [],
+                "modulePlacements": [],
+                "decorations": []
+            }
+        ]
+    },
+    "canUndoArchitecture": false
+}

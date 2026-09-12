@@ -1,0 +1,15 @@
+# Raumprüfung
+
+Die PNG-Pläne entstehen mit Blender aus tatsächlicher Geometrie und echten ausgeschnittenen Durchgängen. `function-layout.blend` ist ein massstäblicher Planungsstand, kein fertiges Spielmodell. Die Bildkonzepte sind Gestaltungsziele, keine Runtime-Nachweise. Der Bestand wird als getrenntes Bachelorhaus, Masterhaus und gemeinsame KI-Werkstatt ausgearbeitet.
+
+Der zusätzliche externe Kostenrahmen beträgt 0. Daher ersetzen lokale eigene Blender-Modelle den im allgemeinen Raum-Skill vorgesehenen bezahlten Meshy-Weg. Dessen unveränderter Standardvalidator verlangt ausdrücklich Meshy und positive Credits; diese Anforderungen sind mit dem expliziten Nutzerauftrag nicht vereinbar. Es werden keine Meshy-Ergebnisse, Credits oder Freigaben vorgetäuscht. Prüfungen zu Geometrie, Stützen, Kollisionsfreiheit, Referenztreue, Laufzeit und menschlicher Sichtprüfung bleiben bestehen.
+
+Die einzelnen Referenzen sind im Kontaktbogen nach Position bezeichnet. `props.json` dokumentiert Masse, Lernfunktion, Polygonziele und Freigabestand. Das verwendete integrierte Bildwerkzeug bietet hier keinen auswählbaren Modellversionsparameter; daher wird keine exakte Version behauptet.
+
+Das Manifest umfasst 22 eindeutige geplante Modelle: neun Architekturteile, fünf weitere Lern-/Orientierungsmodelle und acht zusätzliche Möbel. `wall-door` ersetzt die frühere Manifest-ID `entry-portal`; `legacyId` und die zusätzliche ursprüngliche Bildreferenz erhalten die Zuordnung. Die geschlossene Wand ist ausdrücklich eine abgeleitete Variante der Fensterwand und kein separat generiertes Referenzobjekt.
+
+Die Galerie bietet unabhängig aufklappbare Ebenen für Architektur, Einrichtung, Lernorte/Spielfigur und die optionale Startvorlage. Der 28 × 24 m grosse Function-Plan beschränkt die freie Gebäudeplanung nicht. Das geplante Raster beträgt 4 m, die Etagenhöhe 3.2 m und die lichte Türöffnung 2.4 × 2.7 m. Überstände an Abdeckungen, Dachkanten und Geländern gehören zur vollständigen Modellhülle.
+
+Die Dimensionen in `props.json` sind geplante vollständige Hüllen aus dem Quellcode beziehungsweise den vorgegebenen Möbelmassen, noch keine exportierten Messwerte. Monitor, ausgebreitete Arme und Treppengeländer sind eingeschlossen. Erst die ausgeführte Blender-Geometrie liefert die gemessenen Bounds, Dreieckszahlen und Pivots. Die bestehenden Bilder wurden nicht verändert. Für alle drei Kontaktbögen sind SHA-256-Hashes der tatsächlichen PNG-Dateien hinterlegt. Die Architektur- und Möbelprompts sind ausdrücklich beschreibende Zusammenfassungen, keine behaupteten wortgetreuen Generierungsprotokolle.
+
+Alle 22 Bildfreigaben stehen auf `false`, die Modellprüfungen auf `pending`. Ein vorhandenes Bild, ein berechneter Hash oder ein erfolgreicher Quelltest ersetzt keine Sichtfreigabe. `node tools/validate-art-pipeline.mjs --source` prüft vorbereitende Dateien und benennt offene Nachweise; `--release` scheitert, solange erforderliche Messungen, Exporte oder tatsächlich dokumentierte Freigaben fehlen. Das Skript arbeitet lokal und verändert weder Dateien noch Freigaben.
