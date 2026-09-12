@@ -614,10 +614,10 @@ function renderCompanion() {
   const module = moduleContent(state?.quiz?.moduleId); setText('companion-context', module ? t('Dein aktueller Lernkontext: ', 'Your current learning context: ') + localise(module.title) : 'Du bestimmst, welche Frage du mitnimmst.');
   $('copy-context').disabled = !state?.ready || !companionCatalog;
   const embed = safeCompanionUrl(config.companionEmbedUrl || companionPublication?.embedUrl, location.href);
-  const allowed = companionPublication?.allowedEmbedDomains?.includes(location.hostname);
+  const allowed = companionPublication?.embedGenerationVerified === true && companionPublication?.allowedEmbedDomains?.includes(location.hostname);
   visible('companion-frame', Boolean(embed && allowed)); $('companion-dialog').classList.toggle('connected', Boolean(embed && allowed));
   if (embed && allowed && !$('companion-frame').src) $('companion-frame').src = embed;
-  setText('companion-embed-note', embed && allowed ? 'Falls die Einbettung eine Anmeldung verlangt oder leer bleibt, öffne die Begleitung separat.' : 'Die Begleitung öffnet separat. Die Einbettung ist für die veröffentlichte GitHub-Spielseite vorgesehen.');
+  setText('companion-embed-note', embed && allowed ? 'Falls die Einbettung eine Anmeldung verlangt oder leer bleibt, öffne die Begleitung separat.' : t('Öffne die Begleitung in Claude, um KI-Antworten zu erhalten. Deinen Lernkontext kannst du freiwillig mitnehmen; das Spiel bleibt hier geöffnet.', 'Open the companion in Claude to receive AI responses. You can choose to take your learning context with you; the game stays open here.'));
 }
 $('copy-context').addEventListener('click', async () => {
   try { const text = JSON.stringify(buildTutorContext(state, companionCatalog), null, 2); await navigator.clipboard.writeText(text); setText('copy-context-status', 'Kopiert. Öffne in der KI-Begleitung «Spielstand importieren» und füge den Text dort ein. Der Import startet kein Gespräch.'); }
