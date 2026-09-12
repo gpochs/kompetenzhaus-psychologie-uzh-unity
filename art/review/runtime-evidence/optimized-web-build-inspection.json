@@ -1,0 +1,85 @@
+{
+  "schema": "kompetenzhaus.web-build-inspection.v1",
+  "passed": true,
+  "totalBytes": 20475299,
+  "fileCount": 15,
+  "issues": [],
+  "files": [
+    {
+      "path": "bridge-contract.mjs",
+      "bytes": 13751,
+      "sha256": "954cf2c1a0b6907a00db46ed39152194b952f4edcce9f7635440e0b8f45fbede"
+    },
+    {
+      "path": "Build/WebGL.data.unityweb",
+      "bytes": 6485911,
+      "sha256": "61772825f7476f182e7c5b4747fbc48e80f27286218f655ff0658f13cb3c713f"
+    },
+    {
+      "path": "Build/WebGL.framework.js.unityweb",
+      "bytes": 74968,
+      "sha256": "79a117c1f29d1374c31fbfb523b79f04f8accbd1693968bfe926332ad9f70f63"
+    },
+    {
+      "path": "Build/WebGL.loader.js",
+      "bytes": 48779,
+      "sha256": "2212a60b3f6414425d9c7ed5cecea37102a45b138163b75741f0b47585ca6550"
+    },
+    {
+      "path": "Build/WebGL.wasm.unityweb",
+      "bytes": 8662486,
+      "sha256": "d5a5be2c058120f7fc86670935e989bfa0b7b04c46476d1ec08d6d8e83c3503b"
+    },
+    {
+      "path": "companion/context-catalog.json",
+      "bytes": 9302,
+      "sha256": "81051d25f139f6c1f4cbfe40cc993577fbe6c4914401703e5b68d125ad79087c"
+    },
+    {
+      "path": "companion/published.json",
+      "bytes": 3630,
+      "sha256": "ea779800fbba0e4b1ceec91aca0cdd7caf681fd3e3452de912054254b27fb4c9"
+    },
+    {
+      "path": "content/kompetenzhaus-content.json",
+      "bytes": 1401421,
+      "sha256": "8e2946d575727902fd2d0cd1e6f17032ff54acd1fbba8c495e284dab988ab7de"
+    },
+    {
+      "path": "content/module-learning-design.json",
+      "bytes": 453350,
+      "sha256": "79fbb9ca622f2fcb8e5267099109375b22208137edf3f960112d06198aba2c00"
+    },
+    {
+      "path": "framework-view.mjs",
+      "bytes": 31599,
+      "sha256": "f817c3a6108035b9e3319e472c1f5d9b2c333f7421f1e7727ad3a100fcdb7747"
+    },
+    {
+      "path": "index.html",
+      "bytes": 25681,
+      "sha256": "57f95414fd163ca471e6bc168f2fd0ad077fc0c42bf7cd832be824df6fd86d13"
+    },
+    {
+      "path": "shell-locale.mjs",
+      "bytes": 24173,
+      "sha256": "5193af0ea77e3697bf7b7814f1edf136665d6f02dbe79e3fabbb031b8f1ec936"
+    },
+    {
+      "path": "shell.css",
+      "bytes": 35058,
+      "sha256": "1ba47c1036ef13b29bd11a5fa6327841948f65f76a9761dacb912c2bccb85999"
+    },
+    {
+      "path": "shell.js",
+      "bytes": 64730,
+      "sha256": "dcfe94f8a1a34a493ccb98d85578c06a03b1409a1355bf0fd574a72d2746ac7b"
+    },
+    {
+      "path": "TemplateData/cover.png",
+      "bytes": 3140460,
+      "sha256": "2a4833396dd0a438db2ff2c33825930e80c62cebdcfd28a418405c13a5cfe303"
+    }
+  ],
+  "scope": "File integrity and static packaging only. Browser, graphics, sound and learning interactions require a separate runtime check."
+}

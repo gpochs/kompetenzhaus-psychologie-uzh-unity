@@ -267,11 +267,27 @@ namespace Kompetenzhaus.World
             {
                 player.enabled = false; player.transform.position = game.cameraController.entryPoint; player.enabled = true;
             }
+            // Walking uses one nearby label. Distant billboards otherwise overlap
+            // across the entire courtyard; the focused task also has an HTML hint.
+            GameObject nearestLabel = null;
+            var nearestDistance = 36f;
+            if (camera != null && game.cameraController.Mode == ViewMode.FirstPerson)
+                foreach (var label in worldLabels)
+                {
+                    if (label == null || !label.activeInHierarchy) continue;
+                    var offset = label.transform.position - camera.transform.position;
+                    if (offset.sqrMagnitude >= nearestDistance || Vector3.Dot(camera.transform.forward, offset.normalized) < .35f) continue;
+                    nearestLabel = label; nearestDistance = offset.sqrMagnitude;
+                }
             // Labels rotate around their own anchor so their letters never mirror.
             for (var i = worldLabels.Count - 1; i >= 0; i--)
             {
                 var label = worldLabels[i]; if (label == null) { worldLabels.RemoveAt(i); continue; }
-                if (camera != null && label.activeInHierarchy) label.transform.rotation = camera.transform.rotation;
+                if (camera != null && label.activeInHierarchy)
+                {
+                    label.transform.rotation = camera.transform.rotation;
+                    label.GetComponent<MeshRenderer>().enabled = game.cameraController.Mode == ViewMode.BirdView || label == nearestLabel;
+                }
             }
         }
 

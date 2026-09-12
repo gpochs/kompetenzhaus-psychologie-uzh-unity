@@ -1,0 +1,129 @@
+{
+  "schema": "kompetenzhaus.model-optimization.v1",
+  "status": "reviewed-exported-and-measured-in-three-unity-layouts",
+  "reason": "Measured dense campus exceeded the unchanged 160000 scene-triangle budget.",
+  "triangleBudget": 160000,
+  "method": "Targeted authored geometry simplification: single chamfers on repeated props, reduced window/desk edge detail, broad polygonal parquet, low-poly tree canopies, simple structural stair boxes. No mesh decimation or blanket envelope rescale.",
+  "baselineUniqueTriangles": 37282,
+  "optimizedUniqueTriangles": 21486,
+  "assets": [
+    {
+      "assetId": "wall-window",
+      "beforeTriangles": 1534,
+      "afterTriangles": 222
+    },
+    {
+      "assetId": "wall-door",
+      "beforeTriangles": 1454,
+      "afterTriangles": 686
+    },
+    {
+      "assetId": "wall-solid",
+      "beforeTriangles": 332,
+      "afterTriangles": 140
+    },
+    {
+      "assetId": "wall-partition",
+      "beforeTriangles": 1454,
+      "afterTriangles": 686
+    },
+    {
+      "assetId": "floor-tile",
+      "beforeTriangles": 690,
+      "afterTriangles": 130
+    },
+    {
+      "assetId": "roof-flat",
+      "beforeTriangles": 648,
+      "afterTriangles": 104
+    },
+    {
+      "assetId": "roof-gabled",
+      "beforeTriangles": 876,
+      "afterTriangles": 748
+    },
+    {
+      "assetId": "balcony",
+      "beforeTriangles": 468,
+      "afterTriangles": 404
+    },
+    {
+      "assetId": "staircase",
+      "beforeTriangles": 3880,
+      "afterTriangles": 808
+    },
+    {
+      "assetId": "evidence-table",
+      "beforeTriangles": 2440,
+      "afterTriangles": 1480
+    },
+    {
+      "assetId": "research-desk",
+      "beforeTriangles": 1558,
+      "afterTriangles": 318
+    },
+    {
+      "assetId": "discussion-sofa",
+      "beforeTriangles": 3192,
+      "afterTriangles": 1680
+    },
+    {
+      "assetId": "courtyard-tree",
+      "beforeTriangles": 2852,
+      "afterTriangles": 576
+    },
+    {
+      "assetId": "student-guide",
+      "beforeTriangles": 6208,
+      "afterTriangles": 6208
+    },
+    {
+      "assetId": "bookshelf",
+      "beforeTriangles": 2568,
+      "afterTriangles": 1480
+    },
+    {
+      "assetId": "lamp",
+      "beforeTriangles": 1100,
+      "afterTriangles": 1100
+    },
+    {
+      "assetId": "noticeboard",
+      "beforeTriangles": 1108,
+      "afterTriangles": 852
+    },
+    {
+      "assetId": "chair",
+      "beforeTriangles": 680,
+      "afterTriangles": 392
+    },
+    {
+      "assetId": "bench",
+      "beforeTriangles": 756,
+      "afterTriangles": 436
+    },
+    {
+      "assetId": "acoustic-divider",
+      "beforeTriangles": 756,
+      "afterTriangles": 308
+    },
+    {
+      "assetId": "achievement-display",
+      "beforeTriangles": 2380,
+      "afterTriangles": 2380
+    },
+    {
+      "assetId": "research-poster",
+      "beforeTriangles": 348,
+      "afterTriangles": 348
+    }
+  ],
+  "sourceBlendSha256": "a37b3df586be01a234c84315f1e5a011174567ac3d6963359b8624f2da76b842",
+  "generatorScriptSha256": "dbd5b13372812ce9debf0874da46d6453d6ccc5a7e8ebf746559cc80ac8d5faa",
+  "functionalEvidence": "../models/functional-audit.json",
+  "formEvidence": "milestone-reviews.json",
+  "measurementNotice": "Unique-kit triangles are not scene-instance triangles. The before/after production measurement uses separate loaded-scene evidence; the 64-bay sample does not cover every permitted decoration or roof combination.",
+  "productionEvidence": "production-metrics.json",
+  "productionEvidenceSha256": "67402a571992dd4a77bc0cf191a52a620a97a80fe7da35c57da2fdde3c9ab548",
+  "maximumObservedGeometryTriangleUpperBound": 112500
+}

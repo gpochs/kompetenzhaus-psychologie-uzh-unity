@@ -79,7 +79,7 @@ def init(lang,title,subtitle):
     field=OxmlElement('w:fldSimple');field.set(qn('w:instr'),'PAGE');footer._p.append(field)
     d.core_properties.title=title;d.core_properties.subject=subtitle
     d.core_properties.author='Kompetenzhaus project';d.core_properties.keywords='Psychologie, Kompetenzentwicklung, AI, Future Skills, Entwurf'
-    para(d,pair(lang,'MODELL 2.1 · ARBEITSENTWURF','MODEL 2.1 · WORKING DRAFT'))
+    para(d,pair(lang,'MODELL 2.2 · ARBEITSENTWURF','MODEL 2.2 · WORKING DRAFT'))
     heading(d,title,0);para(d,subtitle,'Subtitle')
     para(d,loc(F['status'],lang))
     para(d,pair(lang,'Fachwissenschaft, Future Skills und KI-Kompetenzen gemeinsam entwickeln.','Develop disciplinary expertise, future skills and AI competence together.'))
@@ -87,6 +87,67 @@ def init(lang,title,subtitle):
     para(d,pair(lang,'Stand: 12. September 2026. Für das Lernspiel und als Gesprächsgrundlage zur Curriculumentwicklung.','Version date: 12 September 2026. For the learning game and as a basis for curriculum discussions.'))
     para(d,pair(lang,'Die bestehenden Modulbeschreibungen bilden den Ausgangspunkt. Neue Lernziele und Aufgaben sind Vorschläge. Die ursprünglichen Modelle und Quelldokumente bleiben unverändert.','Existing module descriptions are the starting point. New objectives and tasks are proposals. The original models and source documents remain unchanged.'))
     return d
+
+def page_heading(doc,text):
+    p=heading(doc,text);p.paragraph_format.page_break_before=True;return p
+
+def ai_phases(doc, lang, heading_level=1, new_page=False):
+    across=F['aiAcrossCurriculum']
+    title=heading(doc,pair(lang,'Ohne KI, mit KI und über KI lernen und prüfen','Learning and assessment without, with and about AI'),heading_level)
+    if new_page:title.paragraph_format.page_break_before=True
+    para(doc,loc(across['assessmentNotice'],lang))
+    for phase in across['phasePolicy']['phases']:
+        heading(doc,loc(phase['title'],lang),2)
+        for field in ['purpose','learnerAction','assessmentUse']:para(doc,loc(phase[field],lang))
+    heading(doc,pair(lang,'Bedingungen für Lern- und Prüfphasen','Conditions for learning and assessment phases'),2)
+    for rule in across['phasePolicy']['assessmentRules']:para(doc,loc(rule['text'],lang),'List Bullet')
+
+
+def ai_crosscurricular_pages(doc,lang):
+    across=F['aiAcrossCurriculum']
+    page_heading(doc,loc(across['title'],lang));para(doc,loc(across['principle'],lang))
+    # Editable navigation cards; no ranking or numerical assessment plot.
+    cards=doc.add_table(rows=3,cols=2);cards.autofit=False
+    for index,row in enumerate(across['domainRows']):
+        cell=cards.rows[index//2].cells[index%2];cell.width=Cm(8.4);shade(cell,PALE if index%2==0 else 'EDF2F1')
+        domain=next(x for x in F['domains'] if x['id']==row['domainId'])
+        p=cell.paragraphs[0];r=p.add_run(row['domainId']+'  '+loc(domain['title'],lang));r.bold=True
+        cell.add_paragraph(' · '.join(row['competencyIds']))
+        cell.add_paragraph(loc(row['summary'],lang))
+        for p in cell.paragraphs:
+            p.paragraph_format.space_after=Pt(6)
+            for r in p.runs:r.font.size=Pt(9)
+    for row in cards.rows:no_split(row)
+    para(doc,loc(across['flowRule'],lang))
+    page_heading(doc,pair(lang,'Wie die Bereiche in einer Fachaufgabe zusammenwirken','How domains connect within a disciplinary task'))
+    table(doc,[pair(lang,'Verbindung','Connection'),pair(lang,'Übergang und kanonische Kriterien','Transition and canonical criteria')],[(x['fromDomainId']+' → '+x['toDomainId'],loc(x['label'],lang)+'\n'+', '.join(x['criterionIds'])) for x in across['flowEdges']],[2.5,14.3])
+    heading(doc,pair(lang,'Wissen, Fähigkeiten, Haltungen und Werte','Knowledge, capabilities, attitudes and values'),2)
+    for dimension in across['dimensions']:
+        p=para(doc,'');p.add_run(loc(dimension['title'],lang)+': ').bold=True;p.add_run(loc(dimension['description'],lang))
+    page_heading(doc,pair(lang,'Woran die menschliche Leistung erkennbar wird','What makes the human contribution visible'))
+    first_domain_paragraph=len(doc.paragraphs)
+    for row in across['domainRows']:
+        heading(doc,row['domainId']+' · '+', '.join(row['competencyIds']),2)
+        para(doc,loc(row['learnerResponsibility'],lang));para(doc,loc(row['evidenceFocus'],lang))
+        p=para(doc,pair(lang,'Kriterien: ','Criteria: ')+', '.join(row['criterionIds']));p.paragraph_format.space_after=Pt(10)
+    for p in doc.paragraphs[first_domain_paragraph:]:
+        p.paragraph_format.space_before=Pt(5 if p.style.name.startswith('Heading') else 0)
+        p.paragraph_format.space_after=Pt(4)
+        p.paragraph_format.line_spacing=1.02
+        if not p.style.name.startswith('Heading'):
+            for r in p.runs:r.font.size=Pt(9.5)
+    ai_phases(doc,lang,new_page=True)
+    for example in across['examples']:
+        page_heading(doc,loc(example['title'],lang))
+        para(doc,pair(lang,'Mögliche Anschlüsse: ','Possible module links: ')+', '.join(example['moduleIds']))
+        para(doc,pair(lang,'Kriterien: ','Criteria: ')+', '.join(example['criterionIds']))
+        para(doc,pair(lang,'Aufgabenbeispiel im Entwurf. Die Modulnennung ist eine Lerngelegenheit und keine verbindliche Vorgabe.','Proposed task example. The named modules indicate opportunities, not binding requirements.'))
+        for phase in example['phases']:
+            title=next(x['title'] for x in across['phasePolicy']['phases'] if x['contextId']==phase['contextId'])
+            heading(doc,loc(title,lang),2);para(doc,loc(phase['activity'],lang))
+            p=para(doc,'');p.add_run(pair(lang,'Vorgeschlagener Nachweis: ','Proposed evidence: ')).bold=True;p.add_run(loc(phase['evidence'],lang))
+        heading(doc,pair(lang,'Beurteilungsvorschlag','Assessment proposal'),2);para(doc,loc(example['assessmentProposal'],lang))
+
 
 def build(lang):
     title=pair(lang,'Psychologische Handlungskompetenz','Competence in psychological practice and research')
@@ -99,14 +160,15 @@ def build(lang):
       pair(lang,'Drei Niveaus beschreiben die Anforderungen einer Aufgabe. Vier Studienmeilensteine ordnen mögliche Lerngelegenheiten. Beides wird getrennt geführt.','Three levels describe task demands. Four study milestones organise possible learning opportunities. They are recorded separately.'),
       pair(lang,'Ein Berufsprofil zeigt Tätigkeiten und nächste Lernmöglichkeiten. Es liefert keine Prozentzahl zur persönlichen Eignung.','A professional profile shows activities and next learning opportunities. It does not produce a percentage of personal suitability.')]
     for text in points:para(d,text,'List Bullet')
-    d.add_page_break();heading(d,pair(lang,'Das Modell auf einen Blick','The model at a glance'))
+    page_heading(d,pair(lang,'Das Modell auf einen Blick','The model at a glance'))
     table(d,[pair(lang,'Bereich','Domain'),pair(lang,'Kompetenzen','Competencies')],[(loc(dm['title'],lang),'\n'.join(c['id']+'  '+loc(c['title'],lang) for c in F['competencies'] if c['domainId']==dm['id'])) for dm in F['domains']],[5.1,11.7])
     para(d,loc(F['limitation'],lang))
     heading(d,pair(lang,'Was eine Zuordnung leistet','What the classification does'),2)
     para(d,pair(lang,'Die Trennung erfolgt nach der beurteilten Leistung. Bei einem KI-gestützten Gutachten können mehrere Kriterien relevant sein: fachliche Belege prüfen (R4), einen funktionierenden Ablauf testen (T3), Schutzinteressen abwägen (V1) und das Ergebnis verständlich darstellen (K1). Jedes Kriterium wird separat beurteilt; dieselbe Leistung erhält keinen zweiten KI- oder Future-Skills-Bonus.','The classification follows the performance being judged. An AI-assisted report may involve several criteria: checking evidence (R4), testing a functional workflow (T3), weighing protected interests (V1) and communicating clearly (K1). Each criterion is judged separately; the same performance receives no second AI or future-skills bonus.'))
     heading(d,pair(lang,'Wissenschaft und Zukunft zusammenhalten','Keep science and future capabilities together'),2)
     para(d,pair(lang,'Ein neues Werkzeug darf die fachliche Begründung nicht ersetzen. Die Aufgaben verbinden deshalb Wissen mit Entscheidungen, Gestaltung und Rückmeldung. Ein Masterauftrag kann anspruchsvoller sein, weil die Frage offen ist, Befunde widersprechen oder Verantwortung geteilt werden muss. Ein höherer KI-Anteil allein macht ihn nicht anspruchsvoller.','A new tool must not replace disciplinary reasoning. Tasks therefore connect knowledge with decisions, design and feedback. A Master’s task may be more demanding because its question is open, findings conflict or responsibility is shared. A larger AI component alone does not increase its level.'))
-    d.add_page_break();heading(d,pair(lang,'Spiralcurriculum und Kompetenzstufen','Spiral curriculum and competence levels'))
+    ai_crosscurricular_pages(d,lang)
+    page_heading(d,pair(lang,'Spiralcurriculum und Kompetenzstufen','Spiral curriculum and competence levels'))
     table(d,[pair(lang,'Niveau','Level'),pair(lang,'Anforderung','Demand')],[(x['label']+' · '+loc(x['title'],lang),loc(x['description'],lang)) for x in F['levelDefinitions']],[4.9,11.9])
     para(d,loc(F['milestoneRule'],lang))
     para(d,pair(lang,'Ein späterer Auftrag kann dasselbe Kriterium unter schwierigeren Bedingungen aufgreifen. Die Stufen werden nicht addiert. Ein einzelner gelungener Auftrag belegt keine allgemeine Beherrschung in allen Situationen. Je nach Vorwissen können anspruchsvolle Aufgaben früher und Grundlagenübungen später sinnvoll sein.','A later task can revisit the same criterion under more demanding conditions. Levels are not added together. Success on one task does not establish general mastery across situations. Prior experience may justify advanced tasks earlier or foundational practice later.'))
@@ -135,13 +197,13 @@ def build(lang):
             heading(d,pair(lang,'Future-Skills-Perspektiven','Future skills perspectives'),2)
             para(d,' · '.join(loc(x['title'],lang) for x in lenses))
         para(d,pair(lang,'Die Aufgabe ist ein Vorschlag und kann mit vorbereiteten KI-Ausgaben oder einer Simulation bearbeitet werden. Sie setzt keinen kostenpflichtigen KI-Zugang voraus. Die drei Kontexte ohne KI, mit KI und über KI bleiben je nach Lernziel wählbar.','This proposed task can use prepared AI outputs or a simulation. It requires no paid AI access. The contexts without AI, with AI and about AI remain available according to the learning objective.'))
-    d.add_page_break();heading(d,pair(lang,'Future Skills und KI ausdrücklich mitdenken','Make future skills and AI explicit'))
+    page_heading(d,pair(lang,'Future Skills und KI ausdrücklich mitdenken','Make future skills and AI explicit'))
     para(d,loc(F['futureCoverageRule'],lang))
     for item in F['futureLenses']:
         heading(d,loc(item['title'],lang),2);para(d,loc(item['description'],lang));para(d,pair(lang,'Kriterien: ','Criteria: ')+', '.join(item['criterionIds']))
     heading(d,pair(lang,'Sechs Fragen an jede Zukunftsaufgabe','Six questions for every future-oriented task'),2)
     for item in F['futureDesignTests']:para(d,loc(item,lang),'List Bullet')
-    d.add_page_break();heading(d,pair(lang,'Kompetenzkompasse für Tätigkeiten','Competence compasses for professional activities'))
+    page_heading(d,pair(lang,'Kompetenzkompasse für Tätigkeiten','Competence compasses for professional activities'))
     para(d,loc(C['notice'],lang))
     para(d,pair(lang,'Die gemeinsame Grundlage bleibt für alle sichtbar. Innerhalb eines Berufsprofils werden ausgewählte Kriterien nach beruflichen Tätigkeiten angeordnet. Ein Kriterium erscheint dort höchstens einmal. Unterschiedliche Berufsansichten sind verschiedene Perspektiven auf denselben Lernweg; ihre Werte werden nicht zusammengezählt.','The shared foundation remains visible. Within a professional profile, selected criteria are organised by professional activities. Each criterion appears at most once within that profile. Different profiles are views of the same learning pathway; their values are not added together.'))
     for role in C['roles']:
@@ -155,7 +217,7 @@ def build(lang):
             for run in p.runs:run.font.size=Pt(9.5)
         p=para(d,'');p.paragraph_format.space_after=Pt(4)
         hyperlink(p,pair(lang,'Fachliche Orientierung der Tätigkeitsauswahl','Source informing the activity selection'),role['sourceUrl'])
-    d.add_page_break();heading(d,pair(lang,'Lerngelegenheiten, Übung und Nachweise','Opportunities, practice and evidence'))
+    page_heading(d,pair(lang,'Lerngelegenheiten, Übung und Nachweise','Opportunities, practice and evidence'))
     table(d,[pair(lang,'Ebene','Layer'),pair(lang,'Was angezeigt werden darf','What can be shown')],[
       (pair(lang,'Geplant','Planned'),pair(lang,'Ein Modul bietet ein Lernziel auf einem Zielniveau. Das ist eine Gelegenheit.','A module offers an objective at a target level. This is an opportunity.')),
       (pair(lang,'Im Spiel geübt','Practised in the game'),pair(lang,'Ein Lerncheck oder eine Quest wurde bearbeitet. Das sagt nicht, dass alle Modulziele beherrscht werden.','A check or quest was completed. This does not show mastery of all module objectives.')),
@@ -171,12 +233,12 @@ def build(lang):
       pair(lang,'Gestaltung, Erkundung und Quests schaffen Anlass für Entscheidungen und Rückmeldung. Kosmetische Belohnungen stehen getrennt von fachlichen Nachweisen.','Design, exploration and quests create opportunities for decisions and feedback. Cosmetic rewards remain separate from disciplinary evidence.')]:para(d,text,'List Bullet')
     heading(d,pair(lang,'Fachlich prüfen und erproben','Review and pilot'),2)
     para(d,pair(lang,'Vor curricularer Verwendung sollen Lehrende die Fachabdeckung und Aufgabenanforderungen prüfen, Studierende die Verständlichkeit und Arbeitsbelastung erproben und Berufspersonen die Tätigkeitsansichten beurteilen. Beispielarbeiten dienen anschliessend dazu, Kriteriengrenzen und Beurteilungsübereinstimmung zu testen. Dieses Dokument behauptet keine bereits erfolgte Zustimmung oder empirische Validierung.','Before curricular use, lecturers should review disciplinary coverage and task demands, students should test clarity and workload, and practitioners should examine the activity views. Sample work can then be used to test criterion boundaries and agreement between assessors. This document does not claim completed approval or empirical validation.'))
-    d.add_page_break();heading(d,pair(lang,'Zuordnung bisheriger Begriffe','Mapping earlier terms'))
+    page_heading(d,pair(lang,'Zuordnung bisheriger Begriffe','Mapping earlier terms'))
     para(d,pair(lang,'Die Zuordnung erklärt die begriffliche Weiterentwicklung. Alte Punktwerte werden nicht übertragen: Die bisherige Berechnung anhand gebauter ECTS eignet sich nicht als Beleg für die neuen Kriterien.','This mapping explains the conceptual revision. Old scores are not transferred: the previous calculation based on built credits cannot establish evidence for the new criteria.'))
     table(d,[pair(lang,'Bisherige ID','Previous ID'),pair(lang,'Kanonische Zuordnung','Canonical mapping')],[(x['legacyId'],', '.join(x['competencyIds'])) for x in F['legacyCrosswalk']],[4.2,12.6])
     heading(d,pair(lang,'Rahmen werden zu Quellen, nicht zu parallelen Skalen','Frameworks become sources, not parallel scales'),2)
     para(d,pair(lang,'Der St. Galler Rahmen unterscheidet operative und reflexive KI-Kompetenzen und verarbeitet bereits weitere Modelle, darunter AIComp. AIComp ordnet Zukunftskompetenzen in zwölf Felder. UNESCO liefert Perspektiven auf Menschenorientierung, Ethik und technische Gestaltung. Der UZH-/ETH-Rahmen ergänzt die besondere Rolle von Dozierenden. Psychologische Fachwissenschaft und berufliche Tätigkeiten werden im vorliegenden Entwurf ausdrücklich ergänzt. Die Zuordnungen sind eine eigene didaktische Synthese.','The St. Gallen framework distinguishes operational and reflective AI competencies and already draws on other models, including AIComp. AIComp organises future capabilities into twelve fields. UNESCO contributes perspectives on human agency, ethics and technical design. The UZH/ETH framework adds the specific lecturer role. This draft explicitly retains psychological science and professional activities. These mappings are an original educational synthesis.'))
-    d.add_page_break();heading(d,pair(lang,'Quellen und Geltungsgrenzen','Sources and scope'))
+    page_heading(d,pair(lang,'Quellen und Geltungsgrenzen','Sources and scope'))
     for s in F['sources']:
         p=para(d,'');hyperlink(p,s['title'],s['url'])
         if lang=='en':para(d,s['role'])
@@ -185,7 +247,10 @@ def build(lang):
     para(d,pair(lang,'Zusätzlich berücksichtigt wurden das bestehende Kompetenzaufbaumodell des Psychologischen Instituts, der KI-im-Curriculum-Kompass UZH, die bereitgestellten September-Unterlagen und die Benchmark-Ausgaben. Diese Unterlagen wurden ausschliesslich gelesen. Ihre Rohdateien werden nicht in die öffentliche Spiel-Repository übernommen. Der Kompass ist eine Planungshilfe; seine acht Entwicklungsperspektiven werden nicht als acht Studierendenkompetenzen behandelt.','The existing Psychology Institute competence model, the UZH AI-in-curriculum compass, the supplied September materials and benchmark outputs also informed the work. These sources were read only. Their raw files are not included in the public game repository. The compass supports planning; its eight development perspectives are not treated as eight student competencies.'))
     para(d,pair(lang,'Die publizierten Spielinhalte sind die technische Ausgangsbasis für Modultitel, Codes und Credits. Ihre Übernahme ist keine erneute Verifikation der geltenden Studienordnung. Zukünftige Modulbeschreibungen bleiben separat gekennzeichnete Vorschläge.','The published game content is the technical baseline for module titles, codes and credits. Reusing it does not constitute renewed verification of current study regulations. Future module descriptions remain separately labelled proposals.'))
     para(d,pair(lang,'Die drei Aufgabenniveaus sind eine begründete Designentscheidung dieses Entwurfs. Sie sind weder aus Studiensemestern abgeleitet noch als psychometrische Skala validiert.','The three task levels are a reasoned design choice in this draft. They are neither derived from semesters nor validated as a psychometric scale.'))
-    out=OUT/('Kompetenzaufbaumodell-Psychologie-Zukunft-v2.1-'+lang.upper()+'.docx')
+    import hashlib
+    para(d,'Framework: '+F['version'])
+    para(d,'SHA256 content/competency-framework.json: '+hashlib.sha256((ROOT/'content/competency-framework.json').read_bytes()).hexdigest())
+    out=OUT/('Kompetenzaufbaumodell-Psychologie-Zukunft-v2.2-'+lang.upper()+'.docx')
     d.save(out)
     return out
 

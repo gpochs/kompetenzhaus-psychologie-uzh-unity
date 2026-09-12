@@ -66,6 +66,7 @@ namespace Kompetenzhaus.Competencies
                 { id = item.id, title = Text(item.title, language), typicalSemesters = item.typicalSemesters }).ToArray(),
                 futureCoverageRule = Text(source.Framework.futureCoverageRule, language),
                 futureDesignTests = source.Framework.futureDesignTests.Select(item => Text(item, language)).ToArray(),
+                aiAcrossCurriculum = AiAcross(source.Framework.aiAcrossCurriculum, language),
                 futureLenses = source.Framework.futureLenses.Select(lens => new FrameworkV2LensView
                 {
                     id = lens.id, title = Text(lens.title, language), description = Text(lens.description, language),
@@ -96,6 +97,39 @@ namespace Kompetenzhaus.Competencies
                     questIds = progression.Data.completedQuestIds.Where(id => Array.Exists(curriculum.Document.quests, quest => quest.id == id)).Distinct().ToArray()
                 },
                 selfReportedModuleIds = progression.Data.selfCheckedModuleIds.Where(curriculum.HasModule).Distinct().ToArray()
+            };
+        }
+
+        private static FrameworkV2AiAcrossView AiAcross(FrameworkV2AiAcrossDefinition source, string language)
+        {
+            if (source == null) return null;
+            return new FrameworkV2AiAcrossView
+            {
+                schemaVersion = source.schemaVersion, status = source.status,
+                title = Text(source.title, language), principle = Text(source.principle, language),
+                assessmentNotice = Text(source.assessmentNotice, language), flowRule = Text(source.flowRule, language),
+                dimensions = source.dimensions.Select(d => new FrameworkV2AiDimensionView
+                { id = d.id, title = Text(d.title, language), description = Text(d.description, language) }).ToArray(),
+                domainRows = source.domainRows.Select(d => new FrameworkV2AiDomainView
+                {
+                    domainId = d.domainId, competencyIds = d.competencyIds.ToArray(), criterionIds = d.criterionIds.ToArray(), aiRoles = d.aiRoles.ToArray(),
+                    summary = Text(d.summary, language), learnerResponsibility = Text(d.learnerResponsibility, language), evidenceFocus = Text(d.evidenceFocus, language)
+                }).ToArray(),
+                flowEdges = source.flowEdges.Select(e => new FrameworkV2AiEdgeView
+                { fromDomainId = e.fromDomainId, toDomainId = e.toDomainId, criterionIds = e.criterionIds.ToArray(), label = Text(e.label, language) }).ToArray(),
+                phasePolicy = new FrameworkV2AiPhasePolicyView
+                {
+                    noWholeModuleMandate = source.phasePolicy.noWholeModuleMandate,
+                    phases = source.phasePolicy.phases.Select(p => new FrameworkV2AiPhaseView
+                    { contextId = p.contextId, title = Text(p.title, language), purpose = Text(p.purpose, language), learnerAction = Text(p.learnerAction, language), assessmentUse = Text(p.assessmentUse, language) }).ToArray(),
+                    assessmentRules = source.phasePolicy.assessmentRules.Select(r => new FrameworkV2AiRuleView { id = r.id, text = Text(r.text, language) }).ToArray()
+                },
+                examples = source.examples.Select(e => new FrameworkV2AiExampleView
+                {
+                    id = e.id, title = Text(e.title, language), assessmentProposal = Text(e.assessmentProposal, language),
+                    moduleIds = e.moduleIds.ToArray(), criterionIds = e.criterionIds.ToArray(),
+                    phases = e.phases.Select(p => new FrameworkV2AiExamplePhaseView { contextId = p.contextId, activity = Text(p.activity, language), evidence = Text(p.evidence, language) }).ToArray()
+                }).ToArray()
             };
         }
 

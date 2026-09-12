@@ -2,7 +2,7 @@
     "isSyntheticQaState": true,
     "frameworkProfile": {
         "schemaVersion": 2,
-        "frameworkVersion": "2.1.0-draft",
+        "frameworkVersion": "2.2.0-draft",
         "title": "Psychologische Handlungskompetenz",
         "status": "Entwurf für das Lernspiel und die Curriculumentwicklung; fachliche Validierung steht aus.",
         "limitation": "Die Bereiche sind miteinander verbunden. Eindeutige Zuordnung verhindert doppelte Erfassung; sie beweist keine psychometrische Unabhängigkeit. Das Modell wurde nicht als Messinstrument validiert.",
@@ -17,7 +17,7 @@
         "futureDesignTests": [
             "Bleibt das Lernziel sinnvoll, wenn das heute verwendete KI-Werkzeug ersetzt wird?",
             "Müssen Studierende selbst eine Frage, Alternative oder begründete Entscheidung entwickeln?",
-            "Wird erkennbar, wo KI unterstützt und welche fachliche Eigenleistung bestehen bleibt?",
+            "Wird erkennbar, wo KI unterstützt, wo sie selbst Gegenstand der Untersuchung ist und welche Schritte eigenständig ohne KI bearbeitet oder beurteilt werden?",
             "Werden Unsicherheit, Systemfolgen und die Perspektive betroffener Menschen berücksichtigt?",
             "Verändert eine Rückmeldung das weitere Handeln, statt nur Punkte zu liefern?",
             "Ist der neue Lernanteil in den vorhandenen Arbeitsaufwand integriert und einer konkreten bisherigen Aktivität zugeordnet?"
@@ -443,6 +443,468 @@
                 ]
             }
         ],
+        "aiAcrossCurriculum": {
+            "schemaVersion": 1,
+            "status": "design-proposal",
+            "title": "KI durch alle Kompetenzbereiche denken",
+            "principle": "KI verändert psychologische Fragen, Arbeitsweisen und Folgen. Fachliches Verstehen, wissenschaftliches Prüfen, professionelles Handeln, Zusammenarbeit und Verantwortung behalten ihre eigenen Kriterien. T1–T3 beschreiben den technischen Teil. Alle sechs Bereiche können Aufgaben ohne KI, mit KI oder über KI enthalten.",
+            "assessmentNotice": "Diese Ansicht ordnet Lerngelegenheiten. Sie belegt keine erreichten Kompetenzen. KI-Nutzung, Toolzugang, Quellenanzahl, ECTS und erledigte Spielaufgaben werden nicht als Kompetenznachweis gewertet. Eine Leistung wird anhand des passenden kanonischen Kriteriums beurteilt; die KI- und Future-Skills-Ansichten zählen nichts hinzu.",
+            "flowRule": "Die Verbindungen zeigen typische Übergänge innerhalb einer Fachaufgabe, keine feste Lernreihenfolge und keine zusätzliche Skala. Wer einer Verbindung folgt, gelangt zum bestehenden Kriterium. Ein Kriterium behält überall dieselbe Bedeutung.",
+            "dimensions": [
+                {
+                    "id": "knowledge",
+                    "title": "Wissen und Verstehen",
+                    "description": "Psychologische Begriffe, Methoden und Befunde mit Wissen über KI und ihren Einsatzbedingungen verbinden. Eine generierte Erklärung muss fachlich begründet werden."
+                },
+                {
+                    "id": "skills",
+                    "title": "Fähigkeiten und begründetes Handeln",
+                    "description": "Selbst Fragen entwickeln, prüfen, entscheiden, gestalten und verständlich handeln. Welche Hilfe dabei sinnvoll ist, hängt vom Lernziel und vom konkreten Schritt ab."
+                },
+                {
+                    "id": "attitudes",
+                    "title": "Haltungen und Selbststeuerung",
+                    "description": "Neugier, begründete Skepsis, Offenheit für Gegenbelege und Bereitschaft zur Korrektur im Handeln zeigen. Selbstauskünfte über Zuversicht sind keine Messung dieser Haltungen."
+                },
+                {
+                    "id": "values",
+                    "title": "Werte und Verantwortung",
+                    "description": "Autonomie, Integrität, Fairness, Wohlergehen und soziale oder ökologische Folgen bei Entscheidungen berücksichtigen. Bewertet wird eine begründete Abwägung, keine private Gesinnung."
+                }
+            ],
+            "domainRows": [
+                {
+                    "domainId": "P",
+                    "summary": "KI kann Erklärungsalternativen liefern; Vertrauen in Automation, Vermenschlichung von KI und veränderte Lern- oder Lebensbedingungen sind zugleich psychologische Gegenstände.",
+                    "learnerResponsibility": "Studierende erklären Mechanismen selbst, unterscheiden konkurrierende Modelle und berücksichtigen Entwicklung sowie sozialen Kontext. Sprachliche Plausibilität ersetzt kein psychologisches Modell.",
+                    "evidenceFocus": "P1 prüft die fachliche Erklärung; P2 deren Kontextbezug und Übertragbarkeit. Die Belastbarkeit einer zitierten Studie bleibt bei R4.",
+                    "competencyIds": [
+                        "P1",
+                        "P2"
+                    ],
+                    "criterionIds": [
+                        "P1.1",
+                        "P1.2",
+                        "P1.3",
+                        "P2.1",
+                        "P2.2",
+                        "P2.3"
+                    ],
+                    "aiRoles": [
+                        "tool",
+                        "subject",
+                        "context",
+                        "deliberate-nonuse"
+                    ]
+                },
+                {
+                    "domainId": "R",
+                    "summary": "Forschungsfragen können KI betreffen; KI kann Recherche, Messung und Auswertung unterstützen. Generierte Behauptungen, Instrumente und Analysen werden wissenschaftlich geprüft.",
+                    "learnerResponsibility": "Studierende formulieren eine prüfbare Frage, begründen Design und Messung, verstehen ihre Analyse und prüfen Quellen, Schlussfolgerungen und Gegenbelege. Sie benennen, was sich aus den Daten nicht entscheiden lässt.",
+                    "evidenceFocus": "R1: Untersuchungsplanung; R2: Messqualität; R3: reproduzierbare Auswertung; R4: Tragfähigkeit von Quellen und Behauptungen. KI-Ausgaben evaluieren gehört je nach Gegenstand hierher, nicht pauschal zu T.",
+                    "competencyIds": [
+                        "R1",
+                        "R2",
+                        "R3",
+                        "R4"
+                    ],
+                    "criterionIds": [
+                        "R1.1",
+                        "R1.2",
+                        "R1.3",
+                        "R2.1",
+                        "R2.2",
+                        "R2.3",
+                        "R3.1",
+                        "R3.2",
+                        "R3.3",
+                        "R4.1",
+                        "R4.2",
+                        "R4.3"
+                    ],
+                    "aiRoles": [
+                        "tool",
+                        "subject",
+                        "context",
+                        "deliberate-nonuse"
+                    ]
+                },
+                {
+                    "domainId": "H",
+                    "summary": "KI kann Fallhypothesen, Interventionsideen oder Gestaltungsvorschläge anbieten. Ihr Einsatz verändert selbst die Bedingungen psychologischer Versorgung, Arbeit und Bildung.",
+                    "learnerResponsibility": "Studierende klären den Auftrag, verbinden Fallinformationen, prüfen Alternativen und entwerfen fachlich begründete Veränderungen. Die Entscheidung und ihre Grenzen bleiben menschlich verantwortet.",
+                    "evidenceFocus": "H1 beurteilt die fallbezogene Schlussfolgerung; H2 Bedarf, Wirkannahmen und Anpassung einer Veränderung. Messgüte bleibt R2, empirische Wirkungsbelege R4, normative Zulässigkeit V1.",
+                    "competencyIds": [
+                        "H1",
+                        "H2"
+                    ],
+                    "criterionIds": [
+                        "H1.1",
+                        "H1.2",
+                        "H1.3",
+                        "H2.1",
+                        "H2.2",
+                        "H2.3"
+                    ],
+                    "aiRoles": [
+                        "tool",
+                        "subject",
+                        "context",
+                        "deliberate-nonuse"
+                    ]
+                },
+                {
+                    "domainId": "K",
+                    "summary": "KI kann Entwürfe, Übersetzungen und fiktive Gesprächsübungen unterstützen. Menschen müssen ihren Einsatz erklären, Verständigung sichern und gemeinsame Verantwortung organisieren.",
+                    "learnerResponsibility": "Studierende hören Menschen zu, reagieren auf Perspektiven und Beziehungsspannungen und machen Entscheidungen für Beteiligte nachvollziehbar. Eine passende Chatbot-Antwort belegt noch keine menschliche Beziehungskompetenz.",
+                    "evidenceFocus": "K1: verständliche Darstellung; K2: Gespräch und Beziehung; K3: Abstimmung zwischen Menschen. Technische Schnittstellen eines Workflows werden unter T3 beurteilt.",
+                    "competencyIds": [
+                        "K1",
+                        "K2",
+                        "K3"
+                    ],
+                    "criterionIds": [
+                        "K1.1",
+                        "K1.2",
+                        "K1.3",
+                        "K2.1",
+                        "K2.2",
+                        "K2.3",
+                        "K3.1",
+                        "K3.2",
+                        "K3.3"
+                    ],
+                    "aiRoles": [
+                        "tool",
+                        "subject",
+                        "context",
+                        "deliberate-nonuse"
+                    ]
+                },
+                {
+                    "domainId": "T",
+                    "summary": "Technisches Verstehen, gezieltes Bedienen und Systemgestaltung ermöglichen einen kontrollierbaren Einsatz. Modellmechanismen und technische Fehler können auch ohne aktive KI-Nutzung untersucht werden.",
+                    "learnerResponsibility": "Studierende erklären Datenwege und Grenzen, übersetzen Aufgaben in geeignete Eingaben, sichern Bedienabläufe und entwickeln überprüfbare Workflows mit menschlichen Eingriffsmöglichkeiten.",
+                    "evidenceFocus": "T1: Funktionsverständnis; T2: Eingabe, Bedienung und technische Sicherung; T3: Komponenten, Schnittstellen und Funktionstests. Fachliche Richtigkeit bleibt im Fachkriterium, Folgenabwägung bei V1.",
+                    "competencyIds": [
+                        "T1",
+                        "T2",
+                        "T3"
+                    ],
+                    "criterionIds": [
+                        "T1.1",
+                        "T1.2",
+                        "T1.3",
+                        "T2.1",
+                        "T2.2",
+                        "T2.3",
+                        "T3.1",
+                        "T3.2",
+                        "T3.3"
+                    ],
+                    "aiRoles": [
+                        "tool",
+                        "subject",
+                        "deliberate-nonuse"
+                    ]
+                },
+                {
+                    "domainId": "V",
+                    "summary": "KI wirft Fragen zu Schutzinteressen, Macht, Zugang und längerfristigen Folgen auf. Sie verändert auch Lernstrategien, Selbstvertrauen und die Verteilung eigener Denkarbeit.",
+                    "learnerResponsibility": "Studierende wägen Nutzen, Risiken und Werte ab, begrenzen Delegation und können KI begründet ablehnen. Sie überprüfen ihr Verständnis an eigener Leistung und passen Hilfen sowie Lernstrategien an.",
+                    "evidenceFocus": "V1: ethische Abwägung und verantwortbares Vorgehen; V2: begründete Selbststeuerung. Vertrauen in die eigenen Fähigkeiten bleibt als Selbstbericht erkennbar; fachliche Leistung wird separat geprüft.",
+                    "competencyIds": [
+                        "V1",
+                        "V2"
+                    ],
+                    "criterionIds": [
+                        "V1.1",
+                        "V1.2",
+                        "V1.3",
+                        "V2.1",
+                        "V2.2",
+                        "V2.3"
+                    ],
+                    "aiRoles": [
+                        "tool",
+                        "subject",
+                        "context",
+                        "deliberate-nonuse"
+                    ]
+                }
+            ],
+            "flowEdges": [
+                {
+                    "fromDomainId": "P",
+                    "toDomainId": "R",
+                    "label": "Von einer Erklärung zur prüfbaren Frage und zum Gegenbeleg",
+                    "criterionIds": [
+                        "P1.2",
+                        "R1.1",
+                        "R4.2"
+                    ]
+                },
+                {
+                    "fromDomainId": "R",
+                    "toDomainId": "H",
+                    "label": "Mess- und Forschungsbelege in ein begrenztes Fallurteil überführen",
+                    "criterionIds": [
+                        "R2.2",
+                        "R4.3",
+                        "H1.3"
+                    ]
+                },
+                {
+                    "fromDomainId": "H",
+                    "toDomainId": "K",
+                    "label": "Veränderungsvorschläge mit Menschen besprechen",
+                    "criterionIds": [
+                        "H2.2",
+                        "K1.2",
+                        "K2.2"
+                    ]
+                },
+                {
+                    "fromDomainId": "K",
+                    "toDomainId": "T",
+                    "label": "Menschliche Übergaben und technische Schnittstellen aufeinander abstimmen",
+                    "criterionIds": [
+                        "K3.2",
+                        "T3.1",
+                        "T3.3"
+                    ]
+                },
+                {
+                    "fromDomainId": "T",
+                    "toDomainId": "R",
+                    "label": "Funktionsprüfung mit wissenschaftlicher Prüfung verbinden",
+                    "criterionIds": [
+                        "T2.3",
+                        "T3.3",
+                        "R3.1",
+                        "R4.2"
+                    ]
+                },
+                {
+                    "fromDomainId": "T",
+                    "toDomainId": "V",
+                    "label": "Technische Möglichkeiten an Folgen und Schutzinteressen prüfen",
+                    "criterionIds": [
+                        "T1.3",
+                        "V1.1",
+                        "V1.2"
+                    ]
+                },
+                {
+                    "fromDomainId": "V",
+                    "toDomainId": "P",
+                    "label": "Eigenes Verständnis und veränderte Lernbedingungen erneut prüfen",
+                    "criterionIds": [
+                        "V2.3",
+                        "P1.3",
+                        "P2.1"
+                    ]
+                },
+                {
+                    "fromDomainId": "V",
+                    "toDomainId": "H",
+                    "label": "Verantwortungsgrenzen in die Umsetzung einbauen",
+                    "criterionIds": [
+                        "V1.2",
+                        "V1.3",
+                        "H2.3"
+                    ]
+                }
+            ],
+            "phasePolicy": {
+                "noWholeModuleMandate": true,
+                "phases": [
+                    {
+                        "contextId": "without-ai",
+                        "title": "Ohne KI: selbst denken und zeigen",
+                        "purpose": "Eigenes Wissen, Lösungsansätze und Urteilsvermögen aufbauen oder unter bekannten Bedingungen beobachten.",
+                        "learnerAction": "Zum Beispiel zuerst eine Erklärung, Hypothese, Fallformulierung oder Analyseentscheidung selbst erarbeiten; nach einer Hilfsphase eine neue Aufgabe eigenständig lösen. Zulässige nicht-KI-basierte Hilfen werden festgelegt.",
+                        "assessmentUse": "Ein angekündigter Abschnitt ohne KI kann Eigenleistung sichtbar machen, etwa eine begründete Kurzantwort, Live-Analyse, Transferaufgabe oder mündliche Erläuterung. Er ersetzt keine fachlichen Beurteilungskriterien."
+                    },
+                    {
+                        "contextId": "with-ai",
+                        "title": "Mit KI: unterstützen, prüfen und entscheiden",
+                        "purpose": "An einer passenden Stelle Unterstützung erproben und den Einfluss auf Ergebnis und eigenes Denken untersuchen.",
+                        "learnerAction": "Einen eigenen Auftrag formulieren, Vorschläge mit fachlichen Kriterien prüfen und die Annahme, Überarbeitung oder Ablehnung begründen. Vorbereitete Ausgaben oder eine lokale Simulation können einen Live-Zugang ersetzen.",
+                        "assessmentUse": "Beurteilt werden der begründete Umgang mit der Hilfe und die jeweils verlangte Fachleistung. Relevante Ausgaben, menschliche Änderungen und Verantwortlichkeiten müssen nachvollziehbar sein."
+                    },
+                    {
+                        "contextId": "about-ai",
+                        "title": "Über KI: Mechanismen und Folgen untersuchen",
+                        "purpose": "KI und Mensch-KI-Interaktion als technischen, psychologischen, wissenschaftlichen oder ethischen Gegenstand bearbeiten.",
+                        "learnerAction": "Zum Beispiel Automationsvertrauen erklären, die Messqualität eines KI-Instruments prüfen oder Verteilungsfolgen abwägen. Das geht auch anhand von Quellen, vorbereiteten Ausgaben und fiktiven Fällen ohne KI-Systemzugang.",
+                        "assessmentUse": "Die Gegenstandswahl erzeugt keine eigene KI-Bewertung. Je nach Frage gelten etwa P1, R2, R4, T1 oder V1; eine einzige Leistung wird nicht doppelt gezählt."
+                    }
+                ],
+                "assessmentRules": [
+                    {
+                        "id": "context-variants",
+                        "text": "Kontextangaben an einem Lernziel bezeichnen mögliche Bearbeitungsformen. Dasselbe Ziel kann mit einer vorbereiteten Ausgabe ohne eigenen KI-Zugang oder mit einem Werkzeug bearbeitet werden. Mehrere Kontextetiketten bedeuten weder mehrere erworbene Kompetenzen noch mehrere verpflichtende Prüfungen."
+                    },
+                    {
+                        "id": "task-specific",
+                        "text": "Der erlaubte KI-Einsatz wird für die konkrete Lern- oder Prüfphase begründet. Ein Modul kann mehrere Phasen kombinieren. Diese Entwurfsansicht erklärt kein ganzes Modul pauschal für KI-frei oder KI-pflichtig."
+                    },
+                    {
+                        "id": "clear-conditions",
+                        "text": "Vor einer beurteilten Leistung müssen Aufgabe, Kriterien, erlaubte Hilfen, Nachweisform und Umgang mit KI-Ausgaben bekannt sein. Verbindliche Prüfbedingungen bleiben Sache der zuständigen Lehr- und Prüfungsverantwortlichen."
+                    },
+                    {
+                        "id": "independent-transfer",
+                        "text": "Eigenständige Denkarbeit wird gezielt aufgebaut und bei Bedarf gesondert beobachtet. Eine später ohne KI gelöste Transferaufgabe kann andere Informationen liefern als ein mit Hilfe entstandenes Produkt; beide werden unter ihren Bedingungen dokumentiert."
+                    },
+                    {
+                        "id": "same-criteria",
+                        "text": "Die Kriterien bleiben über Phasen hinweg dieselben. Beurteilungen beziehen sich auf konkrete Nachweise und dürfen durch wiederholte Darstellung in KI-, Fach- oder Future-Skills-Ansichten nicht vervielfacht werden."
+                    },
+                    {
+                        "id": "access-and-support",
+                        "text": "Der Entwurf setzt keinen kostenpflichtigen KI-Zugang voraus. Vorbereitete Ausgaben, Simulationen und fachlich gleichwertige Alternativen sind vorzusehen; berechtigte Unterstützungsbedürfnisse werden bei der Festlegung von Bedingungen berücksichtigt."
+                    },
+                    {
+                        "id": "no-automated-attainment",
+                        "text": "Eine Modellantwort, ein Quellenzähler oder ein abgeschlossener Lerncheck bestätigt keine Kompetenz. Im Spiel bleiben geplante Gelegenheit, Übung, Selbstangabe und tatsächlich beurteilte Leistung getrennt."
+                    }
+                ]
+            },
+            "examples": [
+                {
+                    "id": "explanation-and-evidence",
+                    "title": "Eine überzeugende Erklärung fachlich prüfen",
+                    "assessmentProposal": "Eine neue Vorhersage ohne KI erläutern; Modellvergleich, Evidenzprüfung und begründete Selbstkorrektur getrennt an P1.2, R4.2 und V2.3 betrachten.",
+                    "moduleIds": [
+                        "200",
+                        "201",
+                        "BA"
+                    ],
+                    "criterionIds": [
+                        "P1.2",
+                        "R4.2",
+                        "V2.3"
+                    ],
+                    "phases": [
+                        {
+                            "contextId": "without-ai",
+                            "activity": "Zwei psychologische Modelle und ihre unterschiedlichen Vorhersagen selbst skizzieren.",
+                            "evidence": "Eigene Modellskizze mit einer begründeten Vorhersage."
+                        },
+                        {
+                            "contextId": "with-ai",
+                            "activity": "Eine vorbereitete KI-Erklärung mit der Skizze und einem zugänglichen Originalbefund vergleichen; begründet korrigieren.",
+                            "evidence": "Annotierte Erklärung mit Beleg und begründeter Korrektur."
+                        },
+                        {
+                            "contextId": "about-ai",
+                            "activity": "Prüfen, ob sprachliche Sicherheit oder ein Autoritätshinweis das eigene Urteil beeinflusst hat; daraus einen nächsten Prüfschritt ableiten.",
+                            "evidence": "Kurze Reflexion mit Bezug auf den eigenen Lösungsweg."
+                        }
+                    ]
+                },
+                {
+                    "id": "measurement-and-case",
+                    "title": "KI-Vorschläge in einem fiktiven diagnostischen Fall",
+                    "assessmentProposal": "Messgüte, Fallinterpretation und ethische Abwägung unter R2.2, H1.2 und V1.2 trennen. Eine mündliche Begründung ohne KI kann die eigene Urteilsbildung ergänzend sichtbar machen; daraus entsteht keine klinische Qualifikation.",
+                    "moduleIds": [
+                        "100",
+                        "501",
+                        "option:06SM200-511"
+                    ],
+                    "criterionIds": [
+                        "R2.2",
+                        "H1.2",
+                        "V1.2"
+                    ],
+                    "phases": [
+                        {
+                            "contextId": "without-ai",
+                            "activity": "Messqualität und eine erste Fallhypothese anhand vorgegebener Informationen selbst begründen.",
+                            "evidence": "Getrennte Notizen zu Messgüte und Fallhypothese."
+                        },
+                        {
+                            "contextId": "with-ai",
+                            "activity": "Eine vorbereitete alternative KI-Fallformulierung prüfen und eine begründete eigene Fassung erstellen.",
+                            "evidence": "Fallformulierung mit angenommenen und verworfenen Alternativen."
+                        },
+                        {
+                            "contextId": "about-ai",
+                            "activity": "Abwägen, ob das vorgeschlagene System im fiktiven Setting eingesetzt werden sollte und welche Schutzinteressen betroffen sind.",
+                            "evidence": "Begründeter Einsatz- oder Verzichtsentscheid."
+                        }
+                    ]
+                },
+                {
+                    "id": "research-and-workflow",
+                    "title": "Einen nachvollziehbaren Forschungsablauf entwickeln",
+                    "assessmentProposal": "Eine neue Analyseentscheidung selbst erläutern. R3.1 bewertet die Reproduzierbarkeit der Analyse; T3.3 die technische Fehlerbehandlung; K3.2 die Verständlichkeit der Übergabe für andere. Die Daten dürfen für die Übung synthetisch sein.",
+                    "moduleIds": [
+                        "102",
+                        "s03",
+                        "MA"
+                    ],
+                    "criterionIds": [
+                        "R1.1",
+                        "R3.1",
+                        "T3.3",
+                        "K3.2"
+                    ],
+                    "phases": [
+                        {
+                            "contextId": "without-ai",
+                            "activity": "Aus einem offenen Fachproblem eine prüfbare Frage und erste Analyseschritte selbst entwickeln.",
+                            "evidence": "Begründete Frage und eigener Analyseplan."
+                        },
+                        {
+                            "contextId": "with-ai",
+                            "activity": "Bei einem ausgewählten Arbeitsschritt Hilfe erproben, Änderungen im Analyseskript sichern und den Ablauf mit fehlerhaften Eingaben testen.",
+                            "evidence": "Reproduzierbares Skript und getrenntes Funktionstestprotokoll."
+                        },
+                        {
+                            "contextId": "about-ai",
+                            "activity": "Im Team erklären, wo ein technischer Erfolg noch keinen wissenschaftlich begründeten Schluss erlaubt.",
+                            "evidence": "Nachvollziehbare Übergabe mit offenen Prüfentscheidungen."
+                        }
+                    ]
+                },
+                {
+                    "id": "relationship-and-reflection",
+                    "title": "Gesprächsführung zwischen Simulation und Begegnung",
+                    "assessmentProposal": "Eine weitere Peer-Sequenz ohne KI an K2.1 und K2.3 beobachten. V2.3 betrachtet die begründete Anpassung des Lernens. Das KI-Rollenspiel allein bestätigt keine menschliche Beziehungskompetenz.",
+                    "moduleIds": [
+                        "400",
+                        "403",
+                        "600",
+                        "option:10SMSTS-505"
+                    ],
+                    "criterionIds": [
+                        "K2.1",
+                        "K2.3",
+                        "V2.3"
+                    ],
+                    "phases": [
+                        {
+                            "contextId": "without-ai",
+                            "activity": "In einer vereinbarten Peer-Übung ein Anliegen mit offenen Fragen klären und das Verstandene rückmelden.",
+                            "evidence": "Beobachtete Gesprächssequenz und konkrete Peer-Rückmeldung."
+                        },
+                        {
+                            "contextId": "with-ai",
+                            "activity": "Ein fiktives Gespräch oder vorbereitete KI-Rückmeldung nutzen, um eine eigene Formulierung zu überarbeiten.",
+                            "evidence": "Begründete Überarbeitung mit Bezug auf den eigenen Wortlaut."
+                        },
+                        {
+                            "contextId": "about-ai",
+                            "activity": "Grenzen der Simulation und Unterschiede zur Reaktion eines Menschen benennen; ein persönliches Übungsziel ableiten.",
+                            "evidence": "Reflexion zu beobachteten Grenzen und nächstem Übungsschritt."
+                        }
+                    ]
+                }
+            ]
+        },
         "competencies": [
             {
                 "id": "P1",
@@ -476,12 +938,14 @@
                                 "proposalStatus": "design-proposal",
                                 "targetLevel": 1,
                                 "contextIds": [
-                                    "without-ai"
+                                    "without-ai",
+                                    "with-ai",
+                                    "about-ai"
                                 ],
-                                "text": "Emotion, Stimmung und Motivation anhand ihrer fachlichen Merkmale unterscheiden.",
-                                "task": "Ordne drei kurze Alltagssituationen anhand der eingeführten Definitionen ein und benenne bei einer unklaren Situation fehlende Information.",
-                                "evidence": "Begriffszuordnung mit begründetem Grenzfall.",
-                                "successCriteria": "Die Zuordnung nutzt definierende Merkmale statt Alltagsassoziationen und kennzeichnet eine unentscheidbare Abgrenzung.",
+                                "text": "Emotion, Stimmung und Motivation anhand ihrer fachlichen Merkmale unterscheiden, auch bei Zuschreibungen an KI.",
+                                "task": "Ordne zuerst drei Alltagssituationen selbst anhand der eingeführten Definitionen ein. Vergleiche danach eine vorbereitete KI-Deutung mit deiner Antwort. Erkläre an einem fiktiven Chatbeispiel, warum emotionale Wortwahl allein kein Beleg für erlebte Emotion ist, und benenne fehlende Informationen.",
+                                "evidence": "Eigene Begriffszuordnung mit kommentiertem Vergleich und begründetem Grenzfall.",
+                                "successCriteria": "Die Zuordnung nutzt definierende Merkmale statt Alltagsassoziationen. Emotionale Darstellung und behauptetes Erleben werden auseinandergehalten; eine unentscheidbare Abgrenzung bleibt als solche kenntlich.",
                                 "openDecisions": "Lehrteam wählt Befunde, Rechentiefe und barrierefreie Antwortformate aus.",
                                 "topicRequired": false,
                                 "individualisationRequired": false,
@@ -520,12 +984,14 @@
                                 "proposalStatus": "design-proposal",
                                 "targetLevel": 1,
                                 "contextIds": [
-                                    "without-ai"
+                                    "without-ai",
+                                    "with-ai",
+                                    "about-ai"
                                 ],
-                                "text": "Biologische und kognitive Erklärungen desselben Phänomens vergleichen.",
-                                "task": "Stelle für eine Aufmerksamkeitsaufgabe die Erklärungsebenen und je eine prüfbare Vorhersage gegenüber.",
-                                "evidence": "Zweispaltige Modellskizze.",
-                                "successCriteria": "Neuronale Beschreibung und funktionale Erklärung werden verbunden, ohne sie gleichzusetzen.",
+                                "text": "Biologische und kognitive Erklärungen desselben Phänomens vergleichen und eine KI-Analogie fachlich begrenzen.",
+                                "task": "Stelle für eine Gedächtnis- oder Aufmerksamkeitsaufgabe zunächst selbst die Erklärungsebenen und je eine prüfbare Vorhersage gegenüber. Prüfe dann eine vorbereitete KI-Erklärung, die menschliches Lernen mit dem Speichern von Text gleichsetzt. Markiere mit Kursbegriffen, welche Annahme für den menschlichen Mechanismus fehlt.",
+                                "evidence": "Eigene Modellskizze mit fachlich kommentierter KI-Analogie.",
+                                "successCriteria": "Neuronale Beschreibung und funktionale Erklärung werden verbunden, ohne sie gleichzusetzen. Eine ähnliche Bezeichnung wie Gedächtnis genügt nicht, um denselben psychologischen Mechanismus anzunehmen.",
                                 "openDecisions": "Die verantwortlichen Lehrenden bestimmen gemeinsame Beispiele und die Abgrenzung der biologischen Vertiefung.",
                                 "topicRequired": false,
                                 "individualisationRequired": false,
@@ -566,12 +1032,13 @@
                                 "proposalStatus": "design-proposal",
                                 "targetLevel": 2,
                                 "contextIds": [
-                                    "without-ai"
+                                    "without-ai",
+                                    "with-ai"
                                 ],
-                                "text": "Zwei Aufmerksamkeitsmodelle anhand einer kritischen Bedingung vergleichen.",
-                                "task": "Leite ab, bei welcher Aufgabenvariation sich die Modelle in ihren Vorhersagen unterscheiden.",
-                                "evidence": "Vorhersagematrix.",
-                                "successCriteria": "Die Vorhersagen folgen aus Modellannahmen und unterscheiden sich empirisch prüfbar.",
+                                "text": "Zwei Aufmerksamkeitsmodelle anhand einer kritischen Bedingung vergleichen und einen KI-Vorschlag daran prüfen.",
+                                "task": "Leite zunächst ohne KI ab, bei welcher Aufgabenvariation sich die Modelle in ihren Vorhersagen unterscheiden. Vergleiche danach einen vorbereiteten KI-Vorschlag für dieselbe Variation mit deiner Matrix. Übernimm, korrigiere oder verwerfe ihn anhand der Modellannahmen und begründe anschliessend eine neue Variation selbst.",
+                                "evidence": "Eigene Vorhersagematrix, begründete Überarbeitung und selbständig erklärter Transfer.",
+                                "successCriteria": "Vorhersagen und Korrektur folgen aus den Modellannahmen und unterscheiden sich empirisch prüfbar. Sprachliche Sicherheit des KI-Vorschlags ersetzt diese Begründung nicht.",
                                 "openDecisions": "Die konkrete Aufgabe und die Auswahl menschlicher Vergleichsdaten bleiben bei der Modulleitung.",
                                 "topicRequired": false,
                                 "individualisationRequired": false,
@@ -951,12 +1418,14 @@
                                 "proposalStatus": "design-proposal",
                                 "targetLevel": 2,
                                 "contextIds": [
-                                    "without-ai"
+                                    "without-ai",
+                                    "with-ai",
+                                    "about-ai"
                                 ],
-                                "text": "Individuelle Unterschiede ohne deterministische Zuschreibung interpretieren.",
-                                "task": "Überarbeite eine fiktive Profilbeschreibung, die aus einem Testwert ein festes Verhalten vorhersagt.",
-                                "evidence": "Kontextbezogene Profilkritik.",
-                                "successCriteria": "Die Überarbeitung berücksichtigt Variation und Situation; keine Aussage über die reale Persönlichkeit der Lernenden wird erzeugt.",
+                                "text": "Individuelle Unterschiede und KI-generierte Persönlichkeitszuschreibungen ohne Determinismus interpretieren.",
+                                "task": "Formuliere zunächst selbst eine kontextbezogene Deutung eines vollständig fiktiven Profils. Vergleiche damit eine vorbereitete KI-Beschreibung, die aus einem Testwert festes Verhalten vorhersagt. Überarbeite die Zuschreibung anhand von Variation und Situation und erläutere deine Deutung für eine neue Situation ohne KI.",
+                                "evidence": "Eigene Profildeutung mit kommentierter KI-Korrektur und begründetem Situationswechsel.",
+                                "successCriteria": "Die Überarbeitung berücksichtigt Variation und Situation und vermeidet deterministische Aussagen. Beurteilt wird die Interpretation individueller Unterschiede; Messvalidität wird separat unter R2 behandelt. Es werden keine realen Persönlichkeitsprofile der Lernenden erzeugt.",
                                 "openDecisions": "Lehrende bestimmen die Testmaterialien und bieten gleichwertige fiktive Beispiele für persönliche Selbsterfahrung an.",
                                 "topicRequired": false,
                                 "individualisationRequired": false,

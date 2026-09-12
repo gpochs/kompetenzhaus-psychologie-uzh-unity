@@ -1,0 +1,386 @@
+{
+  "schema": "kompetenzhaus.authored-assets-functional-audit.v1",
+  "inspectedAt": "2026-09-12T10:58:19.768545+00:00",
+  "sourceBlendSha256": "a37b3df586be01a234c84315f1e5a011174567ac3d6963359b8624f2da76b842",
+  "method": "Reopened generated .blend in a separate factory-startup Blender process; no source save or export.",
+  "status": "checks-passed-awaiting-form-and-unity-runtime-review",
+  "assetCount": 22,
+  "meshObjects": 32,
+  "playerContract": {
+    "radiusMetres": 0.3,
+    "heightMetres": 1.75,
+    "stepOffsetMetres": 0.28
+  },
+  "stairs": {
+    "treads": [
+      {
+        "step": 1,
+        "centreBlenderY": -1.9,
+        "surfaceHeightMetres": 0.2199997901916504,
+        "expectedSurfaceHeightMetres": 0.22,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          0.6980000138282776,
+          0.6980000138282776
+        ]
+      },
+      {
+        "step": 2,
+        "centreBlenderY": -1.7,
+        "surfaceHeightMetres": 0.4200000762939453,
+        "expectedSurfaceHeightMetres": 0.42000000000000004,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 3,
+        "centreBlenderY": -1.5,
+        "surfaceHeightMetres": 0.619999885559082,
+        "expectedSurfaceHeightMetres": 0.6200000000000001,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 4,
+        "centreBlenderY": -1.2999999999999998,
+        "surfaceHeightMetres": 0.820000171661377,
+        "expectedSurfaceHeightMetres": 0.8200000000000001,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          0.6979999542236328,
+          0.6979999542236328
+        ]
+      },
+      {
+        "step": 5,
+        "centreBlenderY": -1.1,
+        "surfaceHeightMetres": 1.0199999809265137,
+        "expectedSurfaceHeightMetres": 1.02,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 6,
+        "centreBlenderY": -0.8999999999999999,
+        "surfaceHeightMetres": 1.2199997901916504,
+        "expectedSurfaceHeightMetres": 1.2200000000000002,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 7,
+        "centreBlenderY": -0.7,
+        "surfaceHeightMetres": 1.4200000762939453,
+        "expectedSurfaceHeightMetres": 1.4200000000000002,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          0.6980000138282776,
+          0.6980000138282776
+        ]
+      },
+      {
+        "step": 8,
+        "centreBlenderY": -0.5,
+        "surfaceHeightMetres": 1.619999885559082,
+        "expectedSurfaceHeightMetres": 1.62,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 9,
+        "centreBlenderY": -0.2999999999999998,
+        "surfaceHeightMetres": 1.820000171661377,
+        "expectedSurfaceHeightMetres": 1.82,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 10,
+        "centreBlenderY": -0.09999999999999987,
+        "surfaceHeightMetres": 2.0199999809265137,
+        "expectedSurfaceHeightMetres": 2.02,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          0.6980000138282776,
+          0.6980000138282776
+        ]
+      },
+      {
+        "step": 11,
+        "centreBlenderY": 0.10000000000000009,
+        "surfaceHeightMetres": 2.2199997901916504,
+        "expectedSurfaceHeightMetres": 2.22,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 12,
+        "centreBlenderY": 0.30000000000000027,
+        "surfaceHeightMetres": 2.4200000762939453,
+        "expectedSurfaceHeightMetres": 2.4200000000000004,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 13,
+        "centreBlenderY": 0.5,
+        "surfaceHeightMetres": 2.619999885559082,
+        "expectedSurfaceHeightMetres": 2.62,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          0.6980000138282776,
+          0.6980001330375671
+        ]
+      },
+      {
+        "step": 14,
+        "centreBlenderY": 0.7000000000000002,
+        "surfaceHeightMetres": 2.819999933242798,
+        "expectedSurfaceHeightMetres": 2.8200000000000003,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 15,
+        "centreBlenderY": 0.9000000000000004,
+        "surfaceHeightMetres": 3.0199999809265137,
+        "expectedSurfaceHeightMetres": 3.02,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          null,
+          null
+        ]
+      },
+      {
+        "step": 16,
+        "centreBlenderY": 1.1,
+        "surfaceHeightMetres": 3.2200000286102295,
+        "expectedSurfaceHeightMetres": 3.22,
+        "horizontal": true,
+        "sideClearanceMetres": [
+          0.6980000138282776,
+          0.6980000138282776
+        ]
+      }
+    ],
+    "measuredTreadRisesMetres": [
+      0.20000028610229492,
+      0.19999980926513672,
+      0.20000028610229492,
+      0.19999980926513672,
+      0.19999980926513672,
+      0.20000028610229492,
+      0.19999980926513672,
+      0.20000028610229492,
+      0.19999980926513672,
+      0.19999980926513672,
+      0.20000028610229492,
+      0.19999980926513672,
+      0.20000004768371582,
+      0.20000004768371582,
+      0.20000004768371582
+    ],
+    "measuredMinimumRailClearanceMetres": 1.3959999084472656,
+    "structuralRiseMetres": 3.2,
+    "treadFinishThicknessMetres": 0.02,
+    "topFinishedSurfaceMetres": 3.2200000286102295,
+    "unityLandingDatumMetres": 3.2,
+    "topLandingTransitionMetres": 0.02,
+    "note": "The oak finish is 2 cm above each structural step. The last finish is at 3.22 m, 2 cm above the 3.2 m Unity landing; actual CharacterController traversal remains a runtime acceptance check."
+  },
+  "guide": {
+    "kind": "rigid-parts-not-skinned",
+    "pivotCount": 11,
+    "pivots": [
+      {
+        "name": "GuideBody",
+        "expectedMetres": [
+          0,
+          0,
+          0
+        ],
+        "actualMetres": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deviationMetres": 0.0
+      },
+      {
+        "name": "LeftUpperArm",
+        "expectedMetres": [
+          -0.27,
+          0,
+          1.37
+        ],
+        "actualMetres": [
+          -0.26999998092651367,
+          0.0,
+          1.3700000047683716
+        ],
+        "deviationMetres": 2.9802322387695312e-08
+      },
+      {
+        "name": "RightUpperArm",
+        "expectedMetres": [
+          0.27,
+          0,
+          1.37
+        ],
+        "actualMetres": [
+          0.26999998092651367,
+          0.0,
+          1.3700000047683716
+        ],
+        "deviationMetres": 2.9802322387695312e-08
+      },
+      {
+        "name": "LeftForearm",
+        "expectedMetres": [
+          -0.38,
+          -0.01,
+          1.13
+        ],
+        "actualMetres": [
+          -0.37999987602233887,
+          -0.009999990463256836,
+          1.1299999952316284
+        ],
+        "deviationMetres": 1.1957253400760915e-07
+      },
+      {
+        "name": "RightForearm",
+        "expectedMetres": [
+          0.38,
+          -0.01,
+          1.13
+        ],
+        "actualMetres": [
+          0.37999987602233887,
+          -0.009999990463256836,
+          1.1299999952316284
+        ],
+        "deviationMetres": 1.1957253400760915e-07
+      },
+      {
+        "name": "LeftHand",
+        "expectedMetres": [
+          -0.48,
+          -0.02,
+          0.92
+        ],
+        "actualMetres": [
+          -0.48000001907348633,
+          -0.019999980926513672,
+          0.9200000166893005
+        ],
+        "deviationMetres": 3.514431838712321e-08
+      },
+      {
+        "name": "RightHand",
+        "expectedMetres": [
+          0.48,
+          -0.02,
+          0.92
+        ],
+        "actualMetres": [
+          0.48000001907348633,
+          -0.019999980926513672,
+          0.9200000166893005
+        ],
+        "deviationMetres": 3.514431838712321e-08
+      },
+      {
+        "name": "LeftLeg",
+        "expectedMetres": [
+          -0.13,
+          0,
+          0.87
+        ],
+        "actualMetres": [
+          -0.13000011444091797,
+          0.0,
+          0.8700000047683716
+        ],
+        "deviationMetres": 1.1920928955078125e-07
+      },
+      {
+        "name": "RightLeg",
+        "expectedMetres": [
+          0.13,
+          0,
+          0.87
+        ],
+        "actualMetres": [
+          0.13000011444091797,
+          0.0,
+          0.8700000047683716
+        ],
+        "deviationMetres": 1.1920928955078125e-07
+      },
+      {
+        "name": "LeftFoot",
+        "expectedMetres": [
+          -0.13,
+          0,
+          0.15
+        ],
+        "actualMetres": [
+          -0.13000011444091797,
+          0.0,
+          0.15000000596046448
+        ],
+        "deviationMetres": 1.1920928955078125e-07
+      },
+      {
+        "name": "RightFoot",
+        "expectedMetres": [
+          0.13,
+          0,
+          0.15
+        ],
+        "actualMetres": [
+          0.13000011444091797,
+          0.0,
+          0.15000000596046448
+        ],
+        "deviationMetres": 1.1920928955078125e-07
+      }
+    ],
+    "animationStatus": "Unity motion groups exist; actual imported motion still requires runtime review."
+  },
+  "portability": {
+    "renderPath": "//..\\review\\",
+    "externalDatablockPaths": [],
+    "storedAbsoluteFileBrowserDirectoryCount": 0,
+    "note": "No raw author paths are included in this audit."
+  },
+  "errors": []
+}

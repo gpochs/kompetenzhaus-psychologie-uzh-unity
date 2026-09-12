@@ -1,0 +1,207 @@
+{
+  "schema": "kompetenzhaus.materials.v1",
+  "materials": [
+    {
+      "name": "GameMat_Stone",
+      "baseColorSrgb": "#d3c7ae",
+      "roughness": 0.86,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Oak",
+      "baseColorSrgb": "#b88b55",
+      "roughness": 0.68,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Navy",
+      "baseColorSrgb": "#173650",
+      "roughness": 0.42,
+      "metallic": 0.1,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Sage",
+      "baseColorSrgb": "#758e74",
+      "roughness": 0.8,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Copper",
+      "baseColorSrgb": "#b77b4b",
+      "roughness": 0.32,
+      "metallic": 0.65,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Glass",
+      "baseColorSrgb": "#56838c",
+      "roughness": 0.2,
+      "metallic": 0,
+      "opacity": 0.32,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Leaf",
+      "baseColorSrgb": "#71844a",
+      "roughness": 0.9,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Skin",
+      "baseColorSrgb": "#bd875f",
+      "roughness": 0.65,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Ivory",
+      "baseColorSrgb": "#f1ede2",
+      "roughness": 0.8,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Ink",
+      "baseColorSrgb": "#162331",
+      "roughness": 0.56,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Ochre",
+      "baseColorSrgb": "#d9ac55",
+      "roughness": 0.85,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_Soil",
+      "baseColorSrgb": "#584b38",
+      "roughness": 1,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_OakLight",
+      "baseColorSrgb": "#c89d69",
+      "roughness": 0.72,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_OakDark",
+      "baseColorSrgb": "#a87d4b",
+      "roughness": 0.73,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_NavyFabric",
+      "baseColorSrgb": "#294969",
+      "roughness": 0.93,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.18
+    },
+    {
+      "name": "GameMat_SageFabric",
+      "baseColorSrgb": "#829079",
+      "roughness": 0.94,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.18
+    },
+    {
+      "name": "GameMat_ClothTan",
+      "baseColorSrgb": "#b49b78",
+      "roughness": 0.94,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.18
+    },
+    {
+      "name": "GameMat_LeafLight",
+      "baseColorSrgb": "#859957",
+      "roughness": 0.92,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_WarmLight",
+      "baseColorSrgb": "#ffdf9e",
+      "roughness": 0.55,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#ffdf9e",
+      "emissionStrength": 0.7,
+      "sheenWeight": 0.0
+    },
+    {
+      "name": "GameMat_StoneJoint",
+      "baseColorSrgb": "#b4a68d",
+      "roughness": 0.94,
+      "metallic": 0,
+      "opacity": 1.0,
+      "emissionColorSrgb": "#000000",
+      "emissionStrength": 0.0,
+      "sheenWeight": 0.0
+    }
+  ],
+  "textures": [],
+  "note": "Authored portable PBR constants. No baked texture maps are claimed. Read these values when replacing FBX materials in Unity."
+}

@@ -1,0 +1,250 @@
+{
+  "schema": "kompetenzhaus.edge-runtime-qa.v1",
+  "testedOn": "2026-09-12",
+  "tester": "Codex architecture_audit subagent",
+  "environment": {
+    "browser": "Microsoft Edge via CUA",
+    "url": "http://127.0.0.1:8768/",
+    "runtime": "Actual Unity WebGL player; no preview fixture, injected state or direct bridge invocation",
+    "accountData": "Only synthetic local game actions and neutral QA room names"
+  },
+  "provenance": {
+    "optimizedBuild": {
+      "inspectionFile": "UnityProject/Logs/web-build-inspection.json",
+      "inspectionSnapshot": "optimized-web-build-inspection.json",
+      "inspectionSha256": "C2616879BDB30E91B9F5F3DC2768DF4554ED90C0468BB11F130BBFBA4F9FC07C",
+      "inspectionWrittenUtc": "2026-09-12T11:06:34Z",
+      "totalBytes": 20475299,
+      "fileCount": 15,
+      "playerDataSha256": "61772825f7476f182e7c5b4747fbc48e80f27286218f655ff0658f13cb3c713f",
+      "wasmSha256": "d5a5be2c058120f7fc86670935e989bfa0b7b04c46476d1ec08d6d8e83c3503b",
+      "runtimeLoadedUtc": "2026-09-12T11:07:01Z"
+    },
+    "earlierBuild": {
+      "description": "The first working WebGL build served at the same URL before the pointer-lock, model-readability and graphics optimization fixes.",
+      "retainedManifestSha256": null,
+      "scope": "The complete 43-module start sweep, full module/quest completion and architecture Undo were exercised here. Those actions created the saved game subsequently verified in the optimized build."
+    },
+    "gameContentSha256": "8e2946d575727902fd2d0cd1e6f17032ff54acd1fbba8c495e284dab988ab7de",
+    "moduleDesignSha256": "79fbb9ca622f2fcb8e5267099109375b22208137edf3f960112d06198aba2c00",
+    "frameworkVersion": "2.2.0-draft"
+  },
+  "checks": [
+    {
+      "id": "start-real-player",
+      "result": "passed",
+      "phase": "both builds",
+      "observed": "The welcome changed from loading to ready; the real 3D canvas rendered and the start button became usable. No preview or synthetic-host toolbar was present."
+    },
+    {
+      "id": "module-001-complete",
+      "result": "passed",
+      "phase": "earlier build",
+      "observed": "Opened 001 from the entry guide. Check was disabled before selection. An intentional wrong answer showed the correct answer and full explanation; options were disabled during feedback. Continue advanced to the next question. The missed item returned later. All three questions were mastered. The final explanation stayed visible with Continue while Complete remained hidden. Continue then displayed completion.",
+      "correctnessMethod": "Matched visible shuffled answer text, not display indexes or direct state edits."
+    },
+    {
+      "id": "build-after-quiz",
+      "result": "passed",
+      "phase": "earlier build; persistence confirmed optimized",
+      "observed": "Completion led to room creation on an empty lot. Created Labor Nord QA through the UI, reopened the module and used the visible build action. The module became positioned and the counter changed to 1/20. It remained present after both an error recovery reload and the optimized-build reload."
+    },
+    {
+      "id": "all-module-starts",
+      "result": "passed",
+      "phase": "earlier build",
+      "count": 43,
+      "mode": "Free",
+      "moduleSlotIds": [
+        "001",
+        "002",
+        "003",
+        "100",
+        "101",
+        "400",
+        "200",
+        "201",
+        "102",
+        "s11",
+        "103",
+        "401",
+        "402",
+        "300",
+        "301",
+        "302",
+        "403",
+        "s12",
+        "s13",
+        "BA",
+        "500",
+        "501",
+        "502",
+        "s04",
+        "s05",
+        "s06",
+        "wp",
+        "s01a",
+        "s01b",
+        "s07",
+        "s08",
+        "s09",
+        "s01c",
+        "s03",
+        "600",
+        "s02a",
+        "s02b",
+        "MA",
+        "901",
+        "902",
+        "903",
+        "904",
+        "909"
+      ],
+      "observed": "Selected Campus, opened the 43 actual cards and started each quiz normally. Each produced its expected module code, a substantive question and four answer options. Each was closed normally. The wp slot used its default Economic and Consumer Psychology 510 option.",
+      "limit": "This tests all 43 slot entry routes, not complete traversal of every question or all optional variants."
+    },
+    {
+      "id": "architecture-and-undo",
+      "result": "passed",
+      "phase": "earlier build",
+      "observed": "Applied the courtyard template, added a separate Studio Evidenz QA room, and applied light-mineral/glass/terrace styling. Confirmed selected values. Undo restored warm-timber/open-bays/flat without removing the additional room. Further Undo removed only the added room, then restored the original named room and module placement. The 1/20 built-module count remained throughout.",
+      "limit": "DOM and actual Unity transactions were tested. Detailed collision, door and stair traversal belongs to separate physics/world checks."
+    },
+    {
+      "id": "settings-save-reload",
+      "result": "passed",
+      "phase": "saved earlier; reloaded optimized",
+      "observed": {
+        "language": "en",
+        "directMasterEntry": true,
+        "learningMode": "Free",
+        "masterVolume": 0.75,
+        "ambienceVolume": 0.35,
+        "effectsVolume": 0.65,
+        "footstepsVolume": 0,
+        "textScale": 1.1,
+        "captions": true,
+        "lookSensitivity": 1
+      },
+      "verification": "Values were shown after reopening settings and after a real page reload into the optimized player. The interface switched to English. German was restored and saved at the end.",
+      "limit": "No claim about Serious-mode prerequisite gates or subjective sound quality."
+    },
+    {
+      "id": "quest-completion",
+      "result": "passed",
+      "phase": "completed earlier; persisted optimized",
+      "questId": "main-evidence-foundation",
+      "observed": "All 11 quest cards were listed. Started the first main quest in English, answered its two source-checking questions, saw full feedback until Continue, then completion. Its card showed Explore again after completion and after reload. The journey moved to the following quest.",
+      "limit": "Only this one quest was completed end to end."
+    },
+    {
+      "id": "current-competency-profile",
+      "result": "passed",
+      "phase": "optimized",
+      "observed": {
+        "competencies": 16,
+        "canonicalCriteria": 48,
+        "aiCards": 16,
+        "aiDomains": 6,
+        "careerOptions": 12,
+        "builtModules": 1,
+        "modulePractice": 1,
+        "completedQuests": 1
+      },
+      "verification": "Actual host profile displayed version 2.2.0-draft and explicitly unassessed competence. Scientific-inquiry domain separated R1/R2/R3/R4 responsibilities. The psychotherapy view showed disciplinary activities, relevant opportunities and next modules without suitability percentages. Optional digital context remained optional.",
+      "limit": "The current first career view was inspected, not every detailed role facet."
+    },
+    {
+      "id": "responsive-ui",
+      "result": "passed-with-measurement-limit",
+      "phase": "optimized",
+      "viewportOverride": {
+        "width": 390,
+        "height": 844
+      },
+      "observed": "English career view remained readable and vertically scrollable with no visible horizontal overflow; all 16 profile disclosures and 48 criterion nodes remained present. Override was reset.",
+      "limit": "Read-only DOM geometry evaluation timed out in this live player. No exact width measurements are claimed for this build; visual inspection and DOM counts were used."
+    },
+    {
+      "id": "tutor-link-and-context",
+      "result": "passed",
+      "phase": "optimized",
+      "publicUrl": "https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043",
+      "observed": {
+        "envelopeSchema": "kompetenzhaus.tutor-context",
+        "version": 3,
+        "frameworkVersion": "2.2.0-draft",
+        "locale": "en",
+        "placedModuleIds": [
+          "001"
+        ],
+        "practiceModuleIds": [
+          "001"
+        ],
+        "practiceQuestIds": [
+          "main-evidence-foundation"
+        ],
+        "privateRoomNameIncluded": false,
+        "legacyScoreFieldsIncluded": false
+      },
+      "verification": "Used the visible Copy learning context button and read the resulting clipboard payload. Link matched published metadata. Localhost correctly kept the public iframe hidden and offered the separate public link.",
+      "limit": "GitHub-domain embed generation is not established by this local test. Real public Tutor DE/EN generation is documented separately in companion/published.json."
+    },
+    {
+      "id": "web-look-controls",
+      "result": "passed",
+      "phase": "optimized",
+      "observed": "Explore then canvas click no longer raised a fatal alert. A real left-button drag visibly changed viewing direction; no pointer lock was required. The English and German help/ARIA text described the new control. The focused hint stayed hidden when no learning place was focused.",
+      "limit": "A positive focused-target hint was not acquired in this Edge check."
+    },
+    {
+      "id": "zoom-controls",
+      "result": "passed-limited",
+      "phase": "optimized",
+      "observed": "Zoom in/out buttons were enabled in bird view and absent in first person. Both normal UI clicks were accepted with no new console error.",
+      "limit": "Root independently checked the visible camera-distance change in the in-app browser."
+    }
+  ],
+  "resolvedFindings": [
+    {
+      "id": "pointer-lock-fatal",
+      "original": "Explore plus canvas click raised Unity fatal WrongDocumentError: The root document of this element is not valid for pointer lock.",
+      "optimized": "No alert after canvas click and drag; visible direction change."
+    },
+    {
+      "id": "non-readable-mesh-colliders",
+      "original": "CollisionMeshData errors on furniture and architectural models in the earlier player.",
+      "optimized": "The error log entries remained from earlier loads, latest at 11:05:37 UTC. No new error entries were recorded at or after the optimized runtime load, 11:07:01 UTC."
+    },
+    {
+      "id": "automation-clipboard-bridge",
+      "original": "Copy failed after a CUA kernel reset because the old Browser Use clipboard bridge had been removed.",
+      "optimized": "After normal reload, the visible copy action succeeded and its actual payload was inspected. No product patch was required."
+    }
+  ],
+  "console": {
+    "optimizedErrorsObserved": 0,
+    "errorWindowStartUtc": "2026-09-12T11:07:00Z",
+    "nonFatalMessages": [
+      "Unity deprecated manual persistentDataPath synchronization warning; observed saving and reloading still worked.",
+      "URP reported stripped/unsupported optional postprocessing shaders (depth of field, Panini, FSR).",
+      "Initial audio metadata-not-loaded messages preceded normal resumed AudioContext."
+    ]
+  },
+  "screenshots": {
+    "source": "Actual CUA browser screenshots, inline in the tool conversation",
+    "localFiles": [],
+    "selectedEvidence": [
+      "Last module explanation while completion remained hidden",
+      "Optimized first-person view before and after a real drag",
+      "Narrow English career view"
+    ],
+    "note": "No supported direct-to-file screenshot method was available in the inspected CUA API. No mock screenshot or raw base64 text was created."
+  },
+  "remainingScope": [
+    "Public GitHub Pages deployment and allowed-domain iframe generation require separate checks.",
+    "This report does not claim full completion of every module quiz, every option or all 11 quests.",
+    "Audio audibility, sustained performance across hardware, physical traversal and broader graphics acceptance are separate from this Edge UI report.",
+    "The final export-metadata-only rebuild, if produced after this manifest, must retain its own provenance rather than being silently substituted into this report."
+  ]
+}

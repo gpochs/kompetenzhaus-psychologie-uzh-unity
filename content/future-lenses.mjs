@@ -20,7 +20,7 @@ export const futureCoverageRule=L('Diese Bezüge machen Future Skills sichtbar. 
 export const futureDesignTests=[
   L('Bleibt das Lernziel sinnvoll, wenn das heute verwendete KI-Werkzeug ersetzt wird?','Does the objective remain useful if today’s AI tool is replaced?'),
   L('Müssen Studierende selbst eine Frage, Alternative oder begründete Entscheidung entwickeln?','Must students develop a question, alternative or justified decision themselves?'),
-  L('Wird erkennbar, wo KI unterstützt und welche fachliche Eigenleistung bestehen bleibt?','Is it clear where AI assists and which disciplinary work remains the student’s own?'),
+  L('Wird erkennbar, wo KI unterstützt, wo sie selbst Gegenstand der Untersuchung ist und welche Schritte eigenständig ohne KI bearbeitet oder beurteilt werden?','Is it clear where AI assists, where it is itself the subject of inquiry and which steps are undertaken or assessed independently without AI?'),
   L('Werden Unsicherheit, Systemfolgen und die Perspektive betroffener Menschen berücksichtigt?','Does the task account for uncertainty, system effects and the perspectives of affected people?'),
   L('Verändert eine Rückmeldung das weitere Handeln, statt nur Punkte zu liefern?','Does feedback change subsequent action rather than merely award points?'),
   L('Ist der neue Lernanteil in den vorhandenen Arbeitsaufwand integriert und einer konkreten bisherigen Aktivität zugeordnet?','Is the new learning component integrated into the existing workload and tied to a specific previous activity?')

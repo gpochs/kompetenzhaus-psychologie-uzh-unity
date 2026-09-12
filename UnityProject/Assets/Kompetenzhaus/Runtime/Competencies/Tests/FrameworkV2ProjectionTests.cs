@@ -163,7 +163,7 @@ namespace Kompetenzhaus.Competencies.Tests
             data.language = "en";
             var profile = Profile();
             var criteria = Criteria(profile).Select(item => item.id).ToHashSet();
-            Assert.That(profile.frameworkVersion, Is.EqualTo("2.1.0-draft"));
+            Assert.That(profile.frameworkVersion, Is.EqualTo("2.2.0-draft"));
             foreach (var competency in profile.competencies)
             {
                 var integration = competency.aiIntegration;
@@ -181,6 +181,37 @@ namespace Kompetenzhaus.Competencies.Tests
                 Assert.That(definition.aiIntegration.exampleTask.en, Is.Not.Empty);
                 Assert.That(integration.possibleRole, Is.EqualTo(definition.aiIntegration.possibleRole.Get("en")));
             }
+        }
+
+        [Test] public void AiAcrossKeepsEveryCriterionOnceAndLocalisesAllPhases()
+        {
+            data.language = "en";
+            var profile = Profile();
+            var ai = profile.aiAcrossCurriculum;
+            Assert.That(ai.domainRows.SelectMany(r => r.criterionIds), Is.EquivalentTo(Criteria(profile).Select(c => c.id)));
+            Assert.That(ai.principle, Is.EqualTo(source.Framework.aiAcrossCurriculum.principle.en));
+            Assert.That(ai.phasePolicy.noWholeModuleMandate, Is.True);
+            Assert.That(ai.phasePolicy.phases.Select(p => p.contextId), Is.EquivalentTo(new[] { "without-ai", "with-ai", "about-ai" }));
+            foreach (var phase in ai.phasePolicy.phases)
+                Assert.That(phase.assessmentUse, Is.EqualTo(source.Framework.aiAcrossCurriculum.phasePolicy.phases.Single(p => p.contextId == phase.contextId).assessmentUse.en));
+            Assert.That(ai.domainRows.Single(r => r.domainId == "R").criterionIds, Does.Contain("R4.2"));
+            Assert.That(ai.domainRows.Single(r => r.domainId == "T").criterionIds, Does.Not.Contain("R4.2"));
+            Assert.That(ai.examples.SelectMany(e => e.phases).All(p => !string.IsNullOrWhiteSpace(p.evidence)), Is.True);
+        }
+
+        [Test] public void AiViewCannotMoveScientificCriteriaIntoTechnicalDomain()
+        {
+            var copy = JsonUtility.FromJson<FrameworkV2Definition>(JsonUtility.ToJson(source.Framework));
+            var row = copy.aiAcrossCurriculum.domainRows.Single(r => r.domainId == "T");
+            row.criterionIds = row.criterionIds.Append("R4.2").ToArray();
+            Assert.Throws<ArgumentException>(() => new FrameworkV2Catalog(copy, source.Careers, source.Learning, curriculum));
+        }
+
+        [Test] public void AiViewCannotSilentlyRemoveIndependentReasoningPhase()
+        {
+            var copy = JsonUtility.FromJson<FrameworkV2Definition>(JsonUtility.ToJson(source.Framework));
+            copy.aiAcrossCurriculum.phasePolicy.phases = copy.aiAcrossCurriculum.phasePolicy.phases.Where(p => p.contextId != "without-ai").ToArray();
+            Assert.Throws<ArgumentException>(() => new FrameworkV2Catalog(copy, source.Careers, source.Learning, curriculum));
         }
     }
 }

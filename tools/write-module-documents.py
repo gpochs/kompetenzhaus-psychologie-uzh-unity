@@ -22,7 +22,7 @@ from docx.oxml.ns import qn
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "content/module-learning-design.json"
 FRAMEWORK = ROOT / "content/competency-framework.json"
-EXPECTED_VERSION = "2.1.0-draft"
+EXPECTED_VERSION = "2.2.0-draft"
 EXPECTED_ENTRIES = 46
 EXPECTED_OBJECTIVES = 153
 ROMAN = {1: "I", 2: "II", 3: "III"}
@@ -51,7 +51,7 @@ def local(value, language):
 
 def validate_source(data, framework):
     if data.get("frameworkVersion") != EXPECTED_VERSION or framework.get("version") != EXPECTED_VERSION:
-        fail("Both source files must be final framework version 2.1.0-draft.")
+        fail("Both source files must be final framework version 2.2.0-draft.")
     if data.get("schema") != "kompetenzhaus.module-learning-design" or data.get("schemaVersion") != 1 or data.get("status") != "design-proposal":
         fail("Unsupported module learning design or missing proposal status.")
     modules = data.get("modules", [])
@@ -170,7 +170,7 @@ def build(language, data, framework, layout, output_folder):
     choose = lambda de, en: de if language == "de" else en
     text = lambda value: local(value, language)
     title = choose("Modulbeschreibungen\nPsychologie der Zukunft", "Module descriptions\nPsychology for the future")
-    subtitle = choose("Lernentwürfe für Bachelor und Master · Band DE · Version 2.1", "Learning designs for Bachelor and Master study · English volume · Version 2.1")
+    subtitle = choose("Lernentwürfe für Bachelor und Master · Band DE · Version 2.2", "Learning designs for Bachelor and Master study · English volume · Version 2.2")
     document = layout.init(language, title, subtitle)
     # Retain the shared page setup, styles, header and footer. Author this volume's
     # cover from module data rather than inheriting the framework-volume cover.
@@ -215,7 +215,7 @@ def build(language, data, framework, layout, output_folder):
         p.add_run(translated)
         return p
 
-    paragraph(choose("MODULBAND 2.1 · ARBEITSENTWURF", "MODULE VOLUME 2.1 · WORKING DRAFT"))
+    paragraph(choose("MODULBAND 2.2 · ARBEITSENTWURF", "MODULE VOLUME 2.2 · WORKING DRAFT"))
     heading(title, 0)
     paragraph(subtitle, "Subtitle")
     paragraph(choose("43 Studienbausteine · 3 Wahlvarianten · 153 Lernziele", "43 curriculum slots · 3 elective alternatives · 153 learning objectives"))
@@ -235,6 +235,12 @@ def build(language, data, framework, layout, output_folder):
     heading(choose("Drei Aufgabenniveaus", "Three task levels"), 2)
     for level in framework["levelDefinitions"]:
         labelled(f"{level['label']} · {text(level['title'])}:", level["description"], "level:" + str(level["level"]))
+
+    layout.ai_phases(document,language,new_page=True)
+    heading(choose("KI im Fach, in Future Skills und in Verantwortung", "AI in disciplinary work, future skills and responsibility"),2)
+    source_text("aiAcross:principle",framework["aiAcrossCurriculum"]["principle"])
+    for row in framework["aiAcrossCurriculum"]["domainRows"]:
+        labelled(row["domainId"]+" · "+", ".join(row["competencyIds"])+":",row["summary"],"aiAcross:"+row["domainId"])
 
     modules = data["modules"]
     module_by_id = {module["id"]: module for module in modules}
@@ -293,6 +299,14 @@ def build(language, data, framework, layout, output_folder):
         labelled(choose("KI-Rolle:", "Role of AI:"), proposal["aiRole"], module["id"] + ":aiRole")
         labelled(choose("Eigenleistungsnachweis:", "Evidence of independent work:"), proposal["independentEvidence"], module["id"] + ":independentEvidence")
         labelled(choose("Beurteilungsvorschlag:", "Assessment proposal:"), proposal["assessmentProposal"], module["id"] + ":assessmentProposal")
+        phase_refs=proposal["aiStudyAssessment"]
+        phase_parts=[]
+        for key,de,en in [("withoutAiObjectiveIds","Ohne KI","Without AI"),("withAiObjectiveIds","Mit KI","With AI"),("aboutAiObjectiveIds","Über KI","About AI")]:
+            if phase_refs[key]:
+                numbers=[str(next(i for i,o in enumerate(proposal["objectives"],1) if o["id"]==oid)) for oid in phase_refs[key]]
+                phase_parts.append(choose(de,en)+": "+choose("Ziel ","objective ")+", ".join(numbers))
+        labelled(choose("Mögliche Bearbeitungsformen:","Possible working contexts:"),"; ".join(phase_parts)+".")
+        paragraph(choose("Kontextangaben sind Varianten der folgenden Aufgaben. Daraus entstehen keine zusätzlichen Lernziele, Prüfungen oder pauschalen KI-Regeln für das ganze Modul.","Context labels are variants of the following tasks. They create no additional objectives, assessments or blanket AI rules for the whole module."))
         labelled(choose("Einbettung in den Arbeitsaufwand:", "Workload integration:"), proposal["workloadIntegration"], module["id"] + ":workloadIntegration")
         if proposal.get("topicRequired") or proposal.get("individualisationRequired"):
             flags = []
@@ -348,7 +362,7 @@ def build(language, data, framework, layout, output_folder):
     paragraph("content/competency-framework.json")
     paragraph("SHA256: " + sha256(FRAMEWORK))
     paragraph(choose("Die 153 Lernziele sind vollständig enthalten. Wiederkehrende Kriterien bezeichnen dieselbe Kompetenz; sie begründen keine Mehrfachbewertung derselben Leistung. Fachliche Erprobung, verbindliche Modulbeschlüsse und eine psychometrische Validierung werden nicht behauptet.", "All 153 objectives are included. Recurring criteria refer to the same competency; they do not justify counting one performance several times. This document does not claim completed disciplinary piloting, binding module decisions or psychometric validation."))
-    path = output_folder / f"Modulbeschreibungen-Psychologie-Zukunft-v2.1-{language.upper()}.docx"
+    path = output_folder / f"Modulbeschreibungen-Psychologie-Zukunft-v2.2-{language.upper()}.docx"
     document.save(path)
     return verify_output(path, required, [m["id"] for m in modules], [o["id"] for m in modules for o in m["proposal"]["objectives"]])
 

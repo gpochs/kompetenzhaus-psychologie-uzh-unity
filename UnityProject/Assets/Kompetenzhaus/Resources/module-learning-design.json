@@ -40,12 +40,12 @@
     "de": "Alle vorgeschlagenen Kernaufgaben funktionieren mit vorhandener Literatur, Übungsdaten und bereitgestellten Beispielen. Kostenpflichtige KI-Zugänge, neue Konten und zusätzliche ECTS sind nicht vorausgesetzt.",
     "en": "All proposed core tasks work with existing readings, practice data and supplied examples. Paid AI access, new accounts and additional credits are not assumed."
   },
-  "frameworkVersion": "2.1.0-draft",
+  "frameworkVersion": "2.2.0-draft",
   "frameworkSchemaVersion": 2,
   "sources": [
     {
       "path": "content/kompetenzhaus-content.json",
-      "sha256": "4d81b07980fdb9802df147443c79d20843a2184b000205d568799952aefa0e30",
+      "sha256": "8e2946d575727902fd2d0cd1e6f17032ff54acd1fbba8c495e284dab988ab7de",
       "status": "inherited-public-game-current-baseline",
       "url": "https://github.com/gpochs/kompetenzhaus-psychologie-uzh",
       "sourceDate": "2026-07-03",
@@ -74,16 +74,16 @@
     },
     {
       "path": "content/competency-framework.json",
-      "sha256": "adfaa605ad755d61a79f48e6ebf552efbde89da4d663c752e33d6f3de3b807d6",
+      "sha256": "04f3056ff9b00723fe058fd8d1d5bb8010fd110839c315b44187ef5928a7ed32",
       "status": {
         "de": "Entwurf für das Lernspiel und die Curriculumentwicklung; fachliche Validierung steht aus.",
         "en": "Draft for the learning game and curriculum development; subject review is still required."
       },
-      "version": "2.1.0-draft"
+      "version": "2.2.0-draft"
     },
     {
       "path": "content/module-learning-design.mjs",
-      "sha256": "b7fe3cd9328a08362132e031786f249360f7341f0b69e787f1b1ebccc05811a9",
+      "sha256": "d0e12304a5e2141105ed7f7d442f661c40d2de3cd35d2295ba8629b2d6c835ff",
       "status": "independently-authored-design-proposal"
     }
   ],
@@ -201,29 +201,31 @@
             "criterionId": "P1.1",
             "targetLevel": 1,
             "contextIds": [
-              "without-ai"
+              "without-ai",
+              "with-ai",
+              "about-ai"
             ],
             "text": {
-              "de": "Emotion, Stimmung und Motivation anhand ihrer fachlichen Merkmale unterscheiden.",
-              "en": "Distinguish emotion, mood and motivation through their disciplinary features."
+              "de": "Emotion, Stimmung und Motivation anhand ihrer fachlichen Merkmale unterscheiden, auch bei Zuschreibungen an KI.",
+              "en": "Distinguish emotion, mood and motivation through their disciplinary features, including attributions to AI."
             },
             "task": {
-              "de": "Ordne drei kurze Alltagssituationen anhand der eingeführten Definitionen ein und benenne bei einer unklaren Situation fehlende Information.",
-              "en": "Classify three short everyday situations using the introduced definitions and identify missing information in an ambiguous situation."
+              "de": "Ordne zuerst drei Alltagssituationen selbst anhand der eingeführten Definitionen ein. Vergleiche danach eine vorbereitete KI-Deutung mit deiner Antwort. Erkläre an einem fiktiven Chatbeispiel, warum emotionale Wortwahl allein kein Beleg für erlebte Emotion ist, und benenne fehlende Informationen.",
+              "en": "First classify three everyday situations independently using the introduced definitions. Then compare a prepared AI interpretation with your answer. Using a fictional chat example, explain why emotional wording alone does not establish experienced emotion and identify missing information."
             },
             "evidence": {
-              "de": "Begriffszuordnung mit begründetem Grenzfall.",
-              "en": "Concept classification with a justified boundary case."
+              "de": "Eigene Begriffszuordnung mit kommentiertem Vergleich und begründetem Grenzfall.",
+              "en": "Personal concept classification with an annotated comparison and a justified boundary case."
             },
             "successCriteria": {
-              "de": "Die Zuordnung nutzt definierende Merkmale statt Alltagsassoziationen und kennzeichnet eine unentscheidbare Abgrenzung.",
-              "en": "Classification uses defining features rather than everyday associations and marks an indeterminate distinction."
+              "de": "Die Zuordnung nutzt definierende Merkmale statt Alltagsassoziationen. Emotionale Darstellung und behauptetes Erleben werden auseinandergehalten; eine unentscheidbare Abgrenzung bleibt als solche kenntlich.",
+              "en": "Classification uses defining features rather than everyday associations. Emotional expression is distinguished from claimed experience; an indeterminate distinction remains explicitly unresolved."
             }
           }
         ],
         "activitySequence": {
-          "de": "1. Ordne einer Vignette Verantwortungsdiffusion oder pluralistische Ignoranz zu und begründe anhand eines Situationsmerkmals.\n2. Berechne eine Streuungskennzahl und erkläre, weshalb ein Konfidenzintervall keine Aussage über alle Einzelwerte ist.\n3. Markiere in einer bereitgestellten KI-Erklärung eine Überdehnung und ersetze sie durch eine vom Studienauszug gedeckte Aussage.\n4. Ordne drei kurze Alltagssituationen anhand der eingeführten Definitionen ein und benenne bei einer unklaren Situation fehlende Information.",
-          "en": "1. Match a vignette to diffusion of responsibility or pluralistic ignorance and justify the choice using a situational feature.\n2. Calculate a measure of variation and explain why a confidence interval does not describe all individual observations.\n3. Mark an overstatement in a supplied AI explanation and replace it with a claim supported by the study extract.\n4. Classify three short everyday situations using the introduced definitions and identify missing information in an ambiguous situation."
+          "de": "1. Ordne einer Vignette Verantwortungsdiffusion oder pluralistische Ignoranz zu und begründe anhand eines Situationsmerkmals.\n2. Berechne eine Streuungskennzahl und erkläre, weshalb ein Konfidenzintervall keine Aussage über alle Einzelwerte ist.\n3. Markiere in einer bereitgestellten KI-Erklärung eine Überdehnung und ersetze sie durch eine vom Studienauszug gedeckte Aussage.\n4. Ordne zuerst drei Alltagssituationen selbst anhand der eingeführten Definitionen ein. Vergleiche danach eine vorbereitete KI-Deutung mit deiner Antwort. Erkläre an einem fiktiven Chatbeispiel, warum emotionale Wortwahl allein kein Beleg für erlebte Emotion ist, und benenne fehlende Informationen.",
+          "en": "1. Match a vignette to diffusion of responsibility or pluralistic ignorance and justify the choice using a situational feature.\n2. Calculate a measure of variation and explain why a confidence interval does not describe all individual observations.\n3. Mark an overstatement in a supplied AI explanation and replace it with a claim supported by the study extract.\n4. First classify three everyday situations independently using the introduced definitions. Then compare a prepared AI interpretation with your answer. Using a fictional chat example, explain why emotional wording alone does not establish experienced emotion and identify missing information."
         },
         "aiRole": {
           "de": "Optionaler sokratischer Tutor für Übungsfragen; fehlerhafte Antworten können als eingefrorene Beispiele bereitgestellt werden. Kein persönlicher Account ist nötig.",
@@ -263,6 +265,26 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "001:o1",
+            "001:o2",
+            "001:o3",
+            "001:o4"
+          ],
+          "withAiObjectiveIds": [
+            "001:o3",
+            "001:o4"
+          ],
+          "aboutAiObjectiveIds": [
+            "001:o4"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -354,33 +376,35 @@
             "criterionId": "P1.2",
             "targetLevel": 1,
             "contextIds": [
-              "without-ai"
+              "without-ai",
+              "with-ai",
+              "about-ai"
             ],
             "text": {
-              "de": "Biologische und kognitive Erklärungen desselben Phänomens vergleichen.",
-              "en": "Compare biological and cognitive accounts of the same phenomenon."
+              "de": "Biologische und kognitive Erklärungen desselben Phänomens vergleichen und eine KI-Analogie fachlich begrenzen.",
+              "en": "Compare biological and cognitive accounts of the same phenomenon and delimit an AI analogy on disciplinary grounds."
             },
             "task": {
-              "de": "Stelle für eine Aufmerksamkeitsaufgabe die Erklärungsebenen und je eine prüfbare Vorhersage gegenüber.",
-              "en": "Contrast the levels of explanation and one testable prediction each for an attention task."
+              "de": "Stelle für eine Gedächtnis- oder Aufmerksamkeitsaufgabe zunächst selbst die Erklärungsebenen und je eine prüfbare Vorhersage gegenüber. Prüfe dann eine vorbereitete KI-Erklärung, die menschliches Lernen mit dem Speichern von Text gleichsetzt. Markiere mit Kursbegriffen, welche Annahme für den menschlichen Mechanismus fehlt.",
+              "en": "First independently contrast the levels of explanation and one testable prediction each for a memory or attention task. Then examine a prepared AI explanation that equates human learning with storing text. Use course concepts to identify the missing assumption about the human mechanism."
             },
             "evidence": {
-              "de": "Zweispaltige Modellskizze.",
-              "en": "Two-column model sketch."
+              "de": "Eigene Modellskizze mit fachlich kommentierter KI-Analogie.",
+              "en": "Personal model sketch with a disciplinary annotation of the AI analogy."
             },
             "successCriteria": {
-              "de": "Neuronale Beschreibung und funktionale Erklärung werden verbunden, ohne sie gleichzusetzen.",
-              "en": "Neural description and functional explanation are connected without being equated."
+              "de": "Neuronale Beschreibung und funktionale Erklärung werden verbunden, ohne sie gleichzusetzen. Eine ähnliche Bezeichnung wie Gedächtnis genügt nicht, um denselben psychologischen Mechanismus anzunehmen.",
+              "en": "Neural description and functional explanation are connected without being equated. A shared term such as memory is insufficient to establish the same psychological mechanism."
             }
           }
         ],
         "activitySequence": {
-          "de": "1. Formuliere für einen vorgegebenen Gedächtniseffekt Vergleich, erwartete Richtung und beobachtbares Ergebnis.\n2. Kennzeichne in einer Querschnittsstudie Alter, Kohorte und Lerngelegenheiten, die für den Befund relevant sein könnten.\n3. Stelle für eine Aufmerksamkeitsaufgabe die Erklärungsebenen und je eine prüfbare Vorhersage gegenüber.",
-          "en": "1. Specify the comparison, expected direction and observable outcome for a supplied memory effect.\n2. Identify age, cohort and learning opportunities that may matter in a cross-sectional study.\n3. Contrast the levels of explanation and one testable prediction each for an attention task."
+          "de": "1. Formuliere für einen vorgegebenen Gedächtniseffekt Vergleich, erwartete Richtung und beobachtbares Ergebnis.\n2. Kennzeichne in einer Querschnittsstudie Alter, Kohorte und Lerngelegenheiten, die für den Befund relevant sein könnten.\n3. Stelle für eine Gedächtnis- oder Aufmerksamkeitsaufgabe zunächst selbst die Erklärungsebenen und je eine prüfbare Vorhersage gegenüber. Prüfe dann eine vorbereitete KI-Erklärung, die menschliches Lernen mit dem Speichern von Text gleichsetzt. Markiere mit Kursbegriffen, welche Annahme für den menschlichen Mechanismus fehlt.",
+          "en": "1. Specify the comparison, expected direction and observable outcome for a supplied memory effect.\n2. Identify age, cohort and learning opportunities that may matter in a cross-sectional study.\n3. First independently contrast the levels of explanation and one testable prediction each for a memory or attention task. Then examine a prepared AI explanation that equates human learning with storing text. Use course concepts to identify the missing assumption about the human mechanism."
         },
         "aiRole": {
-          "de": "KI ist für diese Kernaufgaben nicht erforderlich. Eine optionale Begriffsabfrage muss an den Kursmaterialien geprüft werden.",
-          "en": "AI is not required for these core tasks. Optional terminology checks must be verified against course materials."
+          "de": "Ein vorbereiteter KI-Vorschlag folgt auf die eigene Modellskizze. Er dient der fachlichen Begriffs- und Modellprüfung; KI kann als Vergleichsgegenstand untersucht werden. Ein persönlicher Account ist nicht erforderlich.",
+          "en": "A prepared AI suggestion follows the personal model sketch. It supports disciplinary scrutiny of concepts and models; AI can be examined as a comparison subject. No personal account is required."
         },
         "independentEvidence": {
           "de": "Hypothese und Modellvergleich werden an einem neuen Beispiel ohne KI erläutert.",
@@ -416,6 +440,24 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "002:o1",
+            "002:o2",
+            "002:o3"
+          ],
+          "withAiObjectiveIds": [
+            "002:o3"
+          ],
+          "aboutAiObjectiveIds": [
+            "002:o3"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -621,6 +663,28 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "003:o1",
+            "003:o2",
+            "003:o3",
+            "003:o4",
+            "003:o5"
+          ],
+          "withAiObjectiveIds": [
+            "003:o3",
+            "003:o5"
+          ],
+          "aboutAiObjectiveIds": [
+            "003:o2",
+            "003:o4"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -776,6 +840,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "100:o1",
+            "100:o2",
+            "100:o3"
+          ],
+          "withAiObjectiveIds": [
+            "100:o1"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -938,6 +1018,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "101:o1",
+            "101:o2",
+            "101:o3"
+          ],
+          "withAiObjectiveIds": [
+            "101:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -1100,6 +1196,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "400:o1",
+            "400:o2",
+            "400:o3"
+          ],
+          "withAiObjectiveIds": [
+            "400:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -1143,23 +1255,24 @@
             "criterionId": "P1.2",
             "targetLevel": 2,
             "contextIds": [
-              "without-ai"
+              "without-ai",
+              "with-ai"
             ],
             "text": {
-              "de": "Zwei Aufmerksamkeitsmodelle anhand einer kritischen Bedingung vergleichen.",
-              "en": "Compare two attention models through a critical condition."
+              "de": "Zwei Aufmerksamkeitsmodelle anhand einer kritischen Bedingung vergleichen und einen KI-Vorschlag daran prüfen.",
+              "en": "Compare two attention models through a critical condition and check an AI suggestion against them."
             },
             "task": {
-              "de": "Leite ab, bei welcher Aufgabenvariation sich die Modelle in ihren Vorhersagen unterscheiden.",
-              "en": "Identify a task variation for which the models predict different outcomes."
+              "de": "Leite zunächst ohne KI ab, bei welcher Aufgabenvariation sich die Modelle in ihren Vorhersagen unterscheiden. Vergleiche danach einen vorbereiteten KI-Vorschlag für dieselbe Variation mit deiner Matrix. Übernimm, korrigiere oder verwerfe ihn anhand der Modellannahmen und begründe anschliessend eine neue Variation selbst.",
+              "en": "First identify without AI a task variation for which the models predict different outcomes. Then compare a prepared AI suggestion for the same variation with your matrix. Accept, revise or reject it through the model assumptions, then justify a new variation independently."
             },
             "evidence": {
-              "de": "Vorhersagematrix.",
-              "en": "Prediction matrix."
+              "de": "Eigene Vorhersagematrix, begründete Überarbeitung und selbständig erklärter Transfer.",
+              "en": "Personal prediction matrix, justified revision and independently explained transfer."
             },
             "successCriteria": {
-              "de": "Die Vorhersagen folgen aus Modellannahmen und unterscheiden sich empirisch prüfbar.",
-              "en": "Predictions follow from model assumptions and differ in a testable way."
+              "de": "Vorhersagen und Korrektur folgen aus den Modellannahmen und unterscheiden sich empirisch prüfbar. Sprachliche Sicherheit des KI-Vorschlags ersetzt diese Begründung nicht.",
+              "en": "Predictions and revisions follow from model assumptions and differ in a testable way. Confident wording in the AI suggestion does not replace this justification."
             }
           },
           {
@@ -1213,12 +1326,12 @@
           }
         ],
         "activitySequence": {
-          "de": "1. Leite ab, bei welcher Aufgabenvariation sich die Modelle in ihren Vorhersagen unterscheiden.\n2. Prüfe, ob ein Reaktionszeitunterschied durch Schwierigkeit statt durch den behaupteten Prozess erklärt werden könnte.\n3. Vergleiche eine bereitgestellte Modellantwort und einen menschlichen Befund bei einer Sprach- oder Denkaufgabe.",
-          "en": "1. Identify a task variation for which the models predict different outcomes.\n2. Examine whether a response-time difference could reflect task difficulty rather than the claimed process.\n3. Compare a supplied model response with a human finding on a language or reasoning task."
+          "de": "1. Leite zunächst ohne KI ab, bei welcher Aufgabenvariation sich die Modelle in ihren Vorhersagen unterscheiden. Vergleiche danach einen vorbereiteten KI-Vorschlag für dieselbe Variation mit deiner Matrix. Übernimm, korrigiere oder verwerfe ihn anhand der Modellannahmen und begründe anschliessend eine neue Variation selbst.\n2. Prüfe, ob ein Reaktionszeitunterschied durch Schwierigkeit statt durch den behaupteten Prozess erklärt werden könnte.\n3. Vergleiche eine bereitgestellte Modellantwort und einen menschlichen Befund bei einer Sprach- oder Denkaufgabe.",
+          "en": "1. First identify without AI a task variation for which the models predict different outcomes. Then compare a prepared AI suggestion for the same variation with your matrix. Accept, revise or reject it through the model assumptions, then justify a new variation independently.\n2. Examine whether a response-time difference could reflect task difficulty rather than the claimed process.\n3. Compare a supplied model response with a human finding on a language or reasoning task."
         },
         "aiRole": {
-          "de": "KI ist Untersuchungsgegenstand für einen begrenzten Modellvergleich; kein Ersatz für psychologische Theorie.",
-          "en": "AI is an object of study in a bounded model comparison; it does not replace psychological theory."
+          "de": "Vorbereitete KI-Vorschläge werden nach einer eigenen Vorhersage fachlich geprüft. KI ist zusätzlich Gegenstand eines begrenzten Vergleichs mit menschlicher Kognition; die technische Reichweite bleibt von der psychologischen Modellbegründung getrennt.",
+          "en": "Prepared AI suggestions receive disciplinary scrutiny after an independent prediction. AI is also the subject of a bounded comparison with human cognition; technical scope remains distinct from psychological model justification."
         },
         "independentEvidence": {
           "de": "Modellvorhersagen und Konfundierungsanalyse werden ohne KI erstellt.",
@@ -1255,6 +1368,24 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "200:o1",
+            "200:o2",
+            "200:o3"
+          ],
+          "withAiObjectiveIds": [
+            "200:o1"
+          ],
+          "aboutAiObjectiveIds": [
+            "200:o3"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -1410,6 +1541,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "201:o1",
+            "201:o2",
+            "201:o3"
+          ],
+          "withAiObjectiveIds": [
+            "201:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -1597,6 +1744,24 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "102:o1",
+            "102:o2",
+            "102:o3",
+            "102:o4"
+          ],
+          "withAiObjectiveIds": [
+            "102:o2",
+            "102:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -1752,6 +1917,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s11:o1",
+            "s11:o2",
+            "s11:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s11:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -1908,6 +2089,23 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "103:o1",
+            "103:o2",
+            "103:o3"
+          ],
+          "withAiObjectiveIds": [
+            "103:o2",
+            "103:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -2062,6 +2260,20 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "401:o1",
+            "401:o2",
+            "401:o3"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -2217,6 +2429,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "402:o1",
+            "402:o2",
+            "402:o3"
+          ],
+          "withAiObjectiveIds": [
+            "402:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -2284,23 +2512,25 @@
             "criterionId": "P2.2",
             "targetLevel": 2,
             "contextIds": [
-              "without-ai"
+              "without-ai",
+              "with-ai",
+              "about-ai"
             ],
             "text": {
-              "de": "Individuelle Unterschiede ohne deterministische Zuschreibung interpretieren.",
-              "en": "Interpret individual differences without deterministic attribution."
+              "de": "Individuelle Unterschiede und KI-generierte Persönlichkeitszuschreibungen ohne Determinismus interpretieren.",
+              "en": "Interpret individual differences and AI-generated personality attributions without determinism."
             },
             "task": {
-              "de": "Überarbeite eine fiktive Profilbeschreibung, die aus einem Testwert ein festes Verhalten vorhersagt.",
-              "en": "Revise a fictional profile that predicts fixed behaviour from a test score."
+              "de": "Formuliere zunächst selbst eine kontextbezogene Deutung eines vollständig fiktiven Profils. Vergleiche damit eine vorbereitete KI-Beschreibung, die aus einem Testwert festes Verhalten vorhersagt. Überarbeite die Zuschreibung anhand von Variation und Situation und erläutere deine Deutung für eine neue Situation ohne KI.",
+              "en": "First formulate a context-sensitive interpretation of an entirely fictional profile independently. Compare it with a prepared AI description that predicts fixed behaviour from a test score. Revise the attribution through variation and situation, then explain your interpretation for a new situation without AI."
             },
             "evidence": {
-              "de": "Kontextbezogene Profilkritik.",
-              "en": "Context-sensitive profile critique."
+              "de": "Eigene Profildeutung mit kommentierter KI-Korrektur und begründetem Situationswechsel.",
+              "en": "Personal profile interpretation with an annotated AI correction and justified change of situation."
             },
             "successCriteria": {
-              "de": "Die Überarbeitung berücksichtigt Variation und Situation; keine Aussage über die reale Persönlichkeit der Lernenden wird erzeugt.",
-              "en": "The revision considers variation and situation; it does not generate claims about learners’ actual personalities."
+              "de": "Die Überarbeitung berücksichtigt Variation und Situation und vermeidet deterministische Aussagen. Beurteilt wird die Interpretation individueller Unterschiede; Messvalidität wird separat unter R2 behandelt. Es werden keine realen Persönlichkeitsprofile der Lernenden erzeugt.",
+              "en": "The revision considers variation and situation and avoids deterministic claims. Assessment concerns interpretation of individual differences; measurement validity is addressed separately under R2. No real personality profiles of learners are produced."
             }
           },
           {
@@ -2330,8 +2560,8 @@
           }
         ],
         "activitySequence": {
-          "de": "1. Erkläre, welche unterschiedlichen Fragen zwei Modelle zu demselben Verhaltensbeispiel beantworten.\n2. Überarbeite eine fiktive Profilbeschreibung, die aus einem Testwert ein festes Verhalten vorhersagt.\n3. Vergleiche Norm- und Validierungsinformationen eines Fragebogens mit einer behaupteten KI-Inferenz aus Text.",
-          "en": "1. Explain which different questions two models address for the same behavioural example.\n2. Revise a fictional profile that predicts fixed behaviour from a test score.\n3. Compare questionnaire norms and validation information with a claimed AI inference from text."
+          "de": "1. Erkläre, welche unterschiedlichen Fragen zwei Modelle zu demselben Verhaltensbeispiel beantworten.\n2. Formuliere zunächst selbst eine kontextbezogene Deutung eines vollständig fiktiven Profils. Vergleiche damit eine vorbereitete KI-Beschreibung, die aus einem Testwert festes Verhalten vorhersagt. Überarbeite die Zuschreibung anhand von Variation und Situation und erläutere deine Deutung für eine neue Situation ohne KI.\n3. Vergleiche Norm- und Validierungsinformationen eines Fragebogens mit einer behaupteten KI-Inferenz aus Text.",
+          "en": "1. Explain which different questions two models address for the same behavioural example.\n2. First formulate a context-sensitive interpretation of an entirely fictional profile independently. Compare it with a prepared AI description that predicts fixed behaviour from a test score. Revise the attribution through variation and situation, then explain your interpretation for a new situation without AI.\n3. Compare questionnaire norms and validation information with a claimed AI inference from text."
         },
         "aiRole": {
           "de": "KI-basierte Persönlichkeitszuschreibung wird kritisch untersucht, nicht an Kommilitoninnen und Kommilitonen durchgeführt.",
@@ -2372,6 +2602,25 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "300:o1",
+            "300:o2",
+            "300:o3"
+          ],
+          "withAiObjectiveIds": [
+            "300:o2"
+          ],
+          "aboutAiObjectiveIds": [
+            "300:o2",
+            "300:o3"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -2527,6 +2776,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "301:o1",
+            "301:o2",
+            "301:o3"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [
+            "301:o2"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -2683,6 +2948,24 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "302:o1",
+            "302:o2",
+            "302:o3"
+          ],
+          "withAiObjectiveIds": [
+            "302:o1"
+          ],
+          "aboutAiObjectiveIds": [
+            "302:o3"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -2837,6 +3120,20 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "403:o1",
+            "403:o2",
+            "403:o3"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -2992,6 +3289,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s12:o1",
+            "s12:o2",
+            "s12:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s12:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -3155,6 +3468,24 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s13:o1",
+            "s13:o2",
+            "s13:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s13:o2"
+          ],
+          "aboutAiObjectiveIds": [
+            "s13:o3"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -3375,6 +3706,27 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "BA:o1",
+            "BA:o2",
+            "BA:o3",
+            "BA:o4",
+            "BA:o5"
+          ],
+          "withAiObjectiveIds": [
+            "BA:o2",
+            "BA:o3",
+            "BA:o4",
+            "BA:o5"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -3530,6 +3882,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "500:o1",
+            "500:o2",
+            "500:o3"
+          ],
+          "withAiObjectiveIds": [
+            "500:o2"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -3717,6 +4085,25 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "501:o1",
+            "501:o2",
+            "501:o3",
+            "501:o4"
+          ],
+          "withAiObjectiveIds": [
+            "501:o2"
+          ],
+          "aboutAiObjectiveIds": [
+            "501:o4"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -3872,6 +4259,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "502:o1",
+            "502:o2",
+            "502:o3"
+          ],
+          "withAiObjectiveIds": [
+            "502:o2"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -4034,6 +4437,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s04:o1",
+            "s04:o2",
+            "s04:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s04:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -4196,6 +4615,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s05:o1",
+            "s05:o2",
+            "s05:o3"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [
+            "s05:o3"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -4377,6 +4812,25 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s06:o1",
+            "s06:o2",
+            "s06:o3",
+            "s06:o4"
+          ],
+          "withAiObjectiveIds": [
+            "s06:o1",
+            "s06:o2",
+            "s06:o4"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -4530,6 +4984,20 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "wp:o1",
+            "wp:o2",
+            "wp:o3"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -4685,6 +5153,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s01a:o1",
+            "s01a:o2",
+            "s01a:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s01a:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -4840,6 +5324,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s01b:o1",
+            "s01b:o2",
+            "s01b:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s01b:o2"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -4995,6 +5495,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s07:o1",
+            "s07:o2",
+            "s07:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s07:o2"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -5158,6 +5674,24 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s08:o1",
+            "s08:o2",
+            "s08:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s08:o2"
+          ],
+          "aboutAiObjectiveIds": [
+            "s08:o3"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -5338,6 +5872,24 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s09:o1",
+            "s09:o2",
+            "s09:o3",
+            "s09:o4"
+          ],
+          "withAiObjectiveIds": [
+            "s09:o2",
+            "s09:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -5494,6 +6046,23 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s01c:o1",
+            "s01c:o2",
+            "s01c:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s01c:o1",
+            "s01c:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -5650,6 +6219,23 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s03:o1",
+            "s03:o2",
+            "s03:o3"
+          ],
+          "withAiObjectiveIds": [
+            "s03:o2",
+            "s03:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -5836,6 +6422,23 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "600:o1",
+            "600:o2",
+            "600:o3",
+            "600:o4"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [
+            "600:o3"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -5982,6 +6585,20 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s02a:o1",
+            "s02a:o2",
+            "s02a:o3"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -6136,6 +6753,20 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "s02b:o1",
+            "s02b:o2",
+            "s02b:o3"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -6356,6 +6987,28 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "MA:o1",
+            "MA:o2",
+            "MA:o3",
+            "MA:o4",
+            "MA:o5"
+          ],
+          "withAiObjectiveIds": [
+            "MA:o2",
+            "MA:o3",
+            "MA:o5"
+          ],
+          "aboutAiObjectiveIds": [
+            "MA:o4"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -6511,6 +7164,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "901:o1",
+            "901:o2",
+            "901:o3"
+          ],
+          "withAiObjectiveIds": [
+            "901:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -6666,6 +7335,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "902:o1",
+            "902:o2",
+            "902:o3"
+          ],
+          "withAiObjectiveIds": [
+            "902:o1"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -6821,6 +7506,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "903:o1",
+            "903:o2",
+            "903:o3"
+          ],
+          "withAiObjectiveIds": [
+            "903:o2"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -6983,6 +7684,22 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "904:o1",
+            "904:o2",
+            "904:o3"
+          ],
+          "withAiObjectiveIds": [
+            "904:o1"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -7130,6 +7847,22 @@
             }
           ],
           "next": []
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "909:o1",
+            "909:o2",
+            "909:o3"
+          ],
+          "withAiObjectiveIds": [
+            "909:o3"
+          ],
+          "aboutAiObjectiveIds": [],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -7319,6 +8052,24 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "option:06SM200-510:o1",
+            "option:06SM200-510:o2",
+            "option:06SM200-510:o3",
+            "option:06SM200-510:o4"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [
+            "option:06SM200-510:o3",
+            "option:06SM200-510:o4"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -7507,6 +8258,23 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "option:06SM200-511:o1",
+            "option:06SM200-511:o2",
+            "option:06SM200-511:o3",
+            "option:06SM200-511:o4"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [
+            "option:06SM200-511:o4"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     },
@@ -7695,6 +8463,23 @@
               }
             }
           ]
+        },
+        "aiStudyAssessment": {
+          "status": "design-proposal",
+          "wholeModuleAiRequirement": "not-specified",
+          "withoutAiObjectiveIds": [
+            "option:10SMSTS-505:o1",
+            "option:10SMSTS-505:o2",
+            "option:10SMSTS-505:o3",
+            "option:10SMSTS-505:o4"
+          ],
+          "withAiObjectiveIds": [],
+          "aboutAiObjectiveIds": [
+            "option:10SMSTS-505:o4"
+          ],
+          "independentEvidenceRef": "proposal.independentEvidence",
+          "assessmentProposalRef": "proposal.assessmentProposal",
+          "policyRef": "aiAcrossCurriculum.phasePolicy"
         }
       }
     }
@@ -7713,8 +8498,8 @@
     },
     "objectiveCountsByContext": {
       "without-ai": 153,
-      "with-ai": 45,
-      "about-ai": 16
+      "with-ai": 49,
+      "about-ai": 19
     },
     "coverageMeaning": "Authored opportunity coverage only; no assessment result or measurement validity is implied."
   }

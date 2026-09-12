@@ -1,7 +1,7 @@
 {
   "schema": "kompetenzhaus.career-profiles",
   "schemaVersion": 2,
-  "frameworkVersion": "2.1.0-draft",
+  "frameworkVersion": "2.2.0-draft",
   "notice": {
     "de": "Diese Ansichten zeigen berufliche Tätigkeiten und passende Lerngelegenheiten. Sie beurteilen weder persönliche Eignung noch Berufszulassung. Ein Spielabschluss ersetzt keine Ausbildung, Supervision oder gesetzlich erforderliche Qualifikation.",
     "en": "These views connect professional activities to learning opportunities. They assess neither personal suitability nor eligibility to practise. Completing the game does not replace education, supervision or legally required qualifications."

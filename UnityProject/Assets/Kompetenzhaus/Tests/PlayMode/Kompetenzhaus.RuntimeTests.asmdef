@@ -1,0 +1,6 @@
+{
+  "name": "Kompetenzhaus.RuntimeTests",
+  "references": ["Kompetenzhaus.Runtime"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

@@ -1,0 +1,743 @@
+{
+  "schema": "kompetenzhaus.physics-review.v1",
+  "recordedAt": "2026-09-12T11:12:45.825370+00:00",
+  "status": "physics-tests-passed-runtime-review-incomplete",
+  "scope": "Actual assembled Unity scene, imported authored meshes and production CharacterController in Editor PlayMode. This is not browser or release approval.",
+  "testRun": {
+    "platform": "Unity Editor PlayMode",
+    "graphicsApi": "D3D11",
+    "editorVersion": "6000.6.0f1",
+    "scene": "Assets/Kompetenzhaus/Scenes/Kompetenzhaus.unity",
+    "sceneSha256": "fbe1a1ab9f88a233a9272ab242dee8a31919c447ff3f5834afcbc0ce7b68331d",
+    "result": "Passed",
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 19.605104,
+    "selection": "Four AuthoredWorldPhysicsTests selected from the combined suite. Production metrics are documented separately and do not confer browser performance approval.",
+    "originalNunitTotal": 5,
+    "originalLocalNunitSha256": "b014a03252f64f52425683b010f34eb97a1e332632298c12f9a18c9cd44bf04b",
+    "testSource": "../../UnityProject/Assets/Kompetenzhaus/Tests/PlayMode/AuthoredWorldPhysicsTests.cs",
+    "testSourceSha256": "8410f14826dc548e3db920cc943f4147707f0fd9d94e838bacd8fe6f9020cf30",
+    "persistence": "-qaNoPersist: new temporary progress state, no saved-game read or write."
+  },
+  "playerContract": {
+    "heightMetres": 1.75,
+    "radiusMetres": 0.3,
+    "stepOffsetMetres": 0.28,
+    "movementMethod": "Original CharacterController.Move at production walking speed and gravity; fixed-step traces. External keyboard input is paused."
+  },
+  "tests": [
+    {
+      "name": "ImportedKitAndCameraModesRemainValidInRealScene",
+      "result": "Passed",
+      "durationSeconds": 0.297655,
+      "evidence": "physics-evidence/ImportedKitAndCameraModesRemainValidInRealScene.json",
+      "evidenceSha256": "99a26a1aae2d054e9f7f8f18dad9ab50114ed6218515df5a4d88aa01890062a0",
+      "measuredMoveFrames": 0
+    },
+    {
+      "name": "RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt",
+      "result": "Passed",
+      "durationSeconds": 3.895784,
+      "evidence": "physics-evidence/RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt.json",
+      "evidenceSha256": "0279e48a194c2ed2ae23e7a2e6a18ce279ceb3f0d8ee50970e870d8aed357119",
+      "measuredMoveFrames": 189
+    },
+    {
+      "name": "RealStairsClimbAndDescendInAllFourOrientations",
+      "result": "Passed",
+      "durationSeconds": 15.278166,
+      "evidence": "physics-evidence/RealStairsClimbAndDescendInAllFourOrientations.json",
+      "evidenceSha256": "65954b20b304d248c7121c3f5ab32d509c61f5f5d63b973e92efcf86bbd1053d",
+      "measuredMoveFrames": 756
+    },
+    {
+      "name": "RuntimeRebuildUndoAndRecoveryDoNotLeaveInvisibleColliders",
+      "result": "Passed",
+      "durationSeconds": 0.133499,
+      "evidence": "physics-evidence/RuntimeRebuildUndoAndRecoveryDoNotLeaveInvisibleColliders.json",
+      "evidenceSha256": "00184966645233c0dd390651e871481c0989c638ad8b75c044a667a5e1880eb2",
+      "measuredMoveFrames": 0
+    }
+  ],
+  "measurements": [
+    {
+      "test": "RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt",
+      "stage": "exterior-door",
+      "frames": 40,
+      "startPosition": {
+        "x": -20.0,
+        "y": 0.02499990165233612,
+        "z": -1.215999960899353
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 0.08890639245510101,
+        "z": 2.0000007152557373
+      },
+      "minimumPlayerY": 0.02499990165233612,
+      "maximumPlayerY": 0.0890001505613327,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt",
+      "stage": "exterior-door-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": -20.0,
+        "y": 0.08890639245510101,
+        "z": 2.0000007152557373
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 0.08890639245510101,
+        "z": 2.0000007152557373
+      },
+      "minimumPlayerY": 0.08890639245510101,
+      "maximumPlayerY": 0.08890639245510101,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt",
+      "stage": "interior-door",
+      "frames": 48,
+      "startPosition": {
+        "x": -19.916000366210938,
+        "y": 0.08900003135204315,
+        "z": 2.0000007152557373
+      },
+      "endPosition": {
+        "x": -15.999998092651367,
+        "y": 0.08890645205974579,
+        "z": 2.0000007152557373
+      },
+      "minimumPlayerY": 0.08890645205974579,
+      "maximumPlayerY": 0.0890001505613327,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt",
+      "stage": "interior-door-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": -15.999998092651367,
+        "y": 0.08890645205974579,
+        "z": 2.0000007152557373
+      },
+      "endPosition": {
+        "x": -15.999998092651367,
+        "y": 0.08890645205974579,
+        "z": 2.0000007152557373
+      },
+      "minimumPlayerY": 0.08890645205974579,
+      "maximumPlayerY": 0.08890645205974579,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt",
+      "stage": "outside-door",
+      "frames": 15,
+      "startPosition": {
+        "x": -20.0,
+        "y": 0.22607599198818207,
+        "z": -1.2999999523162842
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 0.02499990165233612,
+        "z": -1.2999999523162842
+      },
+      "minimumPlayerY": 0.02499990165233612,
+      "maximumPlayerY": 0.22607599198818207,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt",
+      "stage": "solid-wall",
+      "frames": 41,
+      "startPosition": {
+        "x": -15.999998092651367,
+        "y": 0.08900003135204315,
+        "z": 2.084000825881958
+      },
+      "endPosition": {
+        "x": -15.999998092651367,
+        "y": 0.08900026977062225,
+        "z": 3.54499888420105
+      },
+      "minimumPlayerY": 0.08881323039531708,
+      "maximumPlayerY": 0.08900032937526703,
+      "endGrounded": true,
+      "sideCollisionFrames": 23
+    },
+    {
+      "test": "RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt",
+      "stage": "solid-wall-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": -15.999998092651367,
+        "y": 0.08900026977062225,
+        "z": 3.54499888420105
+      },
+      "endPosition": {
+        "x": -15.999998092651367,
+        "y": 0.08900026977062225,
+        "z": 3.54499888420105
+      },
+      "minimumPlayerY": 0.08900026977062225,
+      "maximumPlayerY": 0.08900026977062225,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-down-0",
+      "frames": 72,
+      "startPosition": {
+        "x": -20.0,
+        "y": 3.2890000343322754,
+        "z": 9.115998268127441
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 0.08900022506713867,
+        "z": 3.200000047683716
+      },
+      "minimumPlayerY": 0.08863884210586548,
+      "maximumPlayerY": 3.2890000343322754,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-down-0-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": -20.0,
+        "y": 0.08900022506713867,
+        "z": 3.200000047683716
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 0.08900022506713867,
+        "z": 3.200000047683716
+      },
+      "minimumPlayerY": 0.08900022506713867,
+      "maximumPlayerY": 0.08900022506713867,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-down-1",
+      "frames": 72,
+      "startPosition": {
+        "x": 27.115999221801758,
+        "y": 3.2890005111694336,
+        "z": 6.000000476837158
+      },
+      "endPosition": {
+        "x": 21.200000762939453,
+        "y": 0.08900004625320435,
+        "z": 6.0
+      },
+      "minimumPlayerY": 0.08899986743927002,
+      "maximumPlayerY": 3.2890005111694336,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-down-1-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": 21.200000762939453,
+        "y": 0.08900004625320435,
+        "z": 6.0
+      },
+      "endPosition": {
+        "x": 21.200000762939453,
+        "y": 0.08900004625320435,
+        "z": 6.0
+      },
+      "minimumPlayerY": 0.08900004625320435,
+      "maximumPlayerY": 0.08900004625320435,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-down-2",
+      "frames": 72,
+      "startPosition": {
+        "x": -20.0,
+        "y": 3.2890000343322754,
+        "z": 2.8840019702911377
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 0.08899986743927002,
+        "z": 8.800000190734863
+      },
+      "minimumPlayerY": 0.08827674388885498,
+      "maximumPlayerY": 3.2890005111694336,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-down-2-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": -20.0,
+        "y": 0.08899986743927002,
+        "z": 8.800000190734863
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 0.08899986743927002,
+        "z": 8.800000190734863
+      },
+      "minimumPlayerY": 0.08899986743927002,
+      "maximumPlayerY": 0.08899986743927002,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-down-3",
+      "frames": 72,
+      "startPosition": {
+        "x": 20.884000778198242,
+        "y": 3.2890000343322754,
+        "z": 6.000000476837158
+      },
+      "endPosition": {
+        "x": 26.799999237060547,
+        "y": 0.08900010585784912,
+        "z": 6.0
+      },
+      "minimumPlayerY": 0.08899986743927002,
+      "maximumPlayerY": 3.2890000343322754,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-down-3-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": 26.799999237060547,
+        "y": 0.08900010585784912,
+        "z": 6.0
+      },
+      "endPosition": {
+        "x": 26.799999237060547,
+        "y": 0.08900010585784912,
+        "z": 6.0
+      },
+      "minimumPlayerY": 0.08900010585784912,
+      "maximumPlayerY": 0.08900010585784912,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-start-0",
+      "frames": 15,
+      "startPosition": {
+        "x": -20.0,
+        "y": 0.22607599198818207,
+        "z": 3.200000047683716
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 0.08900026977062225,
+        "z": 3.200000047683716
+      },
+      "minimumPlayerY": 0.08900026977062225,
+      "maximumPlayerY": 0.22607599198818207,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-start-1",
+      "frames": 15,
+      "startPosition": {
+        "x": 21.200000762939453,
+        "y": 0.22607599198818207,
+        "z": 6.0
+      },
+      "endPosition": {
+        "x": 21.200000762939453,
+        "y": 0.08900009095668793,
+        "z": 6.0
+      },
+      "minimumPlayerY": 0.08900009095668793,
+      "maximumPlayerY": 0.22607599198818207,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-start-2",
+      "frames": 15,
+      "startPosition": {
+        "x": -20.0,
+        "y": 0.22607599198818207,
+        "z": 8.800000190734863
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 0.08899997174739838,
+        "z": 8.800000190734863
+      },
+      "minimumPlayerY": 0.08899997174739838,
+      "maximumPlayerY": 0.22607599198818207,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-start-3",
+      "frames": 15,
+      "startPosition": {
+        "x": 26.799999237060547,
+        "y": 0.22607599198818207,
+        "z": 6.0
+      },
+      "endPosition": {
+        "x": 26.799999237060547,
+        "y": 0.08900009095668793,
+        "z": 6.0
+      },
+      "minimumPlayerY": 0.08900009095668793,
+      "maximumPlayerY": 0.22607599198818207,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-up-0",
+      "frames": 72,
+      "startPosition": {
+        "x": -20.0,
+        "y": 0.08900021016597748,
+        "z": 3.2839999198913574
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 3.2890000343322754,
+        "z": 9.199997901916504
+      },
+      "minimumPlayerY": 0.08900021016597748,
+      "maximumPlayerY": 3.2890000343322754,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-up-0-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": -20.0,
+        "y": 3.2890000343322754,
+        "z": 9.199997901916504
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 3.2890000343322754,
+        "z": 9.199997901916504
+      },
+      "minimumPlayerY": 3.2890000343322754,
+      "maximumPlayerY": 3.2890000343322754,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-up-1",
+      "frames": 72,
+      "startPosition": {
+        "x": 21.284000396728516,
+        "y": 0.08900003135204315,
+        "z": 6.0
+      },
+      "endPosition": {
+        "x": 27.19999885559082,
+        "y": 3.2890005111694336,
+        "z": 6.000000476837158
+      },
+      "minimumPlayerY": 0.08843033015727997,
+      "maximumPlayerY": 3.2890005111694336,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-up-1-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": 27.19999885559082,
+        "y": 3.2890000343322754,
+        "z": 6.000000476837158
+      },
+      "endPosition": {
+        "x": 27.19999885559082,
+        "y": 3.2890000343322754,
+        "z": 6.000000476837158
+      },
+      "minimumPlayerY": 3.2890000343322754,
+      "maximumPlayerY": 3.2890000343322754,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-up-2",
+      "frames": 72,
+      "startPosition": {
+        "x": -20.0,
+        "y": 0.08899985253810883,
+        "z": 8.7160005569458
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 3.2890005111694336,
+        "z": 2.800002098083496
+      },
+      "minimumPlayerY": 0.08877365291118622,
+      "maximumPlayerY": 3.2890005111694336,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-up-2-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": -20.0,
+        "y": 3.2890005111694336,
+        "z": 2.800002098083496
+      },
+      "endPosition": {
+        "x": -20.0,
+        "y": 3.2890000343322754,
+        "z": 2.800002098083496
+      },
+      "minimumPlayerY": 3.2890000343322754,
+      "maximumPlayerY": 3.2890005111694336,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-up-3",
+      "frames": 72,
+      "startPosition": {
+        "x": 26.715999603271484,
+        "y": 0.08900009095668793,
+        "z": 6.0
+      },
+      "endPosition": {
+        "x": 20.80000114440918,
+        "y": 3.2890000343322754,
+        "z": 6.000000476837158
+      },
+      "minimumPlayerY": 0.08900003135204315,
+      "maximumPlayerY": 3.2890005111694336,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    },
+    {
+      "test": "RealStairsClimbAndDescendInAllFourOrientations",
+      "stage": "stair-up-3-settled",
+      "frames": 15,
+      "startPosition": {
+        "x": 20.80000114440918,
+        "y": 3.2890000343322754,
+        "z": 6.000000476837158
+      },
+      "endPosition": {
+        "x": 20.80000114440918,
+        "y": 3.2890000343322754,
+        "z": 6.000000476837158
+      },
+      "minimumPlayerY": 3.2890000343322754,
+      "maximumPlayerY": 3.2890000343322754,
+      "endGrounded": true,
+      "sideCollisionFrames": 0
+    }
+  ],
+  "establishedChecks": {
+    "collision": "Both door boundaries use imported MeshCollider geometry; no box substitutes. The capsule passes exterior and interior portals and is stopped by a solid wall.",
+    "doorTraversal": "Measured exterior entry and interior room-to-room traversal.",
+    "boundsRecovery": "The original player returns to the entry after being placed below the world recovery threshold.",
+    "support": "The original capsule climbs to and descends from the 3.2 m upper storey in all four stair orientations, alternately in BSc and MSc. The upper stairwell is open and the landing is physically present.",
+    "architectureTransactions": "Runtime removal destroys old colliders; undo rebuilds them; invalid architecture does not replace the accepted state.",
+    "cameraModeSwitching": "Actual camera objects and player controller enable/disable appropriately. This does not assess production camera composition.",
+    "assetImportContract": "All 22 prefab entries have CPU-readable meshes for runtime MeshCollider cooking and URP Lit materials. The guide retains its 11 named rigid movement groups. This verifies import metadata and Editor operation; WebGL collision acceptance remains a browser check."
+  },
+  "byteAndTriangleEvidence": {
+    "uniqueAuthoredModelTriangles": 21486,
+    "uniqueAuthoredModelTrianglesMeaning": "One instance of every authored model. This is not the instanced loaded scene triangle count.",
+    "exportedFbxFileBytes": 1171400,
+    "exportedFbxFileBytesMeaning": "Actual checked-in source model files, verified against their export hashes. Not Unity runtime mesh memory or WebGL transfer bytes.",
+    "modelFiles": [
+      {
+        "assetId": "evidence-table",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/evidence-table.fbx",
+        "bytes": 80748,
+        "sha256": "31e151abdf915a143f6f4dd43717ecce01647334d6e5fb815d91aa9449b1a2c3"
+      },
+      {
+        "assetId": "wall-door",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/wall-door.fbx",
+        "bytes": 38972,
+        "sha256": "22ff63efcfd4966258fad140e38aa61524414928122934741ddd7de010990477"
+      },
+      {
+        "assetId": "discussion-sofa",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/discussion-sofa.fbx",
+        "bytes": 96380,
+        "sha256": "160f9e3eab6212d25c2a984a53851cb513f3fd10c9c2b9c2d3d178acd94fc457"
+      },
+      {
+        "assetId": "research-desk",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/research-desk.fbx",
+        "bytes": 28028,
+        "sha256": "7c8442170491119ac8e3f1d9359cac7ab60897803d65dd398ac0877cdc9f2a98"
+      },
+      {
+        "assetId": "courtyard-tree",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/courtyard-tree.fbx",
+        "bytes": 37836,
+        "sha256": "7f03339d4522a0265e9bf4fa160013eda6f21bf7419a1bd450d4689eb030e0d9"
+      },
+      {
+        "assetId": "student-guide",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/student-guide.fbx",
+        "bytes": 282188,
+        "sha256": "2ee00e4d0fa397cc86cb04d3228a655d134303b7c3880b6d2cbceffb94e89ab9"
+      },
+      {
+        "assetId": "wall-window",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/wall-window.fbx",
+        "bytes": 23804,
+        "sha256": "4a5e5b4d5b799c40d055accb70f8a1e1c6259de670be7569689abe78f0f82ea8"
+      },
+      {
+        "assetId": "wall-solid",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/wall-solid.fbx",
+        "bytes": 21516,
+        "sha256": "2a4bcdf5beb5bf8357b37cdf45ffd4aaa8051832e37765157fb4f7824a74e43e"
+      },
+      {
+        "assetId": "floor-tile",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/floor-tile.fbx",
+        "bytes": 21532,
+        "sha256": "c4a9dad36cf7d667bc0a32fdc416f234901c92f90cf6992116789a18189e0b98"
+      },
+      {
+        "assetId": "roof-flat",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/roof-flat.fbx",
+        "bytes": 19164,
+        "sha256": "dc5bdb5dd12dde12598659a2e578155cb99d3330ecbabb537b13c8b375c90bd5"
+      },
+      {
+        "assetId": "roof-gabled",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/roof-gabled.fbx",
+        "bytes": 42188,
+        "sha256": "4134ee0c8e984842bb2fb9920960410a092f66e58f3bbdf0a3d764540e299fc5"
+      },
+      {
+        "assetId": "balcony",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/balcony.fbx",
+        "bytes": 27356,
+        "sha256": "c1e72ac944c59492257c395207264782588e43301958bc99d297cae62bef76fb"
+      },
+      {
+        "assetId": "staircase",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/staircase.fbx",
+        "bytes": 33708,
+        "sha256": "48a66a5abd4ae32659a96f17081bb639e83f86474dc14fe4301a172976cdc593"
+      },
+      {
+        "assetId": "wall-partition",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/wall-partition.fbx",
+        "bytes": 37900,
+        "sha256": "d0957906b182165c54897ef1d6c3e5b5f952ecf21da5dae0e34e633d44b9331a"
+      },
+      {
+        "assetId": "bookshelf",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/bookshelf.fbx",
+        "bytes": 70060,
+        "sha256": "c59c1d3c58e25082ab9dc1a26eec16708161e3ff5ec20cc4c8d92dc03e146d59"
+      },
+      {
+        "assetId": "lamp",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/lamp.fbx",
+        "bytes": 51116,
+        "sha256": "2512da54f87eefb614f2dab602e5cea22a288fb388b750301463de16d19037ca"
+      },
+      {
+        "assetId": "noticeboard",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/noticeboard.fbx",
+        "bytes": 44220,
+        "sha256": "f5ef3d7b8e7e0d552cfcda87f63265191749770ba2bf711c19c7460689a6201f"
+      },
+      {
+        "assetId": "chair",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/chair.fbx",
+        "bytes": 30092,
+        "sha256": "7224e588760a053c81d73ca285883d4d62ff3417b4eabfdcf63a3c5bcef1842c"
+      },
+      {
+        "assetId": "bench",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/bench.fbx",
+        "bytes": 31228,
+        "sha256": "1190073c61bf5b104f9ca996d63bd5352c0a88896a442bd7daee5b85cc7ed5c7"
+      },
+      {
+        "assetId": "acoustic-divider",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/acoustic-divider.fbx",
+        "bytes": 28012,
+        "sha256": "3acc783c3d1e95cc00936d7375aa9e030ebe1b5e6700bdedfce4fc5ccba752ec"
+      },
+      {
+        "assetId": "achievement-display",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/achievement-display.fbx",
+        "bytes": 93228,
+        "sha256": "21a04f6bc76cd62edd66bc9bd7df9b61af055727387fc28d77e13aa7191ec2d1"
+      },
+      {
+        "assetId": "research-poster",
+        "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/research-poster.fbx",
+        "bytes": 32124,
+        "sha256": "a7b490ef61a5da13d7cb5f259eda6e977603025a9a4fbb79a0905aab472b83d9"
+      }
+    ],
+    "authoredMaterialTextureFileCount": 0,
+    "authoredMaterialTextureMeaning": "The authored PBR kit uses constants without texture files. Built-in fonts, URP targets and other loaded textures are not measured here."
+  },
+  "notMeasured": {
+    "viewport": "The actual browser viewport was not part of the physics tests.",
+    "productionCamera": "Composition, readable UI/world labels and browser view changes require visual browser review.",
+    "interaction": "Keyboard/pointer/controller interactions and the browser learning/building flow require browser review.",
+    "performance": "Frame time, memory and responsiveness require measurements in the browser at a recorded viewport and representative architecture state.",
+    "referenceFidelity": "Art reference/form review is separate from these physics tests."
+  },
+  "supplementaryMetrics": {
+    "path": "production-metrics.json",
+    "sha256": "67402a571992dd4a77bc0cf191a52a620a97a80fe7da35c57da2fdde3c9ab548",
+    "scope": "Separate actual-scene mesh/line inventory, TextMesh upper bound, native Editor memory observations and source artifact byte totals in three legal layouts. Not browser performance approval."
+  }
+}

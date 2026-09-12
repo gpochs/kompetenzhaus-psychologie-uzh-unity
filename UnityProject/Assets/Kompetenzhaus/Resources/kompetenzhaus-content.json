@@ -47,7 +47,7 @@
     "sourceDate": "2026-07-03",
     "additionalQuestSource": {
       "path": "content/additional-quests.mjs",
-      "sha256": "ab69a43b87cdeffa634bbd1fa27d9c90c149a8d5aa13e311c8f2fa823654ff86"
+      "sha256": "fc63f76a7f935e3bbcb8eec1f8dfc799c9fb6dd93c3a4317043af475c09fa927"
     }
   },
   "rules": {
@@ -15605,7 +15605,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -15717,7 +15717,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -15832,7 +15832,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -15947,7 +15947,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -16062,7 +16062,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -16179,7 +16179,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -16290,7 +16290,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -16403,7 +16403,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -16515,7 +16515,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -16630,7 +16630,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,
@@ -16743,7 +16743,7 @@
     {
       "status": "Designentwurf",
       "sourceType": "original-authored-fictional-exercise",
-      "frameworkVersion": "2.1.0-draft",
+      "frameworkVersion": "2.2.0-draft",
       "alignmentMeaning": "game-practice-topics-not-assessed-competence",
       "liveAIRequired": false,
       "personalDataRequired": false,

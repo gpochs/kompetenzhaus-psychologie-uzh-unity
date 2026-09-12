@@ -76,6 +76,8 @@ namespace Kompetenzhaus
                         if (!game.cameraController.SetMode(viewMode)) throw new InvalidOperationException("The reviewed environment is not ready for first-person exploration.");
                         break;
                     case "setUiFocus": game.SetUiFocus(payload.enabled); break;
+                    case "zoomIn": game.cameraController.ZoomBirdView(1); break;
+                    case "zoomOut": game.cameraController.ZoomBirdView(-1); break;
                     case "userGesture": worldAudio?.NotifyUserInteraction(); break;
                     case "setArchitectureView":
                         if (world == null) throw new InvalidOperationException("The world view is not ready.");

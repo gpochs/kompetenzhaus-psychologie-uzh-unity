@@ -11,9 +11,16 @@
 /UnityProject/Assets/**/*.json -text whitespace=cr-at-eol
 /web-template/qa/*.json -text whitespace=cr-at-eol
 /art/**/*.json -text whitespace=cr-at-eol
+/art/**/*.py -text
+/UnityProject/Assets/Kompetenzhaus/**/*.cs -text
+/UnityProject/Assets/Kompetenzhaus/Scenes/*.unity -text
+/UnityProject/Assets/Kompetenzhaus/Art/** -text
+/web-template/** -text whitespace=cr-at-eol
 
 # Unity serializes empty YAML values with a trailing space.
 *.meta whitespace=-blank-at-eol
 *.asset whitespace=-blank-at-eol
+*.mat whitespace=-blank-at-eol
+*.prefab whitespace=-blank-at-eol
 *.unity whitespace=-blank-at-eol
 /UnityProject/Assets/TutorialInfo/** whitespace=-blank-at-eol

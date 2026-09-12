@@ -1,10 +1,10 @@
 """Own mesh production from the reviewed image references. No paid services.
 
-blender --background --python art/blender/build_assets.py -- <repository>
+blender --background --factory-startup --python art/blender/build_assets.py -- <repository>
 The default produces Blender sources and review images only. Add --export after
 the recorded Form review (or explicit user-delegated review) for FBX output.
 """
-import bpy, math, json, sys, hashlib
+import bpy, math, json, sys, hashlib, os
 from datetime import datetime, timezone
 from pathlib import Path
 from mathutils import Vector, Matrix
@@ -16,6 +16,8 @@ ARGS=sys.argv[sys.argv.index('--')+1:]
 ROOT=Path(ARGS[0]).resolve()
 REVIEW=ROOT/'art'/'review'
 OUT=ROOT/'art'/'models'
+RENDER_REVIEW=ROOT/'art'/'work'/'lowpoly-review' if '--review-work' in ARGS else REVIEW
+RENDER_REVIEW.mkdir(parents=True,exist_ok=True)
 decisions=json.loads((REVIEW/'milestone-reviews.json').read_text(encoding='utf-8'))
 if decisions['function']['status']!='approved' or not decisions['function'].get('approvedBy'):
     raise RuntimeError('Function reference/layout approval is pending. No production models generated.')
@@ -104,10 +106,20 @@ def add(obj,name,mat):
     return obj
 def soft_edges(obj,width,segments=2):
     if width<=0:return
+    # Repeated kit pieces use one chamfer, not a rounded multi-ring edge.
+    # Keep the guide's original authored silhouette and named joints intact.
+    if active!='student-guide':segments=1
     b=obj.modifiers.new('Authored soft edges','BEVEL');b.width=width;b.segments=segments
     b.affect='EDGES';b.harden_normals=True;b.limit_method='ANGLE';b.angle_limit=math.radians(35)
     bpy.context.view_layer.objects.active=obj;bpy.ops.object.modifier_apply(modifier=b.name)
 def box(name,location,size,mat='Stone',bevel=.025,segments=2):
+    # Small/hidden bevels multiply across user-authored 128-bay campuses.
+    # Preserve the geometric envelopes and structural surfaces explicitly.
+    if active in ('floor-tile','staircase'):bevel=0
+    elif active=='wall-window' and name!='Cap':bevel=0
+    elif active=='roof-flat' and name!='Roof deck':bevel=0
+    elif active=='research-desk' and name!='Desktop':bevel=0
+    elif active=='bookshelf' and name=='Research book':bevel=0
     bpy.ops.mesh.primitive_cube_add(size=1,location=location)
     o=bpy.context.object; o.dimensions=size
     bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
@@ -115,17 +127,22 @@ def box(name,location,size,mat='Stone',bevel=.025,segments=2):
     soft_edges(o,min(bevel,min(size)*.45),segments)
     return o
 def cylinder(name,location,radius,depth,mat='Navy',vertices=24,bevel=.008):
+    if active=='courtyard-tree':vertices=min(vertices,12);bevel=0
+    elif active=='research-desk':vertices=min(vertices,10);bevel=0
+    elif active=='evidence-table':vertices=min(vertices,24)
     bpy.ops.mesh.primitive_cylinder_add(vertices=vertices,radius=radius,depth=depth,location=location)
     o=add(bpy.context.object,name,mat)
     soft_edges(o,min(bevel,depth*.2,radius*.15),1)
     for p in o.data.polygons:p.use_smooth=abs(p.normal.z)<.5
     return o
 def ellipsoid(name,location,size,mat='Leaf',segments=16,rings=8):
-    bpy.ops.mesh.primitive_uv_sphere_add(segments=segments,ring_count=rings,location=location)
+    if active=='courtyard-tree':
+        bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=1,radius=1,location=location)
+    else:bpy.ops.mesh.primitive_uv_sphere_add(segments=segments,ring_count=rings,location=location)
     o=bpy.context.object;o.scale=size
     bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
     add(o,name,mat)
-    for p in o.data.polygons:p.use_smooth=True
+    for p in o.data.polygons:p.use_smooth=active!='courtyard-tree'
     return o
 def beam(name,a,b,radius,mat='Oak',vertices=10):
     a,b=Vector(a),Vector(b);o=cylinder(name,(a+b)/2,radius,(b-a).length,mat,vertices,bevel=0)
@@ -216,8 +233,14 @@ def make_wall(name,style):
         aperture=1.5 if style=='window' and z<2.8 else 1.2 if style in ('door','partition') and z<2.7 else 0
         spans=[(-1.97,-aperture),(aperture,1.97)] if aperture else [(-1.97,1.97)]
         for left,right in spans:stroke('Limestone bed joint',(left,-.1208,z),(right,-.1208,z),.007,'StoneJoint')
-    b=wall.modifiers.new('Masonry edge','BEVEL');b.width=.018;b.segments=2
-    bpy.context.view_layer.objects.active=wall;bpy.ops.object.modifier_apply(modifier=b.name)
+    if style!='window':
+        b=wall.modifiers.new('Masonry edge','BEVEL');b.width=.018;b.segments=1
+        bpy.context.view_layer.objects.active=wall;bpy.ops.object.modifier_apply(modifier=b.name)
+    if style in ('door','partition'):
+        # A concave bevel rounds material into the two upper aperture corners.
+        # Recut the specified clear rectangle after beveling, preserving the
+        # decorative outside edges without narrowing the traversable opening.
+        hole(wall,(0,0,1.35),(2.4,.8,2.7))
 
 make_wall('wall-window','window'); make_wall('wall-door','door')
 make_wall('wall-solid','solid');make_wall('wall-partition','partition')
@@ -241,7 +264,9 @@ for a in range(-8,9):
         ox,oy=4*a+b,4*a-b
         for orientation,(x0,y0,x1,y1) in enumerate([(0,0,4,1),(4,0,5,4)]):
             corners=[(x0+.015,y0+.015),(x1-.015,y0+.015),(x1-.015,y1-.015),(x0+.015,y1-.015)]
-            poly=[((x+ox-y-oy)*.15/math.sqrt(2),(x+ox+y+oy)*.15/math.sqrt(2)) for x,y in corners]
+            # Broad authored parquet boards keep the herringbone direction
+            # visible without hundreds of small triangles per repeated bay.
+            poly=[((x+ox-y-oy)*.50/math.sqrt(2),(x+ox+y+oy)*.50/math.sqrt(2)) for x,y in corners]
             for axis in [0,1]:
                 poly=clip_polygon(poly,axis,-1.89,False) if poly else []
                 poly=clip_polygon(poly,axis,1.89,True) if poly else []
@@ -252,8 +277,10 @@ for x in [-1.9475,1.9475]:box('Limestone border',(x,0,.012),(.105,4,.024),'Stone
 for y in [-1.9475,1.9475]:box('Limestone border',(0,y,.012),(3.79,.105,.024),'Stone',.003,1)
 
 start('roof-flat');box('Roof deck',(0,0,.15),(4.1,4.1,.3),'Stone')
-for x in [-1.97,1.97]:box('Parapet',(x,0,.4),(.16,4.1,.4),'Stone')
-for y in [-1.97,1.97]:box('Parapet',(0,y,.4),(4.1,.16,.4),'Stone')
+# Butt the parapets onto the slab and each other. Coincident exposed faces
+# from intersecting boxes caused black z-fighting in the real review render.
+for x in [-1.97,1.97]:box('Parapet',(x,0,.45),(.16,4.1,.3),'Stone')
+for y in [-1.97,1.97]:box('Parapet',(0,y,.45),(3.78,.16,.3),'Stone')
 box('Roof surface',(0,0,.31),(3.76,3.76,.035),'Sage',.005)
 
 start('roof-gabled')
@@ -343,12 +370,12 @@ tips=[(-.55,.05,2.25),(.45,.12,2.45),(.1,-.45,2.20),(-.18,.48,2.50)]
 for i,t in enumerate(tips):
     beam('Tree branch',(.02,0,1.35+i*.08),t,.065,'Oak',8)
     ellipsoid('Canopy mass',t,(.60,.55,.54),'Leaf' if i%2 else 'LeafLight',12,6)
-    for j in range(3):
+    for j in range(2):
         a=(i*3+j)*2.4
         ellipsoid('Leaf cluster',(t[0]+.34*math.cos(a),t[1]+.30*math.sin(a),t[2]+.18),(.30,.27,.27),'LeafLight' if j%2 else 'Leaf',10,5)
 ellipsoid('Top canopy',(.02,.02,2.65),(.60,.58,.43),'Sage',12,6)
-for i in range(8):
-    a=i*math.tau/8;ellipsoid('Planter foliage',(.53*math.cos(a),.53*math.sin(a),.48),(.24,.22,.22),'Leaf',10,5)
+for i in range(4):
+    a=i*math.tau/4;ellipsoid('Planter foliage',(.53*math.cos(a),.53*math.sin(a),.48),(.24,.22,.22),'Leaf',10,5)
 
 start('student-guide')
 # Separate rigid body pieces permit inexpensive authored idle/walk/build animation
@@ -646,14 +673,14 @@ def render_group(ids,filename,columns=4,spacing=5.8):
     cam.location=(span*.66,-span*1.08,span*.83)
     cam.rotation_euler=(Vector((0,0,.7))-cam.location).to_track_quat('-Z','Y').to_euler()
     cam.data.ortho_scale=span*1.25
-    scene.render.filepath=str(REVIEW/filename)
+    scene.render.filepath=str(RENDER_REVIEW/filename)
     try:bpy.ops.render.render(write_still=True)
     finally:
         for name,offset in offsets.items():
             for obj in assets[name]:obj.location-=offset
         for objects in assets.values():
             for obj in objects:obj.hide_render=False
-    review_images.append({'path':'../review/'+filename,'sha256':hashlib.sha256((REVIEW/filename).read_bytes()).hexdigest(),
+    review_images.append({'path':os.path.relpath(RENDER_REVIEW/filename,OUT).replace('\\','/'),'sha256':hashlib.sha256((RENDER_REVIEW/filename).read_bytes()).hexdigest(),
                           'assetIds':ids,'status':'rendered-awaiting-form-review'})
 
 render_group(list(assets),'model-contact-sheet.png',4)
@@ -663,6 +690,16 @@ render_group([name for name in assets if PROP[name].get('family')=='furniture'],
 render_group(['student-guide'],'student-guide-model.png',1,2.2)
 for obj in [ground,key,fill,cam]:bpy.data.objects.remove(obj,do_unlink=True)
 scene.camera=None;scene.cursor.location=(0,0,0)
+# Keep the publishable source portable; review output paths are relative to
+# art/models, and must not embed the author's Windows workspace location.
+scene.render.filepath='//'+os.path.relpath(RENDER_REVIEW,OUT).replace('\\','/')+'/'
+for screen in bpy.data.screens:
+    for area in screen.areas:
+        for space in area.spaces:
+            if space.type=='FILE_BROWSER' and space.params:
+                # Factory startup also has a file browser in the Shading
+                # workspace. Its author-local home directory is not an asset.
+                space.params.directory=b'//'
 for name,objects in assets.items():
     # A named collection per exportable authored model.
     coll=bpy.data.collections.new(name);scene.collection.children.link(coll)
@@ -670,7 +707,7 @@ for name,objects in assets.items():
         for old in list(o.users_collection):old.objects.unlink(o)
         coll.objects.link(o)
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'kompetenzhaus-assets.blend'))
-(OUT/'asset-audit.json').write_text(json.dumps({'generator':'Own local Blender geometry from approved references','version':2,
+(OUT/'asset-audit.json').write_text(json.dumps({'generator':'Own local Blender geometry from approved references','version':3,
     'generatedAt':datetime.now(timezone.utc).isoformat(),'blenderVersion':bpy.app.version_string,
     'generatorScriptSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
     'propsManifestSha256':hashlib.sha256((REVIEW/'props.json').read_bytes()).hexdigest(),

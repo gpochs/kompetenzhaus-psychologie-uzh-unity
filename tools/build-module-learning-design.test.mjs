@@ -25,6 +25,35 @@ test('covers all 43 source slots and 3 optional modules; preserves every baselin
   assert.equal(JSON.stringify(framework), originalFramework);
 });
 
+test('AI phase references use actual objective contexts and never impose whole-module AI rules',()=>{
+  for(const m of build().modules){
+    const phases=m.proposal.aiStudyAssessment;
+    assert.equal(phases.status,'design-proposal');assert.equal(phases.wholeModuleAiRequirement,'not-specified');
+    for(const [key,context] of [['withoutAiObjectiveIds','without-ai'],['withAiObjectiveIds','with-ai'],['aboutAiObjectiveIds','about-ai']]){
+      assert.deepEqual(phases[key],m.proposal.objectives.filter(o=>o.contextIds.includes(context)).map(o=>o.id));
+    }
+    assert.equal(phases.policyRef,'aiAcrossCurriculum.phasePolicy');
+  }
+  rejects(c=>{c.modules[0].proposal.aiStudyAssessment.withAiObjectiveIds.push('invented');},/AI phase references/);
+  rejects(c=>{c.modules[0].proposal.aiStudyAssessment.wholeModuleAiRequirement='without-ai';},/AI phase references/);
+});
+
+test('Psychological explanations and context interpretation have concrete AI variants with independent reasoning',()=>{
+  const content=build();
+  const cases=[['001','001:o4','P1.1',1],['002','002:o3','P1.2',1],['200','200:o1','P1.2',2],['300','300:o2','P2.2',2]];
+  for(const [moduleId,objectiveId,criterionId,level] of cases){
+    const objective=get(content,moduleId).proposal.objectives.find(o=>o.id===objectiveId);
+    assert.equal(objective.criterionId,criterionId);assert.equal(objective.targetLevel,level);
+    assert.ok(objective.contextIds.includes('without-ai')&&objective.contextIds.includes('with-ai'));
+    assert.match(objective.task.en,/prepared AI/);
+    assert.match(objective.task.en,/independently|without AI/i);
+    assert.match(objective.successCriteria.en,/defining features|psychological mechanism|model assumptions|variation and situation/);
+  }
+  for(const id of ['001','002','300'])assert.ok(get(content,id).proposal.objectives.some(o=>o.criterionId.startsWith('P')&&o.contextIds.includes('about-ai')));
+  assert.match(get(content,'300').proposal.objectives[1].successCriteria.en,/measurement validity.*separately under R2/);
+  assert.equal(content.coverage.objectives,153);
+});
+
 test('build is deterministic and generated output matches inputs and source hashes', async () => {
   const first = build(), second = build();
   assert.deepEqual(first, second);

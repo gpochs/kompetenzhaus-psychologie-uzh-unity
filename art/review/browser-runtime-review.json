@@ -1,0 +1,67 @@
+{
+  "schema": "kompetenzhaus.browser-runtime-review.v1",
+  "recordedAt": "2026-09-12T11:12:02.1599862Z",
+  "status": "local-release-player-checked-public-release-pending",
+  "runtime": "Unity 6000.6 WebGL, actual local Build/WebGL",
+  "browser": "Codex in-app Chromium 152",
+  "graphics": "NVIDIA GeForce RTX 5090 Laptop GPU, ANGLE D3D11",
+  "viewport": [
+    1440,
+    900
+  ],
+  "canvas": [
+    1440,
+    900
+  ],
+  "observations": [
+    "Actual saved module 001 and named room restored after reloading the new Web player.",
+    "Bird-view zoom buttons visibly change the actual 3D view.",
+    "Left-button drag visibly rotates first-person camera without a pointer-lock request or fatal dialog. Short W key presses move the camera; full held-key traversals are separately covered by native CharacterController traces.",
+    "The courtyard template visibly replaces architecture with a continuous U-shaped house; 14 footprint tiles, one room. Learning inventory remains available.",
+    "Authored window frames, clear doors, parquet, trees, evidence furniture and the moving guide were inspected in actual rendered first-person and bird views.",
+    "After the optimized build loaded, no new collision-mesh accessibility errors or pointer-lock exceptions appeared. Earlier errors in retained console history belong to the previous build."
+  ],
+  "engineMeasurements": [
+    {
+      "case": "FirstPerson, one built module, one 2x2 room",
+      "fps": 59.249159874363656,
+      "movingAverageFps": 59.249159874363656,
+      "totalWASMHeapBytes": 161087488,
+      "usedWASMHeapBytes": 138824832
+    },
+    {
+      "case": "BirdView, 14-tile courtyard template",
+      "fps": 59.93512752315226,
+      "movingAverageFps": 59.59214369875796,
+      "totalWASMHeapBytes": 161087488,
+      "usedWASMHeapBytes": 138824832
+    }
+  ],
+  "engineMeasurementMethod": "Read-only unityInstance.GetMetricsInfo(), the metrics accessor in the generated Unity loader. Samples on this laptop, not a low-end-device or maximum-decoration benchmark.",
+  "browserCadence": {
+    "durationMs": 2514,
+    "samples": 150,
+    "medianMs": 16.7,
+    "p95Ms": 16.8,
+    "over50ms": 0,
+    "method": "Ephemeral requestAnimationFrame observer, separately reported from Unity FPS."
+  },
+  "audio": {
+    "contextState": "running",
+    "contextType": "realtime",
+    "sampleRate": 48000,
+    "callbackIntervalMeanSeconds": 0.00999910296694218,
+    "callbackBufferSize": 480,
+    "userGestureBeforeObservation": true,
+    "muteUnmuteUiVerified": true,
+    "scope": "Observed WebAudio execution and saved mixer values. This does not claim a subjective listening review."
+  },
+  "consoleWarnings": [
+    "Unity deprecated manual persistent-data synchronization; saving and reload were separately tested.",
+    "Unused URP FSR upscaling shader unavailable; actual geometry renders and performance were observed. No claim of FSR or post-processing support."
+  ],
+  "screenshotEvidence": "Actual screenshots inspected inline during the browser session (bird room, first-person stations, courtyard). No fabricated saved screenshot path is claimed.",
+  "scope": "Browser UI/runtime observations complement the separate actual Unity physics and dense-scene geometry tests. Public URL, hosted embed and final metadata-clean build readiness still require their own confirmation.",
+  "finalBuildInspectionSha256": "d10ae9cc9b6ac523515013e4bf8439829b40c8d8a07bd8067440878d39a3311d",
+  "finalBuildRecheck": "After metadata-clean export/retest/rebuild, reloaded the actual final player, restored courtyard architecture and inventory, and placed the previously unpositioned module through the normal guidance button. The source UI and gameplay are unchanged from the scoped browser checks."
+}

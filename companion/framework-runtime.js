@@ -8,7 +8,13 @@ function standText() {
   });
 }
 function frameworkText() {
+  const ai=FRAMEWORK.aiAcrossCurriculum;
   return JSON.stringify({status:FRAMEWORK.status[lang],principle:FRAMEWORK.designPrinciple[lang],
+    aiAcrossCurriculum:{principle:ai.principle[lang],assessmentNotice:ai.assessmentNotice[lang],
+      dimensions:ai.dimensions.map(d=>({title:d.title[lang],meaning:d.description[lang]})),
+      domains:ai.domainRows.map(d=>({id:d.domainId,role:d.summary[lang],responsibility:d.learnerResponsibility[lang],criteria:d.criterionIds})),
+      phases:ai.phasePolicy.phases.map(p=>({id:p.contextId,purpose:p.purpose[lang],assessment:p.assessmentUse[lang]})),
+      assessmentRules:ai.phasePolicy.assessmentRules.map(r=>r.text[lang])},
     competencies:FRAMEWORK.competencies.map(c=>({id:c.id,title:c.title[lang],scope:c.scope[lang],boundary:c.boundary[lang],criteria:c.criteria.map(k=>({id:k.id,text:k.text[lang]})),aiRole:c.aiIntegration.possibleRole[lang],learnerResponsibility:c.aiIntegration.learnerResponsibility[lang],assessmentFocus:c.aiIntegration.assessmentFocus[lang]})),
     futureSkills:FRAMEWORK.futureLenses.map(l=>({title:l.title[lang],criteria:l.criterionIds})),
     levels:FRAMEWORK.levelDefinitions.map(l=>({level:l.level,title:l.title[lang],description:l.description[lang]})),
@@ -34,6 +40,7 @@ function selectedLearningDesigns() {
 }
 function ctxTutor() {
   return `Du bist der KI-Baututor im Kompetenzhaus Psychologie. Hilf beim eigenen Denken, Planen und Bauen. Das Modell verbindet psychologische Fachwissenschaft, Future Skills und KI, ohne Leistungen mehrfach zu zählen. Drei Kompetenz-Zielniveaus sind von vier Studienmeilensteinen getrennt. Eine wiederkehrende Aufgabe darf dasselbe Kriterium auf höherem Niveau aufgreifen. KI-Ethik I–III sind dabei mögliche Niveaus von V1, keine neuen Module. KI-Kontext oder ECTS bestimmen kein Niveau.
+KI-Kompetenz ist nicht auf T1–T3 begrenzt: Generierte fachliche Behauptungen prüft R4, Messqualität R2, Fallurteile H1, Beziehungen K2, ethische Folgen V1 und eigene Denkarbeit V2. T1–T3 behandeln technische Funktionen, Anwendung und Systemgestaltung. Zeige bei Bedarf diese Verbindungen, ohne Kriterien doppelt zu zählen. Plane bewusst eigenständige Schritte ohne KI, begründete Unterstützung mit KI und Untersuchungen über KI; eine Phase über KI erfordert keinen KI-Zugang. Erfinde keine KI-Pflicht und kein Verbot für ganze Module oder Prüfungen. Die drei Phasen sind Aufgabenvarianten; verbindliche Prüfbedingungen legen die zuständigen Lehrenden fest.
 Aktuelles kanonisches Modell: ${frameworkText()}
 Modulindex (Ausgangsdaten des veröffentlichten Spiels, keine frisch verifizierte Studienordnung): ${JSON.stringify(LEARNING.modules.filter(m=>m.kind==='slot').map(m=>({id:m.id,code:m.code,title:m.baseline.title[lang]})))}
 Ausgewählte Modulbeschreibungen mit separat gekennzeichneten Zukunftsvorschlägen: ${JSON.stringify(selectedLearningDesigns())}

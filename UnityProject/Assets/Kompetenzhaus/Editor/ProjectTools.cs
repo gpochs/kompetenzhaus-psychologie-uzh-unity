@@ -159,6 +159,8 @@ namespace Kompetenzhaus.Editor
         {
             if (!File.Exists(ProjectTools.ScenePath)) throw new InvalidOperationException("Create and review the game scene before building.");
             ProjectTools.SyncContent();
+            WorldSetup.SyncWebTemplate();
+            WorldSetup.PrepareRuntimeMeshAccess();
             ProjectTools.ConfigureWebPlayer();
             var arguments = Environment.GetCommandLineArgs();
             var outputArgument = Array.IndexOf(arguments, "-buildOutput");

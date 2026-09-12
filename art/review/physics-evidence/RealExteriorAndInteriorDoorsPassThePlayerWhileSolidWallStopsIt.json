@@ -1,0 +1,1899 @@
+{
+    "test": "RealExteriorAndInteriorDoorsPassThePlayerWhileSolidWallStopsIt",
+    "scene": "Assets/Kompetenzhaus/Scenes/Kompetenzhaus.unity",
+    "method": "Actual scene CharacterController.Move against runtime colliders; fixed-step trajectory, no substitute geometry.",
+    "playerHeight": 1.75,
+    "playerRadius": 0.30000001192092896,
+    "frames": [
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.22607599198818207,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 0,
+            "grounded": false
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.21822796761989594,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 0,
+            "grounded": false
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.2064560502767563,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 0,
+            "grounded": false
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.19076000154018402,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 0,
+            "grounded": false
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.17114005982875824,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 0,
+            "grounded": false
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.1475961059331894,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 0,
+            "grounded": false
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.1201280802488327,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 0,
+            "grounded": false
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08873610198497772,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 0,
+            "grounded": false
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.053420111536979675,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 0,
+            "grounded": false
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "outside-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -1.2999999523162842
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -1.215999960899353
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -1.1319999694824219
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -1.0480000972747803
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.9640001058578491
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.880000114440918
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.7960001826286316
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.7120002508163452
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.6280002593994141
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.5440002679824829
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.46000033617019653
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.37600037455558777
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.292000412940979
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.02499990165233612,
+                "z": -0.20800045132637024
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.062173351645469666,
+                "z": -0.12400048971176147
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08632110059261322,
+                "z": -0.04000052809715271
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899985253810883,
+                "z": 0.043999433517456055
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899985253810883,
+                "z": 0.12799939513206482
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899985253810883,
+                "z": 0.21199935674667358
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899985253810883,
+                "z": 0.29599931836128235
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899985253810883,
+                "z": 0.3799992799758911
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.0889999121427536,
+                "z": 0.4639992415904999
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899997174739838,
+                "z": 0.5479992032051086
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.0889999121427536,
+                "z": 0.631999135017395
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.0889999121427536,
+                "z": 0.7159991264343262
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.0889999121427536,
+                "z": 0.7999991178512573
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899997174739838,
+                "z": 0.8839990496635437
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.0889999121427536,
+                "z": 0.9679989814758301
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08900009095668793,
+                "z": 1.0519989728927612
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899997174739838,
+                "z": 1.1359989643096924
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08900003135204315,
+                "z": 1.219998836517334
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08860693871974945,
+                "z": 1.3039988279342651
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899997174739838,
+                "z": 1.3879988193511963
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08900003135204315,
+                "z": 1.4719988107681274
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08899997174739838,
+                "z": 1.5559988021850586
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08900003135204315,
+                "z": 1.6399986743927002
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08900009095668793,
+                "z": 1.7239986658096313
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08900009095668793,
+                "z": 1.8079986572265625
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08900003135204315,
+                "z": 1.891998529434204
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.0890001505613327,
+                "z": 1.9759985208511353
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "exterior-door-settled",
+            "position": {
+                "x": -20.0,
+                "y": 0.08890639245510101,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.916000366210938,
+                "y": 0.08900003135204315,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.832000732421875,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.74799919128418,
+                "y": 0.08899997174739838,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.663999557495117,
+                "y": 0.08900003135204315,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.579999923706055,
+                "y": 0.08900003135204315,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.496000289916992,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.41200065612793,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.328001022338867,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.243999481201172,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.15999984741211,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -19.076000213623047,
+                "y": 0.08900003135204315,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.992000579833984,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.908000946044922,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.82400131225586,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.739999771118164,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.6560001373291,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.57200050354004,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.488000869750977,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.404001235961914,
+                "y": 0.08899997174739838,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.32000160217285,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.236000061035156,
+                "y": 0.08900003135204315,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.152000427246094,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -18.06800079345703,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.98400115966797,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.900001525878906,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.816001892089844,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.73200035095215,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.648000717163086,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.564001083374023,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.48000144958496,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.3960018157959,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.312000274658203,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.22800064086914,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.144001007080078,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -17.060001373291016,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.976001739501953,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.89200210571289,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.808000564575195,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.724000930786133,
+                "y": 0.0890001505613327,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.64000129699707,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.556001663208008,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.472002029418945,
+                "y": 0.08900003135204315,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.388002395629883,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.304000854492188,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.220001220703125,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.136001586914063,
+                "y": 0.08900003135204315,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -16.052001953125,
+                "y": 0.08900009095668793,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "interior-door-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08890645205974579,
+                "z": 2.0000007152557373
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900003135204315,
+                "z": 2.084000825881958
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.0890001505613327,
+                "z": 2.1680006980895996
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900021016597748,
+                "z": 2.2520008087158203
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900021016597748,
+                "z": 2.336000680923462
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900021016597748,
+                "z": 2.4200005531311035
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.0890001505613327,
+                "z": 2.504000663757324
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.0890001505613327,
+                "z": 2.588000535964966
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900021016597748,
+                "z": 2.6720004081726074
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900009095668793,
+                "z": 2.756000518798828
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08881323039531708,
+                "z": 2.8400003910064697
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900021016597748,
+                "z": 2.9240002632141113
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900021016597748,
+                "z": 3.008000373840332
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900021016597748,
+                "z": 3.0920002460479736
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.1760003566741943
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.260000228881836
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.3440001010894775
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.4280002117156982
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.51200008392334
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900032937526703,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900032937526703,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900032937526703,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900032937526703,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900032937526703,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900032937526703,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900032937526703,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900032937526703,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 5,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        },
+        {
+            "stage": "solid-wall-settled",
+            "position": {
+                "x": -15.999998092651367,
+                "y": 0.08900026977062225,
+                "z": 3.54499888420105
+            },
+            "collisionFlags": 4,
+            "grounded": true
+        }
+    ]
+}

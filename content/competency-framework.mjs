@@ -1,5 +1,5 @@
 import {futureLenses,futureCoverageRule,futureDesignTests} from './future-lenses.mjs';
-import {aiIntegration} from './ai-integration.mjs';
+import {aiIntegration,aiAcrossCurriculum} from './ai-integration.mjs';
 // Original design synthesis. Public references are attributed in sources below.
 // This is a planning framework, not a validated assessment instrument.
 const L = (de, en) => ({ de, en });
@@ -10,8 +10,8 @@ const C = (id, domainId, title, scope, boundary, criteria, levels) => ({
   levels: levels.map((text, i) => ({ level: i + 1, description: L(...text) }))
 });
 export const framework = {
-  futureLenses, futureCoverageRule, futureDesignTests,
-  schema: 'kompetenzhaus.competency-framework', schemaVersion: 2, version: '2.1.0-draft',
+  futureLenses, futureCoverageRule, futureDesignTests, aiAcrossCurriculum,
+  schema: 'kompetenzhaus.competency-framework', schemaVersion: 2, version: '2.2.0-draft',
   status: L('Entwurf für das Lernspiel und die Curriculumentwicklung; fachliche Validierung steht aus.', 'Draft for the learning game and curriculum development; subject review is still required.'),
   date: '2026-09-12',
   title: L('Psychologische Handlungskompetenz', 'Competence in psychological practice and research'),

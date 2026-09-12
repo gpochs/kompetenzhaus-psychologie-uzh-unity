@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { frameworkProfile, visibleCriteria, visibleOpportunities, moduleLearningProposal } from './framework-view.mjs';
+import { frameworkProfile, visibleCriteria, visibleOpportunities, moduleLearningProposal, aiCurriculum, moduleAiPhases } from './framework-view.mjs';
 
 test('a missing V2 snapshot cannot fall back to legacy competence or career scores', () => {
   assert.equal(frameworkProfile({ profile: { competencies: [{ stage: 4 }], careers: [{ fitPercent: 86 }] } }), null);
@@ -49,4 +49,34 @@ test('a future lens reuses canonical criteria and filters opportunities by conte
   assert.deepEqual(visibleOpportunities(original.criteria[0], lens).map(item => [item.objectiveId, item.targetLevel]), [['ai-source', 1]]);
   assert.equal(visibleOpportunities(original.criteria[0]).length, 2);
   assert.equal(JSON.stringify(original), before);
+});
+
+test('AI curriculum links reuse every domain and competency and reject unknown canonical destinations', () => {
+  const profile = JSON.parse(readFileSync(new URL('./qa/framework-v2-all-modules.json', import.meta.url), 'utf8')).frameworkProfile;
+  assert.equal(aiCurriculum(profile.aiAcrossCurriculum ? { ...profile, aiAcrossCurriculum: null } : profile), null);
+  // Structural UI fixture; it does not invent a learner record or source text.
+  const metadata = { schemaVersion: 1, status: 'design-proposal', domainRows: profile.domains.map(domain => {
+    const items = profile.competencies.filter(item => item.domainId === domain.id);
+    return { domainId: domain.id, competencyIds: items.map(item => item.id), criterionIds: items.flatMap(item => item.criteria.map(criterion => criterion.id)) };
+  }), flowEdges: [{ fromDomainId: 'T', toDomainId: 'R', criterionIds: ['R4.1'] }], phasePolicy: { phases: ['without-ai', 'with-ai', 'about-ai'].map(contextId => ({ contextId })) }, examples: [{ criterionIds: ['V1.1', 'P2.1'] }] };
+  profile.aiAcrossCurriculum = metadata;
+  const before = JSON.stringify(profile);
+  assert.equal(aiCurriculum(profile), metadata, 'the diagram is a view of canonical data');
+  assert.equal(JSON.stringify(profile), before, 'reading the diagram cannot change opportunities or assessments');
+  assert.equal(aiCurriculum({ ...profile, aiAcrossCurriculum: { ...metadata, domainRows: metadata.domainRows.slice(1) } }), null);
+  assert.equal(aiCurriculum({ ...profile, aiAcrossCurriculum: { ...metadata, flowEdges: [{ fromDomainId: 'T', toDomainId: 'R', criterionIds: ['R4.99'] }] } }), null);
+  assert.equal(aiCurriculum({ ...profile, aiAcrossCurriculum: { ...metadata, examples: [{ criterionIds: ['new-ai-bonus'] }] } }), null);
+});
+
+test('module AI phases link existing objectives by explicit context and never infer a whole-module requirement', () => {
+  const independent = { id: 'one', criterionId: 'R4.1', contextIds: ['without-ai'] };
+  const assisted = { id: 'two', criterionId: 'R4.1', contextIds: ['with-ai', 'about-ai'] };
+  const proposal = { objectives: [independent, assisted], aiStudyAssessment: { status: 'design-proposal', wholeModuleAiRequirement: 'not-specified', withoutAiObjectiveIds: ['one'], withAiObjectiveIds: ['two'], aboutAiObjectiveIds: ['two'] } };
+  const before = JSON.stringify(proposal), phases = moduleAiPhases(proposal);
+  assert.equal(phases[0].objectives[0], independent);
+  assert.equal(phases[1].objectives[0], assisted);
+  assert.equal(phases[2].objectives[0], assisted, 'a different context is not a duplicate criterion or new outcome');
+  assert.equal(JSON.stringify(proposal), before);
+  assert.deepEqual(moduleAiPhases({ ...proposal, aiStudyAssessment: { ...proposal.aiStudyAssessment, withoutAiObjectiveIds: ['two'] } }), [], 'an assisted objective cannot be relabelled as independent work');
+  assert.deepEqual(moduleAiPhases({ objectives: proposal.objectives }), [], 'missing policy does not imply an AI-free requirement');
 });

@@ -1,0 +1,260 @@
+{
+  "schema": "kompetenzhaus.fbx-metadata-audit.v1",
+  "status": "checked-clean-scene-data-unchanged",
+  "recordedAt": "2026-09-12T11:09:50.549172+00:00",
+  "sourceBlendSha256": "a37b3df586be01a234c84315f1e5a011174567ac3d6963359b8624f2da76b842",
+  "exporter": "../blender/export_public_fbx.py",
+  "exporterSha256": "076811966de3ab7cb9f5e7fddecbab1bcc09b01a8d1afb4452e568f2ceef2862",
+  "method": "Typed property values neutralized before normal Blender FBX encoding. Parsed Objects, GlobalSettings and semantic Connections fingerprints equal before/after; object UIDs are resolved by object identity. Source blend was not saved or modified.",
+  "metadataReplacements": {
+    "Original|ApplicationNativeFile": 22,
+    "Original|FileName": 22,
+    "DocumentUrl": 22,
+    "SrcDocumentUrl": 22
+  },
+  "models": [
+    {
+      "assetId": "evidence-table",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/evidence-table.fbx",
+      "sha256": "31e151abdf915a143f6f4dd43717ecce01647334d6e5fb815d91aa9449b1a2c3",
+      "bytes": 80748,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "1b8c33728d999883898718a8eabcac7bd60cb4f72706b1a49863a4839c714d53",
+      "sceneDataFingerprintBeforeAndAfter": "b5f3e25259f79b6f2891579f8caaeac405ea58269b7e041adbcf1405bade0f7b",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "wall-door",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/wall-door.fbx",
+      "sha256": "22ff63efcfd4966258fad140e38aa61524414928122934741ddd7de010990477",
+      "bytes": 38972,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "baaa08b301b7e716bfff339ad5a0c81dbe2778ccc981334f49b4b23749998908",
+      "sceneDataFingerprintBeforeAndAfter": "887ed6ca7becbb358d80286d65ebb9271a00939ba62fd438bf93ca23a17e5c03",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "discussion-sofa",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/discussion-sofa.fbx",
+      "sha256": "160f9e3eab6212d25c2a984a53851cb513f3fd10c9c2b9c2d3d178acd94fc457",
+      "bytes": 96380,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "9d5e7217284f3e635e8c6d6f85ff51ba830ecd202b227f10f2250f53ee9d1a95",
+      "sceneDataFingerprintBeforeAndAfter": "7fb0baba174152870272877423a4db464473aefaddfaa8c85523d8f2a3ac298a",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "research-desk",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/research-desk.fbx",
+      "sha256": "7c8442170491119ac8e3f1d9359cac7ab60897803d65dd398ac0877cdc9f2a98",
+      "bytes": 28028,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "e95de973077320a284d7f7f95a087882ed689c1852b838630effd1e111499286",
+      "sceneDataFingerprintBeforeAndAfter": "e9fef848766596a5aa632df71d224770209bd3bd06524e75cfd74dd98ab11b51",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "courtyard-tree",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/courtyard-tree.fbx",
+      "sha256": "7f03339d4522a0265e9bf4fa160013eda6f21bf7419a1bd450d4689eb030e0d9",
+      "bytes": 37836,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "87162aaeaa95d5727fc66ffe0cfa948f78a1940d0df8dff7215d1136c8764c30",
+      "sceneDataFingerprintBeforeAndAfter": "56097fd6bff5cd83dcc3b1f273a340546f26f44e0ddbaf4ddfdf6d2d20de9298",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "student-guide",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/student-guide.fbx",
+      "sha256": "2ee00e4d0fa397cc86cb04d3228a655d134303b7c3880b6d2cbceffb94e89ab9",
+      "bytes": 282188,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "cdbacbd37066cce02cad4130d7de562ffa35fadd59e2c27ed721b57452fc2c93",
+      "sceneDataFingerprintBeforeAndAfter": "0182ac248664c519636e1c4cc7c584a6ba9b856dc4528f2be40a8e70719fd826",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "wall-window",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/wall-window.fbx",
+      "sha256": "4a5e5b4d5b799c40d055accb70f8a1e1c6259de670be7569689abe78f0f82ea8",
+      "bytes": 23804,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "c36b6067b096a49d384984210e1be0d3a6fbe85b3596e842afad0222a8ef5ec0",
+      "sceneDataFingerprintBeforeAndAfter": "3418eb5823e292064193dd4cf99d6ecbd289d305309dbde159f42e615e0954a5",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "wall-solid",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/wall-solid.fbx",
+      "sha256": "2a4bcdf5beb5bf8357b37cdf45ffd4aaa8051832e37765157fb4f7824a74e43e",
+      "bytes": 21516,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "55bf44fc55e7dcc84d7fc0ddd02155efb9ac907938ab2fc997ac19c38dcad036",
+      "sceneDataFingerprintBeforeAndAfter": "70a2d8cad50d2f81f83e0869ec5b4504b3a97da88b2dd19b97bd2883db3fd879",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "floor-tile",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/floor-tile.fbx",
+      "sha256": "c4a9dad36cf7d667bc0a32fdc416f234901c92f90cf6992116789a18189e0b98",
+      "bytes": 21532,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "ff4b388e88eb4f338e7f2ec31107be0cb35d4cf0324ffa666b8b20fbae7babcd",
+      "sceneDataFingerprintBeforeAndAfter": "b0ebf63859bbe62615d339d4be3b9a8e9fcf1e943fc3525db07e8c83c10e650d",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "roof-flat",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/roof-flat.fbx",
+      "sha256": "dc5bdb5dd12dde12598659a2e578155cb99d3330ecbabb537b13c8b375c90bd5",
+      "bytes": 19164,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "2d71980d3461c55d4fcc53077dbb04a5d052218911530e04d504e0e1a3121281",
+      "sceneDataFingerprintBeforeAndAfter": "25fd3b1be2718765cff7f660b961947f25e6158204af759fff3e6ede70a7ae1f",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "roof-gabled",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/roof-gabled.fbx",
+      "sha256": "4134ee0c8e984842bb2fb9920960410a092f66e58f3bbdf0a3d764540e299fc5",
+      "bytes": 42188,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "1b39be99f13c119df87f74aba2b86a463bfb61862a0aa5aa95f096e1bafe117c",
+      "sceneDataFingerprintBeforeAndAfter": "bfc0d09148da678be1d4d30e9a123ffa28f14f99d44d3aa8ddbf46b5a93b72a6",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "balcony",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/balcony.fbx",
+      "sha256": "c1e72ac944c59492257c395207264782588e43301958bc99d297cae62bef76fb",
+      "bytes": 27356,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "3585d8ea1fb4ac3879993baecf44ac8f6e5dc091c6a6a1a1fe50088f21c1578f",
+      "sceneDataFingerprintBeforeAndAfter": "cd22c5b64e0abec39a9274e80fb4d80913cb10e694972045ed87fa6367a021c3",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "staircase",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/staircase.fbx",
+      "sha256": "48a66a5abd4ae32659a96f17081bb639e83f86474dc14fe4301a172976cdc593",
+      "bytes": 33708,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "ec188e01bcc4efc6cfc71f72c7e0744eeb6430cda32bc631425d0229ff521ae8",
+      "sceneDataFingerprintBeforeAndAfter": "8b1562d94d172ac077bd7a5b1426879cf49ea232bf0dfa0eb11e7454158be7ea",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "wall-partition",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/wall-partition.fbx",
+      "sha256": "d0957906b182165c54897ef1d6c3e5b5f952ecf21da5dae0e34e633d44b9331a",
+      "bytes": 37900,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "03cd7098224981ebd98727002ccb6b25be1b6367a4ab7b1dac880b752365914c",
+      "sceneDataFingerprintBeforeAndAfter": "f7bd88076e05d2cb9d641fcf5d0d8d4d614214ed3a62faccf59695f01f1c5960",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "bookshelf",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/bookshelf.fbx",
+      "sha256": "c59c1d3c58e25082ab9dc1a26eec16708161e3ff5ec20cc4c8d92dc03e146d59",
+      "bytes": 70060,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "fd6dd4179735d3a21ed2f1e3841c519d3a6457f0fbd970f606a8c4a0a4c2c252",
+      "sceneDataFingerprintBeforeAndAfter": "481dbfc4385cacab81709e45846c40a1dfb5454385f0dbd2de4b6132d6c6ee8d",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "lamp",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/lamp.fbx",
+      "sha256": "2512da54f87eefb614f2dab602e5cea22a288fb388b750301463de16d19037ca",
+      "bytes": 51116,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "a1a42f4fe6c108376a76c0d1ceeb056eedcb5a73c18e3f8cb7816d79ed730402",
+      "sceneDataFingerprintBeforeAndAfter": "ad214cde72d3f762b475f4e6d8452526ab0d54dc70619f50ca5c1ffe305a89fd",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "noticeboard",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/noticeboard.fbx",
+      "sha256": "f5ef3d7b8e7e0d552cfcda87f63265191749770ba2bf711c19c7460689a6201f",
+      "bytes": 44220,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "67038daf760466ecd050cdb5eb0536e0d91731fc11edaa53abe0d60a5b745ff2",
+      "sceneDataFingerprintBeforeAndAfter": "3ab8319251727a33b60da9f2abfaec62a18b01954e1aecd502c2e95ce5036d1a",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "chair",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/chair.fbx",
+      "sha256": "7224e588760a053c81d73ca285883d4d62ff3417b4eabfdcf63a3c5bcef1842c",
+      "bytes": 30092,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "8d8e540623ba46d78a08895ebe436f1a660d31456e553fa6f3a9e0a72bd8dded",
+      "sceneDataFingerprintBeforeAndAfter": "0e67d2bba9441faa3368cdff51162133f98678ad992f87ddacff75ff2f867126",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "bench",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/bench.fbx",
+      "sha256": "1190073c61bf5b104f9ca996d63bd5352c0a88896a442bd7daee5b85cc7ed5c7",
+      "bytes": 31228,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "da84ba6cfa2871f15e0529d950d6db7c4325eee03008df10ddee541dc1286b7f",
+      "sceneDataFingerprintBeforeAndAfter": "185f9052b49f8f4b529894672b7b458b98221b3ea54f2864f11037d5aa235dd9",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "acoustic-divider",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/acoustic-divider.fbx",
+      "sha256": "3acc783c3d1e95cc00936d7375aa9e030ebe1b5e6700bdedfce4fc5ccba752ec",
+      "bytes": 28012,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "1b8fa3c6a8130f685ee7b20bbdd0814beb9393180e0ac933797b7ebfcf44e875",
+      "sceneDataFingerprintBeforeAndAfter": "9b5388a5bd29d7c92912dae0454f4d0f699f746a0d807041ef7daf5afbd1eba7",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "achievement-display",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/achievement-display.fbx",
+      "sha256": "21a04f6bc76cd62edd66bc9bd7df9b61af055727387fc28d77e13aa7191ec2d1",
+      "bytes": 93228,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "2b0d7ffbb976d8e1042525a3005dcebbb322a2b8a9c4a8c5c23707a7ee41a113",
+      "sceneDataFingerprintBeforeAndAfter": "96278c321be77570a96daaddd335c6513a7fc7c9b11de71ce9153573a2a0331e",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    },
+    {
+      "assetId": "research-poster",
+      "path": "UnityProject/Assets/Kompetenzhaus/Art/Models/research-poster.fbx",
+      "sha256": "a7b490ef61a5da13d7cb5f259eda6e977603025a9a4fbb79a0905aab472b83d9",
+      "bytes": 32124,
+      "fbxVersion": 7400,
+      "previousFbxSha256": "218ea890a5a09f3c4cea700999e0235bd2a92290d07a69656326c4b19986fcf0",
+      "sceneDataFingerprintBeforeAndAfter": "ebabc73d6e3e038f6746314cb01f2f8533cb09643ebc405e12148e98eeb2e7f0",
+      "applicationNativeFile": "kompetenzhaus-assets.blend",
+      "absolutePrivatePathCount": 0
+    }
+  ],
+  "runtimeScope": "Metadata-only re-export after the recorded geometry/physics tests; no new Unity or browser test is claimed here."
+}

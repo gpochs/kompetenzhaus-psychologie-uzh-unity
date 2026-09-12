@@ -37,10 +37,10 @@
         "sheetCell": "top-left",
         "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
         "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
-        "approved": false,
-        "approvedBy": "",
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
         "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
-        "approvedAt": ""
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "reviewStatus": "pending",
       "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
@@ -77,9 +77,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "reviewStatus": "pending",
       "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
@@ -128,10 +128,10 @@
         "sheetCell": "top-right",
         "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
         "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
-        "approved": false,
-        "approvedBy": "",
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
         "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
-        "approvedAt": ""
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "reviewStatus": "pending",
       "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
@@ -165,10 +165,10 @@
         "sheetCell": "bottom-left",
         "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
         "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
-        "approved": false,
-        "approvedBy": "",
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
         "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
-        "approvedAt": ""
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "reviewStatus": "pending",
       "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
@@ -202,10 +202,10 @@
         "sheetCell": "bottom-middle",
         "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
         "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
-        "approved": false,
-        "approvedBy": "",
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
         "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
-        "approvedAt": ""
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "reviewStatus": "pending",
       "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
@@ -239,10 +239,10 @@
         "sheetCell": "bottom-right",
         "generator": "OpenAI built-in image_gen tool; model version not exposed by tool",
         "prompt": "Six isolated mesh-ready references matching campus concept: oak/navy circular evidence table; real 2.4m entrance portal; curved blue sofa; oak research desk; sculptural courtyard tree; adult neutral student guide. Full silhouettes, consistent light grey backdrop, simple bevelled game-ready matte forms.",
-        "approved": false,
-        "approvedBy": "",
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
         "sha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
-        "approvedAt": ""
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "reviewStatus": "pending",
       "dimensionBasis": "Planned full-object envelope from the authored Blender source, not a measured export. Awaiting geometry execution and Form review.",
@@ -283,9 +283,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -323,9 +323,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "referenceRelation": "Authored closed-wall derivative; no separate solid-wall object appears in the contact sheet."
     },
@@ -364,9 +364,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "pivotNote": "Local grid/contact plane is z=0; foundation extends below it and the oak finish above it."
     },
@@ -405,9 +405,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -445,9 +445,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -485,9 +485,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -525,9 +525,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "riseMetres": 3.2,
       "riserCount": 16,
@@ -569,9 +569,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated architecture kit references in two rows of four; top: limestone window wall, navy/oak door portal, oak floor tile, planted flat roof; bottom: navy gabled roof, balcony, staircase, oak acoustic interior portal. Warm oak, navy, limestone and copper; readable depth and complete silhouettes. Four-metre modular construction and genuine passages are production targets, not measurements inferred from the image.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       },
       "clearOpeningMetres": [
         2.4,
@@ -611,9 +611,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -649,9 +649,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -687,9 +687,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -725,9 +725,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -763,9 +763,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -801,9 +801,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -839,9 +839,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     },
     {
@@ -878,9 +878,9 @@
         "prompt": "Descriptive summary, not the verbatim generation prompt: eight isolated furnishings in two rows of four; top: 1.8m bookshelf, 1.7m arc floor lamp, 1.5m evidence pinboard, .85m study chair; bottom: 1.5m-wide oak bench, 1.6m acoustic divider, .7m achievement stand, .9m research poster. Warm oak, navy, limestone, copper and sage; no legible text; orthographic three-quarter views; complete separate silhouettes.",
         "promptProvenance": "descriptive-summary-not-verbatim",
         "sha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
-        "approved": false,
-        "approvedBy": "",
-        "approvedAt": ""
+        "approved": true,
+        "approvedBy": "User — prepared reference family approved in project conversation",
+        "approvedAt": "2026-09-12T10:15:10.909245+00:00"
       }
     }
   ],

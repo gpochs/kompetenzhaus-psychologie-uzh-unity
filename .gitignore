@@ -7,6 +7,11 @@
 **/[Tt]emp/
 **/[Oo]bj/
 **/[Ll]ogs/
+UnityProject/[Bb]uild/
+UnityProject/Data/
+UnityProject/Assets/Resources/PerformanceTestRun*.json*
+# Unity performance-test runner creates this otherwise empty Resources folder.
+UnityProject/Assets/Resources.meta
 **/[Uu]ser[Ss]ettings/
 **/[Mm]emoryCaptures/
 **/[Rr]ecordings/

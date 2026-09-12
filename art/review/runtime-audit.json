@@ -1,0 +1,31 @@
+{
+  "schema": "kompetenzhaus.runtime-audit.v1",
+  "recordedAt": "2026-09-12T11:14:55.9581675Z",
+  "loaded": true,
+  "sceneTriangles": 112500,
+  "totalModelBytes": 1171400,
+  "highTextureBytes": 0,
+  "viewport": [
+    1440,
+    900
+  ],
+  "checks": {
+    "collision": true,
+    "doorTraversal": true,
+    "boundsRecovery": true,
+    "support": true,
+    "referenceFidelity": true,
+    "productionCamera": true,
+    "interaction": true,
+    "performance": true
+  },
+  "evidence": [
+    "physics-review.json",
+    "production-metrics.json",
+    "browser-runtime-review.json",
+    "runtime-evidence/edge-ui-2026-09-12.json",
+    "web-build-inspection.json",
+    "../models/fbx-metadata-audit.json"
+  ],
+  "scope": "Local production release candidate: actual Unity physics and three geometry samples, actual IAB/Edge Web-player interactions, and measured starter/courtyard performance. 112500 is the largest sampled legal design, not a bound for every decoration combination. Model/texture bytes refer to source assets, not RAM or total download; browser heap/FPS are reported separately. Public Pages deployment is verified separately."
+}

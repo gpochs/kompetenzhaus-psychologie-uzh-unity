@@ -66,6 +66,7 @@ namespace Kompetenzhaus.Competencies
                 ValidateReferences(lens.contextIds, contexts, "future perspective context");
                 Require(lens.criterionIds.All(id => lens.competencyIds.Contains(criterionOwners[id])), "A future perspective must name every criterion's owner.");
             }
+            ValidateAiAcross(framework, criterionOwners, contexts);
             Ids(careers.roles, item => item.id, "career role");
             foreach (var role in careers.roles)
             {
@@ -140,6 +141,48 @@ namespace Kompetenzhaus.Competencies
                     foreach (var id in design.parentSlotIds)
                         Require(curriculum.HasModule(id) && curriculum.GetModule(id).optionCodes.Contains(design.code), "Optional design references an incompatible slot.");
                 }
+            }
+        }
+
+        private static void ValidateAiAcross(FrameworkV2Definition framework, Dictionary<string, string> owners, HashSet<string> contexts)
+        {
+            var ai = framework.aiAcrossCurriculum;
+            Require(ai != null || framework.version != "2.2.0-draft", "Framework 2.2 requires its AI across curriculum view.");
+            if (ai == null) return;
+            Require(ai.schemaVersion == 1 && ai.status == "design-proposal", "Unknown AI across curriculum schema or status.");
+            var domains = framework.domains.Select(d => d.id).ToHashSet();
+            var competencies = framework.competencies.ToDictionary(c => c.id);
+            var rows = Ids(ai.domainRows, d => d.domainId, "AI domain");
+            Require(rows.SetEquals(domains), "The AI view must include every domain exactly once.");
+            var seen = new HashSet<string>();
+            foreach (var row in ai.domainRows)
+            {
+                ValidateReferences(row.competencyIds, competencies.Keys, "AI domain competency");
+                Require(row.competencyIds.ToHashSet().SetEquals(framework.competencies.Where(c => c.domainId == row.domainId).Select(c => c.id)),
+                    "An AI domain must retain all and only its canonical competencies.");
+                ValidateReferences(row.criterionIds, owners.Keys, "AI domain criterion");
+                Require(row.criterionIds.ToHashSet().SetEquals(owners.Where(p => row.competencyIds.Contains(p.Value)).Select(p => p.Key)),
+                    "An AI domain must retain all and only its canonical criteria.");
+                foreach (var id in row.criterionIds) Require(seen.Add(id), "An AI view cannot duplicate a criterion owner.");
+            }
+            Require(seen.SetEquals(owners.Keys), "AI view omits canonical criteria.");
+            foreach (var edge in ai.flowEdges)
+            {
+                Require(domains.Contains(edge.fromDomainId) && domains.Contains(edge.toDomainId), "Unknown AI flow domain.");
+                ValidateReferences(edge.criterionIds, owners.Keys, "AI flow criterion");
+                Require(edge.criterionIds.All(id => new[] { edge.fromDomainId, edge.toDomainId }.Contains(competencies[owners[id]].domainId)),
+                    "AI flow criteria must belong to the connected domains.");
+            }
+            Require(ai.phasePolicy != null && ai.phasePolicy.noWholeModuleMandate, "AI phases must not mandate whole-module conditions.");
+            var phases = Ids(ai.phasePolicy.phases, p => p.contextId, "AI phase");
+            Require(phases.SetEquals(new[] { "without-ai", "with-ai", "about-ai" }) && phases.IsSubsetOf(contexts), "AI phases need without, with and about AI.");
+            Ids(ai.phasePolicy.assessmentRules, r => r.id, "AI assessment rule");
+            Ids(ai.dimensions, d => d.id, "AI dimension");
+            Ids(ai.examples, e => e.id, "AI example");
+            foreach (var example in ai.examples)
+            {
+                ValidateReferences(example.criterionIds, owners.Keys, "AI example criterion");
+                Require(Ids(example.phases, p => p.contextId, "AI example phase").SetEquals(phases), "AI examples must explain all three phases.");
             }
         }
 

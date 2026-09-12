@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d03541ad41b814d98b6f5f619966e1, type: 3}
+  m_Name: WorldAssets
+  m_EditorClassIdentifier: Kompetenzhaus.Runtime::Kompetenzhaus.World.WorldAssetLibrary
+  entries:
+  - id: wall-window
+    model: {fileID: 4269851293990583233, guid: 8e09513fa4024784cb974f8f57f93ab1, type: 3}
+  - id: wall-door
+    model: {fileID: 2181607007591583679, guid: f70bf6ba39f39074b82e44842c712103, type: 3}
+  - id: wall-solid
+    model: {fileID: 3589398510398687890, guid: 3803fa3f728bf1a42b3aa5197c0cd5c9, type: 3}
+  - id: wall-partition
+    model: {fileID: 7368510221080809793, guid: 4b09e2c9980d2ec49a59dd97ab6c7459, type: 3}
+  - id: floor-tile
+    model: {fileID: 5447797161053865953, guid: 5910de3f0f159a54d8ec968530d7a103, type: 3}
+  - id: roof-flat
+    model: {fileID: 6215101441771612544, guid: fa526e35406fe58479f41b1580c51682, type: 3}
+  - id: roof-gabled
+    model: {fileID: 6974619363548806383, guid: a48cb5ffd6576994dac39f31c0ec9aeb, type: 3}
+  - id: balcony
+    model: {fileID: 371268190904897074, guid: 52c2d3351349d5945bde702e5a262439, type: 3}
+  - id: staircase
+    model: {fileID: 1544903387774120324, guid: 4241842f9566d764a9ad5d6b0d60562b, type: 3}
+  - id: evidence-table
+    model: {fileID: 5819020310798831355, guid: 81ba4c27f96764e47935b77699f54e5a, type: 3}
+  - id: research-desk
+    model: {fileID: 5889460450043795115, guid: fcea958c24b29bf4da19f0bf7aa43c82, type: 3}
+  - id: discussion-sofa
+    model: {fileID: 8647596606247238062, guid: b02f5eed0fb745b4f83e6bf7a710c551, type: 3}
+  - id: courtyard-tree
+    model: {fileID: 6149618835691330353, guid: fc76bd04cab30ed4dac62a3631fb64b3, type: 3}
+  - id: student-guide
+    model: {fileID: 8559723224604588695, guid: a37d5b9f1f972144b98af5397da929f5, type: 3}
+  - id: bookshelf
+    model: {fileID: 3597455362122750301, guid: 9c3aed08c161166499d51dd7d3033288, type: 3}
+  - id: lamp
+    model: {fileID: 1205177536211960783, guid: 643793e51758d814890b89261c91cc0e, type: 3}
+  - id: noticeboard
+    model: {fileID: 49354463361358164, guid: ed879862b6cd3be4fb6fe009d8dacc82, type: 3}
+  - id: chair
+    model: {fileID: 7621676547117153249, guid: 0f69d1a5a3f36b54385d9b55bc12490c, type: 3}
+  - id: bench
+    model: {fileID: 5579683889260107116, guid: c82a993db9d786e49816aa11be49c13e, type: 3}
+  - id: acoustic-divider
+    model: {fileID: 2954383145591886029, guid: 7061b969e2056e94ca09b1514ea03cb5, type: 3}
+  - id: achievement-display
+    model: {fileID: 9202463286413215156, guid: c5574ef5aff8b8b40bde0b179fcd84c5, type: 3}
+  - id: research-poster
+    model: {fileID: 8188878580470453146, guid: f81a6f86d33e1394aa861dd701ba1fd0, type: 3}
+  ground: {fileID: 2100000, guid: 604743627eaeff24c8da3fcbd67caf54, type: 2}
+  path: {fileID: 2100000, guid: da3b8ae34cc37c24d957f147d4f7d5ab, type: 2}
+  navy: {fileID: 2100000, guid: e67ef9adc772d8947bc15cc873c839a6, type: 2}
+  copper: {fileID: 2100000, guid: cb1d739e1c2e11e48a19d121484b08b8, type: 2}
+  foliage: {fileID: 2100000, guid: b9354f50440c2ea4c8420bebdba753fd, type: 2}
+  ivory: {fileID: 2100000, guid: 21529e99d84e1e84891e03b766897cc2, type: 2}
+  labelFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}

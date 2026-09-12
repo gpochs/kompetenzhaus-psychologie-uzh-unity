@@ -162,8 +162,8 @@ namespace Kompetenzhaus.WorldSupport
                 marker.text.transform.rotation = view.transform.rotation;
                 // Avoid a wall of labels at first-person eye level; interaction hints
                 // remain in the semantic HTML shell and are not color-dependent.
-                var nearby = Vector3.Distance(view.transform.position, marker.target.transform.position) < 12f;
-                marker.text.gameObject.SetActive(camera.Mode == ViewMode.BirdView || nearby);
+                var focused = interactor != null && interactor.FocusedTarget == marker.target;
+                marker.text.gameObject.SetActive(camera.Mode == ViewMode.BirdView || focused);
             }
             for (var i = pulses.Count - 1; i >= 0; i--)
             {

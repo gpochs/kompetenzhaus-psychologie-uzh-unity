@@ -39,6 +39,7 @@ namespace Kompetenzhaus.Editor
         public static void Assemble()
         {
             RequireReviews();
+            FrameworkV2ContentSync.SyncAndExportQaProfiles();
             foreach (var id in RequiredModels)
                 if (!File.Exists(ArtRoot + "/Models/" + id + ".fbx")) throw new FileNotFoundException("Reviewed Blender export missing: " + id);
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
@@ -106,7 +107,9 @@ namespace Kompetenzhaus.Editor
                 var modelPath = ArtRoot + "/Models/" + id + ".fbx";
                 var importer = (ModelImporter)AssetImporter.GetAtPath(modelPath);
                 importer.importCameras = false; importer.importLights = false; importer.importAnimation = false;
-                importer.isReadable = id == "staircase"; importer.meshCompression = ModelImporterMeshCompression.Low;
+                // Players build MeshColliders as the user's architecture changes.
+                // The Editor can access non-readable meshes; a Web player cannot.
+                importer.isReadable = true; importer.meshCompression = ModelImporterMeshCompression.Low;
                 importer.SaveAndReimport();
                 var model = AssetDatabase.LoadAssetAtPath<GameObject>(modelPath);
                 if (model == null) throw new InvalidOperationException("FBX import failed: " + id);
@@ -138,6 +141,28 @@ namespace Kompetenzhaus.Editor
             library.foliage = Material("Sage foliage", new Color(.42f, .53f, .35f), .1f);
             library.labelFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             EditorUtility.SetDirty(library); return library;
+        }
+
+        [MenuItem("Kompetenzhaus/Refresh reviewed model library")]
+        public static void RefreshReviewedModels()
+        {
+            RequireReviews();
+            AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
+            PrepareLibrary();
+            AssetDatabase.SaveAssets();
+            Debug.Log("[Kompetenzhaus] REVIEWED_MODELS_REFRESHED. Existing scene and player saves retained.");
+        }
+
+        public static void PrepareRuntimeMeshAccess()
+        {
+            foreach (var id in RequiredModels)
+            {
+                var importer = AssetImporter.GetAtPath(ArtRoot + "/Models/" + id + ".fbx") as ModelImporter;
+                if (importer == null) throw new InvalidOperationException("Reviewed model missing: " + id);
+                if (importer.isReadable) continue;
+                importer.isReadable = true;
+                importer.SaveAndReimport();
+            }
         }
 
         private static void NormalizeStairHeading(GameObject geometry)
@@ -243,6 +268,9 @@ namespace Kompetenzhaus.Editor
             Directory.CreateDirectory(destination);
             foreach (var file in new[] { "index.html", "shell.css", "shell.js", "bridge-contract.mjs", "framework-view.mjs", "shell-locale.mjs" })
                 File.Copy(Path.Combine(SourceRoot, "web-template", file), Path.Combine(destination, file), true);
+            var templateData = Path.Combine(destination, "TemplateData");
+            Directory.CreateDirectory(templateData);
+            File.Copy(Path.Combine(SourceRoot, "art/references/two-houses-concept.png"), Path.Combine(templateData, "cover.png"), true);
             foreach (var relative in new[] { "content/kompetenzhaus-content.json", "content/module-learning-design.json", "companion/published.json", "companion/context-catalog.json" })
             {
                 var target = Path.Combine(destination, relative); Directory.CreateDirectory(Path.GetDirectoryName(target));

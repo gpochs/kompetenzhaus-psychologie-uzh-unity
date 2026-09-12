@@ -190,6 +190,13 @@ test('Tutor uses current AI responsibilities and the explicitly selected module 
   app.run('importLearningContext()');
   const model=JSON.parse(app.run('frameworkText()'));
   assert.equal(model.competencies.length,16);
+  const across=model.aiAcrossCurriculum;
+  assert.equal(across.domains.length,6);
+  assert.deepEqual(across.phases.map(p=>p.id).sort(),['about-ai','with-ai','without-ai']);
+  assert.equal(new Set(across.domains.flatMap(d=>d.criteria)).size,48);
+  assert.ok(across.domains.find(d=>d.id==='R').criteria.includes('R4.2'));
+  assert.ok(!across.domains.find(d=>d.id==='T').criteria.includes('R4.2'));
+  assert.ok(across.assessmentRules.some(rule=>rule.includes('entire module')));
   for(const competence of model.competencies){assert.ok(competence.aiRole);assert.ok(competence.learnerResponsibility);assert.ok(competence.assessmentFocus);}
   const chosen=app.run('selectedLearningDesigns()')[0];
   assert.equal(chosen.slotId,'s09');

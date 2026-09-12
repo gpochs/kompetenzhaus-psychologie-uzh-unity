@@ -2,15 +2,27 @@
 
 Diese öffentliche Repository ist die **einmalige, eigenständige Kopie** des bisherigen Spiels mit erhaltener Git-Historie. Hier entsteht eine neue Unity-Web-Version mit Bachelor- und Masterhaus, Vogel- und Ich-Perspektive, unmittelbar sichtbaren Modulquizzen, zusätzlichen Lernquests, eigener Grafik und Sound sowie einem GenAI-Baututor.
 
-Das neue Kompetenzmodell 2.1 verbindet Fachwissenschaft, Future Skills und KI in 16 Kompetenzen mit 48 eindeutig zugeordneten Kriterien. Die 153 Lernzielvorschläge zeigen konkrete Aufgaben und Nachweise; sie sind ein Entwurf und keine beschlossene Studienordnung. Die folgenden Abschnitte zur alten Version bleiben als historische Dokumentation erhalten.
+Das neue Kompetenzmodell **2.2.0-draft** verbindet Fachwissenschaft, Future Skills und KI in **16 Kompetenzen mit 48 eindeutig zugeordneten Kriterien**. Die 153 Lernzielvorschläge für 43 Modulslots und drei Wahlvarianten beschreiben konkrete Aufgaben und vorgeschlagene Nachweise. Vierzehn Zukunftsansichten und zwölf Berufsperspektiven verwenden dieselben Kriterien. Alle Angaben zum künftigen Lerndesign sind Entwürfe, keine beschlossene Studienordnung.
+
+KI betrifft alle sechs Kompetenzbereiche: fachliches Verstehen, wissenschaftliches Prüfen, verantwortliches Handeln, Zusammenarbeit, technische Gestaltung und Werte. Eine eigene Ansicht macht diese Verbindungen sichtbar, ohne Kriterien oder Bewertungen zu verdoppeln. Phasen ohne, mit und über KI werden passend zur Aufgabe vorgeschlagen; daraus entstehen weder pauschal KI-freie Pflichtmodule noch zusätzliche Prüfungen. Gebaute Module und bestandene Spielquizze zeigen Lerngelegenheiten und Spielübung, keine nachgewiesene Kompetenz.
 
 **Status: in Entwicklung.** Noch kein fertiger Unity-Web-Build veröffentlicht. [Entwicklungsumfang und Nachweise](docs/REBUILD.md) · [Lerndaten](content/README.md) · [GenAI-Integration](docs/genai-integration-design.md).
+
+Die Unity-Szene ist aufgebaut; 22 eigene FBX-Modelle wurden für den Webeinsatz optimiert. Die erneuten Physik- und Browserprüfungen laufen. Der [Tutor 2.2](https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043) ist bereits separat veröffentlicht; sein bestätigter Prüfungsumfang steht in [companion/published.json](companion/published.json). Das Spiel selbst wird nach der Abnahme über die Wurzel des Branches `gh-pages` veröffentlicht.
+
+Für den Einstieg in die neue Webfassung:
+
+- **Bauen:** In die 3D-Fläche klicken, dann mit **W A S D** oder den **Pfeiltasten** die Vogelansicht verschieben. **+ / −** vergrössert oder verkleinert die Ansicht; ein Klick auf einen Lernort öffnet dessen Aufgabe.
+- **Erkunden:** Mit **W A S D** oder den **Pfeiltasten** gehen. Zum Umsehen die **linke Maustaste halten und ziehen**. Bei einem erreichbaren Lernort **E** drücken.
+- **Quiz:** Antwort auswählen → **Antwort prüfen** → Erklärung lesen → **Weiter**. Offene Dialoge halten die Bewegung an; **Esc** schliesst sie. **Studium** öffnet Module und Kompetenzansichten, **KI-Begleitung** den freiwilligen Tutorzugang.
 
 Das [bisherige Spiel](https://gpochs.github.io/kompetenzhaus-psychologie-uzh/) und seine [ursprüngliche Repository](https://github.com/gpochs/kompetenzhaus-psychologie-uzh) bleiben erhalten. Zusatzkostenbudget dieser Neuentwicklung: **0**. Interne Originaldokumente werden nicht veröffentlicht.
 
 ---
 
 ## Dokumentation der übernommenen Ausgangsversion
+
+Die folgenden Beschreibungen, Kompetenzkürzel und Startanweisungen beziehen sich auf das historische Spiel. Sie sind keine Anleitung oder Leistungszusage für den neuen Unity-Build.
 
 # Das Kompetenzhaus — Psychologie UZH (Entwurf)
 

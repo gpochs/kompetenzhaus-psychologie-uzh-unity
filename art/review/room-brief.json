@@ -69,5 +69,6 @@
     "wallElevations": [],
     "visualTarget": "../references/two-houses-concept.png",
     "openingContactSheet": "floor-plan.png"
-  }
+  },
+  "layoutRole": "optional-starter"
 }

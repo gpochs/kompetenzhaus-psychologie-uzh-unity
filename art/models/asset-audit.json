@@ -1,0 +1,1589 @@
+{
+  "generator": "Own local Blender geometry from approved references",
+  "version": 3,
+  "generatedAt": "2026-09-12T10:56:24.713652+00:00",
+  "blenderVersion": "5.2.1 LTS",
+  "generatorScriptSha256": "dbd5b13372812ce9debf0874da46d6453d6ccc5a7e8ebf746559cc80ac8d5faa",
+  "propsManifestSha256": "650a3bcd7b641a1db3b644c138523c52b605a1db172027ff1a9377298fe81ba0",
+  "conventions": {
+    "units": "meters",
+    "gridSizeMetres": 4,
+    "floorHeightMetres": 3.2,
+    "blenderUp": "Z",
+    "unityUp": "Y"
+  },
+  "sourceBlend": {
+    "path": "kompetenzhaus-assets.blend",
+    "sha256": "a37b3df586be01a234c84315f1e5a011174567ac3d6963359b8624f2da76b842"
+  },
+  "materialManifest": {
+    "path": "material-manifest.json",
+    "sha256": "15b87aa7170c641e0215e56000246de5cec97d5edbc38576dd2021b122b75940"
+  },
+  "stairContract": {
+    "riseMetres": 3.2,
+    "runMetres": 3.2,
+    "riserCount": 16,
+    "riserHeightMetres": 0.2,
+    "goingMetres": 0.2,
+    "externalUnityLandingMetres": 0.8,
+    "ascentAxis": "Blender +Y; measured and normalized to Unity +Z in WorldSetup"
+  },
+  "guideMotion": {
+    "kind": "rigid-named-parts-not-skinned",
+    "jointPivotsBlender": {
+      "GuideBody": [
+        0,
+        0,
+        0
+      ],
+      "LeftUpperArm": [
+        -0.27,
+        0,
+        1.37
+      ],
+      "RightUpperArm": [
+        0.27,
+        0,
+        1.37
+      ],
+      "LeftForearm": [
+        -0.38,
+        -0.01,
+        1.13
+      ],
+      "RightForearm": [
+        0.38,
+        -0.01,
+        1.13
+      ],
+      "LeftHand": [
+        -0.48,
+        -0.02,
+        0.92
+      ],
+      "RightHand": [
+        0.48,
+        -0.02,
+        0.92
+      ],
+      "LeftLeg": [
+        -0.13,
+        0,
+        0.87
+      ],
+      "RightLeg": [
+        0.13,
+        0,
+        0.87
+      ],
+      "LeftFoot": [
+        -0.13,
+        0,
+        0.15
+      ],
+      "RightFoot": [
+        0.13,
+        0,
+        0.15
+      ]
+    }
+  },
+  "reviewImages": [
+    {
+      "path": "../review/model-contact-sheet.png",
+      "sha256": "7bc27e3a9b2b74f8c86403b17d5f3068661bb6451273b1f8e827c495766f5bec",
+      "assetIds": [
+        "wall-window",
+        "wall-door",
+        "wall-solid",
+        "wall-partition",
+        "floor-tile",
+        "roof-flat",
+        "roof-gabled",
+        "balcony",
+        "staircase",
+        "evidence-table",
+        "research-desk",
+        "discussion-sofa",
+        "courtyard-tree",
+        "student-guide",
+        "bookshelf",
+        "lamp",
+        "noticeboard",
+        "chair",
+        "bench",
+        "acoustic-divider",
+        "achievement-display",
+        "research-poster"
+      ],
+      "status": "rendered-awaiting-form-review"
+    },
+    {
+      "path": "../review/architecture-models.png",
+      "sha256": "71e2db62d1db84e9d403e697c00a54e7ed147d1794746e5ceb035f9b0955f970",
+      "assetIds": [
+        "wall-window",
+        "wall-door",
+        "wall-solid",
+        "wall-partition",
+        "floor-tile",
+        "roof-flat",
+        "roof-gabled",
+        "balcony",
+        "staircase"
+      ],
+      "status": "rendered-awaiting-form-review"
+    },
+    {
+      "path": "../review/learning-models.png",
+      "sha256": "5f8b42d284ef3fb84735f077812688d409751b0ad0471596280f16c799cdff1e",
+      "assetIds": [
+        "evidence-table",
+        "research-desk",
+        "discussion-sofa",
+        "courtyard-tree",
+        "student-guide"
+      ],
+      "status": "rendered-awaiting-form-review"
+    },
+    {
+      "path": "../review/furniture-models.png",
+      "sha256": "46b9ee4d87dc643b2172149bb1a5ad0945bf1563b813b8938677760c8dfaaace",
+      "assetIds": [
+        "bookshelf",
+        "lamp",
+        "noticeboard",
+        "chair",
+        "bench",
+        "acoustic-divider",
+        "achievement-display",
+        "research-poster"
+      ],
+      "status": "rendered-awaiting-form-review"
+    },
+    {
+      "path": "../review/student-guide-model.png",
+      "sha256": "71dfd460ad39d85f52f19dbf8c110f76d59d6740e6559d39e8510ac1167ade6f",
+      "assetIds": [
+        "student-guide"
+      ],
+      "status": "rendered-awaiting-form-review"
+    }
+  ],
+  "approvalStatus": "pending-form-review",
+  "assets": [
+    {
+      "id": "wall-window",
+      "triangles": 222,
+      "triangleBudget": 3500,
+      "min": [
+        -2.0199999809265137,
+        -0.17000000178813934,
+        0.0
+      ],
+      "max": [
+        2.0199999809265137,
+        0.14999999105930328,
+        3.2200000286102295
+      ],
+      "dimensions": [
+        4.039999961853027,
+        0.3199999928474426,
+        3.2200000286102295
+      ],
+      "sourceReference": "../references/architecture-kit.png",
+      "sourceReferenceSha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "grid-contact-plane",
+      "objects": [
+        {
+          "name": "wall-window",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 5
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 5,
+      "sourceCell": "row-1-column-1",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "wall-door",
+      "triangles": 686,
+      "triangleBudget": 2500,
+      "min": [
+        -2.0199999809265137,
+        -0.21000000834465027,
+        0.0
+      ],
+      "max": [
+        2.0199999809265137,
+        0.14499999582767487,
+        3.2200000286102295
+      ],
+      "dimensions": [
+        4.039999961853027,
+        0.35500000417232513,
+        3.2200000286102295
+      ],
+      "sourceReference": "../references/architecture-kit.png",
+      "sourceReferenceSha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "grid-contact-plane",
+      "objects": [
+        {
+          "name": "wall-door",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 6
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 6,
+      "sourceCell": "row-1-column-2",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "wall-solid",
+      "triangles": 140,
+      "triangleBudget": 1500,
+      "min": [
+        -2.0199999809265137,
+        -0.14749999344348907,
+        0.0
+      ],
+      "max": [
+        2.0199999809265137,
+        0.14499999582767487,
+        3.2200000286102295
+      ],
+      "dimensions": [
+        4.039999961853027,
+        0.29249998927116394,
+        3.2200000286102295
+      ],
+      "sourceReference": "../references/architecture-kit.png",
+      "sourceReferenceSha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "grid-contact-plane",
+      "objects": [
+        {
+          "name": "wall-solid",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 2
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 2,
+      "sourceCell": "derived-from-row-1-column-1",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "wall-partition",
+      "triangles": 686,
+      "triangleBudget": 2500,
+      "min": [
+        -2.0199999809265137,
+        -0.21000000834465027,
+        0.0
+      ],
+      "max": [
+        2.0199999809265137,
+        0.14499999582767487,
+        3.2200000286102295
+      ],
+      "dimensions": [
+        4.039999961853027,
+        0.35500000417232513,
+        3.2200000286102295
+      ],
+      "sourceReference": "../references/architecture-kit.png",
+      "sourceReferenceSha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "grid-contact-plane",
+      "objects": [
+        {
+          "name": "wall-partition",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 5
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 5,
+      "sourceCell": "row-2-column-4",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "floor-tile",
+      "triangles": 130,
+      "triangleBudget": 4000,
+      "min": [
+        -2.0,
+        -2.0,
+        -0.30000001192092896
+      ],
+      "max": [
+        2.0,
+        2.0,
+        0.024000003933906555
+      ],
+      "dimensions": [
+        4.0,
+        4.0,
+        0.3240000158548355
+      ],
+      "sourceReference": "../references/architecture-kit.png",
+      "sourceReferenceSha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "grid-contact-plane",
+      "objects": [
+        {
+          "name": "floor-tile",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 4
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 4,
+      "sourceCell": "row-1-column-3",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "roof-flat",
+      "triangles": 104,
+      "triangleBudget": 2000,
+      "min": [
+        -2.049999952316284,
+        -2.049999952316284,
+        0.0
+      ],
+      "max": [
+        2.049999952316284,
+        2.049999952316284,
+        0.6000000238418579
+      ],
+      "dimensions": [
+        4.099999904632568,
+        4.099999904632568,
+        0.6000000238418579
+      ],
+      "sourceReference": "../references/architecture-kit.png",
+      "sourceReferenceSha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "grid-contact-plane",
+      "objects": [
+        {
+          "name": "roof-flat",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 2
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 2,
+      "sourceCell": "row-1-column-4",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "roof-gabled",
+      "triangles": 748,
+      "triangleBudget": 3000,
+      "min": [
+        -2.1581850051879883,
+        -2.0999999046325684,
+        -0.0358542799949646
+      ],
+      "max": [
+        2.158184766769409,
+        2.0999999046325684,
+        1.440000057220459
+      ],
+      "dimensions": [
+        4.3163697719573975,
+        4.199999809265137,
+        1.4758543372154236
+      ],
+      "sourceReference": "../references/architecture-kit.png",
+      "sourceReferenceSha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "grid-contact-plane",
+      "objects": [
+        {
+          "name": "roof-gabled",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 3
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 3,
+      "sourceCell": "row-2-column-1",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "balcony",
+      "triangles": 404,
+      "triangleBudget": 2000,
+      "min": [
+        -2.0,
+        -1.2000000476837158,
+        -0.23999999463558197
+      ],
+      "max": [
+        2.0,
+        0.0,
+        1.1250001192092896
+      ],
+      "dimensions": [
+        4.0,
+        1.2000000476837158,
+        1.3650001138448715
+      ],
+      "sourceReference": "../references/architecture-kit.png",
+      "sourceReferenceSha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "grid-contact-plane",
+      "objects": [
+        {
+          "name": "balcony",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 3
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 3,
+      "sourceCell": "row-2-column-2",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "staircase",
+      "triangles": 808,
+      "triangleBudget": 4000,
+      "min": [
+        -0.7649999856948853,
+        -2.009999990463257,
+        -2.2351741790771484e-08
+      ],
+      "max": [
+        0.7649999856948853,
+        1.209999918937683,
+        4.143921852111816
+      ],
+      "dimensions": [
+        1.5299999713897705,
+        3.21999990940094,
+        4.143921874463558
+      ],
+      "sourceReference": "../references/architecture-kit.png",
+      "sourceReferenceSha256": "d046f09f1d3b2c6655ed2ff68ef02d3c63c55ab2058b15dd4aa9877d684d34fd",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "grid-contact-plane",
+      "objects": [
+        {
+          "name": "staircase",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 3
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 3,
+      "sourceCell": "row-2-column-3",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "evidence-table",
+      "triangles": 1480,
+      "triangleBudget": 6000,
+      "min": [
+        -1.2999999523162842,
+        -1.2999999523162842,
+        0.0
+      ],
+      "max": [
+        1.2999999523162842,
+        1.2999999523162842,
+        0.9039999842643738
+      ],
+      "dimensions": [
+        2.5999999046325684,
+        2.5999999046325684,
+        0.9039999842643738
+      ],
+      "sourceReference": "../references/asset-references.png",
+      "sourceReferenceSha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "evidence-table",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 5
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 5,
+      "sourceCell": "top-left",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          2.5999999046325684,
+          2.5999999046325684,
+          0.9004999995231628
+        ],
+        "appliedScale": [
+          1.0000000366797828,
+          1.0000000366797828,
+          1.0038867301262526
+        ],
+        "targetDimensions": [
+          2.6,
+          2.6,
+          0.904
+        ]
+      }
+    },
+    {
+      "id": "research-desk",
+      "triangles": 318,
+      "triangleBudget": 4000,
+      "min": [
+        -0.699999988079071,
+        -0.3499999940395355,
+        0.0
+      ],
+      "max": [
+        0.699999988079071,
+        0.3499999940395355,
+        1.399999976158142
+      ],
+      "dimensions": [
+        1.399999976158142,
+        0.699999988079071,
+        1.399999976158142
+      ],
+      "sourceReference": "../references/asset-references.png",
+      "sourceReferenceSha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "research-desk",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 5
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 5,
+      "sourceCell": "bottom-left",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          1.399999976158142,
+          0.699999988079071,
+          1.399999976158142
+        ],
+        "appliedScale": [
+          1.0000000170298988,
+          1.0000000170298988,
+          1.0000000170298988
+        ],
+        "targetDimensions": [
+          1.4,
+          0.7,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "discussion-sofa",
+      "triangles": 1680,
+      "triangleBudget": 5000,
+      "min": [
+        -1.100000023841858,
+        -0.44999998807907104,
+        0.0
+      ],
+      "max": [
+        1.100000023841858,
+        0.44999998807907104,
+        0.8500000238418579
+      ],
+      "dimensions": [
+        2.200000047683716,
+        0.8999999761581421,
+        0.8500000238418579
+      ],
+      "sourceReference": "../references/asset-references.png",
+      "sourceReferenceSha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "discussion-sofa",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 3
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 3,
+      "sourceCell": "top-right",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          2.571667194366455,
+          1.182725504040718,
+          0.7900000251829624
+        ],
+        "appliedScale": [
+          0.8554761692412469,
+          0.7609542509442795,
+          1.0759493327903904
+        ],
+        "targetDimensions": [
+          2.2,
+          0.9,
+          0.85
+        ]
+      }
+    },
+    {
+      "id": "courtyard-tree",
+      "triangles": 576,
+      "triangleBudget": 4500,
+      "min": [
+        -1.2000000476837158,
+        -1.2000000476837158,
+        0.0
+      ],
+      "max": [
+        1.2000000476837158,
+        1.2000000476837158,
+        3.0
+      ],
+      "dimensions": [
+        2.4000000953674316,
+        2.4000000953674316,
+        3.0
+      ],
+      "sourceReference": "../references/asset-references.png",
+      "sourceReferenceSha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "courtyard-tree",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 6
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 6,
+      "sourceCell": "bottom-middle",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          2.0733100175857544,
+          1.8937948942184448,
+          3.080000162124634
+        ],
+        "appliedScale": [
+          1.1575692875852,
+          1.2672966894814985,
+          0.974025922755326
+        ],
+        "targetDimensions": [
+          2.4,
+          2.4,
+          3
+        ]
+      }
+    },
+    {
+      "id": "student-guide",
+      "triangles": 6208,
+      "triangleBudget": 9000,
+      "min": [
+        -0.531000018119812,
+        -0.24000000953674316,
+        0.0
+      ],
+      "max": [
+        0.531000018119812,
+        0.17649999260902405,
+        1.8388080596923828
+      ],
+      "dimensions": [
+        1.062000036239624,
+        0.4165000021457672,
+        1.8388080596923828
+      ],
+      "sourceReference": "../references/asset-references.png",
+      "sourceReferenceSha256": "35d48763978cb208c9756d59ebced34d14dad1368a0dfdce7246782f35462b60",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "pivotMode": "named-part-pivots",
+      "objects": [
+        {
+          "name": "LeftFoot",
+          "origin": [
+            -0.12999999523162842,
+            0.0,
+            0.15000000596046448
+          ],
+          "materialSlots": 3
+        },
+        {
+          "name": "LeftLeg",
+          "origin": [
+            -0.12999999523162842,
+            0.0,
+            0.8700000047683716
+          ],
+          "materialSlots": 1
+        },
+        {
+          "name": "RightFoot",
+          "origin": [
+            0.12999999523162842,
+            0.0,
+            0.15000000596046448
+          ],
+          "materialSlots": 3
+        },
+        {
+          "name": "RightLeg",
+          "origin": [
+            0.12999999523162842,
+            0.0,
+            0.8700000047683716
+          ],
+          "materialSlots": 1
+        },
+        {
+          "name": "GuideBody",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 6
+        },
+        {
+          "name": "LeftUpperArm",
+          "origin": [
+            -0.2699999511241913,
+            6.984919309616089e-09,
+            1.3700000047683716
+          ],
+          "materialSlots": 1
+        },
+        {
+          "name": "LeftForearm",
+          "origin": [
+            -0.37999996542930603,
+            -0.009999998845160007,
+            1.1299999952316284
+          ],
+          "materialSlots": 1
+        },
+        {
+          "name": "LeftHand",
+          "origin": [
+            -0.47999998927116394,
+            -0.019999999552965164,
+            0.9200000166893005
+          ],
+          "materialSlots": 1
+        },
+        {
+          "name": "RightUpperArm",
+          "origin": [
+            0.2699999511241913,
+            6.984919309616089e-09,
+            1.3700000047683716
+          ],
+          "materialSlots": 1
+        },
+        {
+          "name": "RightForearm",
+          "origin": [
+            0.37999996542930603,
+            -0.009999998845160007,
+            1.1299999952316284
+          ],
+          "materialSlots": 1
+        },
+        {
+          "name": "RightHand",
+          "origin": [
+            0.47999998927116394,
+            -0.019999999552965164,
+            0.9200000166893005
+          ],
+          "materialSlots": 1
+        }
+      ],
+      "rendererCount": 11,
+      "materialSlotCount": 20,
+      "sourceCell": "bottom-right",
+      "sizing": {
+        "method": "authored-grid-or-joint-contract-no-envelope-rescale"
+      }
+    },
+    {
+      "id": "bookshelf",
+      "triangles": 1480,
+      "triangleBudget": 5000,
+      "min": [
+        -0.6000000238418579,
+        -0.1599999964237213,
+        0.0
+      ],
+      "max": [
+        0.6000000238418579,
+        0.1599999964237213,
+        1.7999999523162842
+      ],
+      "dimensions": [
+        1.2000000476837158,
+        0.3199999928474426,
+        1.7999999523162842
+      ],
+      "sourceReference": "../references/furniture-references.png",
+      "sourceReferenceSha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "bookshelf",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 9
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 9,
+      "sourceCell": "row-1-column-1",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          1.1999999284744263,
+          0.3199999928474426,
+          1.7999999523162842
+        ],
+        "appliedScale": [
+          1.0000000596046483,
+          1.0000000223517422,
+          1.0000000264909539
+        ],
+        "targetDimensions": [
+          1.2,
+          0.32,
+          1.8
+        ]
+      }
+    },
+    {
+      "id": "lamp",
+      "triangles": 1100,
+      "triangleBudget": 2000,
+      "min": [
+        -0.42500001192092896,
+        -0.2750000059604645,
+        0.0
+      ],
+      "max": [
+        0.42500001192092896,
+        0.2750000059604645,
+        1.7000000476837158
+      ],
+      "dimensions": [
+        0.8500000238418579,
+        0.550000011920929,
+        1.7000000476837158
+      ],
+      "sourceReference": "../references/furniture-references.png",
+      "sourceReferenceSha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "lamp",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 4
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 4,
+      "sourceCell": "row-1-column-2",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          0.8499999940395355,
+          0.550000011920929,
+          1.6967451572418213
+        ],
+        "appliedScale": [
+          1.0000000070123112,
+          0.9999999783255843,
+          1.001918286163533
+        ],
+        "targetDimensions": [
+          0.85,
+          0.55,
+          1.7
+        ]
+      }
+    },
+    {
+      "id": "noticeboard",
+      "triangles": 852,
+      "triangleBudget": 2500,
+      "min": [
+        -0.6499999761581421,
+        -0.25,
+        0.0
+      ],
+      "max": [
+        0.6499999761581421,
+        0.25,
+        1.5
+      ],
+      "dimensions": [
+        1.2999999523162842,
+        0.5,
+        1.5
+      ],
+      "sourceReference": "../references/furniture-references.png",
+      "sourceReferenceSha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "noticeboard",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 5
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 5,
+      "sourceCell": "row-1-column-3",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          1.2999999523162842,
+          0.5,
+          1.5
+        ],
+        "appliedScale": [
+          1.0000000366797828,
+          1.0,
+          1.0
+        ],
+        "targetDimensions": [
+          1.3,
+          0.5,
+          1.5
+        ]
+      }
+    },
+    {
+      "id": "chair",
+      "triangles": 392,
+      "triangleBudget": 3000,
+      "min": [
+        -0.2750000059604645,
+        -0.30000001192092896,
+        0.0
+      ],
+      "max": [
+        0.2750000059604645,
+        0.30000001192092896,
+        0.8500000238418579
+      ],
+      "dimensions": [
+        0.550000011920929,
+        0.6000000238418579,
+        0.8500000238418579
+      ],
+      "sourceReference": "../references/furniture-references.png",
+      "sourceReferenceSha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "chair",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 2
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 2,
+      "sourceCell": "row-1-column-4",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          0.550000011920929,
+          0.5867966115474701,
+          0.8372434610500932
+        ],
+        "appliedScale": [
+          0.9999999783255843,
+          1.022500791914443,
+          1.015236355425108
+        ],
+        "targetDimensions": [
+          0.55,
+          0.6,
+          0.85
+        ]
+      }
+    },
+    {
+      "id": "bench",
+      "triangles": 436,
+      "triangleBudget": 2500,
+      "min": [
+        -0.75,
+        -0.2750000059604645,
+        0.0
+      ],
+      "max": [
+        0.75,
+        0.2750000059604645,
+        0.7799999713897705
+      ],
+      "dimensions": [
+        1.5,
+        0.550000011920929,
+        0.7799999713897705
+      ],
+      "sourceReference": "../references/furniture-references.png",
+      "sourceReferenceSha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "bench",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 2
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 2,
+      "sourceCell": "row-2-column-1",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          1.5,
+          0.5449999868869781,
+          0.7657044371590018
+        ],
+        "appliedScale": [
+          1.0,
+          1.0091743362079362,
+          1.0186698184668215
+        ],
+        "targetDimensions": [
+          1.5,
+          0.55,
+          0.78
+        ]
+      }
+    },
+    {
+      "id": "acoustic-divider",
+      "triangles": 308,
+      "triangleBudget": 1500,
+      "min": [
+        -0.5,
+        -0.22499999403953552,
+        0.0
+      ],
+      "max": [
+        0.5,
+        0.22499999403953552,
+        1.600000023841858
+      ],
+      "dimensions": [
+        1.0,
+        0.44999998807907104,
+        1.600000023841858
+      ],
+      "sourceReference": "../references/furniture-references.png",
+      "sourceReferenceSha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "acoustic-divider",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 2
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 2,
+      "sourceCell": "row-2-column-2",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          1.0,
+          0.44999998807907104,
+          1.6375000476837158
+        ],
+        "appliedScale": [
+          1.0,
+          1.0000000264909539,
+          0.977099208188262
+        ],
+        "targetDimensions": [
+          1,
+          0.45,
+          1.6
+        ]
+      }
+    },
+    {
+      "id": "achievement-display",
+      "triangles": 2380,
+      "triangleBudget": 3500,
+      "min": [
+        -0.4000000059604645,
+        -0.2750000059604645,
+        0.0
+      ],
+      "max": [
+        0.4000000059604645,
+        0.2750000059604645,
+        0.699999988079071
+      ],
+      "dimensions": [
+        0.800000011920929,
+        0.550000011920929,
+        0.699999988079071
+      ],
+      "sourceReference": "../references/furniture-references.png",
+      "sourceReferenceSha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "achievement-display",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 2
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 2,
+      "sourceCell": "row-2-column-3",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          0.9200000166893005,
+          0.5999999940395355,
+          0.6180000305175781
+        ],
+        "appliedScale": [
+          0.8695652016169185,
+          0.916666675772932,
+          1.1326860282090059
+        ],
+        "targetDimensions": [
+          0.8,
+          0.55,
+          0.7
+        ]
+      }
+    },
+    {
+      "id": "research-poster",
+      "triangles": 348,
+      "triangleBudget": 600,
+      "min": [
+        -0.3499999940395355,
+        -0.029999999329447746,
+        0.0
+      ],
+      "max": [
+        0.3499999940395355,
+        0.029999999329447746,
+        0.8999999761581421
+      ],
+      "dimensions": [
+        0.699999988079071,
+        0.05999999865889549,
+        0.8999999761581421
+      ],
+      "sourceReference": "../references/furniture-references.png",
+      "sourceReferenceSha256": "15b7a3e3f59f1c8803be9e5a3c39ec40a827995040aade007370333a061c1720",
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivotMode": "base-center",
+      "objects": [
+        {
+          "name": "research-poster",
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "materialSlots": 7
+        }
+      ],
+      "rendererCount": 1,
+      "materialSlotCount": 7,
+      "sourceCell": "row-2-column-4",
+      "sizing": {
+        "method": "authored-full-envelope-fit",
+        "unfittedDimensions": [
+          0.699999988079071,
+          0.05999999865889549,
+          0.8999999761581421
+        ],
+        "appliedScale": [
+          1.0000000170298988,
+          1.0000000223517422,
+          1.0000000264909539
+        ],
+        "targetDimensions": [
+          0.7,
+          0.06,
+          0.9
+        ]
+      }
+    }
+  ],
+  "openings": [
+    {
+      "assetId": "wall-door",
+      "clearWidthMetres": 2.3999998569488525,
+      "clearHeightMetres": 2.6999998927116398,
+      "depthMetres": 0.35500000417232513,
+      "unobstructed": true,
+      "measurementMethod": "evaluated-mesh",
+      "evidence": "wall-door-clearance.json",
+      "evidenceSha256": "cfaa604d620d76a90cf6023b8fa7f8b4a5f867a73cbfd9fa9abef09919b1c457"
+    },
+    {
+      "assetId": "wall-partition",
+      "clearWidthMetres": 2.3999998569488525,
+      "clearHeightMetres": 2.6999998927116398,
+      "depthMetres": 0.35500000417232513,
+      "unobstructed": true,
+      "measurementMethod": "evaluated-mesh",
+      "evidence": "wall-partition-clearance.json",
+      "evidenceSha256": "cfaa604d620d76a90cf6023b8fa7f8b4a5f867a73cbfd9fa9abef09919b1c457"
+    }
+  ],
+  "exports": [
+    {
+      "assetId": "evidence-table",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/evidence-table.fbx",
+      "sha256": "31e151abdf915a143f6f4dd43717ecce01647334d6e5fb815d91aa9449b1a2c3"
+    },
+    {
+      "assetId": "wall-door",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/wall-door.fbx",
+      "sha256": "22ff63efcfd4966258fad140e38aa61524414928122934741ddd7de010990477"
+    },
+    {
+      "assetId": "discussion-sofa",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/discussion-sofa.fbx",
+      "sha256": "160f9e3eab6212d25c2a984a53851cb513f3fd10c9c2b9c2d3d178acd94fc457"
+    },
+    {
+      "assetId": "research-desk",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/research-desk.fbx",
+      "sha256": "7c8442170491119ac8e3f1d9359cac7ab60897803d65dd398ac0877cdc9f2a98"
+    },
+    {
+      "assetId": "courtyard-tree",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/courtyard-tree.fbx",
+      "sha256": "7f03339d4522a0265e9bf4fa160013eda6f21bf7419a1bd450d4689eb030e0d9"
+    },
+    {
+      "assetId": "student-guide",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/student-guide.fbx",
+      "sha256": "2ee00e4d0fa397cc86cb04d3228a655d134303b7c3880b6d2cbceffb94e89ab9"
+    },
+    {
+      "assetId": "wall-window",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/wall-window.fbx",
+      "sha256": "4a5e5b4d5b799c40d055accb70f8a1e1c6259de670be7569689abe78f0f82ea8"
+    },
+    {
+      "assetId": "wall-solid",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/wall-solid.fbx",
+      "sha256": "2a4bcdf5beb5bf8357b37cdf45ffd4aaa8051832e37765157fb4f7824a74e43e"
+    },
+    {
+      "assetId": "floor-tile",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/floor-tile.fbx",
+      "sha256": "c4a9dad36cf7d667bc0a32fdc416f234901c92f90cf6992116789a18189e0b98"
+    },
+    {
+      "assetId": "roof-flat",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/roof-flat.fbx",
+      "sha256": "dc5bdb5dd12dde12598659a2e578155cb99d3330ecbabb537b13c8b375c90bd5"
+    },
+    {
+      "assetId": "roof-gabled",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/roof-gabled.fbx",
+      "sha256": "4134ee0c8e984842bb2fb9920960410a092f66e58f3bbdf0a3d764540e299fc5"
+    },
+    {
+      "assetId": "balcony",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/balcony.fbx",
+      "sha256": "c1e72ac944c59492257c395207264782588e43301958bc99d297cae62bef76fb"
+    },
+    {
+      "assetId": "staircase",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/staircase.fbx",
+      "sha256": "48a66a5abd4ae32659a96f17081bb639e83f86474dc14fe4301a172976cdc593"
+    },
+    {
+      "assetId": "wall-partition",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/wall-partition.fbx",
+      "sha256": "d0957906b182165c54897ef1d6c3e5b5f952ecf21da5dae0e34e633d44b9331a"
+    },
+    {
+      "assetId": "bookshelf",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/bookshelf.fbx",
+      "sha256": "c59c1d3c58e25082ab9dc1a26eec16708161e3ff5ec20cc4c8d92dc03e146d59"
+    },
+    {
+      "assetId": "lamp",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/lamp.fbx",
+      "sha256": "2512da54f87eefb614f2dab602e5cea22a288fb388b750301463de16d19037ca"
+    },
+    {
+      "assetId": "noticeboard",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/noticeboard.fbx",
+      "sha256": "f5ef3d7b8e7e0d552cfcda87f63265191749770ba2bf711c19c7460689a6201f"
+    },
+    {
+      "assetId": "chair",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/chair.fbx",
+      "sha256": "7224e588760a053c81d73ca285883d4d62ff3417b4eabfdcf63a3c5bcef1842c"
+    },
+    {
+      "assetId": "bench",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/bench.fbx",
+      "sha256": "1190073c61bf5b104f9ca996d63bd5352c0a88896a442bd7daee5b85cc7ed5c7"
+    },
+    {
+      "assetId": "acoustic-divider",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/acoustic-divider.fbx",
+      "sha256": "3acc783c3d1e95cc00936d7375aa9e030ebe1b5e6700bdedfce4fc5ccba752ec"
+    },
+    {
+      "assetId": "achievement-display",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/achievement-display.fbx",
+      "sha256": "21a04f6bc76cd62edd66bc9bd7df9b61af055727387fc28d77e13aa7191ec2d1"
+    },
+    {
+      "assetId": "research-poster",
+      "path": "../../UnityProject/Assets/Kompetenzhaus/Art/Models/research-poster.fbx",
+      "sha256": "a7b490ef61a5da13d7cb5f259eda6e977603025a9a4fbb79a0905aab472b83d9"
+    }
+  ],
+  "totalUniqueTriangles": 21486,
+  "exported": true,
+  "sourcePostprocess": {
+    "script": "../blender/promote_review.py",
+    "scriptSha256": "143051ac780e3eb8324b48d4c688343ee4900c20a1bccc17380a891b8b115c71",
+    "processedAt": "2026-09-12T10:58:10.054274+00:00",
+    "inputBlendSha256": "6f7f33d047f46af0ca4916e238ef06c6659d1705299bf58459ef9a92b7e3c652",
+    "outputBlendSha256": "a37b3df586be01a234c84315f1e5a011174567ac3d6963359b8624f2da76b842",
+    "geometryFingerprintBeforeAndAfter": "14b48fcd4a4dc6f9e6b237096fd7ec9887db5a4ab353abb484eefa99183c4027",
+    "operation": "Copy exact reviewed images to canonical review directory; normalize saved relative render output path only. No mesh, material, transform, pivot or export change."
+  },
+  "exportedAt": "2026-09-12T11:09:50.426932+00:00",
+  "publicExport": {
+    "script": "../blender/export_public_fbx.py",
+    "scriptSha256": "076811966de3ab7cb9f5e7fddecbab1bcc09b01a8d1afb4452e568f2ceef2862",
+    "metadataAudit": "fbx-metadata-audit.json",
+    "metadataAuditSha256": "39ee51e5e0dd2d319efb873a49d956e67ad660969d73d370991596364306c296"
+  }
+}

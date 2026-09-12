@@ -29,7 +29,8 @@ export function upgradeFramework(html,root,catalog){
   html=html.replace('<div id="cvBeispiel"></div>',`<label style="flex-basis:100%;display:grid;gap:5px" data-de="Eigene Erfahrung (optional, ohne sensible Angaben)" data-en="Your experience (optional, no sensitive details)">Eigene Erfahrung (optional, ohne sensible Angaben)</label><textarea id="cvEvidence" aria-label="Eigene Erfahrung / Your experience" rows="3" maxlength="800" style="width:100%;font:inherit;padding:8px;border:1px solid #cfc5b7;border-radius:8px"></textarea><div id="cvBeispiel"></div>`);
   html=html.replaceAll('Fa1–Fa10, KI1–KI6, Fu1–Fu3','Fachwissenschaft, Future Skills und KI').replaceAll('competences (Fachwissenschaft, Future Skills und KI)','competencies (psychological science, future skills and AI)');
   html=html.replaceAll('Modulwahl und vorhandene Kompetenzwerte','Modulwahl und Spielübungen').replaceAll('module choices and available competence values','module choices and game practice');
-  html=html.replaceAll('Kompetenzmodell vom 02.07.2026','Kompetenzmodell 2.1 vom September 2026').replaceAll('model of 2 July 2026','model 2.1 of September 2026');
+  const modelRelease=framework.version.replace(/\.0-draft$/, '');
+  html=html.replaceAll('Kompetenzmodell vom 02.07.2026',`Kompetenzmodell ${modelRelease} vom September 2026`).replaceAll('model of 2 July 2026',`model ${modelRelease} of September 2026`);
   html=html.replaceAll('karrAktiv.de.replace(/^[^ ]+ /, "")','karrAktiv.de').replaceAll('karrAktiv.en.replace(/^[^ ]+ /, "")','karrAktiv.en');
   replaceSection('function stufenFuss(stufe) {','const STARTFRAGEN = {','');
   for(const [before,after] of [

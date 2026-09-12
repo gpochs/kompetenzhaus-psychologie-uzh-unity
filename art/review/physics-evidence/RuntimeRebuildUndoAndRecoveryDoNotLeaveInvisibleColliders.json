@@ -1,0 +1,8 @@
+{
+    "test": "RuntimeRebuildUndoAndRecoveryDoNotLeaveInvisibleColliders",
+    "scene": "Assets/Kompetenzhaus/Scenes/Kompetenzhaus.unity",
+    "method": "Actual scene CharacterController.Move against runtime colliders; fixed-step trajectory, no substitute geometry.",
+    "playerHeight": 1.75,
+    "playerRadius": 0.30000001192092896,
+    "frames": []
+}

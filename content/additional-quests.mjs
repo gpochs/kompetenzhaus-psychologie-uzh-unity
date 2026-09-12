@@ -9,7 +9,7 @@ const Q = (id, de, en, options, correctIndex, feedbackDe, feedbackEn) => ({
 const reward = (cosmeticId, de, en) => ({ cosmeticId, title: L(de, en), experience: 40, type: 'cosmetic-and-game-progress', academicCredit: false });
 const draft = {
   status: 'Designentwurf', sourceType: 'original-authored-fictional-exercise',
-  frameworkVersion: '2.1.0-draft', alignmentMeaning: 'game-practice-topics-not-assessed-competence',
+  frameworkVersion: '2.2.0-draft', alignmentMeaning: 'game-practice-topics-not-assessed-competence',
   liveAIRequired: false, personalDataRequired: false,
   completionRule: 'all-checks-correct-with-retry-and-explicit-feedback-continue',
 };

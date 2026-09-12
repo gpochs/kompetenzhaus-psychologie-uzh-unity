@@ -115,6 +115,7 @@ test('explicit v3 tutor export sends known choices and practice, never legacy sc
   const unknownVersion = buildTutorContext({ ...source, frameworkProfile: { frameworkVersion: 'unrecognized' } }, catalog);
   assert.equal(Object.hasOwn(unknownVersion, 'frameworkVersion'), false);
   assert.equal(buildTutorContext({ ...source, frameworkProfile: { frameworkVersion: '2.1.0-draft' } }, catalog).frameworkVersion, '2.1.0-draft');
+  assert.equal(buildTutorContext({ ...source, frameworkProfile: { frameworkVersion: '2.2.0-draft' } }, catalog).frameworkVersion, '2.2.0-draft');
 });
 
 const connectionHouse = () => ({ rooms: [

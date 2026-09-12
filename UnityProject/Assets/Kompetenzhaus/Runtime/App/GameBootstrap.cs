@@ -29,9 +29,18 @@ namespace Kompetenzhaus
             try
             {
                 Catalog = ContentCatalog.LoadResource();
-                var store = new ProgressStore(Catalog);
-                SaveWarning = store.LoadWarning;
-                Progression = new ProgressionService(Catalog, store);
+#if UNITY_EDITOR
+                // The real scene can be exercised by local runtime QA without reading
+                // or overwriting the developer's saved learning and architecture state.
+                if (Array.IndexOf(Environment.GetCommandLineArgs(), "-qaNoPersist") >= 0)
+                    Progression = new ProgressionService(Catalog, new ProgressData(), () => { });
+                else
+#endif
+                {
+                    var store = new ProgressStore(Catalog);
+                    SaveWarning = store.LoadWarning;
+                    Progression = new ProgressionService(Catalog, store);
+                }
                 Architecture = new ArchitectureService(Catalog, Progression);
                 Quiz = new QuizSession();
                 Quiz.Changed += OnQuizChanged;

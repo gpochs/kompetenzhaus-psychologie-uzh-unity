@@ -20,6 +20,14 @@ const expectedBaseline = module => ({
   title: structuredClone(module.title), ects: module.ects, description: structuredClone(module.description),
   houseId: module.houseId, semester: module.semester, stageId: module.stageId,
 });
+const aiStudyAssessment = proposal => ({
+  status: 'design-proposal', wholeModuleAiRequirement: 'not-specified',
+  withoutAiObjectiveIds: proposal.objectives.filter(o=>o.contextIds.includes('without-ai')).map(o=>o.id),
+  withAiObjectiveIds: proposal.objectives.filter(o=>o.contextIds.includes('with-ai')).map(o=>o.id),
+  aboutAiObjectiveIds: proposal.objectives.filter(o=>o.contextIds.includes('about-ai')).map(o=>o.id),
+  independentEvidenceRef: 'proposal.independentEvidence', assessmentProposalRef: 'proposal.assessmentProposal',
+  policyRef: 'aiAcrossCurriculum.phasePolicy',
+});
 function bilingual(value, location, authored = true) {
   requireValue(value && typeof value === 'object', `${location}: bilingual object required`);
   for (const language of ['de', 'en']) requireValue(typeof value[language] === 'string' && value[language].trim().length > 5, `${location}.${language}: substantive text required`);
@@ -46,7 +54,10 @@ export function buildPackage(catalog, framework, sourceDesigns = designs, hashes
     modules: records.map(source => ({
       id: source.id, code: source.code, kind: catalog.modules.some(m => m.id === source.id) ? 'slot' : 'option',
       parentSlotIds: source.id.startsWith('option:') ? catalog.modules.filter(m => m.optionCodes.includes(source.code)).map(m => m.id) : [],
-      baseline: expectedBaseline(source), proposal: structuredClone(definitions.get(source.id).proposal),
+      baseline: expectedBaseline(source), proposal: {
+        ...structuredClone(definitions.get(source.id).proposal),
+        aiStudyAssessment: aiStudyAssessment(definitions.get(source.id).proposal),
+      },
     })),
   };
   const report = validatePackage(modulePackage, catalog, framework);
@@ -97,6 +108,7 @@ export function validatePackage(modulePackage, catalog, framework) {
       for (const field of objectiveFields) bilingual(objective[field], `${objective.id}.${field}`);
     }
     requireValue(p.activitySequence.de === p.objectives.map((o, i) => `${i + 1}. ${o.task.de}`).join('\n'), `${module.id}: German sequence diverges from tasks`);
+    requireValue(equal(p.aiStudyAssessment,aiStudyAssessment(p)),`${module.id}: AI phase references must match actual objectives and create no module mandate`);
     requireValue(p.activitySequence.en === p.objectives.map((o, i) => `${i + 1}. ${o.task.en}`).join('\n'), `${module.id}: English sequence diverges from tasks`);
     for (const direction of ['prior', 'next']) {
       requireValue(Array.isArray(p.spiralLinks?.[direction]), `${module.id}: missing spiral ${direction}`);

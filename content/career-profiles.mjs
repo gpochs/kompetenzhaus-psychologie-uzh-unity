@@ -3,7 +3,7 @@ const all=id=>[`${id}.1`,`${id}.2`,`${id}.3`];
 const facet=(id,de,en,ids,taskDe,taskEn)=>({id,title:L(de,en),criterionIds:ids,activity:L(taskDe,taskEn)});
 const role=(id,de,en,sourceUrl,facets)=>({id,title:L(de,en),sourceUrl,status:'authored-orientation-view-not-professional-standard',facets});
 export const careerProfiles={
-  schema:'kompetenzhaus.career-profiles',schemaVersion:2,frameworkVersion:'2.1.0-draft',
+  schema:'kompetenzhaus.career-profiles',schemaVersion:2,frameworkVersion:'2.2.0-draft',
   notice:L('Diese Ansichten zeigen berufliche Tätigkeiten und passende Lerngelegenheiten. Sie beurteilen weder persönliche Eignung noch Berufszulassung. Ein Spielabschluss ersetzt keine Ausbildung, Supervision oder gesetzlich erforderliche Qualifikation.','These views connect professional activities to learning opportunities. They assess neither personal suitability nor eligibility to practise. Completing the game does not replace education, supervision or legally required qualifications.'),
   displayRule:'Show concrete activities, mapped opportunities and next learning options. Never calculate a similarity percentage or a normative target polygon. Each criterion occurs at most once within a role view.',
   roles:[

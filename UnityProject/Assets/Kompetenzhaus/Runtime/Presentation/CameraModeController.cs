@@ -53,6 +53,13 @@ namespace Kompetenzhaus.Presentation
             if (blocked) ReleasePointer();
         }
 
+        public bool ZoomBirdView(int steps)
+        {
+            if (Mode != ViewMode.BirdView || birdCamera == null) return false;
+            birdCamera.orthographicSize = Mathf.Clamp(birdCamera.orthographicSize * Mathf.Pow(.8f, steps), 6f, maximumBirdSize);
+            return true;
+        }
+
         public void FitBirdView(Bounds bounds)
         {
             if (birdCamera == null) return;
@@ -116,6 +123,11 @@ namespace Kompetenzhaus.Presentation
         {
             if (player == null || firstPersonCamera == null) return;
             var mouse = Mouse.current;
+#if UNITY_WEBGL && !UNITY_EDITOR
+            // Embedded browsers can reject pointer lock asynchronously. Drag-look
+            // keeps exploration usable without a browser-specific mouse capture.
+            var looking = mouse != null && mouse.leftButton.isPressed;
+#else
             if (mouse != null && mouse.leftButton.wasPressedThisFrame &&
                 (EventSystem.current == null || !EventSystem.current.IsPointerOverGameObject()))
             {
@@ -123,7 +135,9 @@ namespace Kompetenzhaus.Presentation
                 Cursor.visible = false;
             }
             if (Cursor.lockState != CursorLockMode.Locked) return;
-            if (mouse != null)
+            var looking = mouse != null;
+#endif
+            if (looking)
             {
                 var look = mouse.delta.ReadValue() * (0.08f * progression.Data.accessibility.lookSensitivity);
                 player.transform.Rotate(0f, look.x, 0f);

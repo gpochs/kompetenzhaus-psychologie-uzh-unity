@@ -15,7 +15,48 @@ namespace Kompetenzhaus.Competencies
         public FrameworkV2NamedItem[] contexts = Array.Empty<FrameworkV2NamedItem>();
         public FrameworkV2CompetencyDefinition[] competencies = Array.Empty<FrameworkV2CompetencyDefinition>();
         public FrameworkV2LensDefinition[] futureLenses = Array.Empty<FrameworkV2LensDefinition>();
+        public FrameworkV2AiAcrossDefinition aiAcrossCurriculum;
     }
+    [Serializable] public sealed class FrameworkV2AiAcrossDefinition
+    {
+        public int schemaVersion;
+        public string status;
+        public LocalizedText title, principle, assessmentNotice, flowRule;
+        public FrameworkV2AiDimensionDefinition[] dimensions = Array.Empty<FrameworkV2AiDimensionDefinition>();
+        public FrameworkV2AiDomainDefinition[] domainRows = Array.Empty<FrameworkV2AiDomainDefinition>();
+        public FrameworkV2AiEdgeDefinition[] flowEdges = Array.Empty<FrameworkV2AiEdgeDefinition>();
+        public FrameworkV2AiPhasePolicyDefinition phasePolicy;
+        public FrameworkV2AiExampleDefinition[] examples = Array.Empty<FrameworkV2AiExampleDefinition>();
+    }
+    [Serializable] public sealed class FrameworkV2AiDimensionDefinition { public string id; public LocalizedText title, description; }
+    [Serializable] public sealed class FrameworkV2AiDomainDefinition
+    {
+        public string domainId;
+        public string[] competencyIds, criterionIds, aiRoles;
+        public LocalizedText summary, learnerResponsibility, evidenceFocus;
+    }
+    [Serializable] public sealed class FrameworkV2AiEdgeDefinition
+    {
+        public string fromDomainId, toDomainId;
+        public string[] criterionIds;
+        public LocalizedText label;
+    }
+    [Serializable] public sealed class FrameworkV2AiPhasePolicyDefinition
+    {
+        public bool noWholeModuleMandate;
+        public FrameworkV2AiPhaseDefinition[] phases;
+        public FrameworkV2AiRuleDefinition[] assessmentRules;
+    }
+    [Serializable] public sealed class FrameworkV2AiPhaseDefinition { public string contextId; public LocalizedText title, purpose, learnerAction, assessmentUse; }
+    [Serializable] public sealed class FrameworkV2AiRuleDefinition { public string id; public LocalizedText text; }
+    [Serializable] public sealed class FrameworkV2AiExampleDefinition
+    {
+        public string id;
+        public LocalizedText title, assessmentProposal;
+        public string[] moduleIds, criterionIds;
+        public FrameworkV2AiExamplePhaseDefinition[] phases;
+    }
+    [Serializable] public sealed class FrameworkV2AiExamplePhaseDefinition { public string contextId; public LocalizedText activity, evidence; }
     [Serializable] public sealed class FrameworkV2NamedItem { public string id; public LocalizedText title; }
     [Serializable] public sealed class FrameworkV2LevelDefinition { public int level; public string label; public LocalizedText title, description; }
     [Serializable] public sealed class FrameworkV2MilestoneDefinition { public string id, typicalSemesters; public LocalizedText title; }
@@ -109,12 +150,45 @@ namespace Kompetenzhaus.Competencies
         public FrameworkV2LevelView[] levels;
         public FrameworkV2MilestoneView[] studyMilestones;
         public FrameworkV2LensView[] futureLenses;
+        public FrameworkV2AiAcrossView aiAcrossCurriculum;
         public FrameworkV2CompetencyView[] competencies;
         public FrameworkV2RoleView[] careers;
         public FrameworkV2PracticeView gamePractice;
         public string[] selfReportedModuleIds;
     }
     [Serializable] public sealed class FrameworkV2NamedView { public string id, title; }
+    [Serializable] public sealed class FrameworkV2AiAcrossView
+    {
+        public int schemaVersion;
+        public string status, title, principle, assessmentNotice, flowRule;
+        public FrameworkV2AiDimensionView[] dimensions;
+        public FrameworkV2AiDomainView[] domainRows;
+        public FrameworkV2AiEdgeView[] flowEdges;
+        public FrameworkV2AiPhasePolicyView phasePolicy;
+        public FrameworkV2AiExampleView[] examples;
+    }
+    [Serializable] public sealed class FrameworkV2AiDimensionView { public string id, title, description; }
+    [Serializable] public sealed class FrameworkV2AiDomainView
+    {
+        public string domainId, summary, learnerResponsibility, evidenceFocus;
+        public string[] competencyIds, criterionIds, aiRoles;
+    }
+    [Serializable] public sealed class FrameworkV2AiEdgeView { public string fromDomainId, toDomainId, label; public string[] criterionIds; }
+    [Serializable] public sealed class FrameworkV2AiPhasePolicyView
+    {
+        public bool noWholeModuleMandate;
+        public FrameworkV2AiPhaseView[] phases;
+        public FrameworkV2AiRuleView[] assessmentRules;
+    }
+    [Serializable] public sealed class FrameworkV2AiPhaseView { public string contextId, title, purpose, learnerAction, assessmentUse; }
+    [Serializable] public sealed class FrameworkV2AiRuleView { public string id, text; }
+    [Serializable] public sealed class FrameworkV2AiExampleView
+    {
+        public string id, title, assessmentProposal;
+        public string[] moduleIds, criterionIds;
+        public FrameworkV2AiExamplePhaseView[] phases;
+    }
+    [Serializable] public sealed class FrameworkV2AiExamplePhaseView { public string contextId, activity, evidence; }
     [Serializable] public sealed class FrameworkV2LevelView { public int level; public string label, title, description; }
     [Serializable] public sealed class FrameworkV2MilestoneView { public string id, title, typicalSemesters; }
     [Serializable] public sealed class FrameworkV2LensView
