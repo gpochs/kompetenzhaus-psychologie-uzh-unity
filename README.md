@@ -1,14 +1,14 @@
 # Kompetenzhaus Psychologie UZH – Unity-Neuentwicklung
 
-Diese öffentliche Repository ist die **einmalige, eigenständige Kopie** des bisherigen Spiels mit erhaltener Git-Historie. Hier entsteht eine neue Unity-Web-Version mit Bachelor- und Masterhaus, Vogel- und Ich-Perspektive, unmittelbar sichtbaren Modulquizzen, zusätzlichen Lernquests, eigener Grafik und Sound sowie einem GenAI-Baututor.
+Diese öffentliche Repository ist die **einmalige, eigenständige Kopie** des bisherigen Spiels mit erhaltener Git-Historie. Die neue Unity-Web-Version verbindet Bachelor- und Masterhaus, Vogel- und Ich-Perspektive, unmittelbar sichtbare Modulquizze, zusätzliche Lernquests, eigene Grafik und Sound sowie einen separat geöffneten GenAI-Tutor.
 
 Das neue Kompetenzmodell **2.2.0-draft** verbindet Fachwissenschaft, Future Skills und KI in **16 Kompetenzen mit 48 eindeutig zugeordneten Kriterien**. Die 153 Lernzielvorschläge für 43 Modulslots und drei Wahlvarianten beschreiben konkrete Aufgaben und vorgeschlagene Nachweise. Vierzehn Zukunftsansichten und zwölf Berufsperspektiven verwenden dieselben Kriterien. Alle Angaben zum künftigen Lerndesign sind Entwürfe, keine beschlossene Studienordnung.
 
 KI betrifft alle sechs Kompetenzbereiche: fachliches Verstehen, wissenschaftliches Prüfen, verantwortliches Handeln, Zusammenarbeit, technische Gestaltung und Werte. Eine eigene Ansicht macht diese Verbindungen sichtbar, ohne Kriterien oder Bewertungen zu verdoppeln. Phasen ohne, mit und über KI werden passend zur Aufgabe vorgeschlagen; daraus entstehen weder pauschal KI-freie Pflichtmodule noch zusätzliche Prüfungen. Gebaute Module und bestandene Spielquizze zeigen Lerngelegenheiten und Spielübung, keine nachgewiesene Kompetenz.
 
-**Status: in Entwicklung.** Noch kein fertiger Unity-Web-Build veröffentlicht. [Entwicklungsumfang und Nachweise](docs/REBUILD.md) · [Lerndaten](content/README.md) · [GenAI-Integration](docs/genai-integration-design.md).
+**Veröffentlicht: [Kompetenzhaus spielen](https://gpochs.github.io/kompetenzhaus-psychologie-uzh-unity/).** Die öffentliche Unity-Fassung wurde am 12.09.2026 geprüft. [Release und Prüfungsumfang](docs/RELEASE.md) · [Entwicklungsanleitung](docs/REBUILD.md) · [Lerndaten](content/README.md).
 
-Die Unity-Szene ist aufgebaut; 22 eigene FBX-Modelle wurden für den Webeinsatz optimiert. Die erneuten Physik- und Browserprüfungen laufen. Der [Tutor 2.2](https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043) ist bereits separat veröffentlicht; sein bestätigter Prüfungsumfang steht in [companion/published.json](companion/published.json). Das Spiel selbst wird nach der Abnahme über die Wurzel des Branches `gh-pages` veröffentlicht.
+22 eigene FBX-Modelle bilden die geprüfte Unity-Szene. Die Veröffentlichung läuft über die Wurzel des Branches `gh-pages`. **KI-Begleitung** öffnet den [Tutor 2.2 in Claude](https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043), wo echte Antworten geprüft wurden. Die Generierung im eingebetteten Fenster ist nicht bestätigt und wird deshalb nicht als funktionierender Zugang angeboten. Lernkontext lässt sich freiwillig kopieren; automatische Übertragung findet nicht statt. Details stehen in [companion/published.json](companion/published.json).
 
 Für den Einstieg in die neue Webfassung:
 

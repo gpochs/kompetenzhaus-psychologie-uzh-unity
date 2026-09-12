@@ -1,7 +1,7 @@
 {
   "schema": "kompetenzhaus.web-build-inspection.v1",
   "passed": true,
-  "totalBytes": 20479264,
+  "totalBytes": 20479960,
   "fileCount": 15,
   "issues": [],
   "files": [
@@ -37,8 +37,8 @@
     },
     {
       "path": "companion/published.json",
-      "bytes": 3630,
-      "sha256": "ea779800fbba0e4b1ceec91aca0cdd7caf681fd3e3452de912054254b27fb4c9"
+      "bytes": 4088,
+      "sha256": "45ae86d5bab361a5f650e84d714c6509f096ee4eeefa26a3278cec37792c9cc7"
     },
     {
       "path": "content/kompetenzhaus-content.json",
@@ -72,8 +72,8 @@
     },
     {
       "path": "shell.js",
-      "bytes": 64730,
-      "sha256": "dcfe94f8a1a34a493ccb98d85578c06a03b1409a1355bf0fd574a72d2746ac7b"
+      "bytes": 64968,
+      "sha256": "192e086955d8b9aa919e449f13e3c7e9ede6265b9de5edce474a4d690b3c7463"
     },
     {
       "path": "TemplateData/cover.png",

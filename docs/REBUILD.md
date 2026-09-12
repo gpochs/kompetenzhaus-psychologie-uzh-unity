@@ -2,7 +2,7 @@
 
 Diese eigenständige öffentliche Repository entstand am 12.09.2026 durch eine einmalige Kopie von `gpochs/kompetenzhaus-psychologie-uzh`. Der Ausgangscommit ist `824de17987e6ed20d0eb47a98284dc4717bfe87a`. Die vorhandene Historie bleibt erhalten. `upstream` verweist lesend auf die ursprüngliche Repository; Push dorthin ist in dieser Arbeitskopie deaktiviert.
 
-Das ursprüngliche Spiel bleibt unter https://gpochs.github.io/kompetenzhaus-psychologie-uzh/ erreichbar. Diese Repository erhält eine eigene Unity-Web-Version. Solange kein getesteter Unity-Web-Build veröffentlicht wurde, ist die Neuentwicklung noch kein fertiges Spiel.
+Das [ursprüngliche Spiel](https://gpochs.github.io/kompetenzhaus-psychologie-uzh/) bleibt unverändert erreichbar. Die [neue Unity-Web-Version](https://gpochs.github.io/kompetenzhaus-psychologie-uzh-unity/) ist seit 12.09.2026 veröffentlicht und im tatsächlichen Browser-Player geprüft. Der [Release-Nachweis](RELEASE.md) beschreibt den geprüften Umfang und seine Grenzen.
 
 ## Vereinbarte Gestaltung
 
@@ -32,17 +32,17 @@ Zusatzkostenbudget: **0**. Keine kostenpflichtigen Assetkäufe, Meshy-Aufträge,
 - `UnityProject/`: Unity-Quellen, Runtime und Editor-Werkzeuge.
 - `art/`: Bildvorlagen, Blender-Quellen, überprüfbare Raumplanung und selbst erzeugtes Audio.
 - `companion/`: Quellfassung des weiterentwickelten Claude-Baututors.
-- `docs/`: Entwicklungsnachweise. Der spätere öffentliche Web-Build liegt separat in der Wurzel des Branches `gh-pages`.
+- `docs/`: Entwicklungsnachweise. Der öffentliche Web-Build liegt separat in der Wurzel des Branches `gh-pages`.
 
-Geplante technische Nachweise: vollständiger Datenimport, robuste Quiz- und Speicherzustände, tatsächliche Unity-Kompilation, begehbare Wege und Kameras, Soundsteuerung, Tastaturbedienung, geprüfter Web-Build und funktionierender öffentlicher Link. Bildkonzepte sind keine Screenshots eines fertigen Spiels.
+Die Nachweise unterscheiden Datenimport und Zustandslogik, Unity-Kompilation, physische Wege und Kameras, Browserbedienung und öffentlichen Release. Bildkonzepte sind keine Screenshots des Spiels.
 
-## Geprüfter Zwischenstand: Modell 2.2
+## Veröffentlichter Stand: Modell 2.2
 
 Die neue Datenbasis umfasst 16 Kompetenzen mit 48 Kriterien und konkrete KI-Bezüge in jedem Bereich. 153 Lernzielvorschläge decken 43 Studienbausteine und 3 Wahlvarianten ab. Das Profil und die 12 Berufsperspektiven verwenden diese Kriterien ohne automatische Kompetenzwerte. Modell 2.2 zeigt zusätzlich KI als Querschnitt durch alle sechs Bereiche und aufgabenbezogene Phasen ohne, mit und über KI. Die bestätigten Daten-, Logik- und Oberflächenprüfungen sind im [aktuellen Arbeitsplan](PLAN.md) getrennt aufgeführt; ihre Testzahlen werden nicht zu einem vermeintlichen Gesamtlauf addiert.
 
-Die Bildvorlagen, Raumplanung und der Unity-Plan sind freigegeben; die tatsächliche Unity-Szene ist aufgebaut. Nach einer Messung wurden die 22 eigenen Modelle gezielt vereinfacht, geprüft und erneut als FBX exportiert. Der [Optimierungsnachweis](../art/review/model-optimization.json) unterscheidet den einzelnen Modellsatz (37’282 → 21’486 Dreiecke) von der Szene mit allen Instanzen. In drei gemessenen Unity-Aufbauten lag die höchste Geometrieobergrenze bei 112’500 Dreiecken, im dichten Aufbau mit allen 43 Modulslots und zwei Häusern mit jeweils 64 Bodenfeldern. Das unveränderte Budget beträgt 160’000. Diese Stichprobe deckt nicht jede mögliche Gestaltung ab; die [Szenenmessung](../art/review/production-metrics.json) ist keine Browser-Leistungsabnahme. Die abschliessende Physik- und Browserprüfung läuft weiter.
+Die Bildvorlagen, Raumplanung und der Unity-Plan sind freigegeben; die tatsächliche Unity-Szene ist aufgebaut. Nach einer Messung wurden die 22 eigenen Modelle gezielt vereinfacht, geprüft und erneut als FBX exportiert. Der [Optimierungsnachweis](../art/review/model-optimization.json) unterscheidet den einzelnen Modellsatz (37’282 → 21’486 Dreiecke) von der Szene mit allen Instanzen. In drei gemessenen Unity-Aufbauten lag die höchste Geometrieobergrenze bei 112’500 Dreiecken, im dichten Aufbau mit allen 43 Modulslots und zwei Häusern mit jeweils 64 Bodenfeldern. Das unveränderte Budget beträgt 160’000. Diese Stichprobe deckt nicht jede mögliche Gestaltung ab; die [Szenenmessung](../art/review/production-metrics.json) ist keine Browser-Leistungsabnahme. Physik und tatsächliche Browserbedienung wurden getrennt geprüft; der [öffentliche Release-Nachweis](../art/review/public-release.json) dokumentiert die abschliessende Prüfung auf GitHub Pages.
 
-Der [Tutor 2.2](https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043) ist separat veröffentlicht. Echte Claude-Antworten im Tutormodus wurden auf dieser Veröffentlichung in Deutsch und Englisch geprüft; 39 Tests mit simuliertem Host sind ein eigener Nachweis. Die früheren vier Modi und Gesprächsabläufe wurden auf der erhaltenen 2.1-Fassung geprüft, nicht erneut auf 2.2. Details, Quellenhash und verbleibende Sprachgrenzen stehen in [companion/published.json](../companion/published.json). Die Einbettung im veröffentlichten Spiel bleibt offen.
+Der [Tutor 2.2](https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043) ist separat veröffentlicht. Echte Claude-Antworten im Tutormodus wurden auf dieser Veröffentlichung in Deutsch und Englisch geprüft; 39 Tests mit simuliertem Host sind ein eigener Nachweis. Die früheren vier Modi und Gesprächsabläufe wurden auf der erhaltenen 2.1-Fassung geprüft, nicht erneut auf 2.2. Auf GitHub Pages lud die eingebettete Oberfläche, lieferte aber keine Antwort auf die Testfrage. Dieselbe Frage erzeugte im externen Claude-Artefakt eine echte Antwort. Das Spiel bietet deshalb den geprüften externen Zugang und freiwilliges Kontextkopieren; `embedGenerationVerified` bleibt `false`. Details, Quellenhash und verbleibende Sprachgrenzen stehen in [companion/published.json](../companion/published.json).
 
 ## Erste Schritte in der Webfassung
 
@@ -53,7 +53,7 @@ Nach der Hauswahl kann man einen ersten Raum zeichnen, eine editierbare Vorlage 
 - **Bauplan und Dialoge:** Hat das Grundrissraster den Fokus, wählen die Pfeiltasten ein Feld und die Leertaste benutzt das Zeichenwerkzeug. In geöffneten Dialogen ruht die Bewegung. **Esc** schliesst den Dialog; danach bei Bedarf wieder in die 3D-Fläche klicken.
 - **Lerncheck:** Antwort wählen, **Antwort prüfen**, Erklärung lesen, **Weiter**. Auch die letzte Erklärung bleibt sichtbar. **Studium** bündelt Modulübersicht und Kompetenzansichten; **Quests** und **KI-Begleitung** sind eigene freiwillig erreichbare Menüs.
 
-Nach den Änderungen an Zoom und Bedienhinweisen bestanden die **20/20 UI-/Vertragstests** erneut. Sie ersetzen keine Bedienprüfung des neu gebauten Unity-Players im Browser.
+Nach den Änderungen an Zoom und Bedienhinweisen bestanden die **20/20 UI-/Vertragstests** erneut. Die zusätzliche Bedienprüfung erfolgte im echten Unity-Player in Edge und im In-App-Browser. Der [Release-Nachweis](RELEASE.md) trennt diese Ergebnisse von den früheren Vorschauprüfungen.
 
 ## Öffentliche FBX-Dateien aus der geprüften Quelle exportieren
 
@@ -97,12 +97,12 @@ Bei langen Windows-Pfaden kann ein bereits eingerichteter kurzer Alias wie `U:\`
 
 `BuildGame.Web` synchronisiert Inhalt und Webvorlage, konfiguriert den Player und baut die gespeicherte Szene. Das Ausgabeziel muss innerhalb dieses Unity-Projekts liegen. Die Methode prüft den Unity-`BuildReport` und protokolliert bei Erfolg `[Kompetenzhaus] WEB_BUILD_COMPLETE bytes=…`. CLI-Ergebnis, Log und erzeugte Dateien gemeinsam kontrollieren. Ein erfolgreicher lokaler Build benötigt danach noch einen tatsächlichen Browsertest; die Methode veröffentlicht nichts. Lokale Ausgaben unter `UnityProject/Build/` und Logs bleiben aus Git ausgeschlossen.
 
-## Veröffentlichung und verbleibende Prüfung
+## Veröffentlichung und erneute Builds
 
-Die geplante Pages-Quelle ist **Branch `gh-pages`, Ordner `/`**. In dessen Wurzel wird der Inhalt des abgenommenen lokalen Web-Builds abgelegt: `index.html`, Shell-Dateien, `Build/`, `TemplateData/`, die beiden Laufzeit-Lerndateien unter `content/` und die freigegebenen Companion-Metadaten. Eine `.nojekyll`-Datei gehört ebenfalls in diese Wurzel. `docs/` auf `main` bleibt Entwicklungsdokumentation; der ursprüngliche Spielstand im Original-Repository wird nicht überschrieben.
+Die veröffentlichte Pages-Quelle ist **Branch `gh-pages`, Ordner `/`**. Dessen Wurzel enthält den abgenommenen Web-Build: `index.html`, Shell-Dateien, `Build/`, `TemplateData/`, die beiden Laufzeit-Lerndateien unter `content/` und die freigegebenen Companion-Metadaten. `.nojekyll` liegt ebenfalls in dieser Wurzel. `docs/` auf `main` bleibt Entwicklungsdokumentation; der ursprüngliche Spielstand im Original-Repository wird nicht überschrieben. Releasecommit und erfolgreicher Pages-Lauf stehen im [Release-Nachweis](RELEASE.md).
 
-Vorher `node tools/inspect-web-build.mjs` ausführen und zusätzlich die gebauten Shell-, Lern- und Companion-Dateien mit ihren aktuellen Quellen vergleichen. Die statische Prüfung eines früheren Builds bestand, enthielt aber noch ältere Bedienhinweise: Ein erfolgreicher Dateicheck allein bestätigt deshalb nicht die Aktualität der gesamten Oberfläche. Es gibt noch keine bestätigte öffentliche Veröffentlichung des neuen Spiels.
+Vor jeder neuen Veröffentlichung `node tools/inspect-web-build.mjs` ausführen und zusätzlich die gebauten Shell-, Lern- und Companion-Dateien mit ihren aktuellen Quellen vergleichen. Ein erfolgreicher Dateicheck allein bestätigt nicht die Aktualität der gesamten Oberfläche. Der bestätigte Release enthält 15 Spieldateien mit 20’479’960 Bytes; die abschliessende Korrektur zweier statischer Shell-/Metadatendateien veränderte weder Unity-WASM noch Szenendaten.
 
 Am 12.09.2026 bestanden nach Optimierung und bereinigtem FBX-Export **5/5 echte Unity-PlayMode-Tests**: vier Physiktests und eine Szenenmessung. In der zusammengesetzten Szene mit den importierten Modellen und dem produktiven `CharacterController` wurden Modell-/Kameraintegration, durchquerbare Aussen- und Innentüren bei blockierenden Wänden, Treppenauf- und -abstieg in allen vier Ausrichtungen sowie Kollisionen nach Umbau, Undo und Wiederherstellung geprüft. Der dichte Messaufbau blieb bei 112’500 Dreiecken. Die Tests verwendeten einen temporären Zustand und lasen oder schrieben keine gespeicherten Spielstände.
 
-Der [Physiknachweis](../art/review/physics-review.json) enthält Testfälle, Messwerte, Quellenhashes und die Grenzen dieser Prüfung. **Ein fertiger WebGL-Build, vollständige Browserbedienung, Browserleistung und öffentlicher Release sind damit noch nicht bestätigt.**
+Der [Physiknachweis](../art/review/physics-review.json) enthält Testfälle, Messwerte, Quellenhashes und die Grenzen dieser Prüfung. Der getrennte [öffentliche Browsertest](../art/review/public-release.json) bestätigt Unity-Start, Quiz und Erklärung, Profil und KI-Querschnitt, Hausbau und Wiederherstellung nach Neuladen sowie den externen Tutorzugang. Die gemessenen rund 59 FPS betreffen dieses Gerät und die dort genannten kleinen Aufbauten, nicht jede Gestaltung oder Zielhardware.

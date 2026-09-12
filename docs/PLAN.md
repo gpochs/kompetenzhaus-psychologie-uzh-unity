@@ -1,6 +1,6 @@
 # Verbindlicher Arbeitsplan – Kompetenzhaus Unity
 
-Stand: 12.09.2026. Dieser Plan hält den aktuellen Auftrag, den geprüften Stand und die verbleibende Arbeit fest. Goal Mode ist aktiv. **Das Spiel ist noch nicht fertig.** Kompetenzmodell 2.2, Modultexte und Dokumente sind erstellt und geprüft. Die Unity-Szene ist aufgebaut; 22 eigene Modelle wurden nach einer Messung gezielt optimiert und erneut exportiert. Physikprüfung, Browserbedienung und Leistung der optimierten Fassung werden erneut geprüft. Die öffentliche Veröffentlichung des neuen Spiels steht aus. Abschluss bedeutet ein tatsächlich getestetes und veröffentlichtes Spiel.
+Stand: 12.09.2026. **Die erste Unity-Web-Fassung ist veröffentlicht und öffentlich geprüft:** [Spiel öffnen](https://gpochs.github.io/kompetenzhaus-psychologie-uzh-unity/). Kompetenzmodell 2.2, Modultexte, Dokumente, 22 eigene Modelle und die zusammengesetzte Spielwelt sind umgesetzt. Dieser Plan hält den abgenommenen Umfang und seine Grenzen fest. Commit, Deployment und konkrete Prüfungen stehen im [Release-Nachweis](RELEASE.md).
 
 ## Auftrag und feste Grenzen
 
@@ -33,19 +33,19 @@ Das Spiel zeigt geplante Lerngelegenheiten, Spielübung und Selbstangaben getren
 | Phase | Ergebnis und aktueller Stand |
 |---|---|
 | Bestand und Quellen | Öffentliche Spielquellen, internes Kompetenzmodell/Kompass, September-Unterlagen und Benchmark-Ausgaben ausgewertet; Originale nur gelesen. |
-| Einmalige Kopie | Neue öffentliche Repository vorhanden; identische Ausgangshistorie, Push zum Original deaktiviert. Der geprüfte Quellstand wird als Entwicklungsstand gesichert; ein öffentlicher Unity-Web-Build steht noch aus. |
-| Gestaltung | Bildvorlagen, Raumplan und Unity-Plan vom Nutzer ausdrücklich freigegeben. Weitere Modell- und Runtime-Reviews sind an Codex delegiert; jede braucht tatsächliche Prüfergebnisse. |
-| Blender-Produktion | 22 eigene Modelle nach gezielter Geometrievereinfachung geprüft und als FBX exportiert. Der einzelne Modellsatz sank von 37’282 auf 21’486 Dreiecke; das ist keine Zählung aller Modellinstanzen in der Szene. Das unveränderte Szenenbudget von 160’000 Dreiecken und die reale Browserleistung werden separat gemessen. Nachweis: `art/review/model-optimization.json`. |
+| Einmalige Kopie | Neue öffentliche Repository mit erhaltener Ausgangshistorie; Push zum Original deaktiviert. Das Originalspiel wurde erneut sichtbar geprüft, der ursprüngliche Remote-Commit bleibt `824de17987e6ed20d0eb47a98284dc4717bfe87a`. |
+| Gestaltung | Bildvorlagen, Raumplan und Unity-Plan vom Nutzer freigegeben; Function, Form und Runtime anhand tatsächlicher Nachweise durch die delegierte Prüfung abgenommen. |
+| Blender-Produktion | 22 optimierte Modelle, 21’486 Dreiecke im einmaligen Modellsatz; strukturierter FBX-Export ohne private Pfadmetadaten. Der grösste gemessene Szenenaufbau lag bei 112’500 Dreiecken gegenüber dem unveränderten Budget von 160’000. Er deckt nicht jede Dekorations-/Dachkombination ab. Nachweise: `art/review/model-optimization.json`, `production-metrics.json` und `art/models/fbx-metadata-audit.json`. |
 | Neues Kompetenzmodell | Version **2.2.0-draft** mit **16 Kompetenzen, 48 Kriterien**, drei Zielniveaus, 14 Zukunftsansichten und zwölf Berufsperspektiven. Alle 16 KI-Karten sowie die neue Querschnittsansicht mit sechs Bereichen und Phasen ohne, mit und über KI sind in DE/EN ausgearbeitet und geprüft. |
 | Modul-Lerndesign | **153 ausführliche Ziele in DE/EN** für **43 Slots und drei Wahlvarianten**, mit Aufgaben, vorgeschlagenen Nachweisen, Beurteilungskriterien, KI-Rolle, Eigenleistung, Arbeitsaufwand und Spiralverweisen. Vier fachliche P-Ziele enthalten gezielte KI-Kontextvarianten; ein Phasenindex verweist auf bestehende Ziele. Die Baseline bleibt getrennt und unverändert. Nach tatsächlichem Variantenersatz deckt der Standardpfad alle 48 Kriterien ab; 16 Modul-Datentests bestanden. |
 | Word-Dokumente | Neue editierbare **v2.2-Modellbände mit 53 Seiten DE und 52 Seiten EN** sowie **Modulbände mit je 111 Seiten** im übergeordneten Projektordner erstellt. Alle vier Dateien gegen die kanonischen Quellen geprüft, in Word gerendert und visuell kontrolliert. Die v2.1-Dokumente und geschützten Originale bleiben erhalten. |
 | Unity-Kern | Architektur mit Undo, Speichern, Quizführung, Kameras, Zuständen und Modellintegration implementiert. Früher wurden **42 unterschiedliche Kern-Testfälle** in getrennten Läufen erfolgreich geprüft. Aktuell bestanden zusätzlich **15/15 gezielte Framework-2.2-Tests**, darunter eindeutige Kriterienzuordnung, Phasen ohne KI und DE/EN-Projektion. Diese getrennten Nachweise sind kein gemeinsamer Gesamtlauf und kein Test der zusammengesetzten Spielwelt. |
-| Welt und Spielgefühl | Die tatsächliche Unity-Szene ist zusammengesetzt. Ein früherer Lauf bestand **4/4 echte PlayMode-Physiktests** mit importierten Modellen und produktivem CharacterController. Nach der Modelloptimierung laufen erneute Physik- und Browserprüfungen; die früheren Ergebnisse sind keine Abnahme der geänderten Fassung. Nachweis: `art/review/physics-review.json`. |
-| UX/UI | Klarer leerer Bauplatz, direkte Quizführung, editierbare Vorlagen und bedarfsweise Baupalette geprüft. Profil, Berufskompass und KI-Querschnitt verwenden Modell 2.2 und tatsächliche C#-Zustandsdaten. **20/20 UI-/Vertragstests** wurden nach den Änderungen an Zoom und Bedienhinweisen erneut bestanden. Vogelansicht: W A S D/Pfeiltasten verschieben, sichtbares +/− vergrössert/verkleinert. Web-Erkundung: W A S D/Pfeiltasten gehen, linke Maustaste halten und ziehen zum Umsehen, E am Lernort. Die vollständige Browserbedienung der neu gebauten Fassung bleibt separat zu prüfen. |
-| Sound | Neun eigene Audiodateien erzeugt und validiert. Gesamtlautstärke, Atmosphäre, Effekte und Schritte sind getrennt regelbar und werden gespeichert. Alte Spielstände behalten ihre ursprüngliche Mischung. Abspielen im zusammengesetzten Spiel ist noch zu prüfen. |
-| GenAI | **Tutor 2.2** ist veröffentlicht: [Claude-Artefakt](https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043). Auf dieser Fassung wurden echte DE-/EN-Antworten im Tutormodus geprüft; **39/39 Tests mit simuliertem Host** bestanden. Vier-Modus- und Gesprächsprüfungen der erhaltenen 2.1-Fassung bleiben als historische Nachweise getrennt. Einige Status-/Accessibility-Texte des Tutors bleiben nach Sprachwechsel noch Deutsch. Der genaue öffentliche Stand und die Grenzen stehen in `companion/published.json`. Einbettung und Kontextübernahme im Pages-Spiel sind noch zu prüfen. |
-| Qualität und Web | Ein früherer lokaler Build bestand die statische Dateiprüfung. Nach Modell- und Bedienänderungen sind erneuter Build, aktueller Quellenvergleich und Browserprüfung erforderlich. Dateiintegrität belegt weder Leistung noch vollständige Spielbarkeit. |
-| Veröffentlichung | Geplant ist **`gh-pages` mit dessen Wurzelverzeichnis** als GitHub-Pages-Quelle. Dorthin kommt ausschliesslich der abgenommene Web-Build samt `.nojekyll`; `docs/` bleibt Entwicklungsdokumentation. Veröffentlichung und öffentlicher Spieltest stehen aus. |
+| Welt und Spielgefühl | Die finale exportierte Szene bestand **5/5 PlayMode-Tests**: vier Physiktests und eine Szenenmessung. Türen, Treppen in vier Ausrichtungen, Stützen und Umbau wurden mit produktivem CharacterController geprüft. Tatsächliche Vogel-/Ich-Ansichten, Drag-Look, Platzierung und Wiederherstellung wurden im Web-Player beobachtet. |
+| UX/UI | **20/20 UI-/Vertragstests** bestanden. Im echten Edge-Web-Player wurden alle 43 Modul-Einstiege, ein vollständiges Modulquiz und eine Hauptquest geprüft; die Berichte trennen früheren und optimierten Build. Auf der öffentlichen Seite funktionieren Quizantwort und Erklärung sowie Profil 2.2 mit sechs KI-Bereichen und zwölf Berufsperspektiven. Die Psychotherapieansicht wurde fachlich konkret geöffnet. Nicht jede Frage, Wahlvariante oder alle elf Quests wurden vollständig durchgespielt. |
+| Sound | Neun eigene Audiodateien, getrennte Lautstärken und gespeicherte Einstellungen. Im echten Player wurden laufender WebAudio-Kontext nach Nutzerinteraktion sowie Stummschaltung und Mischereinstellungen beobachtet. Ein subjektives Hörqualitätsurteil wird nicht behauptet. |
+| GenAI | **Tutor 2.2** ist veröffentlicht und liefert im direkten Claude-Host echte geprüfte Antworten. Die eingebettete Pages-Oberfläche lud, gab bei der Testfrage aber keine KI-Antwort zurück. Deshalb `embedGenerationVerified: false`: Das Spiel öffnet den geprüften externen Host und bietet freiwilliges Kontextkopieren. Keine automatische Übertragung oder kostenpflichtige API. **39/39 Mock-Host-Tests** und historische 2.1-Prüfungen bleiben getrennt. Einige englische Status-/Accessibility-Texte sind noch deutsch; Details in `companion/published.json`. |
+| Qualität und Web | Finaler Web-Build und tatsächliche Edge-/In-App-Browserprüfungen abgeschlossen. Rund 59 Unity-FPS wurden bei 1440 × 900 im kleinen Startaufbau bzw. Innenhof auf diesem Laptop beobachtet, nicht als allgemeiner Geräte- oder Dichteszenen-Benchmark. 15 Spieldateien umfassen 20’479’960 Bytes; abschliessende Shell-/Metadatenkorrekturen änderten WASM und Szenendaten nicht. |
+| Veröffentlichung | **`gh-pages`, Wurzel `/`**, Commit `c42efdc855cd1972a136f657e172cc7c8305ecd0`. [Pages-Lauf erfolgreich](https://github.com/gpochs/kompetenzhaus-psychologie-uzh-unity/actions/runs/34690814542), öffentliche Unity-Seite geprüft. `docs/` bleibt Entwicklungsdokumentation. |
 
 ## Fachliche Ausgestaltung
 
@@ -68,32 +68,31 @@ Das Spiel zeigt geplante Lerngelegenheiten, Spielübung und Selbstangaben getren
 - Offizielle Einbettung nur mit tatsächlich erhaltenem Embed-Code; sonst klarer Kontext-Export und Öffnen im Claude-Artefakt. Keine API-Schlüssel im Browser.
 - Das Spiel bleibt im Web spielbar. Umfang und Grafik werden an die tatsächlich gemessene Browserleistung angepasst.
 
-## Abnahmekriterien vor Abschluss des Goals
+## Bestätigte Release-Abnahme
 
-Die offenen Punkte beziehen sich auf die endgültig zusammengesetzte und öffentlich spielbare Fassung. Bereits bestandene Daten-, Quellen- und isolierte UI-Prüfungen ersetzen diese Abnahme nicht.
+Die Nachweise kombinieren Quelltests, tatsächliche Editor-Physik, lokale Browserdurchläufe und den öffentlichen Seitencheck. Die jeweilige Reichweite bleibt im [Release-Nachweis](RELEASE.md) sichtbar.
 
 - [x] Neue öffentliche Repository existiert; Ausgangscommit und Historie identisch übernommen.
-- [ ] Original-Repository und ursprünglicher Link bleiben unverändert.
-- [ ] Bildreferenzen wurden zu eigenen Blender-Modellen; verwendete Modelle sind im echten Unity-Render sichtbar.
-- [ ] Beide Studienhäuser sind verständlich; freie Grundrisse, Raum-/Etagenanordnung und Gebäudeformen ändern sichtbar die begehbare Architektur.
-- [ ] Bauänderungen lassen sich speichern, laden und rückgängig machen; ungültige Platzierungen beschädigen nichts.
-- [ ] Vogel- und Ich-Perspektive funktionieren samt Kollision, Orientierung und Interaktion.
-- [ ] Alle Modulslots und zugehörigen Quizbanken sind erreichbar; ein vollständiger Quizdurchlauf inklusive letzter Rückmeldung funktioniert.
-- [ ] Vollständige Modulübersicht und neues Kompetenzmodell sind integriert; kein ECTS-/Quizwert wird als gemessene Kompetenz ausgegeben; Berufsansichten sind tätigkeitsbezogen und ohne doppelte Kriterien.
-- [ ] Wahlthemen, Vertiefungen und optionale Module verändern die ausgewiesenen Lerngelegenheiten nachvollziehbar; offene Themen bleiben als solche sichtbar; zwölf Berufs-/Forschungswege sind zugänglich.
-- [ ] Zusätzliche Haupt-/Nebenquests besitzen Ziele, Ergebnisse, Feedback und funktionierende Belohnungen.
-- [ ] Sound beginnt nach Nutzerinteraktion und kann separat reduziert oder ausgeschaltet werden; Bewegung ist reduzierbar.
-- [ ] Neue GenAI-Integration ist live geprüft oder ein konkret funktionsfähiger kostenfreier Host-Weg im Spiel verfügbar; kein lokales Mock als echte KI ausgegeben.
-- [ ] Echte Unity-Kompilation und Web-Build erfolgreich; öffentliche Seite startet und lässt sich tatsächlich spielen.
-- [ ] Keine internen Originaldokumente, Zugangsdaten, Unity-Caches oder versehentlich kostenpflichtigen Dienste veröffentlicht.
-- [ ] Quellenstatus, bekannte Grenzen, Bedienung und tatsächlicher öffentlicher Link dokumentiert.
+- [x] Original-Remote und ursprüngliches sichtbares Spiel unverändert geprüft.
+- [x] Eigene Modelle in der tatsächlichen Unity-Welt sichtbar; Function, Form und Runtime dokumentiert abgenommen.
+- [x] Bauänderungen, Undo und Wiederherstellung im echten Player geprüft; Türen, Treppen und Stützen zusätzlich in PlayMode geprüft.
+- [x] Vogel- und Ich-Perspektive, sichtbarer Zoom und Umsehen durch Ziehen im Browser geprüft.
+- [x] Alle 43 Modul-Einstiege geöffnet; ein vollständiges Quiz inklusive letzter Erklärung und Weiter durchlaufen.
+- [x] Modell 2.2, sechs KI-Bereiche und zwölf Berufsperspektiven zugänglich; keine gemessene Kompetenz oder Passungsprozente aus Spielpunkten.
+- [x] Wahlvarianten und Lerngelegenheiten in Daten-/DTO-/UI-Prüfungen erhalten; offene Themen bleiben als Entwurf sichtbar.
+- [x] Elf Quests angelegt und validiert; eine Hauptquest mit Abschluss, Rückmeldung und gespeicherten Folgen im echten Player geprüft.
+- [x] WebAudio-Ausführung nach Nutzerinteraktion sowie Mischereinstellungen und Stummschaltung geprüft. Reduzierte Bewegung ist einstellbar.
+- [x] Externer Claude-Tutor aus dem Spiel erreichbar und mit echter Antwort geprüft; fehlende Embed-Generierung transparent ausgewiesen.
+- [x] Unity-Web-Build veröffentlicht; öffentliche Seite startet und beantwortetes Quiz zeigt die Erklärung.
+- [x] Veröffentlichungskandidaten auf interne Rohdokumente, Zugangsdaten, Caches und private Pfadmetadaten geprüft; Zusatzkosten 0.
+- [x] Quellenstatus, Bedienung, Grenzen und öffentlicher Link dokumentiert.
 
 ## Sichtprüfungen und Fortschritt
 
 Der Nutzer hat die vorgelegten Bild-/Raumvorlagen und den Unity-Plan ausdrücklich freigegeben und die weiteren Designprüfungen an Codex delegiert. Die im Raum-Skill vorgesehenen Modell- und Runtime-Reviews werden anhand der tatsächlich erzeugten Ergebnisse ausgeführt und mit Belegen dokumentiert. Eine delegierte Prüfberechtigung ist noch kein bestandenes Review. Die Meshy-/Credit-Vorgaben des allgemeinen Skills werden wegen des ausdrücklich festgelegten Nullkostenrahmens durch lokale Blender-Produktion ersetzt.
 
-Aktuelle Restarbeit: Lerndaten und Word-Dokumente bleiben eingefroren. Nach Import der optimierten Modelle werden Physik, belegte Szenenbudgets, Bewegung, Kollisionen, Quests, Sound und Browserbedienung erneut geprüft. Der finale Web-Build muss die aktuellen Shell-, Content- und Companion-Dateien enthalten. Danach folgen Veröffentlichung über `gh-pages` und Prüfung der öffentlichen Seite, einschliesslich Tutor-Einbettung und freiwilliger Kontextübernahme.
+Lerndaten und Word-Dokumente bleiben eingefroren. Die öffentliche Fassung verwendet den geprüften externen Claude-Zugang; die fehlende Embed-Generierung ist eine dokumentierte Grenze dieses Releases. Vollständige Touch-Steuerung, subjektive Hörqualität, alle Frage-/Questdurchläufe sowie Leistung auf anderer Hardware oder jeder erlaubten Dekorationskombination sind nicht durch die vorhandenen Stichproben belegt.
 
 Die oben genannten früheren Kernprüfungen decken unter anderem Raum- und Treppenzugänglichkeit, Hauswechsel sowie Speicherung und Migration der Tonmischung ab. Sie verhindern beispielsweise, dass unbenannte Bodenfelder einen Raumeingang verschliessen oder eine Treppe ohne erreichbaren Einstieg akzeptiert wird. Diese Quell- und Logikprüfungen ersetzen keinen Rundgang in der endgültigen Szene.
 
-Nach jeder wesentlichen Phase werden Ergebnis, Prüfung und verbleibende Arbeit hier aktualisiert. Das Goal wird erst abgeschlossen, wenn die Abnahmekriterien erfüllt sind oder eine ausdrücklich dokumentierte Nutzerentscheidung den Umfang geändert hat.
+Künftige Änderungen benötigen neue, ihrem Umfang entsprechende Prüfungen. Frühere Testergebnisse werden nicht stillschweigend auf geänderte Binärdateien, Inhalte oder Hostingbedingungen übertragen.

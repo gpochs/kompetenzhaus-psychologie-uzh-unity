@@ -25,7 +25,8 @@
     "browser-runtime-review.json",
     "runtime-evidence/edge-ui-2026-09-12.json",
     "web-build-inspection.json",
-    "../models/fbx-metadata-audit.json"
+    "../models/fbx-metadata-audit.json",
+    "public-release.json"
   ],
   "scope": "Local production release candidate: actual Unity physics and three geometry samples, actual IAB/Edge Web-player interactions, and measured starter/courtyard performance. 112500 is the largest sampled legal design, not a bound for every decoration combination. Model/texture bytes refer to source assets, not RAM or total download; browser heap/FPS are reported separately. Public Pages deployment is verified separately."
 }

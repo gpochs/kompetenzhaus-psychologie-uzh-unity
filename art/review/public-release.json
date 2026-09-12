@@ -1,0 +1,54 @@
+{
+  "schema": "kompetenzhaus.public-release.v1",
+  "verifiedAt": "2026-09-12T11:25:15.8619727Z",
+  "status": "published-and-played",
+  "publicUrl": "https://gpochs.github.io/kompetenzhaus-psychologie-uzh-unity/",
+  "sourceRuntimeCommit": "a300d62b0cd695f39958e4efe27457cfac31475f",
+  "webReleaseCommit": "c42efdc855cd1972a136f657e172cc7c8305ecd0",
+  "deploymentRun": "https://github.com/gpochs/kompetenzhaus-psychologie-uzh-unity/actions/runs/34690814542",
+  "deploymentStatus": "Success",
+  "publishingSource": "gh-pages / (root), .nojekyll, HTTPS",
+  "gameFileCount": 15,
+  "gameFileBytes": 20479960,
+  "originalCommitStill": "824de17987e6ed20d0eb47a98284dc4717bfe87a",
+  "originalGame": "https://gpochs.github.io/kompetenzhaus-psychologie-uzh/",
+  "originalVerified": "Remote main still equals the preserved original SHA; original game tab remains visible and usable, with no original edits.",
+  "publicChecks": [
+    "Actual Unity player loaded and entered from the public URL.",
+    "Public module001 quiz opened directly; selected answer reached correct explanatory feedback awaiting Continue.",
+    "Built a named 2x2 room through normal controls; after page reload its name and architecture remained in the actual C# snapshot.",
+    "Bird/first-person switch and drag-look operated on the public player.",
+    "Public profile shows 16 competencies, framework2.2, all six AI cross-domain choices and without/with/about-AI sections; no automatic competence rating.",
+    "Psychotherapy compass shows case formulation, therapeutic relationship, intervention, evaluation and responsibility as distinct activities.",
+    "Final tutor panel opens the direct published Claude host and offers explicit context copy; it no longer mounts the non-generating embed."
+  ],
+  "publicEngineSample": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "fps": 59.1996487915951,
+    "movingAverageFps": 59.1996487915951,
+    "totalWASMHeapBytes": 161087488,
+    "usedWASMHeapBytes": 139114584,
+    "method": "Read-only Unity GetMetricsInfo on the public first-person player, one room, this laptop."
+  },
+  "genai": {
+    "publicUrl": "https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043",
+    "embedRendered": true,
+    "embedGeneratedAnswer": false,
+    "directHostGeneratedAnswer": true,
+    "actualResponseSummary": "Distinguished P1.2 disciplinary model comparison, R4.2 claim/evidence review and V1 normative judgement without duplicate criteria; proposed independent biological/cognitive explanations and a prediction before comparing a prepared AI analogy.",
+    "launch": "Verified direct host, optional explicit context copy; no automatic personal-data transfer.",
+    "clipboardEvidence": "Public copy action displayed success. The IAB clipboard-read helper returned empty, so content verification is not claimed for that helper; exact v3/context2.2 clipboard content was independently checked in Edge as documented in its report."
+  },
+  "staticReleasePatch": "After the successful Unity build, only shell.js and companion/published.json changed to select the verified direct host. Matching files were synchronized to the Unity template, local player and release branch. WASM/data/model bytes did not change; final packaging check passes.",
+  "knownLimits": [
+    "Curriculum and assessment design remain a draft requiring academic validation.",
+    "Performance measurements cover this laptop and specified scenes; arbitrary decoration combinations and weaker/mobile devices are not comprehensively benchmarked.",
+    "Claude account availability and visitor allowance apply; no paid API fallback.",
+    "Several tutor status/accessibility labels remain German after selecting English.",
+    "Nonfatal Unity legacy-sync and unused FSR-shader warnings remain; actual persistence and rendered performance were tested."
+  ],
+  "additionalPaidServicesUsed": false
+}

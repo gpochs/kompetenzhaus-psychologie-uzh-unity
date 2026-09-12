@@ -3,6 +3,7 @@
   "publishedOn": "2026-09-12",
   "publicUrl": "https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043",
   "embedUrl": "https://claude.site/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043/embed",
+  "embedGenerationVerified": false,
   "allowedEmbedDomains": [
     "gpochs.github.io"
   ],
@@ -41,7 +42,7 @@
     "feedbackScope": "These checks cover the exercised prompts, not all future interpretations or professional competence. Generation used the signed-in Claude account with no separate paid API. Earlier V2.1 four-mode and feedback checks are recorded with that preserved artifact.",
     "embedDomainVerification": "gpochs.github.io was still present after closing and reopening the publication embed settings.",
     "knownPresentationLimit": "After switching to English, the public tutor's runtime-status line and several accessibility labels remain German; generated answers and main controls switch to English.",
-    "publicEmbedGeneration": "pending Unity Web deployment",
+    "publicEmbedGeneration": "2026-09-12 actual GitHub Pages test: embedded UI loaded and exposed the Claude bridge, but the submitted synthetic question returned no AI answer. The same question on the direct published claude.ai artifact generated a real response distinguishing P1.2, R4.2 and V1 and an independent without-AI prediction. The game therefore uses the verified direct host with optional explicit context copy instead of presenting this embed as a working generator.",
     "publishedBytesIndependentlyDownloaded": false
   },
   "billing": "No owner API key or paid endpoint; visitor Claude account and its available allowance apply. No paid usage, credits purchase, auto-reload or paid fallback is enabled by this project."

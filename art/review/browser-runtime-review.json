@@ -1,7 +1,7 @@
 {
   "schema": "kompetenzhaus.browser-runtime-review.v1",
   "recordedAt": "2026-09-12T11:12:02.1599862Z",
-  "status": "local-release-player-checked-public-release-pending",
+  "status": "release-player-checked-and-published",
   "runtime": "Unity 6000.6 WebGL, actual local Build/WebGL",
   "browser": "Codex in-app Chromium 152",
   "graphics": "NVIDIA GeForce RTX 5090 Laptop GPU, ANGLE D3D11",
@@ -61,7 +61,7 @@
     "Unused URP FSR upscaling shader unavailable; actual geometry renders and performance were observed. No claim of FSR or post-processing support."
   ],
   "screenshotEvidence": "Actual screenshots inspected inline during the browser session (bird room, first-person stations, courtyard). No fabricated saved screenshot path is claimed.",
-  "scope": "Browser UI/runtime observations complement the separate actual Unity physics and dense-scene geometry tests. Public URL, hosted embed and final metadata-clean build readiness still require their own confirmation.",
-  "finalBuildInspectionSha256": "d10ae9cc9b6ac523515013e4bf8439829b40c8d8a07bd8067440878d39a3311d",
-  "finalBuildRecheck": "After metadata-clean export/retest/rebuild, reloaded the actual final player, restored courtyard architecture and inventory, and placed the previously unpositioned module through the normal guidance button. The source UI and gameplay are unchanged from the scoped browser checks."
+  "scope": "Browser observations complement native physics and dense-scene geometry tests. Public deployment and direct-host AI verification are recorded in public-release.json.",
+  "finalBuildInspectionSha256": "21bce4d6423394d1875548dd7be19f1a958643a479cdd2f256f9afd92b0283ea",
+  "finalBuildRecheck": "After metadata-clean export/retest/rebuild, reloaded the actual final player, restored courtyard architecture and inventory, and placed the previously unpositioned module through the normal guidance button. The source UI and gameplay are unchanged from the scoped browser checks. Static tutor launch patch then tested locally and on the public URL; public-release.json records its real host response and public player checks."
 }

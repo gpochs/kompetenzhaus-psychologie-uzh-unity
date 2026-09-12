@@ -35,8 +35,8 @@ Accepted input remains self-declared. Selecting a mode, importing context or rec
 
 ## Embedding and publication
 
-Use the actual embed URL and allowed domain in published.json, with a direct Open in Claude alternative. The receiver accepts only validated offers from https://gpochs.github.io and its direct parent frame. The learner must explicitly accept. Clipboard import remains available because host wrappers may prevent parent messaging. Automatic transfer is not verified until tested from the published game origin.
+The released game uses the verified **Open in Claude** route with optional explicit context copy. In the actual GitHub Pages test, the embedded interface loaded and exposed its host bridge, but the submitted question returned no AI answer. The same question on the direct published Claude artifact produced a real answer distinguishing P1.2, R4.2 and V1 and proposing an independent without-AI prediction. `published.json` therefore sets **`embedGenerationVerified: false`**, and the shell does not present the iframe as a working generator.
 
-The domain `gpochs.github.io` was confirmed in the reopened publication settings. **Generation within the game's Pages iframe and context import from the published game remain unverified.** A working standalone tutor does not establish that integration.
+The domain `gpochs.github.io` remains configured for embedding, but domain permission alone does not establish generation. The receiver's optional parent-message contract accepts only validated offers from that origin and its direct parent frame; the released game makes no automatic transfer. Visitors may copy known module choices and game-practice context, then import it in Claude. Names and private notes are omitted. No successful end-to-end Pages iframe generation or automatic context import is claimed. See the [game release record](../docs/RELEASE.md).
 
 Publish the exact reviewed HTML as a new revision of the NEW companion, compare hashes and verify the public page. Updating the author preview does not prove the public revision changed. Preserve the separate original artifact throughout.

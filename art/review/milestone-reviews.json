@@ -58,16 +58,18 @@
       "production-metrics.json",
       "browser-runtime-review.json",
       "runtime-evidence/edge-ui-2026-09-12.json",
-      "web-build-inspection.json"
+      "web-build-inspection.json",
+      "public-release.json"
     ],
-    "notes": "Approved actual assembled models, physical door/stair/support/rebuild behavior, real browser UI and two camera modes, scoped measured performance and functioning WebAudio context/mixer controls. Review uses actual browser observations, not the shell preview. Public URL verification follows deployment.",
+    "notes": "Approved actual assembled models, physical door/stair/support/rebuild behavior, real browser UI and two camera modes, scoped measured performance and functioning WebAudio context/mixer controls. Review uses actual browser observations, not the shell preview. Public URL verification follows deployment. Public Pages player and corrected direct-host AI launch then verified; public-release.json records the concrete observations and limitations.",
     "evidenceSha256": {
-      "runtime-audit.json": "457ca5d43f41b2c429312fa3665930e1d6545955a06506eb385ec892f48e42f1",
+      "runtime-audit.json": "90fd8ac239feb9062843196bbedbf7d80aafe43163894fcbe161db79b1366379",
       "physics-review.json": "493d66becee3697d2e5777368519608247bf29aeac2e77041404708dae740ec9",
       "production-metrics.json": "67402a571992dd4a77bc0cf191a52a620a97a80fe7da35c57da2fdde3c9ab548",
-      "browser-runtime-review.json": "92629432e59cc71f9c1d40da52aca322ac01b9658fec063cf8cbb90fdc74b97c",
+      "browser-runtime-review.json": "f1b1b5b6cbbd7b0deb4a4dc62a73324a2fa5b5459d8ba2c8dc03f4ce70444e79",
       "runtime-evidence/edge-ui-2026-09-12.json": "a03e844335ad7ee018c9f0514035a7387a3f721cdbedbfd963565ed13d3a106c",
-      "web-build-inspection.json": "d10ae9cc9b6ac523515013e4bf8439829b40c8d8a07bd8067440878d39a3311d"
+      "web-build-inspection.json": "21bce4d6423394d1875548dd7be19f1a958643a479cdd2f256f9afd92b0283ea",
+      "public-release.json": "031aa93ecb61b0d1fd85e03e261a471048bac994abcf23fdda8b78da494f72e0"
     }
   },
   "delegatedReview": {
