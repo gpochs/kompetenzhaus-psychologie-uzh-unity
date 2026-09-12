@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#20384a">
+  <meta name="description" content="Gestalte dein Kompetenzhaus und erkunde Psychologie, KI und wissenschaftliches Arbeiten.">
+  <title>Dein Kompetenzhaus · Psychologie UZH</title>
+  <link rel="stylesheet" href="shell.css">
+</head>
+<body>
+  <a class="skip-link" href="#primary-controls">Zur Spielsteuerung</a>
+  <main id="game-shell">
+    <div id="world" aria-label="Dreidimensionale Spielwelt">
+      <canvas id="unity-canvas" tabindex="0" aria-label="Kompetenzhaus in 3D. Im Erkundungsmodus mit W A S D bewegen. Zum Umsehen die linke Maustaste halten und ziehen."></canvas>
+    </div>
+
+    <header class="topbar">
+      <button id="home-button" class="brand" aria-label="Zur Startansicht"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m4 14 12-9 12 9M7 13v14h18V13M13 27v-9h6v9M10 13h3m6 0h3"/></svg></span><span>Kompetenzhaus<small>Psychologie · UZH</small></span></button>
+      <div id="journey-switch" class="segmented" role="group" aria-label="Haus auswählen" hidden>
+        <button data-house="bsc" aria-pressed="false">Bachelor</button><button data-house="msc" aria-pressed="false">Master</button><button data-house="all" aria-pressed="false">Campus</button>
+      </div>
+      <div class="top-actions">
+        <button id="sound-button" class="icon-button" aria-label="Ton ein- oder ausschalten" title="Ton"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4zM17 8c3 2 3 6 0 8"/></svg></button>
+        <button data-open="settings-dialog" class="icon-button" aria-label="Einstellungen öffnen" title="Einstellungen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M8 3v6M16 9v6M10 15v6"/></svg></button>
+      </div>
+    </header>
+
+    <section id="welcome" aria-labelledby="welcome-title">
+      <div class="welcome-copy">
+        <h1 id="welcome-title">Dein<br>Kompetenzhaus.</h1>
+        <p class="welcome-lead">Baue Räume für dein Wissen.<br>Entdecke, was Psychologie möglich macht.</p>
+        <fieldset class="degree-choice"><legend>Wo möchtest du beginnen?</legend>
+          <label><input type="radio" name="degree" value="bsc" checked><span><strong>Bachelor</strong><small>Fundament legen &amp; Zusammenhänge entdecken</small></span></label>
+          <label><input type="radio" name="degree" value="msc"><span><strong>Master</strong><small>Vertiefen, gestalten &amp; eigenständig forschen</small></span></label>
+        </fieldset>
+        <button id="start-button" class="button primary large" disabled>Dein Haus betreten <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+        <div class="load-status"><progress id="load-progress" max="1" value="0" aria-label="Spiel wird geladen"></progress><p id="load-message" role="status">Die Spielwelt wird geladen …</p><button id="reload-button" class="text-button" hidden>Erneut versuchen</button></div>
+        <p class="draft-note">Ein spielerischer Entwurf für ein Psychologiestudium mit KI.</p>
+      </div>
+      <figure id="welcome-art" class="welcome-art" hidden><img id="cover-image" alt="Zwei unterschiedlich gestaltete Psychologiehäuser in einem gemeinsamen Garten"><figcaption>Gestaltungsentwurf</figcaption></figure>
+    </section>
+
+    <div id="playing-ui" hidden>
+      <div class="world-caption"><span id="house-caption">Dein Bachelorhaus</span><span id="progress-caption"></span></div>
+      <section id="journey-guide" class="journey-guide" aria-labelledby="journey-title" hidden>
+        <div class="guide-heading"><p id="journey-eyebrow" class="context-label">Dein nächster Schritt</p><button id="hide-journey" class="close-button" aria-label="Lernweg-Hinweis ausblenden">×</button></div>
+        <ol class="journey-breadcrumb" aria-label="Dein Weg"><li data-step="room">Raum</li><li data-step="learn">Entdecken</li><li data-step="build">Bauen</li><li data-step="quest">Vertiefen</li></ol>
+        <h2 id="journey-title"></h2><p id="journey-story"></p>
+        <button id="journey-action" class="button primary full"></button>
+        <button id="journey-secondary" class="text-button"></button>
+        <details id="journey-quest" hidden><summary id="journey-quest-title">Deine aktuelle Hauptquest</summary><p id="journey-quest-purpose"></p><p id="journey-quest-instructions" class="field-help"></p><button id="journey-quest-start" class="button subtle full">Quest öffnen</button></details>
+        <details id="starter-options"><summary>Lieber mit einer Vorlage beginnen?</summary><div class="starter-options"><button data-starter="linear" class="button subtle">Längsbau</button><button data-starter="courtyard" class="button subtle">Innenhof</button><button data-starter="pavilion-cluster" class="button subtle">Pavillons</button></div><p class="field-help">Ein editierbarer Anfang. Du bestimmst danach Form, Räume und Gestaltung.</p></details>
+      </section>
+      <button id="show-journey" class="button journey-toggle" hidden>Nächster Schritt</button>
+      <nav id="primary-controls" class="play-toolbar" aria-label="Spielbereiche" tabindex="-1">
+        <button id="build-button" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h14V9M10 21v-7h4v7"/></svg><span>Bauen</span></button>
+        <button id="explore-button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 9-6 6m2-8 6-2-2 6-6 2z"/><circle cx="12" cy="12" r="9"/></svg><span>Erkunden</span></button>
+        <span class="toolbar-divider" aria-hidden="true"></span>
+        <button data-open="study-dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 1-3-1-5-2-9-1zM12 7v14"/></svg><span>Studium</span></button>
+        <button data-open="quests-dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3m0 1h13l-3 4 3 4H5"/></svg><span>Quests</span></button>
+        <button data-open="companion-dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4zM8 8h8M8 12h5"/></svg><span>KI-Begleitung</span></button>
+      </nav>
+      <div id="movement-help" class="movement-help" hidden><div class="movement-keys"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>Bewegen</span></div><span>Linke Maustaste halten &amp; ziehen · umsehen</span><span id="interaction-help">E · Lernort</span></div>
+      <button id="open-builder" class="button floating-build">Bauatelier öffnen</button>
+      <p id="world-hint" class="world-hint">Dein Grundriss. Deine Räume. Dein Weg.</p>
+      <p id="focused-learning-hint" class="focused-learning-hint" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+      <div id="zoom-controls" class="zoom-controls" role="group" aria-label="Zoom"><button id="zoom-in" aria-label="Ansicht vergrössern" title="Ansicht vergrössern">+</button><button id="zoom-out" aria-label="Ansicht verkleinern" title="Ansicht verkleinern">−</button></div>
+    </div>
+
+    <aside id="builder" class="builder-panel" aria-labelledby="builder-title" hidden>
+      <div class="panel-heading"><div><h2 id="builder-title">Bauatelier</h2><p id="builder-house-label">Bachelorhaus</p></div><button id="close-builder" class="close-button" aria-label="Bauatelier schliessen">×</button></div>
+      <div class="builder-scroll">
+        <div class="builder-tabs" role="tablist" aria-label="Bauatelier"><button role="tab" id="tab-layout" aria-controls="layout-tools" aria-selected="true">Grundriss</button><button role="tab" id="tab-style" aria-controls="style-tools" aria-selected="false">Gestaltung</button></div>
+        <section id="layout-tools" role="tabpanel" aria-labelledby="tab-layout">
+          <p id="builder-guide" class="builder-guide">Gib deinem Raum einen Namen und wähle seine Grösse. Den Grundriss kannst du jederzeit verfeinern.</p>
+          <details id="plan-drawing"><summary>Grundriss zeichnen &amp; Geschosse</summary>
+          <div class="floor-row"><label for="floor-select">Geschoss</label><select id="floor-select"><option value="0">Erdgeschoss</option><option value="1">1. Obergeschoss</option><option value="2">2. Obergeschoss</option><option value="3">3. Obergeschoss</option></select></div>
+          <div class="plan-header"><strong>Dein Bauplatz</strong><span id="bay-count"></span></div>
+          <div class="plan-tools" role="group" aria-label="Zeichenwerkzeug"><button data-brush="select" aria-pressed="true">Wählen</button><button data-brush="add" aria-pressed="false">Boden</button><button data-brush="remove" aria-pressed="false">Entfernen</button></div>
+          <div id="plan-grid" class="plan-grid" role="grid" aria-label="Grundriss. Pfeiltasten wählen ein Feld, Leertaste verwendet das Zeichenwerkzeug."></div>
+          <p class="field-help">Ein Feld entspricht 4 × 4 m. Bis zu 64 Felder über vier Geschosse. Obergeschosse brauchen einen Boden darunter.</p>
+          </details>
+          <details id="preset-tools"><summary>Mit einer Vorlage beginnen</summary><div class="form-row"><select id="preset-select" aria-label="Bauvorlage"><option value="linear">Längsbau</option><option value="courtyard">Haus mit Innenhof</option><option value="pavilion-cluster">Pavillons</option><option value="empty">Leerer Bauplatz</option></select><button id="apply-preset" class="button subtle">Anwenden</button></div><p class="field-help">Eine Vorlage ersetzt den Bauplan dieses Hauses. Rückgängig ist möglich.</p></details>
+          <details id="room-editor" open><summary>Räume entwerfen</summary>
+          <label class="field">Raum<select id="room-select"><option value="">Neuen Raum anlegen</option></select></label>
+          <label class="field">Raumname<input id="room-name" maxlength="60" value="Mein Lernraum"></label>
+          <div class="form-row"><label class="field">Breite in Feldern<input id="room-width" type="number" min="1" max="8" value="2"></label><label class="field">Tiefe in Feldern<input id="room-depth" type="number" min="1" max="8" value="2"></label></div>
+          <p id="room-size-hint" class="field-help">2 × 2 Felder ergeben einen Raum von 8 × 8 m.</p>
+          <details id="room-geometry"><summary>Position, Form &amp; Funktion</summary>
+          <div class="form-row"><label class="field">Funktion<select id="room-function"><option value="learning">Lernen</option><option value="research">Forschung</option><option value="seminar">Austausch</option><option value="studio">Atelier</option></select></label><label class="field">Form<select id="room-shape"><option value="rectangle">Rechteck</option><option value="l">L-Form</option></select></label></div>
+          <div class="form-row coordinates"><label class="field">X<input id="room-x" type="number" min="-4" max="3" value="-1"></label><label class="field">Y im Plan<input id="room-z" type="number" min="-4" max="3" value="-1"></label></div></details>
+          <div id="room-edit-actions" hidden><div class="nudge-row" role="group" aria-label="Raum verschieben"><button data-nudge="-1,0" aria-label="Raum nach links">←</button><button data-nudge="0,-1" aria-label="Raum nach hinten">↑</button><button data-nudge="0,1" aria-label="Raum nach vorne">↓</button><button data-nudge="1,0" aria-label="Raum nach rechts">→</button><button id="rotate-room">90° drehen</button></div><button id="remove-room" class="text-button danger">Raum entfernen</button></div>
+          </details>
+          <details id="connection-tools"><summary>Räume verbinden</summary><p class="field-help">Türen verbinden Räume an einer gemeinsamen Wand. Treppen brauchen freie Felder genau übereinander und einen Zugang im unteren Raum.</p><label class="field">Verbindung<select id="connection-kind"><option value="door">Türdurchgang</option><option value="stair">Treppe</option></select></label><label class="field">Von Raum<select id="connection-from"></select></label><label class="field">Zu Raum<select id="connection-to"></select></label><label class="field">Verbindungsstelle<select id="connection-endpoints"></select></label><p id="connection-help" class="field-help" role="status"></p><button id="add-connection" class="button primary full" disabled>Verbindung hinzufügen</button><label class="field">Vorhandene Verbindung<select id="connection-existing"></select></label><button id="remove-connection" class="button subtle full" disabled>Verbindung entfernen</button></details><details><summary>Ein gebautes Modul platzieren</summary><label class="field">Modul<select id="placement-module"></select></label><p class="field-help">Wähle im Plan den Startpunkt. Das Modul wird dem gewählten Raum zugeordnet.</p><button id="place-built-module" class="button subtle full">Hier platzieren</button></details>
+        </section>
+        <section id="style-tools" role="tabpanel" aria-labelledby="tab-style" hidden>
+          <label class="field">Materialwelt<select id="theme-select"><option value="warm-timber">Warmes Holz</option><option value="light-mineral">Heller Stein</option><option value="terracotta">Terracotta</option></select></label>
+          <label class="field">Fassade<select id="facade-select"><option value="open-bays">Offene Fensterachsen</option><option value="solid">Geschlossene Flächen</option><option value="glass">Glas</option></select></label>
+          <label class="field">Dach<select id="roof-select"><option value="flat">Flachdach</option><option value="gabled">Satteldach</option><option value="terrace">Dachterrasse</option></select></label>
+          <div class="form-row"><label class="field color-field">Wandfarbe<input id="wall-color" type="color" value="#e9e2d2"></label><label class="field color-field">Akzentfarbe<input id="accent-color" type="color" value="#247b80"></label></div>
+          <button id="save-style" class="button primary full">Gestaltung anwenden</button><label class="check-field"><input id="show-roofs" type="checkbox" checked><span>Dächer in der Bauansicht zeigen</span></label>
+          <hr><h3>Einrichten</h3><p class="field-help">Wähle einen freien Punkt im Plan und stelle ein Objekt auf.</p>
+          <label class="field">Objekt<select id="decoration-select"></select></label><button id="add-decoration" class="button subtle full">Objekt aufstellen</button>
+          <label class="field">Aufgestellte Objekte<select id="placed-decoration"></select></label><div class="form-row"><button id="rotate-decoration" class="button subtle">Drehen</button><button id="remove-decoration" class="button subtle">Entfernen</button></div>
+          <hr><label class="field">Tageszeit <output id="time-label">14:00</output><input id="time-slider" type="range" min="0" max="23.5" step="0.5" value="14"></label><button id="save-time" class="button subtle full">Licht setzen</button>
+        </section>
+      </div>
+      <div class="panel-footer"><div id="builder-learning-actions"><button id="save-room" class="button primary full">Raum hinzufügen</button><button id="builder-next" class="text-button full">Passendes Modul entdecken</button></div><button id="undo-button" class="button subtle full" disabled>Letzte Bauänderung rückgängig</button></div>
+    </aside>
+    <div id="toast" class="toast" role="status" hidden></div>
+    <p id="live-status" class="sr-only" role="status" aria-live="polite"></p>
+  </main>
+
+  <dialog id="modules-dialog" class="drawer" aria-labelledby="modules-title"><div class="dialog-heading"><div><h2 id="modules-title">Dein Lernpfad</h2><p>Wähle ein Modul. Das Quiz beginnt direkt.</p></div><button data-close class="close-button" aria-label="Module schliessen">×</button></div><label class="search-field"><span class="sr-only">Module suchen</span><input id="module-search" type="search" placeholder="Modul suchen …"></label><div id="module-list" class="entry-list"></div></dialog>
+  <dialog id="quests-dialog" class="drawer" aria-labelledby="quests-title"><div class="dialog-heading"><div><h2 id="quests-title">Eine Frage. Ein nächster Schritt.</h2><p>Hauptquests führen dich durch dein Studium. Nebenquests öffnen neue Blickwinkel.</p></div><button data-close class="close-button" aria-label="Quests schliessen">×</button></div><div id="quest-list" class="entry-list"></div></dialog>
+  <dialog id="quiz-dialog" class="quiz-dialog" aria-labelledby="quiz-title"><div class="dialog-heading"><div><p id="quiz-context" class="context-label"></p><h2 id="quiz-title">Dein nächster Baustein</h2></div><button id="close-quiz" class="close-button" aria-label="Quiz schliessen">×</button></div><div id="quiz-progress" class="quiz-progress"></div><p id="quiz-instructions" class="quiz-instructions"></p><div id="quiz-positions" class="positions"></div><fieldset id="quiz-question"><legend id="question-prompt"></legend><div id="answer-options" class="answer-options"></div></fieldset><section id="quiz-feedback" class="quiz-feedback" aria-labelledby="feedback-title" hidden><h3 id="feedback-title"></h3><p id="feedback-text"></p></section><section id="quiz-complete" hidden><h3>Ein Baustein mehr in deinem Wissen.</h3><p id="completion-text"></p></section><div class="quiz-actions"><button id="quiz-check" class="button primary" disabled>Antwort prüfen</button><button id="quiz-next" class="button primary" hidden>Weiter</button><button id="quiz-build" class="button primary" hidden>Modul ins Haus bauen</button><button id="quiz-finish" class="button subtle" hidden>Zurück ins Haus</button></div><details id="module-details"><summary>Modul verstehen</summary><div id="module-detail-body"></div></details><p id="quiz-status-note" class="draft-note">Lernaufgabe im Spiel · kein Leistungsnachweis</p></dialog>
+  <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title"><div class="dialog-heading"><h2 id="settings-title">So spielst du gern.</h2><button data-close class="close-button" aria-label="Einstellungen schliessen">×</button></div><label class="field">Sprache<select id="language-select"><option value="de">Deutsch</option><option value="en">English</option></select></label><label class="field">Lernmodus<select id="learning-mode"><option value="Free">Frei bauen und entdecken</option><option value="Serious">Module mit Lernchecks freischalten</option></select></label><label class="check-field"><input id="future-curriculum" type="checkbox" checked><span>Entwürfe zur KI-Integration anzeigen</span></label><label class="check-field"><input id="direct-master" type="checkbox"><span>Direkt im Master beginnen</span></label><hr><label class="field">Gesamtlautstärke<input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.75"></label><label class="field">Atmosphäre<input id="ambience-volume" type="range" min="0" max="1" step="0.05" value="1"></label><label class="field">Effekte<input id="effects-volume" type="range" min="0" max="1" step="0.05" value="1"></label><label class="field">Schritte<input id="footsteps-volume" type="range" min="0" max="1" step="0.05" value="1"></label><label class="field">Textgrösse<input id="text-scale" type="range" min="1" max="1.4" step="0.1" value="1"></label><label class="check-field"><input id="reduced-motion" type="checkbox"><span>Bewegung reduzieren</span></label><label class="check-field"><input id="high-contrast" type="checkbox"><span>Kontrast verstärken</span></label><label class="check-field"><input id="captions" type="checkbox" checked><span>Akustische Hinweise auch anzeigen</span></label><label class="field">Blickempfindlichkeit<input id="look-sensitivity" type="range" min="0.25" max="2" step="0.25" value="1"></label><button id="save-settings" class="button primary full">Einstellungen übernehmen</button><p class="draft-note">Spielfortschritt wird auf diesem Gerät gespeichert. Das Kompetenzmodell und die KI-Lernaktivitäten sind Entwürfe.</p></dialog>
+  <dialog id="companion-dialog" class="companion-dialog" aria-labelledby="companion-title"><div class="dialog-heading"><h2 id="companion-title">Deine KI-Begleitung</h2><button data-close class="close-button" aria-label="KI-Begleitung schliessen">×</button></div><p>Eine zweite Perspektive auf deine Studienwahl, eine Rückfrage zu deinem Lernweg oder ein Anlass, genauer hinzusehen.</p><p id="companion-context"></p><a id="companion-link" class="button primary" target="_blank" rel="noopener noreferrer" hidden>KI-Begleitung öffnen</a><p id="companion-unavailable">Für diese Spielversion ist noch keine KI-Begleitung verbunden.</p><div class="companion-actions"><button id="copy-context" class="button subtle" disabled>Lernkontext kopieren</button></div><p id="copy-context-status" class="field-help" role="status">Du kannst deine Modulwahl und Spielübungen ausdrücklich kopieren und in der Begleitung importieren. Namen und eigene Notizen werden nicht übernommen.</p><iframe id="companion-frame" class="companion-frame" title="KI-Begleitung als Claude-Artefakt" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="clipboard-read; clipboard-write" hidden></iframe><p id="companion-embed-note" class="field-help"></p><p class="draft-note">Die Begleitung läuft in Claude. Es werden keine persönlichen Daten automatisch übertragen. Antworten werden durch KI erzeugt und müssen geprüft werden.</p></dialog>
+  <dialog id="study-dialog" class="study-dialog" aria-labelledby="study-title">
+    <div class="dialog-heading"><div><p id="study-kicker" class="context-label">Dein Lernweg im Überblick</p><h2 id="study-title">Was dein Haus verbindet.</h2><p id="study-intro">Module, geplante Lerngelegenheiten und berufliche Tätigkeiten.</p></div><button data-close class="close-button" aria-label="Studienübersicht schliessen">×</button></div>
+    <div class="study-tabs" role="tablist" aria-label="Studienübersicht"><button id="study-tab-modules" role="tab" aria-controls="study-modules" aria-selected="true">Module</button><button id="study-tab-profile" role="tab" aria-controls="study-profile" aria-selected="false" tabindex="-1">Kompetenzprofil</button><button id="study-tab-compass" role="tab" aria-controls="study-compass" aria-selected="false" tabindex="-1">Berufskompass</button></div>
+    <section id="study-modules" role="tabpanel" aria-labelledby="study-tab-modules"><h3>Alles, was du bauen kannst.</h3><p>Die Modulübersicht verbindet deine Studienwahl mit den Bausteinen im Haus. Zu jedem Modul findest du den Quellenstand, Lernziele, KI-Entwürfe und den direkten Lerncheck.</p><div id="study-credits" class="study-credits"></div><button data-open="modules-dialog" class="button primary">Alle Module dieses Hauses ansehen</button><p class="draft-note">Die angezeigten ECTS stammen aus der Studienplanung. Spielaktionen vergeben keine akademischen Credits.</p></section>
+    <section id="study-profile" role="tabpanel" aria-labelledby="study-tab-profile" hidden><p id="profile-intro" class="profile-explanation">Erkunde die Lerngelegenheiten deiner gebauten Module.</p><div id="profile-overview"></div><div id="competency-list"></div></section>
+    <section id="study-compass" role="tabpanel" aria-labelledby="study-tab-compass" hidden><p id="career-intro">Wähle ein Berufsfeld. Die Tätigkeitskarten verbinden typische Aufgaben mit Kriterien und deinem Modulplan.</p><label class="field"><span id="career-label">Berufsfeld erkunden</span><select id="career-select"></select></label><div id="compass-result"></div></section>
+  </dialog>
+  <script>window.KOMPETENZHAUS_CONFIG = Object.assign({ contentUrl: 'content/kompetenzhaus-content.json', coverUrl: 'TemplateData/cover.png', companionUrl: '' }, window.KOMPETENZHAUS_CONFIG || {});</script>
+  <script>if (location.search === '?shell-preview=1') Object.assign(window.KOMPETENZHAUS_CONFIG, {preview: true, contentUrl: '../content/kompetenzhaus-content.json', coverUrl: '../art/references/two-houses-concept.png'});</script>
+  <script type="module" src="shell.js"></script>
+  <script>
+    window.addEventListener('kompetenzhaus-shell-ready', function () {
+      var config = window.KOMPETENZHAUS_CONFIG;
+      if (config.preview === true) { window.KompetenzhausShell.setLoading('Oberflächenvorschau: Die Unity-Spielwelt ist hier nicht verbunden.', 0); return; }
+      var buildUrl = 'Build';
+      var unityConfig = {
+        dataUrl: buildUrl + '/WebGL.data.unityweb',
+        frameworkUrl: buildUrl + '/WebGL.framework.js.unityweb',
+        codeUrl: buildUrl + '/WebGL.wasm.unityweb',
+        streamingAssetsUrl: 'StreamingAssets',
+        companyName: 'Kompetenzhaus Psychologie UZH', productName: 'Kompetenzhaus Psychologie UZH Unity', productVersion: '0.1.0',
+        matchWebGLToCanvasSize: true,
+        showBanner: function(message, type) { if (type === 'error') window.KompetenzhausShell.failLoading(message); }
+      };
+      var script = document.createElement('script');
+      script.src = buildUrl + '/WebGL.loader.js';
+      script.onload = function () {
+        createUnityInstance(document.getElementById('unity-canvas'), unityConfig, function(progress) { window.KompetenzhausShell.setLoading('Die Spielwelt wird geladen …', progress); })
+          .then(function(instance) { window.unityInstance = instance; window.KompetenzhausShell.attach(instance); })
+          .catch(function(error) { window.KompetenzhausShell.failLoading(String(error)); });
+      };
+      script.onerror = function () { window.KompetenzhausShell.failLoading('Die Spielwelt konnte nicht geladen werden. Bitte prüfe die Verbindung und versuche es erneut.'); };
+      document.body.appendChild(script);
+    });
+  </script>
+</body>
+</html>

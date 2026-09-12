@@ -1,0 +1,537 @@
+{
+  "slots": {
+    "100": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "101": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "102": {
+      "haus": "bsc",
+      "ects": 8,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "103": {
+      "haus": "bsc",
+      "ects": 8,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "200": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "201": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "300": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "301": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "302": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "400": {
+      "haus": "bsc",
+      "ects": 8,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "401": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "402": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "403": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "500": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "501": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "502": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "600": {
+      "haus": "msc",
+      "ects": 16,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "901": {
+      "haus": "msc",
+      "ects": 2,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "902": {
+      "haus": "msc",
+      "ects": 2,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "903": {
+      "haus": "msc",
+      "ects": 2,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "904": {
+      "haus": "msc",
+      "ects": 2,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "909": {
+      "haus": "msc",
+      "ects": 8,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "001": {
+      "haus": "bsc",
+      "ects": 18,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "002": {
+      "haus": "bsc",
+      "ects": 18,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "003": {
+      "haus": "bsc",
+      "ects": 2,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s11": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [
+        "s11a",
+        "s11b",
+        "s11c"
+      ],
+      "frage": [],
+      "artefakt": []
+    },
+    "s12": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [
+        "s12a",
+        "s12b",
+        "s12c"
+      ],
+      "frage": [],
+      "artefakt": []
+    },
+    "s13": {
+      "haus": "bsc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [
+        "s13a",
+        "s13b",
+        "s13c"
+      ],
+      "frage": [],
+      "artefakt": []
+    },
+    "BA": {
+      "haus": "bsc",
+      "ects": 6,
+      "sp": [],
+      "opt": [],
+      "thema": [
+        "BAk",
+        "BAe",
+        "BAs"
+      ],
+      "frage": [
+        "BAk1",
+        "BAk2",
+        "BAk3",
+        "BAe1",
+        "BAe2",
+        "BAe3",
+        "BAs1",
+        "BAs2",
+        "BAs3"
+      ],
+      "artefakt": [
+        "agent",
+        "app"
+      ]
+    },
+    "s04": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [
+        "DeNC",
+        "HEA",
+        "SEOP"
+      ],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s05": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [
+        "DeNC",
+        "HEA",
+        "SEOP"
+      ],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s06": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [
+        "DeNC",
+        "HEA",
+        "SEOP"
+      ],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "wp": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [],
+      "opt": [
+        "06SM200-510",
+        "06SM200-511"
+      ],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s01a": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s01b": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s07": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [
+        "DeNC",
+        "HEA",
+        "SEOP"
+      ],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s08": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [
+        "DeNC",
+        "HEA",
+        "SEOP"
+      ],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s09": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [
+        "DeNC",
+        "HEA",
+        "SEOP"
+      ],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s01c": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [],
+      "opt": [
+        "06SM200-s01",
+        "10SMSTS-505"
+      ],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s03": {
+      "haus": "msc",
+      "ects": 4,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s02a": {
+      "haus": "msc",
+      "ects": 1,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "s02b": {
+      "haus": "msc",
+      "ects": 1,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    },
+    "MA": {
+      "haus": "msc",
+      "ects": 30,
+      "sp": [],
+      "opt": [],
+      "thema": [],
+      "frage": [],
+      "artefakt": []
+    }
+  },
+  "competenceIds": [
+    "P1",
+    "P2",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "H1",
+    "H2",
+    "K1",
+    "K2",
+    "K3",
+    "T1",
+    "T2",
+    "T3",
+    "V1",
+    "V2"
+  ],
+  "careerNames": {
+    "psycho": {
+      "de": "Psychotherapie",
+      "en": "Psychotherapy"
+    },
+    "klinik": {
+      "de": "Klinische Psychologie",
+      "en": "Clinical psychology"
+    },
+    "gesundheit": {
+      "de": "Gesundheitspsychologie und Prävention",
+      "en": "Health psychology and prevention"
+    },
+    "neuro": {
+      "de": "Neuropsychologie",
+      "en": "Neuropsychology"
+    },
+    "schule": {
+      "de": "Schulpsychologie",
+      "en": "School psychology"
+    },
+    "phd": {
+      "de": "Forschung und akademischer Weg",
+      "en": "Research and academic work"
+    },
+    "gutachten": {
+      "de": "Rechtspsychologie und Begutachtung",
+      "en": "Forensic psychology and expert assessment"
+    },
+    "wirtschaft": {
+      "de": "Arbeits- und Organisationspsychologie",
+      "en": "Work and organisational psychology"
+    },
+    "laufbahn": {
+      "de": "Berufs-, Studien- und Laufbahnberatung",
+      "en": "Career and educational guidance"
+    },
+    "konsum": {
+      "de": "Konsum- und Marktforschung",
+      "en": "Consumer and market research"
+    },
+    "ux": {
+      "de": "UX Research und menschzentrierte Gestaltung",
+      "en": "UX research and human-centred design"
+    },
+    "ppp": {
+      "de": "Unterrichten: Pädagogik und Psychologie",
+      "en": "Teaching pedagogy and psychology"
+    }
+  },
+  "frameworkVersion": "2.2.0-draft",
+  "questIds": [
+    "main-evidence-foundation",
+    "main-methods-workshop",
+    "main-bachelor-capstone",
+    "main-diagnostic-audit",
+    "main-research-capstone",
+    "side-learning-studio",
+    "side-attention-gallery",
+    "side-measurement-workshop",
+    "side-team-roles",
+    "side-health-garden",
+    "side-agent-observatory"
+  ],
+  "optionCredits": {
+    "06SM200-510": 4,
+    "06SM200-511": 4,
+    "10SMSTS-505": 6
+  }
+}

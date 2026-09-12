@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "publishedOn": "2026-09-12",
+  "publicUrl": "https://claude.ai/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043",
+  "embedUrl": "https://claude.site/public/artifacts/28b92e04-206d-41b5-ad4e-2382126be043/embed",
+  "allowedEmbedDomains": [
+    "gpochs.github.io"
+  ],
+  "frameworkVersion": "2.2.0-draft",
+  "sourceFile": "ki-baututor-unity.html",
+  "sourceBytes": 488478,
+  "sourceSha256": "F06768ACD8ACFBC54E4F9170C4A188CB0BAA47E955AF2557BFAEE103FBEE1947",
+  "previousArtifacts": [
+    {
+      "publicUrl": "https://claude.ai/public/artifacts/f66a1b12-cc7f-4cc3-ad43-5146ef4b5277",
+      "status": "Original preserved"
+    },
+    {
+      "publicUrl": "https://claude.ai/public/artifacts/5a04170a-76aa-4bbf-97d0-d60e1e789f2c",
+      "status": "Earlier Unity companion preserved"
+    },
+    {
+      "publicUrl": "https://claude.ai/public/artifacts/3ab6c94b-8a8b-41f5-978d-42d70ad19316",
+      "status": "Superseded draft; short-scene feedback weakness found in public test"
+    },
+    {
+      "publicUrl": "https://claude.ai/public/artifacts/1c63055c-94e1-45c3-b039-5e591b7c1ff2",
+      "status": "Superseded draft; repeated self-reflection control bug found in public test"
+    },
+    {
+      "publicUrl": "https://claude.ai/public/artifacts/3c6ead1a-4ca5-4d72-ade2-a463e3d9841f",
+      "status": "V2.1 preserved; superseded by cross-domain AI model V2.2",
+      "verification": "All four modes generated real German responses on this earlier public version. Fictional conversation passed one-contribution stop/skip, minimum-material notice, same-dialogue resume, second contribution, repeated stop/skip and quotation-validated final feedback. This historical check is not presented as a new V2.2 live test."
+    }
+  ],
+  "verification": {
+    "publishedState": "Claude publisher UI displayed Published (Public); author copy reported matching SHA256, 488478 bytes and no cmp difference. All earlier publications remain available.",
+    "embedDomainSaved": true,
+    "mockHostTests": 39,
+    "publicRuntime": "Verified on this V2.2 public page: real German and English Claude responses in Tutor mode. German response distinguished P2 contextual consequences, R4 evidence evaluation and V1 normative judgement, described R2/H1/K2 responsibilities and T1-T3 as a technical subset without duplicate points. English response used the updated cognitive-psychology task to explain without/with/about-AI phases, an independent initial prediction and transfer task; it rejected whole-module or all-objective AI-free examination mandates and competence certification from quiz points. All four mode controls are present; other modes were not re-exercised on this publication.",
+    "feedbackScope": "These checks cover the exercised prompts, not all future interpretations or professional competence. Generation used the signed-in Claude account with no separate paid API. Earlier V2.1 four-mode and feedback checks are recorded with that preserved artifact.",
+    "embedDomainVerification": "gpochs.github.io was still present after closing and reopening the publication embed settings.",
+    "knownPresentationLimit": "After switching to English, the public tutor's runtime-status line and several accessibility labels remain German; generated answers and main controls switch to English.",
+    "publicEmbedGeneration": "pending Unity Web deployment",
+    "publishedBytesIndependentlyDownloaded": false
+  },
+  "billing": "No owner API key or paid endpoint; visitor Claude account and its available allowance apply. No paid usage, credits purchase, auto-reload or paid fallback is enabled by this project."
+}
