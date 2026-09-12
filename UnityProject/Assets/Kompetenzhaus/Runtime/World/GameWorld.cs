@@ -94,35 +94,14 @@ namespace Kompetenzhaus.World
             var root = new GameObject(house.houseId == "msc" ? "Master house" : "Bachelor house").transform;
             root.SetParent(buildings, false); root.localPosition = HouseOrigin(house.houseId);
             var tiles = house.footprintTiles.ToDictionary(t => t.Key);
-            var roomByTile = new Dictionary<string, string>();
-            foreach (var room in house.rooms) foreach (var tile in room.tiles) roomByTile[tile.Key] = room.id;
-            var doors = new HashSet<string>();
+            var circulation = new ArchitectureCirculationPlan(house);
             var stairs = new Dictionary<string, RoomConnection>();
             foreach (var connection in house.connections)
             {
-                if (connection.kind == "door") doors.Add(EdgeKey(connection.fromTile, connection.toTile));
-                else if (connection.kind == "stair")
+                if (connection.kind == "stair")
                 {
                     var upper = connection.fromTile.floor > connection.toTile.floor ? connection.fromTile : connection.toTile;
                     stairs[upper.Key] = connection;
-                }
-            }
-            // A deliberate entrance per connected room facing its first exposed edge.
-            // Interior circulation remains controlled by authored door connections.
-            var entrances = new HashSet<string>();
-            foreach (var room in house.rooms)
-            {
-                if (room.tiles.Count == 0 || room.tiles[0].floor != 0) continue;
-                bool found = false;
-                foreach (var tile in room.tiles.OrderBy(t => t.z).ThenBy(t => t.x))
-                {
-                    foreach (var direction in Directions)
-                    {
-                        var neighbour = new GridTile(tile.x + direction.x, tile.z + direction.y, tile.floor);
-                        if (tiles.ContainsKey(neighbour.Key)) continue;
-                        entrances.Add(EdgeKey(tile, neighbour)); found = true; break;
-                    }
-                    if (found) break;
                 }
             }
             foreach (var tile in house.footprintTiles)
@@ -132,29 +111,32 @@ namespace Kompetenzhaus.World
                 var centre = TileCentre(tile);
                 if (stairs.ContainsKey(tile.Key))
                 {
+                    circulation.TryStairYaw(stairs[tile.Key], out var stairYaw);
+                    var stairRotation = Quaternion.Euler(0, stairYaw, 0);
                     // Real open stairwell: two side strips leave 1.7 m clear.
                     foreach (var side in new[] { -1f, 1f })
-                        Cube("Stairwell landing", level, centre + new Vector3(side * 1.425f, -.13f, 0),
+                    {
+                        var strip = Cube("Stairwell landing", level, centre + stairRotation * new Vector3(side * 1.425f, -.13f, 0),
                             new Vector3(1.15f, .26f, 4), assets.path, true);
-                    Cube("Upper stair landing", level, centre + new Vector3(0, -.13f, 1.6f),
+                        strip.transform.localRotation = stairRotation;
+                    }
+                    var landing = Cube("Upper stair landing", level, centre + stairRotation * new Vector3(0, -.13f, 1.6f),
                         new Vector3(4, .26f, .8f), assets.path, true);
+                    landing.transform.localRotation = stairRotation;
                 }
                 else Spawn("floor-tile", level, centre, 0, Vector3.one, house, true);
                 foreach (var direction in Directions)
                 {
                     var neighbour = new GridTile(tile.x + direction.x, tile.z + direction.y, tile.floor);
-                    var key = EdgeKey(tile, neighbour);
-                    var hasNeighbour = tiles.ContainsKey(neighbour.Key);
-                    bool sameRoom = roomByTile.TryGetValue(tile.Key, out var a) && roomByTile.TryGetValue(neighbour.Key, out var b) && a == b;
-                    if (hasNeighbour && (sameRoom || string.CompareOrdinal(tile.Key, neighbour.Key) > 0)) continue;
-                    var model = hasNeighbour ? (doors.Contains(key) ? "wall-partition" : "wall-solid") :
-                        entrances.Contains(key) ? "wall-door" : house.facadeStyle == "solid" ? "wall-solid" : "wall-window";
+                    var key = ArchitectureCirculationPlan.EdgeKey(tile, neighbour);
+                    var model = circulation.BoundaryModel(tile, neighbour);
+                    if (model == null) continue;
                     var at = centre + new Vector3(direction.x * 2, 0, direction.y * 2);
                     var wall = Spawn(model, level, at, direction.x != 0 ? 90 : 0, Vector3.one, house, true);
                     wall.name = "Boundary " + key;
-                    if (!hasNeighbour && !entrances.Contains(key) && house.facadeStyle == "glass") MakeGlassFacade(wall, level, at, direction.x != 0 ? 90 : 0);
+                    if (!circulation.HasRoom(neighbour) && model != "wall-door" && house.facadeStyle == "glass") MakeGlassFacade(wall, level, at, direction.x != 0 ? 90 : 0);
                 }
-                if (!tiles.ContainsKey(new GridTile(tile.x, tile.z, tile.floor + 1).Key))
+                if (circulation.HasRoom(tile) && !tiles.ContainsKey(new GridTile(tile.x, tile.z, tile.floor + 1).Key))
                 {
                     var roof = Spawn(house.roofStyle == "gabled" ? "roof-gabled" : "roof-flat", root,
                         centre + Vector3.up * Storey, 0, Vector3.one, house, true);
@@ -176,7 +158,8 @@ namespace Kompetenzhaus.World
                 var lower = connection.fromTile.floor < connection.toTile.floor ? connection.fromTile : connection.toTile;
                 var upper = connection.fromTile.floor > connection.toTile.floor ? connection.fromTile : connection.toTile;
                 var position = TileCentre(upper); position.y = lower.floor * Storey;
-                var stairsModel = Spawn("staircase", root, position, 0, Vector3.one, house, true);
+                circulation.TryStairYaw(connection, out var stairYaw);
+                var stairsModel = Spawn("staircase", root, position, stairYaw, Vector3.one, house, true);
                 levels.Add((stairsModel, lower.floor, false));
             }
             foreach (var room in house.rooms)
@@ -391,7 +374,6 @@ namespace Kompetenzhaus.World
             lines.Add(line); return string.Join("\n", lines);
         }
         private static readonly Vector2Int[] Directions = { new(0, -1), new(1, 0), new(0, 1), new(-1, 0) };
-        private static string EdgeKey(GridTile a, GridTile b) => string.CompareOrdinal(a.Key, b.Key) < 0 ? a.Key + "|" + b.Key : b.Key + "|" + a.Key;
         private static string ModuleModel(ModuleDefinition module) => module.competencyIds.Any(c => c == "Fa2" || c == "Fa3" || c == "Fa4") ? "research-desk" : module.stage >= 3 ? "evidence-table" : "discussion-sofa";
         private static string CosmeticModel(string id)
         {

@@ -108,6 +108,21 @@ export function copyArchitecture(state) {
 export const tileKey = tile => `${tile.x}:${tile.z}:${tile.floor}`;
 const endpointKey = (a, b) => [tileKey(a), tileKey(b)].sort().join('|');
 
+function stairEntryPredicate(house) {
+  // Match ArchitectureCirculationPlan: only named rooms enclose space. Every
+  // ground-floor room gets its first exterior edge in z/x, then S/E/N/W order.
+  const directions = [[0, -1], [1, 0], [0, 1], [-1, 0]];
+  const rooms = new Map(house.rooms.flatMap(room => room.tiles.map(tile => [tileKey(tile), room.id])));
+  const doors = new Set((house.connections || []).filter(link => link.kind === 'door').map(link => endpointKey(link.fromTile, link.toTile)));
+  const entrances = new Set();
+  const neighbours = tile => directions.map(([x, z]) => ({ x: tile.x + x, z: tile.z + z, floor: tile.floor }));
+  for (const room of house.rooms.filter(room => room.tiles[0]?.floor === 0)) {
+    const edge = [...room.tiles].sort((a, b) => a.z - b.z || a.x - b.x).flatMap(tile => neighbours(tile).filter(next => !rooms.has(tileKey(next))).map(next => endpointKey(tile, next)))[0];
+    if (edge) entrances.add(edge);
+  }
+  return lower => neighbours(lower).some(next => rooms.get(tileKey(next)) === rooms.get(tileKey(lower)) || doors.has(endpointKey(lower, next)) || entrances.has(endpointKey(lower, next)));
+}
+
 export function connectionCandidates(house, fromRoomId, toRoomId, kind, gridSizeMetres = 4) {
   if (!house || fromRoomId === toRoomId || !['door', 'stair'].includes(kind)) return [];
   const from = house.rooms.find(room => room.id === fromRoomId), to = house.rooms.find(room => room.id === toRoomId);
@@ -120,11 +135,13 @@ export function connectionCandidates(house, fromRoomId, toRoomId, kind, gridSize
   for (const item of house.decorations || []) blocked.add(tileKey({ x: Math.floor(item.x / gridSizeMetres), z: Math.floor(item.z / gridSizeMetres), floor: item.floor }));
   for (const link of house.connections || []) if (link.kind === 'stair') { blocked.add(tileKey(link.fromTile)); blocked.add(tileKey(link.toTile)); }
   const existing = new Set((house.connections || []).map(link => `${link.kind}:${endpointKey(link.fromTile, link.toTile)}`));
+  const hasStairEntry = kind === 'stair' ? stairEntryPredicate(house) : null;
   const pairs = [];
   for (const a of from.tiles) for (const b of to.tiles) {
     const horizontal = Math.abs(a.x - b.x) + Math.abs(a.z - b.z), vertical = Math.abs(a.floor - b.floor);
     if (kind === 'door' ? vertical !== 0 || horizontal !== 1 : vertical !== 1 || horizontal !== 0 || blocked.has(tileKey(a)) || blocked.has(tileKey(b))) continue;
     if (existing.has(`${kind}:${endpointKey(a, b)}`)) continue;
+    if (hasStairEntry && !hasStairEntry(a.floor < b.floor ? a : b)) continue;
     pairs.push({ fromTile: { ...a }, toTile: { ...b } });
   }
   return pairs;
@@ -133,7 +150,7 @@ export function connectionCandidates(house, fromRoomId, toRoomId, kind, gridSize
 export function addConnection(house, { id, fromRoomId, toRoomId, kind, fromTile, toTile }, gridSizeMetres = 4) {
   if (!id || house.connections.some(link => link.id === id)) throw new Error('Diese Verbindung besitzt keine eindeutige Kennung.');
   const pair = connectionCandidates(house, fromRoomId, toRoomId, kind, gridSizeMetres).find(item => tileKey(item.fromTile) === tileKey(fromTile) && tileKey(item.toTile) === tileKey(toTile));
-  if (!pair) throw new Error(kind === 'stair' ? 'Die Treppe braucht zwei freie Felder genau übereinander. Verschiebe dort zuerst Module und Möbel.' : 'Diese Räume brauchen eine gemeinsame Wand auf derselben Etage.');
+  if (!pair) throw new Error(kind === 'stair' ? 'Die Treppe braucht zwei freie Felder genau übereinander und unten einen Zugang. Verschiebe belegende Module oder Möbel; erweitere bei Bedarf den unteren Raum oder ergänze eine Tür.' : 'Diese Räume brauchen eine gemeinsame Wand auf derselben Etage.');
   house.connections.push({ id, fromRoomId, toRoomId, kind, fromTile: pair.fromTile, toTile: pair.toTile });
 }
 

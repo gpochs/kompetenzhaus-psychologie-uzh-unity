@@ -503,7 +503,7 @@ function renderConnections() {
   populate($('connection-endpoints'), pairs.map(pair => [connectionPairKey(pair), label(pair)]), $('connection-endpoints').value);
   $('add-connection').disabled = !pairs.length;
   if (!$('connection-from').value || !$('connection-to').value) setText('connection-help', 'Wähle zwei unterschiedliche Räume.');
-  else setText('connection-help', pairs.length ? t(`${pairs.length} mögliche Verbindungsstelle${pairs.length > 1 ? 'n' : ''}.`, `${pairs.length} possible connection point${pairs.length > 1 ? 's' : ''}.`) : kind === 'stair' ? 'Keine freien Felder genau übereinander. Module, Möbel oder eine weitere Treppe dürfen diese Felder nicht belegen.' : 'Keine freie gemeinsame Wand auf derselben Etage.');
+  else setText('connection-help', pairs.length ? t(`${pairs.length} mögliche Verbindungsstelle${pairs.length > 1 ? 'n' : ''}.`, `${pairs.length} possible connection point${pairs.length > 1 ? 's' : ''}.`) : kind === 'stair' ? 'Keine passende Treppenstelle. Zwei Felder müssen frei übereinanderliegen; unten braucht es einen Zugang aus demselben Raum oder durch eine Tür.' : 'Keine freie gemeinsame Wand auf derselben Etage.');
   const roomLabel = id => house.rooms.find(room => room.id === id)?.name || ui('Raum');
   populate($('connection-existing'), house.connections.map(link => [link.id, `${ui(link.kind === 'stair' ? 'Treppe' : 'Tür')}: ${roomLabel(link.fromRoomId)} → ${roomLabel(link.toRoomId)} · ${floorName(link.fromTile.floor)}`]), $('connection-existing').value, 'Verbindung auswählen');
   $('remove-connection').disabled = !$('connection-existing').value;
@@ -564,20 +564,23 @@ $('time-slider').addEventListener('input', showTime);
 $('save-time').addEventListener('click', () => editArchitecture((house, architecture) => { architecture.timeOfDay = Number($('time-slider').value); }));
 $('undo-button').addEventListener('click', () => command('undoArchitecture'));
 
+function accessibilityWithAudioDefaults(value) {
+  return { ...value, audioMixVersion: 1, ambienceVolume: value?.ambienceVolume ?? 1, effectsVolume: value?.effectsVolume ?? 1, footstepsVolume: value?.footstepsVolume ?? 1 };
+}
 function renderSettings() {
   if (!state) return;
   $('language-select').value = state.language; $('learning-mode').value = state.learningMode; $('future-curriculum').checked = state.futureCurriculum; $('direct-master').checked = state.directMasterEntry;
-  const access = state.accessibility || {};
-  for (const [id, field] of [['volume-slider', 'masterVolume'], ['text-scale', 'textScale'], ['look-sensitivity', 'lookSensitivity']]) $(id).value = access[field] ?? 1;
+  const access = accessibilityWithAudioDefaults(state.accessibility);
+  for (const [id, field] of [['volume-slider', 'masterVolume'], ['ambience-volume', 'ambienceVolume'], ['effects-volume', 'effectsVolume'], ['footsteps-volume', 'footstepsVolume'], ['text-scale', 'textScale'], ['look-sensitivity', 'lookSensitivity']]) $(id).value = access[field] ?? 1;
   for (const [id, field] of [['reduced-motion', 'reducedMotion'], ['high-contrast', 'highContrast'], ['captions', 'captions']]) $(id).checked = Boolean(access[field]);
 }
 $('save-settings').addEventListener('click', () => {
-  const accessibility = { highContrast: $('high-contrast').checked, reducedMotion: $('reduced-motion').checked, captions: $('captions').checked, textScale: Number($('text-scale').value), lookSensitivity: Number($('look-sensitivity').value), masterVolume: Number($('volume-slider').value) };
+  const accessibility = { ...accessibilityWithAudioDefaults(state?.accessibility), highContrast: $('high-contrast').checked, reducedMotion: $('reduced-motion').checked, captions: $('captions').checked, textScale: Number($('text-scale').value), lookSensitivity: Number($('look-sensitivity').value), masterVolume: Number($('volume-slider').value), ambienceVolume: Number($('ambience-volume').value), effectsVolume: Number($('effects-volume').value), footstepsVolume: Number($('footsteps-volume').value) };
   const changes = [['setLanguage', { language: $('language-select').value }], ['setLearningMode', { mode: $('learning-mode').value }], ['setFutureCurriculum', { enabled: $('future-curriculum').checked }], ['setDirectMasterEntry', { enabled: $('direct-master').checked }], ['setAccessibility', { accessibility }]];
   for (const [name, payload] of changes) command(name, payload);
   closeDialog($('settings-dialog'));
 });
-$('sound-button').addEventListener('click', () => { const value = state?.accessibility?.masterVolume ?? .75; if (value > 0) lastVolume = value; command('setAccessibility', { accessibility: { ...state?.accessibility, masterVolume: value > 0 ? 0 : lastVolume } }); });
+$('sound-button').addEventListener('click', () => { const value = state?.accessibility?.masterVolume ?? .75; if (value > 0) lastVolume = value; command('setAccessibility', { accessibility: { ...accessibilityWithAudioDefaults(state?.accessibility), masterVolume: value > 0 ? 0 : lastVolume } }); });
 function renderCompanion() {
   const url = safeCompanionUrl(config.companionUrl || companionPublication?.publicUrl, location.href);
   visible('companion-link', Boolean(url)); visible('companion-unavailable', !url);

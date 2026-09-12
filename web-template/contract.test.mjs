@@ -155,3 +155,17 @@ test('rotated module footprints and furniture centres remove occupied stair choi
   assert.throws(() => addConnection(house, { id: 'bad', fromRoomId: 'ground', toRoomId: 'upper', kind: 'stair', fromTile: { x: -1, z: 0, floor: 0 }, toTile: { x: -1, z: 0, floor: 1 } }), /freie Felder/);
   assert.equal(JSON.stringify(house), before, 'an invalid connection never removes furniture or mutates the plan');
 });
+
+test('stairs exclude an enclosed single upper-floor tile until its lower entry has a doorway', () => {
+  const tile = floor => ({ x: 0, z: 0, floor });
+  const house = { rooms: [{ id: 'lower', tiles: [tile(1)] }, { id: 'upper', tiles: [tile(2)] }, { id: 'hall', tiles: [{ x: 1, z: 0, floor: 1 }] }], modulePlacements: [], decorations: [], connections: [] };
+  const before = JSON.stringify(house);
+  assert.deepEqual(connectionCandidates(house, 'lower', 'upper', 'stair'), []);
+  assert.throws(() => addConnection(house, { id: 'blocked', fromRoomId: 'upper', toRoomId: 'lower', kind: 'stair', fromTile: tile(2), toTile: tile(1) }), /unten einen Zugang/);
+  assert.equal(JSON.stringify(house), before);
+  house.connections.push({ id: 'door', kind: 'door', fromRoomId: 'hall', toRoomId: 'lower', fromTile: { x: 1, z: 0, floor: 1 }, toTile: tile(1) });
+  assert.equal(connectionCandidates(house, 'upper', 'lower', 'stair').length, 1, 'a reversed room selection uses the lower doorway');
+  house.connections = [];
+  house.rooms = [{ id: 'lower', tiles: [tile(0)] }, { id: 'upper', tiles: [tile(1)] }];
+  assert.equal(connectionCandidates(house, 'lower', 'upper', 'stair').length, 1, 'a ground-floor automatic entrance is an entry');
+});

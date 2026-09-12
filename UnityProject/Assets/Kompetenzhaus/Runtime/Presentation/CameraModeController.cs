@@ -35,14 +35,14 @@ namespace Kompetenzhaus.Presentation
             ApplyMode(worldReady ? progression.Data.viewMode : ViewMode.BirdView);
         }
 
-        public bool SetMode(ViewMode mode)
+        public bool SetMode(ViewMode mode, bool persistProgress = true)
         {
             if (mode == ViewMode.FirstPerson && !worldReady) return false;
             ApplyMode(mode);
             if (progression != null)
             {
                 progression.Data.viewMode = mode;
-                progression.SaveAndNotify();
+                if (persistProgress) progression.SaveAndNotify();
             }
             return true;
         }

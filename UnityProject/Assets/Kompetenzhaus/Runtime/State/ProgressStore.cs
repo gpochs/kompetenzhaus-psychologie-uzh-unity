@@ -19,6 +19,18 @@ namespace Kompetenzhaus.State
         public float textScale = 1f;
         public float lookSensitivity = 1f;
         public float masterVolume = 0.75f;
+        public int audioMixVersion = 1;
+        public float ambienceVolume = 1f;
+        public float effectsVolume = 1f;
+        public float footstepsVolume = 1f;
+
+        public void NormalizeAudioMix()
+        {
+            // Saves and bridge callers from before category controls keep their original mix.
+            if (audioMixVersion != 0) return;
+            ambienceVolume = effectsVolume = footstepsVolume = 1f;
+            audioMixVersion = 1;
+        }
     }
 
     [Serializable]
@@ -110,6 +122,7 @@ namespace Kompetenzhaus.State
             data.competenceChoices ??= new List<CompetenceChoice>();
             data.preStageChecks ??= new List<int>();
             data.accessibility ??= new AccessibilitySettings();
+            data.accessibility.NormalizeAudioMix();
             data.architecture ??= ArchitectureState.CreateDefault();
             data.language = data.language == "en" ? "en" : "de";
             if (data.selectedHouseId != "bsc" && data.selectedHouseId != "msc") data.selectedHouseId = "all";
@@ -133,7 +146,9 @@ namespace Kompetenzhaus.State
             if (data.preStageChecks.Any(index => index < 0 || index > 3) || data.preStageChecks.Distinct().Count() != data.preStageChecks.Count)
                 return Fail("Invalid self-reported prior-learning selection.", out error);
             var access = data.accessibility;
-            if (!InRange(access.textScale, 1f, 1.5f) || !InRange(access.lookSensitivity, 0.2f, 3f) || !InRange(access.masterVolume, 0f, 1f))
+            if (!InRange(access.textScale, 1f, 1.5f) || !InRange(access.lookSensitivity, 0.2f, 3f) || !InRange(access.masterVolume, 0f, 1f) ||
+                access.audioMixVersion != 1 || !InRange(access.ambienceVolume, 0f, 1f) ||
+                !InRange(access.effectsVolume, 0f, 1f) || !InRange(access.footstepsVolume, 0f, 1f))
                 return Fail("Invalid accessibility settings.", out error);
             if (catalog != null)
             {

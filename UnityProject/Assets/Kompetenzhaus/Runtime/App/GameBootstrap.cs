@@ -80,6 +80,10 @@ namespace Kompetenzhaus
         public void SelectHouse(string houseId)
         {
             Progression.Data.selectedHouseId = houseId == "bsc" || houseId == "msc" ? houseId : "all";
+            // House focus frames the bird camera. Activate it before notifying the UI
+            // or requesting framing, without moving a player who was exploring on foot.
+            Progression.Data.viewMode = ViewMode.BirdView;
+            if (cameraController != null) cameraController.SetMode(ViewMode.BirdView, persistProgress: false);
             Progression.SaveAndNotify();
             HouseFocusRequested?.Invoke(Progression.Data.selectedHouseId);
         }
@@ -101,9 +105,14 @@ namespace Kompetenzhaus
 
         public void ApplyAccessibility(AccessibilitySettings settings)
         {
-            if (settings == null || !ValidRange(settings.textScale, 1f, 1.5f) || !ValidRange(settings.lookSensitivity, 0.2f, 3f) ||
-                !ValidRange(settings.masterVolume, 0f, 1f)) throw new ArgumentException("Invalid accessibility settings.");
-            Progression.Data.accessibility = JsonUtility.FromJson<AccessibilitySettings>(JsonUtility.ToJson(settings));
+            if (settings == null) throw new ArgumentException("Invalid accessibility settings.");
+            var candidate = JsonUtility.FromJson<AccessibilitySettings>(JsonUtility.ToJson(settings));
+            candidate.NormalizeAudioMix();
+            if (!ValidRange(candidate.textScale, 1f, 1.5f) || !ValidRange(candidate.lookSensitivity, 0.2f, 3f) ||
+                !ValidRange(candidate.masterVolume, 0f, 1f) || candidate.audioMixVersion != 1 ||
+                !ValidRange(candidate.ambienceVolume, 0f, 1f) || !ValidRange(candidate.effectsVolume, 0f, 1f) ||
+                !ValidRange(candidate.footstepsVolume, 0f, 1f)) throw new ArgumentException("Invalid accessibility settings.");
+            Progression.Data.accessibility = candidate;
             Progression.SaveAndNotify();
         }
 

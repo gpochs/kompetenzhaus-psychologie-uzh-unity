@@ -119,7 +119,8 @@ namespace Kompetenzhaus.WorldSupport
             if (!HasUserInteraction && ((Mouse.current?.leftButton.wasPressedThisFrame ?? false) ||
                 (Keyboard.current?.anyKey.wasPressedThisFrame ?? false))) NotifyUserInteraction();
             var audible = HasUserInteraction && game.Progression.Data.accessibility.masterVolume > 0f;
-            var target = audible && ambienceEnabled && courtyardAmbience != null ? ambienceVolume : 0f;
+            var target = audible && ambienceEnabled && courtyardAmbience != null
+                ? ambienceVolume * game.Progression.Data.accessibility.ambienceVolume : 0f;
             if (ambience != null)
             {
                 if (target > 0f && !ambience.isPlaying)
@@ -154,7 +155,7 @@ namespace Kompetenzhaus.WorldSupport
             alternateStep = !alternateStep;
             if (clip != null && game.Progression.Data.accessibility.masterVolume > 0f)
             {
-                footsteps.PlayOneShot(clip, footstepsVolume);
+                footsteps.PlayOneShot(clip, footstepsVolume * game.Progression.Data.accessibility.footstepsVolume);
                 CuePlayed?.Invoke("footstep");
             }
         }
@@ -186,7 +187,7 @@ namespace Kompetenzhaus.WorldSupport
         {
             if (!isActiveAndEnabled || !HasUserInteraction || clip == null || game?.Progression == null ||
                 game.Progression.Data.accessibility.masterVolume <= 0f) return;
-            effects.PlayOneShot(clip, effectsVolume * gain);
+            effects.PlayOneShot(clip, effectsVolume * game.Progression.Data.accessibility.effectsVolume * gain);
             CuePlayed?.Invoke(cueId);
         }
     }

@@ -170,6 +170,10 @@ namespace Kompetenzhaus.State
                     if (connection.kind == "stair" && (!stairTiles.Add(connection.fromTile.Key) || !stairTiles.Add(connection.toTile.Key)))
                         return Invalid("Each stair needs its own clear bay and landing; stair flights cannot share an endpoint bay.", out error);
                 }
+                var circulation = new ArchitectureCirculationPlan(house);
+                foreach (var stair in house.connections.Where(c => c.kind == "stair"))
+                    if (!circulation.TryStairYaw(stair, out _))
+                        return Invalid("A staircase needs an accessible lower entry: enlarge its room or add a doorway first.", out error);
                 var occupied = new HashSet<string>(StringComparer.Ordinal);
                 foreach (var placement in house.modulePlacements)
                 {
